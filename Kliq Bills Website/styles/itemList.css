@@ -1,0 +1,317 @@
+.itemInputButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.itemInputButton input {
+  width: 90px;
+}
+
+.itemInputButton input,
+.itemInputButton select {
+  height: 22px;
+}
+
+.itemInputButton select {
+  padding: 0;
+}
+
+.itemAddButton button svg {
+  width: 14px;
+}
+
+.itemAddButton button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--primary-linear-gradient-bg);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  color: #fff;
+  padding: 4px;
+  font-size: 0.6rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.itemListTable {
+  position: relative;
+}
+
+.addColumnIcon {
+  position: absolute;
+  left: -10px;
+  top: -14px;
+  transform: translate(50%, 50%);
+  cursor: pointer;
+
+  width: 16px;
+  height: 16px;
+}
+
+.itemListTable img {
+  display: block;
+  max-width: 25px;
+  height: 25px;
+  min-width: 25px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.itemListTable table {
+  border-collapse: collapse;
+  color: #1a1a1a;
+  font-size: 0.5rem;
+  white-space: nowrap;
+}
+
+.itemListTable table thead {
+  background: var(--multiple-branch-table-head-bg);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+  padding-top: 1em;
+  color: #6f6f6f;
+  font-size: 0.5rem;
+}
+
+.itemListTable table tbody tr {
+  background: #fff;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+.itemListTable .itemText p:last-child {
+  font-size: 0.48rem;
+}
+
+.itemListTable th {
+  padding: 1em;
+  text-align: left;
+}
+
+.itemListTable .itemalignRight {
+  text-align: right;
+}
+
+.itemListTable td:last-child {
+  padding: 0;
+}
+
+.itemListTable .noOfVariants {
+  text-align: right;
+}
+
+.itemListTable .noOfVariants select {
+  height: 20px;
+  padding: 0;
+}
+
+.itemImageText {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.itemText p {
+  margin: 0;
+}
+
+.itemText p:first-child {
+  margin-bottom: 0.2em;
+  font-size: 0.5rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.itemImageText .itemAccordion {
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.itemImageText .itemAccordion:after {
+  content: "\002B";
+  color: var(--primary-color);
+  font-weight: bold;
+  float: left;
+  margin-right: 5px;
+}
+
+.itemListTable .itemActive:after {
+  content: "\2212";
+}
+
+.itemListTable .itemPanel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease, padding 0.2s ease, height 0.2s ease,
+    margin 0.2s ease;
+  background: var(--multiple-branch-table-head-bg);
+  box-shadow: 0px 1px 2px 0px rgba(60, 64, 67, 0.3);
+  padding: 0;
+  margin: 0;
+}
+
+.itemListTable .itemPanel.active {
+  padding: 10px;
+  margin: 5px;
+  overflow: visible;
+  max-height: none;
+}
+
+.itemListTable .panel-row td {
+  padding: 0;
+  height: 0;
+}
+
+.itemListTable .wrap-cell {
+  white-space: normal;
+}
+
+.itemListTable .itemPanel.active .panel-content .variantContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.itemListTable .variantInputContainer {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+}
+
+.itemListTable .variantInputContainer select,
+.itemListTable .variantInputContainer input {
+  flex: 1;
+}
+
+.variantHeader {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-weight: bold;
+  margin-bottom: 10px;
+  width: 96.5%;
+}
+
+.itemListTable .variantButtonContainer {
+  display: flex;
+  align-items: center;
+}
+
+.itemListTable .panel-content .inputs:not(:first-child) {
+  margin-top: 10px;
+}
+
+.itemListTable .inputs select,
+.itemListTable .inputs input {
+  height: 20px;
+  padding: 0;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.itemListTable .inputs input {
+  text-align: right;
+}
+
+.itemListTable .panel-content p {
+  margin: 0;
+  color: #707273;
+  font-weight: bold;
+}
+
+.itemListTable .itemPanel.active .panel-content .addAnother {
+  display: inline-block;
+  margin-top: 0.8em;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.itemListTable td:last-child {
+  border: none;
+}
+
+.itemListTable .editDeleteSvgs {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+}
+
+.itemListTable .editDeleteSvgs svg {
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+}
+
+.itemListTable .editDeleteSvgs svg:last-child {
+  width: 14px;
+  height: 14px;
+}
+
+@media (min-width: 768px) {
+  .itemInputButton input,
+  .itemInputButton select {
+    height: 30px;
+  }
+
+  .itemInputButton input {
+    width: auto;
+  }
+
+  .itemInputButton select {
+    padding: 0;
+  }
+
+  .itemAddButton button svg {
+    width: 18px;
+  }
+
+  .itemAddButton button {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .itemListTable table,
+  .itemListTable table thead,
+  .itemListTable .itemText p:first-child {
+    font-size: 0.88rem;
+  }
+
+  .itemListTable .itemText p:last-child {
+    font-size: 0.75rem;
+  }
+
+  .addColumnIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .itemListTable img {
+    max-width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
+
+  .itemListTable .inputs select,
+  .itemListTable .inputs input {
+    height: 30px;
+  }
+
+  .itemListTable .editDeleteSvgs svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .itemListTable .editDeleteSvgs svg:last-child {
+    width: 22px;
+    height: 22px;
+  }
+
+  .itemListTable .noOfVariants select {
+    height: 25px;
+  }
+}

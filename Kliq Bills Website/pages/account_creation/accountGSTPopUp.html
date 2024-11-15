@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account GST PopUp Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../styles/normalize.css" />
+    <link rel="stylesheet" href="../../styles/base.css" />
+    <link rel="stylesheet" href="../../styles/tabStyles.css">
+    <link rel="stylesheet" href="../../styles/formStyles.css">
+    <link rel="stylesheet" href="../../styles/accountCreationMain.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationForm.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationTabs.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationTable.css" />
+  </head>
+  <body>
+    <div class="accountGstPopCotainer">
+      
+      <div class="close_btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="change_colors" d="M4 20H18V22H4C2.9 22 2 21.11 2 20V6H4V20ZM20.22 2H7.78C6.8 2 6 2.8 6 3.78V16.22C6 17.2 6.8 18 7.78 18H20.22C21.2 18 22 17.2 22 16.22V3.78C22 2.8 21.2 2 20.22 2ZM19 13.6L17.6 15L14 11.4L10.4 15L9 13.6L12.6 10L9 6.4L10.4 5L14 8.6L17.6 5L19 6.4L15.4 10L19 13.6Z" fill="#185492"/>
+        </svg>
+      </div>
+
+      <div class="gstin">
+        <label for="gstin" id="mainLabel">GSTIN</label>
+        <div class="gstinInputContainer">
+          <div class="gstinRadioConatiner">
+            <input
+              type="radio"
+              id="gstinRadio"
+              name="gstTanNos"
+              checked
+            /><label for="gstinRadio">GSTIN</label>
+            <input type="radio" id="tannoRadio" name="gstTanNos" /><label
+              for="tannoRadio"
+              >TANNO</label
+            >
+          </div>
+          <input type="text" id="gstin" />
+        </div>
+      </div>
+
+      <div class="partyType">
+        <label for="partyType">Party Type</label>
+        <input type="text" id="partyType" />
+      </div>
+
+      <div class="assessTerritory">
+        <div class="assessTerritoryText">
+          <p>Assesse of other Territory:</p>
+        </div>
+
+        <div class="assessTerritoryRadio">
+          <input type="radio" name="TerrYesNo" id="TerrYes" /><label
+            for="TerrYes"
+            >Yes</label
+          >
+          <input type="radio" name="TerrYesNo" id="TerrNo" checked /><label
+            for="TerrNo"
+            >No</label
+          >
+        </div>
+      </div>
+
+      <div class="ecommerceOperator">
+        <div class="ecommerceOperatorText">
+          <p>Is a E-Commerce Operator:</p>
+        </div>
+
+        <div class="ecommerceOperatorRadio">
+          <input type="radio" name="ecomYesNo" id="ecomYes" /><label
+            for="ecomYes"
+            >Yes</label
+          >
+          <input type="radio" name="ecomYesNo" id="ecomNo" checked /><label
+            for="ecomNo"
+            >No</label
+          >
+        </div>
+      </div>
+
+      <div class="deemedExporter">
+        <div class="deemedExporterText">
+          <p>Consider Party as Deemed Exporter of Purchases:</p>
+        </div>
+
+        <div class="deemedExporterRadio">
+          <input
+            type="radio"
+            name="deemedExporterYesNo"
+            id="deemedExporterYes"
+          /><label for="deemedExporterYes">Yes</label>
+          <input
+            type="radio"
+            name="deemedExporterYesNo"
+            id="deemedExporterNo"
+            checked
+          /><label for="deemedExporterNo">No</label>
+        </div>
+        
+      </div>
+      <div class="gstButton">
+        <button class="btn btn_close">Close</button>
+        <button class="btn btn_ok">Ok</button>
+    </div>
+    <div class="themeOptions">
+      <div class="theme_buttons">
+        <button class="theme_btns default" onclick="switchTheme('default')"></button>
+        <button class="theme_btns purple" onclick="switchTheme('purple')"></button>
+        <button class="theme_btns pink" onclick="switchTheme('pink')"></button>
+        <button class="theme_btns green" onclick="switchTheme('green')"></button>
+        <button class="theme_btns blueGreen" onclick="switchTheme('blueGreen')"></button>
+        <button class="theme_btns googlered" onclick="switchTheme('googlered')"></button>
+        <button class="theme_btns bigred" onclick="switchTheme('bigred')"></button>
+        <button class="theme_btns orange" onclick="switchTheme('orange')"></button>
+      </div>
+    </div>
+  </div>
+
+    <script>
+      document.getElementById("gstinRadio").onclick = function () {
+        document.getElementById("mainLabel").textContent = "GSTIN";
+      };
+
+      document.getElementById("tannoRadio").onclick = function () {
+        document.getElementById("mainLabel").textContent = "TANNO";
+      };
+    </script>
+    <script src="../../js/themes.js"></script>
+  </body>
+</html>

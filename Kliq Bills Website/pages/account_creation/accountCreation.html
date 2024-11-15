@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account Creation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../styles/normalize.css" />
+    <link rel="stylesheet" href="../../styles/base.css" />
+    <link rel="stylesheet" href="../../styles/tabStyles.css" />
+    <link rel="stylesheet" href="../../styles/formStyles.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationMain.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationForm.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationTabs.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationTable.css" />
+  </head>
+  <body>
+    <div class="modal_container">
+    
+      <div class="close_btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="change_colors" d="M4 20H18V22H4C2.9 22 2 21.11 2 20V6H4V20ZM20.22 2H7.78C6.8 2 6 2.8 6 3.78V16.22C6 17.2 6.8 18 7.78 18H20.22C21.2 18 22 17.2 22 16.22V3.78C22 2.8 21.2 2 20.22 2ZM19 13.6L17.6 15L14 11.4L10.4 15L9 13.6L12.6 10L9 6.4L10.4 5L14 8.6L17.6 5L19 6.4L15.4 10L19 13.6Z" fill="#185492"/>
+        </svg>
+      </div>
+
+      <div class="modal_window">
+        <h2>Account Creation</h2>
+        <div class="account_container">
+          <div class="image-container">
+            <div class="replaceImage">
+              <img
+                class="placeholder_img"
+                src="../../images/placeholder_image.svg"
+                alt="placeholder image"
+              />
+              <button class="img_btn">+ Add Image</button>
+            </div>
+            <div class="active_checkbox">
+              <input type="checkbox" name="active" id="active" />
+              <label for="active">Active</label>
+            </div>
+          </div>
+          <div class="form-container">
+            <div class="form1">
+              <form class="form">
+                <div class="form_div">
+                  <select class="form_input" required>
+                    <option value="" selected disabled hidden>
+                      Please select list
+                    </option>
+                    <option value="w">test 1</option>
+                    <option value="w">test 2</option>
+                  </select>
+                  <label class="form_label">Account Type</label>
+                </div>
+
+                <div class="form_div">
+                  <select class="form_input" required>
+                    <option value="" selected disabled hidden>
+                      Please select list
+                    </option>
+                    <option value="w">test 1</option>
+                    <option value="w">test 2</option>
+                  </select>
+                  <label class="form_label">Registration Type</label>
+                </div>
+
+                <div class="form_div">
+                  <input type="text" class="form_input" placeholder=" " />
+                  <label class="form_label">Account Name</label>
+                </div>
+
+                <div class="form_div">
+                  <input type="text" class="form_input" placeholder=" " />
+                  <label class="form_label">Account Code</label>
+                </div>
+
+                <div class="form_div">
+                  <select class="form_input" required>
+                    <option value="" selected disabled hidden>
+                      Please select list
+                    </option>
+                    <option value="w">test 1</option>
+                    <option value="w">test 2</option>
+                  </select>
+                  <label class="form_label">Sub Account</label>
+                </div>
+
+                <div class="form_div">
+                  <input type="text" class="form_input" placeholder=" " />
+                  <label class="form_label">Alias Name</label>
+                </div>
+
+                <div class="form_div">
+                  <input type="text" class="form_input" placeholder=" " />
+                  <label class="form_label">Work Phone</label>
+                </div>
+
+                <div class="form_div">
+                  <input type="text" class="form_input" placeholder=" " />
+                  <label class="form_label">Mobile</label>
+                </div>
+
+                <div class="form_div">
+                  <input type="text" class="form_input" placeholder=" " />
+                  <label class="form_label">E-mail</label>
+                </div>
+
+                <div class="form_div">
+                  <select class="form_input" required>
+                    <option value="" selected disabled hidden>
+                      Please select list
+                    </option>
+                    <option value="w">test 1</option>
+                    <option value="w">test 2</option>
+                  </select>
+                  <label class="form_label">Select Salesman</label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="opening_balance">
+          <div class="oneBranch">
+            <label class="opbalance" for="opbalance">Opening balance</label
+            ><br />
+            <input type="text" id="opbalance" />
+            <select name="op" id="op">
+              <option value="Dr">Dr</option>
+              <option value="Cr">Cr</option>
+            </select>
+          </div>
+
+          <div class="multipleBranches" style="overflow-y: auto">
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    <div class="checbox_middle">
+                      <input type="checkbox" />Branch Name
+                    </div>
+                  </th>
+                  <th>Opening Balance Amount</th>
+                  <th>Sign</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="checbox_middle">
+                      <input type="checkbox" />Head Office
+                    </div>
+                  </td>
+                  <td><input type="text" /></td>
+                  <td>
+                    <select>
+                      <option value="dr">Dr</option>
+                      <option value="cr">Cr</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="checbox_middle">
+                      <input type="checkbox" />Branch Office
+                    </div>
+                  </td>
+                  <td><input type="text" /></td>
+                  <td>
+                    <select>
+                      <option value="dr">Dr</option>
+                      <option value="cr">Cr</option>
+                    </select>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="3">
+                    <div class="checbox_middle">
+                      <input type="checkbox" id="b2badjust" /><label
+                        for="b2badjust"
+                        >Active Bill to Bill Adjustment to</label
+                      >
+                      this Account
+                    </div>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+
+        <div class="tabandSelectContainer">
+          <div class="tabs">
+            <div class="tab" onclick="showContent('content1')">Address</div>
+            <div class="tab" onclick="showContent('content2')">Details</div>
+            <div class="tab" onclick="showContent('content3')">
+              Personal Details
+            </div>
+            <div class="tab" onclick="showContent('content4')">
+              Bank Details
+            </div>
+            <div class="tab" onclick="showContent('content5')">GST</div>
+            <div class="tab" onclick="showContent('content6')">
+              Custom Fields
+            </div>
+          </div>
+
+          <div class="custom_select">
+            <div class="select-wrapper">
+              <select class="select-menu" onchange="showContent(this.value)">
+                <option value="content1">Address</option>
+                <option value="content2">Details</option>
+                <option value="content3">Personal Details</option>
+                <option value="content4">Bank Details</option>
+                <option value="content5">GST</option>
+                <option value="content6">Custom Fields</option>
+              </select>
+              <div class="arrow"></div>
+            </div>
+          </div>
+
+          <div id="content1" class="content">
+            <div class="billingAddress">
+              <h2>Billing Address</h2>
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">Attention</label>
+              </div>
+
+              <div class="form_div tab_content">
+                <select class="form_input" required>
+                  <option value="" selected disabled hidden>
+                    Please select list
+                  </option>
+                  <option value="w">test 1</option>
+                  <option value="w">test 2</option>
+                </select>
+                <label class="form_label">Country / Region</label>
+              </div>
+
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">City</label>
+              </div>
+
+              <div class="textarea_container tab_content">
+                <label>Address</label><br />
+                <div class="txt_container">
+                  <textarea
+                    id="address1"
+                    name="address"
+                    placeholder="street 1"
+                  ></textarea>
+                  <textarea
+                    id="address2"
+                    name="address"
+                    placeholder="street 2"
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="form_div tab_content accountAddress">
+                <select class="form_input" required>
+                  <option value="" selected disabled hidden>
+                    Select District
+                  </option>
+                  <option value="w">test 1</option>
+                  <option value="w">test 2</option>
+                </select>
+                <label class="form_label">District</label>
+
+                <svg class="addressAddIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="change_colors" d="M16 8H14V11H11V13H14V16H16V13H19V11H16M2 12C2 9.21 3.64 6.8 6 5.68V3.5C2.5 4.76 0 8.09 0 12C0 15.91 2.5 19.24 6 20.5V18.32C3.64 17.2 2 14.79 2 12ZM15 3C10.04 3 6 7.04 6 12C6 16.96 10.04 21 15 21C19.96 21 24 16.96 24 12C24 7.04 19.96 3 15 3ZM15 19C11.14 19 8 15.86 8 12C8 8.14 11.14 5 15 5C18.86 5 22 8.14 22 12C22 15.86 18.86 19 15 19Z" fill="#185492"/>
+                </svg>
+              </div>
+
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">State</label>
+              </div>
+
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">Pincode</label>
+              </div>
+
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">Phone</label>
+              </div>
+            </div>
+
+            <div class="shippingAddress">
+              <div class="addressHeadingContainer">
+                <h2>Shipping Address</h2>
+                <p class="copyAddress">
+                  <img src="../../icons/copy address.png" />
+                  <span style="color: #185492;">Copy Billing Address</span>
+                </p>
+              </div>
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">Attention</label>
+              </div>
+
+              <div class="form_div tab_content">
+                <select class="form_input" required>
+                  <option value="" selected disabled hidden>
+                    Please select list
+                  </option>
+                  <option value="w">test 1</option>
+                  <option value="w">test 2</option>
+                </select>
+                <label class="form_label">Country / Region</label>
+              </div>
+
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">City</label>
+              </div>
+
+              <div class="textarea_container tab_content">
+                <label>Address</label><br />
+                <div class="txt_container">
+                  <textarea
+                    id="shippingAddress1"
+                    name="address"
+                    placeholder="street 1"
+                  ></textarea>
+                  <textarea
+                    id="shippingAddress2"
+                    name="address"
+                    placeholder="street 2"
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="form_div tab_content accountAddress">
+                <select class="form_input" required>
+                  <option value="" selected disabled hidden>
+                    Select District
+                  </option>
+                  <option value="w">test 1</option>
+                  <option value="w">test 2</option>
+                </select>
+                <label class="form_label">District</label>
+                <svg class="addressAddIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="change_colors" d="M16 8H14V11H11V13H14V16H16V13H19V11H16M2 12C2 9.21 3.64 6.8 6 5.68V3.5C2.5 4.76 0 8.09 0 12C0 15.91 2.5 19.24 6 20.5V18.32C3.64 17.2 2 14.79 2 12ZM15 3C10.04 3 6 7.04 6 12C6 16.96 10.04 21 15 21C19.96 21 24 16.96 24 12C24 7.04 19.96 3 15 3ZM15 19C11.14 19 8 15.86 8 12C8 8.14 11.14 5 15 5C18.86 5 22 8.14 22 12C22 15.86 18.86 19 15 19Z" fill="#185492"/>
+                </svg>
+              </div>
+
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">State</label>
+              </div>
+
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">Pincode</label>
+              </div>
+
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">Phone</label>
+              </div>
+            </div>
+          </div>
+
+          <div id="content2" class="content">
+            <div class="details_input_container">
+              <div class="form_div tab_content">
+                <select class="form_input" required>
+                  <option value="" selected disabled hidden>
+                    Please select list
+                  </option>
+                  <option value="w">test 1</option>
+                  <option value="w">test 2</option>
+                </select>
+                <label class="form_label">Bill Mode</label>
+              </div>
+
+              <div class="form_div tab_content">
+                <select class="form_input" required>
+                  <option value="" selected disabled hidden>
+                    Please select list
+                  </option>
+                  <option value="w">test 1</option>
+                  <option value="w">test 2</option>
+                </select>
+                <label class="form_label">Tax Type</label>
+              </div>
+
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">Pan No</label>
+              </div>
+
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">Aadhar Number</label>
+              </div>
+
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">Credit Days</label>
+              </div>
+
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">Fssai No 1</label>
+              </div>
+
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">Fssai No 2</label>
+              </div>
+
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">MSME/UDYAN No.</label>
+              </div>
+
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">DL20B</label>
+              </div>
+
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">DL21B</label>
+              </div>
+
+              <div class="checkbox_credit tab_content">
+                <input
+                  type="checkbox"
+                  name="credit_limit"
+                  id="checkbox_credit"
+                />
+                <label for="checkbox_credit">Enable Credit Limit</label>
+              </div>
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">Credit Limit</label>
+              </div>
+            </div>
+
+            <div class="details_box_container">
+              <p>What do you want to do when credit limit is exceeded?</p>
+              <input type="radio" name="credit_limit" id="restrict" />
+              <label for="restrict"
+                >Restrict creating or updating invoices</label
+              ><br />
+              <input type="radio" name="credit_limit" id="warning" />
+              <label for="warning"
+                >Show a warning and allow users to proceed</label
+              ><br />
+
+              <input type="checkbox" id="credit_limit_so" />
+              <label for="credit_limit_so"
+                >Include sales orders amount in limiting the credit given to
+                customers</label
+              >
+            </div>
+
+            <div class="multiple_checkboxes">
+              <div class="checkbox_group">
+                <input type="checkbox" id="tcs" />
+                <label for="tcs">TCS</label>
+              </div>
+
+              <div class="checkbox_group">
+                <input type="checkbox" id="tds" />
+                <label for="tds">TDS</label>
+              </div>
+
+              <div class="checkbox_group">
+                <input type="checkbox" id="sez" />
+                <label for="sez">SEZ</label>
+              </div>
+
+              <div class="checkbox_group">
+                <input type="checkbox" id="openingAsSeperate" />
+                <label for="openingAsSeperate"
+                  >Display Opening Balance as Seperate</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <div id="content3" class="content">
+            <div class="personal_details_container">
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">Contact Person</label>
+              </div>
+
+              <div class="form_div tab_content">
+                <select class="form_input" required>
+                  <option value="" selected disabled hidden>
+                    Please select list
+                  </option>
+                  <option value="w">test 1</option>
+                  <option value="w">test 2</option>
+                </select>
+                <label class="form_label">Profession</label>
+              </div>
+
+              <div class="form_div tab_content">
+                <select class="form_input" required>
+                  <option value="" selected disabled hidden>
+                    Please select list
+                  </option>
+                  <option value="w">test 1</option>
+                  <option value="w">test 2</option>
+                </select>
+                <label class="form_label">Gender</label>
+              </div>
+
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">Blood Group</label>
+              </div>
+
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">Date of Birth</label>
+              </div>
+
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">Joining Date</label>
+              </div>
+
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">Anniversary Date</label>
+              </div>
+
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">Spouse Name</label>
+              </div>
+
+              <div class="form_div tab_content">
+                <select class="form_input" required>
+                  <option value="" selected disabled hidden>
+                    Please select list
+                  </option>
+                  <option value="w">test 1</option>
+                  <option value="w">test 2</option>
+                </select>
+                <label class="form_label">Rate Type</label>
+              </div>
+            </div>
+          </div>
+
+          <div id="content4" class="content">
+            <div class="bank_details_container">
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">Bank Name</label>
+              </div>
+
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">Account Number</label>
+              </div>
+
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">Account Name</label>
+              </div>
+
+              <div class="form_div tab_content">
+                <input type="text" class="form_input" placeholder=" " />
+                <label class="form_label">GST Tax</label>
+              </div>
+            </div>
+          </div>
+
+          <div id="content5" class="content">
+            <div class="gst_container">
+              <div class="form_div tab_content">
+                <select class="form_input" required>
+                  <option value="" selected disabled hidden>
+                    Please select list
+                  </option>
+                  <option value="w">test 1</option>
+                  <option value="w">test 2</option>
+                </select>
+                <label class="form_label">GST Tax Rates</label>
+              </div>
+
+              <div class="gst_text_input_container" style="overflow-y: auto">
+                <p>CGST:</p>
+                <div class="gst_input_container">
+                  <input type="text" />
+                  <select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                  </select>
+                  <select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="gst_text_input_container" style="overflow-y: auto">
+                <p>SGST:</p>
+                <div class="gst_input_container">
+                  <input type="text" />
+                  <select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                  </select>
+                  <select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="gst_text_input_container" style="overflow-y: auto">
+                <p>IGST:</p>
+                <div class="gst_input_container">
+                  <input type="text" />
+                  <select name="" id="">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                  </select>
+                  <select name="" id="">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="content6" class="content">
+            <div class="custom_fields_container">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">
+                      <input type="checkbox" id="name" />
+                      <label for="name">Name</label>
+                    </th>
+                    <th scope="col">Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <input type="checkbox" id="gold" />
+                      <label for="gold">GOLD CUSTOMERS</label>
+                    </td>
+                    <td>GOLD</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" id="royal" />
+                      <label for="royal">ROYAL CUSTOMERS</label>
+                    </td>
+                    <td>ROYAL</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" id="silver" />
+                      <label for="silver">SILVER CUSTOMERS</label>
+                    </td>
+                    <td>SILVER</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" id="vip" />
+                      <label for="vip">VIP CUSTOMERS</label>
+                    </td>
+                    <td>VIP</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="saveAndClose_btns">
+            <button class="btn btn_close">Close</button>
+            <button class="btn btn_save">Save</button>
+          </div>
+        </div>
+        <!-- Temporary theme -->
+        <div class="themeOptions">
+          <div class="theme_buttons">
+            <button class="theme_btns default" onclick="switchTheme('default')"></button>
+            <button class="theme_btns purple" onclick="switchTheme('purple')"></button>
+            <button class="theme_btns pink" onclick="switchTheme('pink')"></button>
+            <button class="theme_btns green" onclick="switchTheme('green')"></button>
+            <button class="theme_btns blueGreen" onclick="switchTheme('blueGreen')"></button>
+            <button class="theme_btns googlered" onclick="switchTheme('googlered')"></button>
+            <button class="theme_btns bigred" onclick="switchTheme('bigred')"></button>
+            <button class="theme_btns orange" onclick="switchTheme('orange')"></button>
+          </div>
+        </div>
+        <!-- Temporary theme -->
+      </div>
+    </div>
+
+    <script src="../../js/accountCreation.js"></script>
+    <script src="../../js/themes.js"></script>
+  </body>
+</html>

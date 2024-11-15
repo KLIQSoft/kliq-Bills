@@ -1,0 +1,384 @@
+/* [Add Item] Tab Styles */
+.form-container {
+  margin-bottom: 0.5em;
+}
+
+.addIconContainer {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  gap: 5px;
+  align-items: center;
+}
+
+.addIconContainer .addIconChild {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.addIconParent .form_input {
+  position: static;
+}
+
+.item-text-container textarea {
+  width: 265px;
+  height: 40px;
+}
+
+.item-text-container,
+.purPack,
+.salePack {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 10px;
+}
+
+.item-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.conUnits label,
+.Disc label {
+  font-size: 0.8rem;
+}
+
+.packContainer {
+  border: 1px solid var(--primary-text-color);
+  padding: 0.6em;
+  margin-top: 1em;
+  margin-bottom: 0.8em;
+}
+
+.uqcContainer {
+  position: relative;
+}
+
+.uqcButton {
+  border: none;
+  border-radius: 0.2em;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 4.5px;
+  font-size: 0.8em;
+
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.purPack,
+.salePack,
+.Disc {
+  margin-bottom: 0.8em;
+}
+
+.salePack {
+  margin-top: 0.8em;
+}
+
+.dicAndMinQty #DiscQP {
+  width: 30%;
+}
+
+.dicAndMinQty div:last-child {
+  min-width: 130px;
+}
+
+.productInclusive {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 10px;
+}
+
+.productLotTable {
+  margin-top: 0.5em;
+}
+
+.productLotTable tbody td input {
+  width: 60px;
+  text-align: right;
+}
+
+.deleteSvg {
+  width: 16px;
+  cursor: pointer;
+}
+
+.productLotTable tbody {
+  background: #fff;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+.productLotTable thead,
+.productLotTable tfoot {
+  background: linear-gradient(90deg, #d4e8f0 0%, #c6d5dc 100%);
+  filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.25))
+    drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.25));
+  color: #333;
+}
+
+.productLotTable tbody td:last-child,
+.productLotTable tfoot td:last-child {
+  border: none;
+}
+
+.productLotTable tfoot {
+  height: 33px;
+}
+
+/* [Accounts] Tab Styles */
+.gstlabelInputContainer {
+  display: grid;
+  grid-template-columns: 0.5fr 4fr;
+  margin-top: 0.6em;
+  gap: 5px;
+  align-items: center;
+}
+
+.gstlabelInputContainer .gstLabelContainer {
+  width: 10%;
+}
+
+.gstlabelInputContainer .gstLabelContainer,
+.csic_cess label {
+  font-size: 0.8rem;
+}
+
+.gstlabelInputContainer .gstinputs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 10px;
+}
+
+.csic_cess {
+  margin-top: 0.6em;
+}
+
+.gstPurchaseSaleContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 0.8em;
+}
+
+.gstPurchaseContainer,
+.gstSaleContainer {
+  padding: 10px 20px;
+  border-radius: 2px;
+}
+
+.gstPurchaseContainer p,
+.gstSaleContainer p {
+  margin-bottom: 1em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.gstPurchaseContainer select,
+.gstSaleContainer select {
+  margin-bottom: 1em;
+  border: 1px solid #797979;
+  background: #fff;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0),
+    0px 0px 0px 1px rgba(0, 0, 0, 0);
+}
+
+.gstPurchaseContainer .form_label,
+.gstSaleContainer .form_label {
+  border-radius: 0.4em;
+  left: 0;
+  font-size: 0.6rem !important;
+}
+
+.gstPurchaseContainer .form_div,
+.gstSaleContainer .form_div {
+  margin-bottom: 0.9em;
+}
+
+.gstPurchaseContainer {
+  background: linear-gradient(180deg, #c1dce1 0%, #9abac1 100%);
+  color: #344c52;
+  margin-bottom: 0.8em;
+}
+
+.gstSaleContainer {
+  background: linear-gradient(180deg, #afd8e1 0%, #82a6ae 100%);
+  color: #21363a;
+}
+
+.gstAccountContainer .gst_tax_rates {
+  width: 50%;
+}
+
+/* [Additional Fields] Tab Styles */
+.additionalFieldContainer .additionalFieldInputs {
+  margin-bottom: 0.5em;
+}
+
+.additionalFieldContainer .additionalFieldInputs input[type="checkbox"] {
+  display: inline-block;
+  margin-right: 0.5em;
+  vertical-align: text-bottom;
+}
+
+.additionalFieldContainer .additionalFieldInputs .fieldValue {
+  margin-left: 0.5em;
+}
+
+@media (max-width: 392px) {
+  .additionalFieldContainer .additionalFieldInputs .fieldValue {
+    display: block;
+    margin-top: 0.5em;
+    margin-left: 2.2em;
+  }
+}
+
+/* [Variants] & [Add On's] Tab Styles */
+.itemAndManual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0.4em;
+}
+
+.itemAndManual #manualEntry {
+  width: 10px;
+  height: 10px;
+}
+
+.itemAndManual label {
+  font-size: 0.8rem;
+  color: var(--primary-color);
+}
+
+.variantsContentContainer,
+.addonsContentContainer {
+  margin-bottom: 0.6em;
+}
+
+.variantsContentContainer p,
+.addonsContentContainer p {
+  color: var(--primary-color);
+}
+
+.variantsContentContainer p .variantItemName,
+.addonsContentContainer p .addonVariantName {
+  font-weight: bold;
+}
+
+.variantsContentContainer .variantsInputContainer,
+.addonsInputContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 0.4em 0;
+}
+
+.variantsContentContainer .btn,
+.addonsContentContainer .btn {
+  background: var(--primary-linear-gradient-bg);
+  border: none;
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  border-radius: 0.2em;
+  cursor: pointer;
+}
+
+
+.VariantTable td:last-child,
+.addonTable td:last-child {
+  border: none;
+  text-align: center;
+}
+
+.variantPrice,
+.addonPrice {
+  text-align: right;
+}
+
+.variantOrderBy,
+.addonOrderBy {
+  text-align: center;
+}
+
+.addonTable svg {
+  cursor: pointer;
+}
+
+@media (min-width: 601px) {
+  /* [Add Item] Tab Styles */
+  .form-container {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas: "item-text-container item-image-container";
+    padding-top: 0;
+    gap: 10px;
+  }
+
+  .item-image-container {
+    grid-area: item-image-container;
+  }
+  .item-text-container {
+    grid-area: item-text-container;
+    padding-top: 0;
+  }
+
+  .dicAndMinQty div:last-child {
+    width: 32%;
+  }
+
+  .conUnits label,
+  .Disc label {
+    font-size: 0.9rem;
+  }
+
+  .Disc input {
+    text-align: right;
+  }
+
+  .deleteSvg {
+    width: 20px;
+  }
+
+  /* [Accounts] Tab Styles */
+  .gstPurchaseSaleContainer {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .gstlabelInputContainer .gstLabelContainer {
+    font-size: 0.9rem;
+  }
+
+  .gstPurchaseContainer {
+    margin-bottom: 0;
+  }
+
+  /* [Variants] Tab Styles */
+  .itemAndManual #manualEntry {
+    width: 12px;
+    height: 12px;
+  }
+
+  .variantsContentContainer .variantsInputContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .variantsContentContainer .btn {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 769px) {
+  /* [Variants] & [Add On's] Tab Styles */
+  .form_input,
+  .form_label {
+    font-size: 0.7rem;
+  }
+}

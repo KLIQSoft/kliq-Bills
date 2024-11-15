@@ -1,0 +1,282 @@
+/* ================================================== 
+        Below Styles works on all Screen Widths 
+   ================================================== */
+.arrow {
+  margin-left: auto;
+  transition: transform 0.4s;
+}
+
+.menu_icon {
+  margin-left: 0.3rem;
+  margin-right: 0.5rem;
+}
+
+path.fill {
+  transition: 0.4s ease;
+}
+
+/* ========== Accordian Styles - START ========== */
+.accordion {
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  background-color: #f1f1f1;
+}
+
+/* ========== Style the panel (hidden by default) ========== */
+.panel {
+  display: none;
+  overflow: hidden;
+  border-radius: 0px 0px 2px 2px;
+  background: #f4f6f8;
+  box-shadow: 0px 2px 5px -1px rgba(50, 50, 93, 0.25),
+    0px 1px 3px -1px rgba(0, 0, 0, 0.3);
+  margin-bottom: 0.4rem;
+  padding: 0.25rem 0.6rem;
+  transition: 0.4s all;
+}
+
+.panel a {
+  color: #333;
+  display: block;
+  padding: 0.6rem;
+}
+
+.panel a:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.panel p {
+  background: #fff;
+  box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.24);
+  font-size: 0.7rem;
+  text-align: left;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.panel_active {
+  background-color: var(--primary-color) !important;
+  color: #fff;
+}
+
+.panel_active path.fill {
+  fill: #fff;
+}
+
+.panel_active .arrow {
+  transform: rotate(90deg);
+  transition: transform 0.4s;
+}
+/* ========== Accordian Styles - END ========== */
+
+/* ================================================== 
+      Below Styles works on max-width of upto 768px 
+   ================================================== */
+@media (max-width: 768px) {
+
+  /* ========== Hiding .on-screen-menu Styles ========== */
+  .on-screen-menu {
+    display: none;
+  }
+
+  /* ========== Nav Styles - START ========== */
+  nav {
+    padding: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+    position: relative;
+  }
+
+  nav img {
+    width: 100%;
+    max-width: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  /* ========== Nav Styles - END ========== */
+
+  /* ========== Off Screen Menu Styles - START ========== */
+  .off-screen-menu {
+    background-color: #fff;
+    height: 100vh;
+    width: 100%;
+    max-width: 300px;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    text-align: center;
+    font-size: 1rem;
+    transition: 0.3s ease;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+    overflow-y: auto;
+    z-index: 3;
+  }
+
+  .off-screen-menu a {
+    color: #333;
+  }
+
+  .off-screen-menu.active {
+    left: 0;
+  }
+
+  .off-screen-menu ul {
+    max-width: 250px;
+    margin-left: 1.5rem;
+    margin-top: 4rem;
+  }
+
+  .off-screen-menu ul li {
+    display: flex;
+    align-items: center;
+
+    border-radius: 2px;
+    background: #fff;
+    box-shadow: 0px 2px 5px -1px rgba(50, 50, 93, 0.25),
+      0px 1px 3px -1px rgba(0, 0, 0, 0.3);
+    padding: 0.5rem;
+    margin-bottom: 0.25rem;
+    font-size: 0.8rem;
+    transition: 0.4s ease;
+
+    cursor: pointer;
+  }
+
+  .off-screen-menu ul li:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+
+  .off-screen-menu ul li:hover path.fill {
+    fill: #fff !important;
+  }
+  /* ========== Off Screen Menu Styles - END ========== */
+
+  /* ========== Ham Menu Styles - START ========== */
+  .ham-menu {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    margin-left: 0.6rem;
+    cursor: pointer;
+    z-index: 4;
+  }
+
+  .ham-menu span {
+    height: 2px;
+    width: 100%;
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease;
+  }
+
+  .ham-menu span:nth-child(1) {
+    top: 25%;
+  }
+
+  .ham-menu span:nth-child(3) {
+    top: 75%;
+  }
+
+  .ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .ham-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  /* ========== Ham Menu Styles - END ========== */
+}
+
+/* ================================================== 
+   Below Styles works on min-width of 768px and above
+   ================================================== */
+@media (min-width: 769px) {
+
+  /* ========== Hiding .off-screen-menu Styles ========== */
+  .off-screen-menu {
+    display: none;
+  }
+
+  /* ========== Nav Styles - START ========== */
+  nav {
+    padding: 1.5rem;
+    background-color: #fff;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+    position: relative;
+  }
+
+  nav img {
+    max-width: 100px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(30%, -50%);
+  }
+  /* ========== Nav Styles - END ========== */
+
+  /* ========== .on-screen-menu - START ========== */
+  .on-screen-menu {
+    background-color: #fff;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    font-size: 1rem;
+    transition: 0.3s ease;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+    overflow-y: auto;
+  }
+
+  .on-screen-menu a {
+    color: #333;
+  }
+
+  .on-screen-menu ul {
+    max-width: 200px;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .on-screen-menu ul li {
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+    background: #fff;
+    box-shadow: 0px 2px 5px -1px rgba(50, 50, 93, 0.25),
+      0px 1px 3px -1px rgba(0, 0, 0, 0.3);
+    padding: 0.5rem;
+    margin-bottom: 0.25rem;
+    font-size: 0.8rem;
+    transition: 0.4s ease;
+    cursor: pointer;
+  }
+
+  .on-screen-menu ul li:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+
+  .on-screen-menu ul li:hover path.fill {
+    fill: #fff !important;
+  }
+  /* ========== .on-screen-menu - END ========== */
+}

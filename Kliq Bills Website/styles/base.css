@@ -1,0 +1,290 @@
+/* ================================================== 
+                      Base Styles 
+   ================================================== */
+:root {
+  --bg-color: #f5f5f5;
+  --primary-color: #185492;
+  --primary-text-color: #1a1a1a;
+  --table-color-lightBlue: #c3d8ea;
+
+  /* Below gradient color used for some background colors [Ex: ok button, table header] using --primary-color and near --primary-color - START */
+  --primary-linear-gradient-bg: linear-gradient(180deg, #185492 0%, #043e7a 100%);
+  /* Below gradient color used for background colors using --primary-color and near --primary-color - END */
+
+  /* Below gradient color used for some background colors [Cancel button] using white and near white color - START */
+  --white-linear-gradient-bg: linear-gradient(90deg, #ffffff 0%, #f6fbfb 100%);
+  /* Below gradient color used for some background colors [Cancel button] using white and near white color - END */
+
+  /* Below gradient color only available in accountCreationTable.css - START */
+  --multiple-branch-table-head-bg: linear-gradient(90deg, #c6d5dc 0%, #c6d5dc 100%);
+  /* Below gradient color only available in accountCreationTable.css - END */
+
+  /* Below gradient color only available in accountCreationTable.css - START */
+  --account-OpBalance-PopUpTable-tfoot-bg: linear-gradient(180deg, #e3efff 0%, #d0d8e1 100%);
+  /* Below gradient color only available in accountCreationTable.css - END */
+
+  /* Below color only available in accountCreationTabs.css - START */
+  --details-box-container-bg: #D8E3EF;
+  /* Below color only available in accountCreationTabs.css - END */
+
+  /* Below gradient color used in accountCreationMain.css for Gst Pop Up container items - START */
+  --gst-popup-container-items-bg: linear-gradient(180deg, #f4f8f7 0%, #ecf2f3 100%);
+  /* Below gradient color used in accountCreationMain.css for Gst Pop Up container items - END */
+}
+
+[data-theme="purple"] {
+  --bg-color: #f5f5f5;
+  --primary-color: #5F259F; 
+  --primary-linear-gradient-bg: linear-gradient(180deg, #5F259F 0%, #4a1186 100%);
+  --table-color-lightBlue: #d6c7e6;
+  --multiple-branch-table-head-bg: linear-gradient(180deg, #f4eef8 0%, #dfdae7 100%);
+  --gst-popup-container-items-bg: linear-gradient(180deg, #efedf1 0%, #fbf8fe 100%);
+  --account-OpBalance-PopUpTable-tfoot-bg: linear-gradient(180deg, #f5f1f8 0%, #e9e6ed 100%);
+  --details-box-container-bg: #d7cbe4;
+}
+
+[data-theme="pink"] {
+  --bg-color: #f5f5f5;
+  --primary-color: #FF0035; 
+  --primary-linear-gradient-bg: linear-gradient(180deg, #FF0035 0%, #9c0e2a 100%);
+  --table-color-lightBlue: #fbd2da;
+  --multiple-branch-table-head-bg: linear-gradient(180deg, #fce5ea 0%, #e4ced2 100%);
+  --gst-popup-container-items-bg: linear-gradient(180deg, #f0ecec 0%, #fef2f4 100%);
+  --account-OpBalance-PopUpTable-tfoot-bg: linear-gradient(180deg, #faf3f5 0%, #f6f1f2 100%);
+  --details-box-container-bg: #ffdce3;
+}
+
+[data-theme="green"] {
+  --bg-color: #f5f5f5;
+  --primary-color: #092417; 
+  --primary-linear-gradient-bg: linear-gradient(180deg, #092417 0%, #0d5231 100%);
+  --table-color-lightBlue: #bce1cf;
+  --multiple-branch-table-head-bg: linear-gradient(180deg, #def6ea 0%, #d6e9df 100%);
+  --gst-popup-container-items-bg: linear-gradient(180deg, #e5e9e7 0%, #f8faf9 100%);
+  --account-OpBalance-PopUpTable-tfoot-bg: linear-gradient(180deg, #ebf6f1 0%, #eff1f0 100%);
+  --details-box-container-bg: #d2ffe9;
+}
+
+[data-theme="blueGreen"] {
+  --bg-color: #f5f5f5;
+  --primary-color: #00727a; 
+  --primary-linear-gradient-bg: linear-gradient(180deg, #00727a 0%, #0a4e53 100%);
+  --table-color-lightBlue: #dceef0;
+  --multiple-branch-table-head-bg: linear-gradient(180deg, #e3feff 0%, #d2e5e7 100%);
+  --gst-popup-container-items-bg: linear-gradient(180deg, #e1e5e5 0%, #f5f7f8 100%);
+  --account-OpBalance-PopUpTable-tfoot-bg: linear-gradient(180deg, #edf8f9 0%, #eff2f2 100%);
+  --details-box-container-bg: #d0f0f3;
+}
+
+[data-theme="googlered"] {
+  --bg-color: #f5f5f5;
+  --primary-color: #E44432; 
+  --primary-linear-gradient-bg: linear-gradient(180deg, #E44432 0%, #a32113 100%);
+  --table-color-lightBlue: #f6dfdc;
+  --multiple-branch-table-head-bg: linear-gradient(180deg, #faeceb 0%, #e5d7d6 100%);
+  --gst-popup-container-items-bg: linear-gradient(180deg, #edecec 0%, #faefed 100%);
+  --account-OpBalance-PopUpTable-tfoot-bg: linear-gradient(180deg, #f8f4f4 0%, #f3efee 100%);
+  --details-box-container-bg: #f3dbd8;
+}
+
+[data-theme="bigred"] {
+  --bg-color: #f5f5f5;
+  --primary-color: #B73841; 
+  --primary-linear-gradient-bg: linear-gradient(180deg, #B73841 0%, #8c141c 100%);
+  --table-color-lightBlue: #FFEBEC;
+  --multiple-branch-table-head-bg: linear-gradient(180deg, #fadcde 0%, #dbc7c8 100%);
+  --gst-popup-container-items-bg: linear-gradient(180deg, #e8e2e3 0%, #fbf2f2 100%);
+  --account-OpBalance-PopUpTable-tfoot-bg: linear-gradient(180deg, #fff9fa 0%, #f5f4f4 100%);
+  --details-box-container-bg: #e7c5c7;
+}
+
+[data-theme="orange"] {
+  --bg-color: #f5f5f5;
+  --primary-color: #E78E1E; 
+  --primary-linear-gradient-bg: linear-gradient(180deg, #E78E1E 0%, #a56313 100%);
+  --table-color-lightBlue: #fbe4c8;
+  --multiple-branch-table-head-bg: linear-gradient(180deg, #f7eddf 0%, #e5ddd3 100%);
+  --gst-popup-container-items-bg: linear-gradient(180deg, #ededec 0%, #fbf9f5 100%);
+  --account-OpBalance-PopUpTable-tfoot-bg: linear-gradient(180deg, #faf7f4 0%, #edeae7 100%);
+  --details-box-container-bg: #f8e9d8;
+}
+
+.change_colors {
+  fill: var(--primary-color);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font: normal 100%/1.5 "Inter", sans-serif;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+/* ========== Table Styles ========== */
+table {
+  border-collapse: collapse;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  color: var(--primary-text-color);
+  width: 100%;
+}
+
+thead,
+tfoot {
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 8px 10px;
+}
+
+td:last-child {
+  border-left: 1px solid rgb(160 160 160);
+}
+
+td:last-of-type {
+  text-align: left;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: var(--table-color-lightBlue);
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  table {
+    font-size: 0.76rem;
+  }
+}
+
+/* ========== Form Styles ========== */
+input,
+select,
+textarea {
+  border: 1px solid var(--primary-text-color);
+  outline: 0;
+  color: var(--primary-text-color);
+  border-radius: 0.2rem;
+  padding: 0.4rem;
+  font-size: 0.6rem;
+}
+
+@media (min-width: 769px) {
+  input,
+  select {
+    font-size: 0.8rem;
+  }
+}
+
+/* Theme Options */
+.themeOptions {
+  padding: 5px;
+}
+
+.themeOptions h3 {
+  color: var(--primary-color);
+}
+
+.theme_buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+
+.theme_btns {
+  display: inline-block;
+  width: 10px;
+  padding: 10px;
+  border: 1px solid lightgrey;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.default {
+  background-color: #185492;
+}
+
+.purple {
+  background-color: #6219f3;
+}
+
+.pink {
+  background-color: #FF0035;
+}
+
+.green {
+  background-color: #092417;
+}
+
+.blueGreen {
+  background-color: #00727a;
+}
+
+.googlered {
+  background-color: #E44432;
+}
+
+.bigred {
+  background-color: #B73841;
+}
+
+.orange {
+  background-color: #E78E1E;
+}
+
+/* ---------- Scrollbar design -------------- */
+
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+  background: lightgray;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #60696c;
+  border-radius: 10px;
+}

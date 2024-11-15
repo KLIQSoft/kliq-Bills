@@ -1,0 +1,97 @@
+textarea {
+  resize: none;
+}
+
+.textarea_container {
+  display: flex;
+  gap: 5px;
+  font-size: 0.8rem;
+}
+
+.textarea_container label,
+.textarea_container textarea,
+.textarea_container textarea::placeholder {
+  font-size: 0.8rem;
+}
+
+.txt_container textarea {
+  width: 100%;
+}
+
+.addressHeadingContainer,
+.addressHeadingContainer p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.addressHeadingContainer span {
+  display: none;
+}
+
+.addressHeadingContainer p {
+  font-size: 0.45rem;
+}
+
+.saveAndClose_btns {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  
+  border-top: 1px solid var(--primary-text-color);
+  margin-top: 1em;
+  padding-top: 0.8em;
+}
+
+.accountAddress {
+  position: relative;
+}
+
+.addressAddIcon {
+  position: absolute;
+  right: 19px;
+  top: 4px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.saveAndClose_btns .btn {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  background: none;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.saveAndClose_btns .btn_close {
+  background: var(--white-linear-gradient-bg);
+}
+
+.saveAndClose_btns .btn_save {
+  background: var(--primary-linear-gradient-bg);
+  color: #fff;
+}
+
+@media (min-width: 769px) {
+  .textarea_container,
+  .textarea_container label,
+  .textarea_container textarea,
+  .textarea_container textarea::placeholder {
+    font-size: 0.9rem;
+  }
+
+  .addressHeadingContainer p {
+    font-size: 0.7rem;
+  }
+
+  .addressHeadingContainer span {
+    display: inline-block;
+  }
+
+  .saveAndClose_btns .btn {
+    font-size: 0.95rem;
+  }
+}

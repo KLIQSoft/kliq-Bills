@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Item Creation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../styles/normalize.css" />
+    <link rel="stylesheet" href="../../styles/base.css" />
+    <link rel="stylesheet" href="../../styles/tabStyles.css" />
+    <link rel="stylesheet" href="../../styles/formStyles.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationMain.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationForm.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationTabs.css" />
+    <link rel="stylesheet" href="../../styles/itemCreationMain.css" />
+    <!-- <link rel="stylesheet" href="../../styless/accountCreationTable.css" /> -->
+  </head>
+  <body>
+    <div class="modal_container">
+      <div class="close_btn">
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            class="change_colors"
+            d="M4 20H18V22H4C2.9 22 2 21.11 2 20V6H4V20ZM20.22 2H7.78C6.8 2 6 2.8 6 3.78V16.22C6 17.2 6.8 18 7.78 18H20.22C21.2 18 22 17.2 22 16.22V3.78C22 2.8 21.2 2 20.22 2ZM19 13.6L17.6 15L14 11.4L10.4 15L9 13.6L12.6 10L9 6.4L10.4 5L14 8.6L17.6 5L19 6.4L15.4 10L19 13.6Z"
+            fill="#185492"
+          />
+        </svg>
+      </div>
+
+      <div class="modal_window">
+        <h2>Item Creation</h2>
+        <div class="item_container" style="margin-top: 0">
+          <div class="Item-form-container">
+            <div class="tabandSelectContainer" style="margin-top: 0">
+              <div class="tabs">
+                <div class="tab" onclick="showContent('itemContent1')">
+                  Add Item
+                </div>
+                <div class="tab" onclick="showContent('itemContent2')">
+                  Details
+                </div>
+                <div class="tab" onclick="showContent('itemContent3')">
+                  Variants
+                </div>
+                <div class="tab" onclick="showContent('itemContent4')">
+                  Add On's
+                </div>
+                <div class="tab" onclick="showContent('itemContent5')">
+                  Accounts
+                </div>
+                <div class="tab" onclick="showContent('itemContent6')">
+                  Additional Fields
+                </div>
+              </div>
+
+              <div class="custom_select">
+                <div class="select-wrapper">
+                  <select
+                    class="select-menu"
+                    onchange="showContent(this.value)"
+                  >
+                    <option value="itemContent1">Add Item</option>
+                    <option value="itemContent2">Details</option>
+                    <option value="itemContent3">Variants</option>
+                    <option value="itemContent4">Add On's</option>
+                    <option value="itemContent5">Accounts</option>
+                    <option value="itemContent6">Additional Fields</option>
+                  </select>
+                  <div class="arrow"></div>
+                </div>
+              </div>
+
+              <div id="itemContent1" class="content">
+                <div class="form-container">
+                  <div class="item-image-container">
+                    <div class="replaceImage">
+                      <img
+                        class="placeholder_img"
+                        src="../../images/placeholder_image.svg"
+                        alt="placeholder image"
+                      />
+                      <button class="img_btn">+ Add Image</button>
+                    </div>
+                    <div class="active_checkbox">
+                      <input type="checkbox" name="active" id="active" />
+                      <label for="active">Active</label>
+                    </div>
+                    <div class="active_checkbox">
+                      <input type="checkbox" name="active" id="cess" />
+                      <label for="cess">Cess</label>
+                    </div>
+                  </div>
+
+                  <div class="item-text-container">
+                    <div class="form_div">
+                      <input type="text" class="form_input" placeholder=" " />
+                      <label class="form_label">Item Name</label>
+                    </div>
+
+                    <div class="form_div">
+                      <input type="text" class="form_input" placeholder=" " />
+                      <label class="form_label">Item Code</label>
+                    </div>
+
+                    <div class="form_div">
+                      <select class="form_input" required>
+                        <option value="" selected disabled hidden>
+                          Please select list
+                        </option>
+                        <option value="w">test 1</option>
+                        <option value="w">test 2</option>
+                      </select>
+                      <label class="form_label">GST %</label>
+                    </div>
+
+                    <div class="addIconContainer">
+                      <div class="addIconParent">
+                        <div class="form_div">
+                          <input
+                            type="text"
+                            class="form_input"
+                            placeholder=" "
+                          />
+                          <label class="form_label">EAN Code</label>
+                        </div>
+                      </div>
+
+                      <div class="addIconChild">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12 2C10.6868 2 9.38642 2.25866 8.17317 2.7612C6.95991 3.26375 5.85752 4.00035 4.92893 4.92893C3.05357 6.8043 2 9.34784 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C5.85752 19.9997 6.95991 20.7362 8.17317 21.2388C9.38642 21.7413 10.6868 22 12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM13 7H11V11H7V13H11V17H13V13H17V11H13V7Z"
+                            fill="#185492"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+
+                    <div class="form_div">
+                      <div class="addIconContainer">
+                        <div class="addIconParent">
+                          <select class="form_input" required>
+                            <option value="" selected disabled hidden>
+                              Please select list
+                            </option>
+                            <option value="w">test 1</option>
+                            <option value="w">test 2</option>
+                          </select>
+                          <label class="form_label">HSN Code</label>
+                        </div>
+
+                        <div class="addIconChild">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12 2C10.6868 2 9.38642 2.25866 8.17317 2.7612C6.95991 3.26375 5.85752 4.00035 4.92893 4.92893C3.05357 6.8043 2 9.34784 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C5.85752 19.9997 6.95991 20.7362 8.17317 21.2388C9.38642 21.7413 10.6868 22 12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM13 7H11V11H7V13H11V17H13V13H17V11H13V7Z"
+                              fill="#185492"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="addIconContainer">
+                      <div class="addIconParent">
+                        <div class="form_div">
+                          <select class="form_input" required>
+                            <option value="" selected disabled hidden>
+                              Please select list
+                            </option>
+                            <option value="w">test 1</option>
+                            <option value="w">test 2</option>
+                          </select>
+                          <label class="form_label">Category</label>
+                        </div>
+                      </div>
+
+                      <div class="addIconChild">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12 2C10.6868 2 9.38642 2.25866 8.17317 2.7612C6.95991 3.26375 5.85752 4.00035 4.92893 4.92893C3.05357 6.8043 2 9.34784 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C5.85752 19.9997 6.95991 20.7362 8.17317 21.2388C9.38642 21.7413 10.6868 22 12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM13 7H11V11H7V13H11V17H13V13H17V11H13V7Z"
+                            fill="#185492"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+
+                    <div class="form_div">
+                      <select class="form_input" required>
+                        <option value="" selected disabled hidden>
+                          Please select list
+                        </option>
+                        <option value="w">test 1</option>
+                        <option value="w">test 2</option>
+                      </select>
+                      <label class="form_label">Sub Category</label>
+                    </div>
+
+                    <div class="addIconContainer">
+                      <div class="addIconParent">
+                        <div class="form_div">
+                          <input
+                            type="text"
+                            class="form_input"
+                            placeholder=" "
+                          />
+                          <label class="form_label">Company</label>
+                        </div>
+                      </div>
+
+                      <div class="addIconChild">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12 2C10.6868 2 9.38642 2.25866 8.17317 2.7612C6.95991 3.26375 5.85752 4.00035 4.92893 4.92893C3.05357 6.8043 2 9.34784 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C5.85752 19.9997 6.95991 20.7362 8.17317 21.2388C9.38642 21.7413 10.6868 22 12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM13 7H11V11H7V13H11V17H13V13H17V11H13V7Z"
+                            fill="#185492"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+
+                    <div class="addIconContainer">
+                      <div class="addIconParent">
+                        <div class="form_div">
+                          <input
+                            type="text"
+                            class="form_input"
+                            placeholder=" "
+                          />
+                          <label class="form_label">Brand</label>
+                        </div>
+                      </div>
+
+                      <div class="addIconChild">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12 2C10.6868 2 9.38642 2.25866 8.17317 2.7612C6.95991 3.26375 5.85752 4.00035 4.92893 4.92893C3.05357 6.8043 2 9.34784 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C5.85752 19.9997 6.95991 20.7362 8.17317 21.2388C9.38642 21.7413 10.6868 22 12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM13 7H11V11H7V13H11V17H13V13H17V11H13V7Z"
+                            fill="#185492"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+
+                    <div class="form_div">
+                      <div class="form_div">
+                        <input type="text" class="form_input" placeholder=" " />
+                        <label class="form_label">Pack</label>
+                      </div>
+                    </div>
+
+                    <div class="form_div">
+                      <textarea class="form_input" placeholder=" "></textarea>
+                      <label class="form_label">Item Description</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="packContainer">
+                  <div class="purPack">
+                    <div class="uqcContainer">
+                      <div class="form_div">
+                        <input type="text" class="form_input" placeholder=" " />
+                        <label class="form_label">Pur Pack</label>
+                      </div>
+
+                      <button class="uqcButton">UQC</button>
+                    </div>
+
+                    <div class="form_div">
+                      <input type="text" class="form_input" placeholder=" " />
+                      <label class="form_label">Pur Price</label>
+                    </div>
+
+                    <div class="form_div">
+                      <input type="text" class="form_input" placeholder=" " />
+                      <label class="form_label">Land Price</label>
+                    </div>
+
+                    <div class="form_div">
+                      <input type="text" class="form_input" placeholder=" " />
+                      <label class="form_label">Margin</label>
+                    </div>
+
+                    <div class="form_div">
+                      <input type="text" class="form_input" placeholder=" " />
+                      <label class="form_label">Sale Price</label>
+                    </div>
+
+                    <div class="form_div">
+                      <input type="text" class="form_input" placeholder=" " />
+                      <label class="form_label">M.R.P</label>
+                    </div>
+                  </div>
+
+                  <div class="conUnits">
+                    <label for="conUnits">Conversion Units</label>
+                    <input id="conUnits" type="text" />
+                  </div>
+
+                  <div class="salePack">
+                    <div class="uqcContainer">
+                      <div class="form_div">
+                        <input type="text" class="form_input" placeholder=" " />
+                        <label class="form_label">Sale Pack</label>
+                      </div>
+
+                      <button class="uqcButton">UQC</button>
+                    </div>
+
+                    <div class="form_div">
+                      <input type="text" class="form_input" placeholder=" " />
+                      <label class="form_label">Pur Price</label>
+                    </div>
+
+                    <div class="form_div">
+                      <input type="text" class="form_input" placeholder=" " />
+                      <label class="form_label">Land Price</label>
+                    </div>
+
+                    <div class="form_div">
+                      <input type="text" class="form_input" placeholder=" " />
+                      <label class="form_label">Margin</label>
+                    </div>
+
+                    <div class="form_div">
+                      <input type="text" class="form_input" placeholder=" " />
+                      <label class="form_label">Sale Price</label>
+                    </div>
+
+                    <div class="form_div">
+                      <input type="text" class="form_input" placeholder=" " />
+                      <label class="form_label">M.R.P</label>
+                    </div>
+                  </div>
+
+                  <div class="dicAndMinQty">
+                    <div class="Disc">
+                      <label for="DiscQP">Discount</label>
+                      <select>
+                        <option value="qty">Qty</option>
+                        <option value="amt">Amt</option>
+                      </select>
+                      <input id="DiscQP" type="text" />
+                    </div>
+
+                    <div class="form_div">
+                      <input type="text" class="form_input" placeholder=" " />
+                      <label class="form_label">Minimum Qty</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="productInclusive">
+                  <div class="form_div">
+                    <select class="form_input" required>
+                      <option value="" selected disabled hidden>
+                        Please select list
+                      </option>
+                      <option value="w">test 1</option>
+                      <option value="w">test 2</option>
+                    </select>
+                    <label class="form_label">Product Lot Type</label>
+                  </div>
+
+                  <div class="form_div">
+                    <select class="form_input" required>
+                      <option value="" selected disabled hidden>
+                        Please select list
+                      </option>
+                      <option value="w">test 1</option>
+                      <option value="w">test 2</option>
+                    </select>
+                    <label class="form_label">Inclusive</label>
+                  </div>
+                </div>
+
+                <div class="productLotTable" style="overflow: auto">
+                  <table style="white-space: nowrap">
+                    <thead>
+                      <th>Batch</th>
+                      <th>Expiry Date</th>
+                      <th>Qty</th>
+                      <th>Manf. Date</th>
+                      <th>Cost Rate</th>
+                      <th>Total</th>
+                      <th>Sales Price</th>
+                      <th>MRP</th>
+                      <th></th>
+                    </thead>
+                    <tbody>
+                      <td><input type="text" /></td>
+                      <td><input type="text" /></td>
+                      <td><input type="text" /></td>
+                      <td><input type="text" /></td>
+                      <td><input type="text" /></td>
+                      <td><input type="text" /></td>
+                      <td><input type="text" /></td>
+                      <td><input type="text" /></td>
+                      <td>
+                        <svg
+                          class="deleteSvg"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9 3V4H4V6H5V19C5 19.5304 5.21071 20.0391 5.58579 20.4142C5.96086 20.7893 6.46957 21 7 21H17C17.5304 21 18.0391 20.7893 18.4142 20.4142C18.7893 20.0391 19 19.5304 19 19V6H20V4H15V3H9ZM9 8H11V17H9V8ZM13 8H15V17H13V8Z"
+                            fill="#DD7554"
+                          />
+                        </svg>
+                      </td>
+                    </tbody>
+                    <tfoot>
+                      <td colspan="9"></td>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+
+              <div id="itemContent2" class="content"></div>
+
+              <div id="itemContent3" class="content">
+                <div class="variantsContainer">
+                  <div class="itemAndManual">
+                    <div class="form_div">
+                      <select class="form_input" required>
+                        <option value="" selected disabled hidden>
+                          Please select list
+                        </option>
+                        <option value="w">test 1</option>
+                        <option value="w">test 2</option>
+                      </select>
+                      <label class="form_label">Item Name</label>
+                    </div>
+
+                    <div class="manual_entry">
+                      <input
+                        type="checkbox"
+                        name="manualEntry"
+                        id="manualEntry"
+                      />
+                      <label for="manualEntry">Manual Entry</label>
+                    </div>
+                  </div>
+
+                  <div class="variantsContentContainer">
+                    <p>Variants Under <span class="variantItemName">Item Name</span></p>
+
+                    <div class="variantsInputContainer">
+                      <div class="form_div">
+                        <input type="text" class="form_input" placeholder=" " />
+                        <label class="form_label">Variant Code</label>
+                      </div>
+
+                      <div class="form_div">
+                        <input type="text" class="form_input" placeholder=" " />
+                        <label class="form_label">Variant Name</label>
+                      </div>
+
+                      <div class="form_div">
+                        <input type="text" class="form_input" placeholder=" " />
+                        <label class="form_label">Variant Price</label>
+                      </div>
+
+                      <div class="form_div">
+                        <input type="text" class="form_input" placeholder=" " />
+                        <label class="form_label">Variant Online Price</label>
+                      </div>
+                    </div>
+                    <button class="btn">Add New Variant</button>
+                  </div>
+
+                  <div style="overflow: auto;" class="VariantTable">
+                    <table>
+                      <thead>
+                        <th>Variant Code</th>
+                        <th>Variant Name</th>
+                        <th>Variant Price</th>
+                        <th>Order By</th>
+                        <th></th>
+                        <th></th>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>P34439</td>
+                          <td>Dosa's</td>
+                          <td class="variantPrice">2000.00</td>
+                          <td class="variantOrderBy">1</td>
+                          <td>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect class="change_colors" width="20" height="20" rx="2" fill="#185492"/>
+                            <path d="M14.8388 7.24449C15.0555 7.02782 15.0555 6.66671 14.8388 6.46116L13.5388 5.16116C13.3333 4.94449 12.9721 4.94449 12.7555 5.16116L11.7333 6.17782L13.8166 8.26116M4.99992 12.9167V15H7.08326L13.2277 8.85005L11.1444 6.76671L4.99992 12.9167Z" fill="white"/>
+                            </svg>
+                          </td>
+                          <td>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <rect x="0.5" y="0.5" width="19" height="19" rx="1.5" stroke="#D9D9D9"/>
+                             <path d="M8.00001 4V4.66667H4.66667V6H5.33334V14.6667C5.33334 15.0203 5.47381 15.3594 5.72386 15.6095C5.97391 15.8595 6.31305 16 6.66667 16H13.3333C13.687 16 14.0261 15.8595 14.2761 15.6095C14.5262 15.3594 14.6667 15.0203 14.6667 14.6667V6H15.3333V4.66667H12V4H8.00001ZM8.00001 7.33333H9.33334V13.3333H8.00001V7.33333ZM10.6667 7.33333H12V13.3333H10.6667V7.33333Z" fill="#DD7554"/>
+                            </svg>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>P34439</td>
+                          <td>Dosa's</td>
+                          <td class="variantPrice">2000.00</td>
+                          <td class="variantOrderBy">2</td>
+                          <td>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect class="change_colors" width="20" height="20" rx="2" fill="#185492"/>
+                            <path d="M14.8388 7.24449C15.0555 7.02782 15.0555 6.66671 14.8388 6.46116L13.5388 5.16116C13.3333 4.94449 12.9721 4.94449 12.7555 5.16116L11.7333 6.17782L13.8166 8.26116M4.99992 12.9167V15H7.08326L13.2277 8.85005L11.1444 6.76671L4.99992 12.9167Z" fill="white"/>
+                            </svg>
+                          </td>
+                          <td>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <rect x="0.5" y="0.5" width="19" height="19" rx="1.5" stroke="#D9D9D9"/>
+                             <path d="M8.00001 4V4.66667H4.66667V6H5.33334V14.6667C5.33334 15.0203 5.47381 15.3594 5.72386 15.6095C5.97391 15.8595 6.31305 16 6.66667 16H13.3333C13.687 16 14.0261 15.8595 14.2761 15.6095C14.5262 15.3594 14.6667 15.0203 14.6667 14.6667V6H15.3333V4.66667H12V4H8.00001ZM8.00001 7.33333H9.33334V13.3333H8.00001V7.33333ZM10.6667 7.33333H12V13.3333H10.6667V7.33333Z" fill="#DD7554"/>
+                            </svg>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>P34439</td>
+                          <td>Dosa's</td>
+                          <td class="variantPrice">2000.00</td>
+                          <td class="variantOrderBy">3</td>
+                          <td>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect class="change_colors" width="20" height="20" rx="2" fill="#185492"/>
+                            <path d="M14.8388 7.24449C15.0555 7.02782 15.0555 6.66671 14.8388 6.46116L13.5388 5.16116C13.3333 4.94449 12.9721 4.94449 12.7555 5.16116L11.7333 6.17782L13.8166 8.26116M4.99992 12.9167V15H7.08326L13.2277 8.85005L11.1444 6.76671L4.99992 12.9167Z" fill="white"/>
+                            </svg>
+                          </td>
+                          <td>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <rect x="0.5" y="0.5" width="19" height="19" rx="1.5" stroke="#D9D9D9"/>
+                             <path d="M8.00001 4V4.66667H4.66667V6H5.33334V14.6667C5.33334 15.0203 5.47381 15.3594 5.72386 15.6095C5.97391 15.8595 6.31305 16 6.66667 16H13.3333C13.687 16 14.0261 15.8595 14.2761 15.6095C14.5262 15.3594 14.6667 15.0203 14.6667 14.6667V6H15.3333V4.66667H12V4H8.00001ZM8.00001 7.33333H9.33334V13.3333H8.00001V7.33333ZM10.6667 7.33333H12V13.3333H10.6667V7.33333Z" fill="#DD7554"/>
+                            </svg>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>P34439</td>
+                          <td>Dosa's</td>
+                          <td class="variantPrice">2000.00</td>
+                          <td class="variantOrderBy">4</td>
+                          <td>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect class="change_colors" width="20" height="20" rx="2" fill="#185492"/>
+                            <path d="M14.8388 7.24449C15.0555 7.02782 15.0555 6.66671 14.8388 6.46116L13.5388 5.16116C13.3333 4.94449 12.9721 4.94449 12.7555 5.16116L11.7333 6.17782L13.8166 8.26116M4.99992 12.9167V15H7.08326L13.2277 8.85005L11.1444 6.76671L4.99992 12.9167Z" fill="white"/>
+                            </svg>
+                          </td>
+                          <td>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <rect x="0.5" y="0.5" width="19" height="19" rx="1.5" stroke="#D9D9D9"/>
+                             <path d="M8.00001 4V4.66667H4.66667V6H5.33334V14.6667C5.33334 15.0203 5.47381 15.3594 5.72386 15.6095C5.97391 15.8595 6.31305 16 6.66667 16H13.3333C13.687 16 14.0261 15.8595 14.2761 15.6095C14.5262 15.3594 14.6667 15.0203 14.6667 14.6667V6H15.3333V4.66667H12V4H8.00001ZM8.00001 7.33333H9.33334V13.3333H8.00001V7.33333ZM10.6667 7.33333H12V13.3333H10.6667V7.33333Z" fill="#DD7554"/>
+                            </svg>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <div id="itemContent4" class="content">
+                <div class="addOnsContainer">
+
+                  <div class="form_div">
+                    <select style="width: 50%;" class="form_input" required>
+                      <option value="" selected disabled hidden>
+                        Please select list
+                      </option>
+                      <option value="w">test 1</option>
+                      <option value="w">test 2</option>
+                    </select>
+                    <label class="form_label">Variant Name</label>
+                  </div> 
+
+                  <div class="addonsContentContainer">
+                    <p>Add On's Under <span class="addonVariantName">Variant Name</span></p>
+
+                    <div class="addonsInputContainer">
+                      <div class="form_div">
+                        <input type="text" class="form_input" placeholder=" " />
+                        <label class="form_label">Variant (Optional)</label>
+                      </div>
+
+                      <div class="form_div">
+                        <input type="text" class="form_input" placeholder=" " />
+                        <label class="form_label">Add On Name</label>
+                      </div>
+
+                      <div class="form_div">
+                        <input type="text" class="form_input" placeholder=" " />
+                        <label class="form_label">Add On Price</label>
+                      </div>
+                    </div>
+                    <button class="btn">Save</button>
+                  </div>
+
+                  <div class="addonTable" style="overflow: auto;">
+                    <table>
+                      <thead>
+                        <th>Variant Name</th>
+                        <th>Add On Name</th>
+                        <th>Add On Price</th>
+                        <th>Order By</th>
+                        <th></th>
+                        <th></th>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Dosa's</td>
+                          <td>Dosa's</td>
+                          <td class="addonPrice">2000.00</td>
+                          <td class="addonOrderBy">1</td>
+                          <td>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect class="change_colors" width="20" height="20" rx="2" fill="#185492"/>
+                            <path d="M14.8388 7.24449C15.0555 7.02782 15.0555 6.66671 14.8388 6.46116L13.5388 5.16116C13.3333 4.94449 12.9721 4.94449 12.7555 5.16116L11.7333 6.17782L13.8166 8.26116M4.99992 12.9167V15H7.08326L13.2277 8.85005L11.1444 6.76671L4.99992 12.9167Z" fill="white"/>
+                            </svg>
+                          </td>
+                          <td>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <rect x="0.5" y="0.5" width="19" height="19" rx="1.5" stroke="#D9D9D9"/>
+                             <path d="M8.00001 4V4.66667H4.66667V6H5.33334V14.6667C5.33334 15.0203 5.47381 15.3594 5.72386 15.6095C5.97391 15.8595 6.31305 16 6.66667 16H13.3333C13.687 16 14.0261 15.8595 14.2761 15.6095C14.5262 15.3594 14.6667 15.0203 14.6667 14.6667V6H15.3333V4.66667H12V4H8.00001ZM8.00001 7.33333H9.33334V13.3333H8.00001V7.33333ZM10.6667 7.33333H12V13.3333H10.6667V7.33333Z" fill="#DD7554"/>
+                            </svg>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Dosa's</td>
+                          <td>Dosa's</td>
+                          <td class="addonPrice">2000.00</td>
+                          <td class="addonOrderBy">2</td>
+                          <td>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect class="change_colors" width="20" height="20" rx="2" fill="#185492"/>
+                            <path d="M14.8388 7.24449C15.0555 7.02782 15.0555 6.66671 14.8388 6.46116L13.5388 5.16116C13.3333 4.94449 12.9721 4.94449 12.7555 5.16116L11.7333 6.17782L13.8166 8.26116M4.99992 12.9167V15H7.08326L13.2277 8.85005L11.1444 6.76671L4.99992 12.9167Z" fill="white"/>
+                            </svg>
+                          </td>
+                          <td>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <rect x="0.5" y="0.5" width="19" height="19" rx="1.5" stroke="#D9D9D9"/>
+                             <path d="M8.00001 4V4.66667H4.66667V6H5.33334V14.6667C5.33334 15.0203 5.47381 15.3594 5.72386 15.6095C5.97391 15.8595 6.31305 16 6.66667 16H13.3333C13.687 16 14.0261 15.8595 14.2761 15.6095C14.5262 15.3594 14.6667 15.0203 14.6667 14.6667V6H15.3333V4.66667H12V4H8.00001ZM8.00001 7.33333H9.33334V13.3333H8.00001V7.33333ZM10.6667 7.33333H12V13.3333H10.6667V7.33333Z" fill="#DD7554"/>
+                            </svg>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Dosa's</td>
+                          <td>Dosa's</td>
+                          <td class="addonPrice">2000.00</td>
+                          <td class="addonOrderBy">3</td>
+                          <td>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect class="change_colors" width="20" height="20" rx="2" fill="#185492"/>
+                            <path d="M14.8388 7.24449C15.0555 7.02782 15.0555 6.66671 14.8388 6.46116L13.5388 5.16116C13.3333 4.94449 12.9721 4.94449 12.7555 5.16116L11.7333 6.17782L13.8166 8.26116M4.99992 12.9167V15H7.08326L13.2277 8.85005L11.1444 6.76671L4.99992 12.9167Z" fill="white"/>
+                            </svg>
+                          </td>
+                          <td>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <rect x="0.5" y="0.5" width="19" height="19" rx="1.5" stroke="#D9D9D9"/>
+                             <path d="M8.00001 4V4.66667H4.66667V6H5.33334V14.6667C5.33334 15.0203 5.47381 15.3594 5.72386 15.6095C5.97391 15.8595 6.31305 16 6.66667 16H13.3333C13.687 16 14.0261 15.8595 14.2761 15.6095C14.5262 15.3594 14.6667 15.0203 14.6667 14.6667V6H15.3333V4.66667H12V4H8.00001ZM8.00001 7.33333H9.33334V13.3333H8.00001V7.33333ZM10.6667 7.33333H12V13.3333H10.6667V7.33333Z" fill="#DD7554"/>
+                            </svg>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Dosa's</td>
+                          <td>Dosa's</td>
+                          <td class="addonPrice">2000.00</td>
+                          <td class="addonOrderBy">4</td>
+                          <td>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect class="change_colors" width="20" height="20" rx="2" fill="#185492"/>
+                            <path d="M14.8388 7.24449C15.0555 7.02782 15.0555 6.66671 14.8388 6.46116L13.5388 5.16116C13.3333 4.94449 12.9721 4.94449 12.7555 5.16116L11.7333 6.17782L13.8166 8.26116M4.99992 12.9167V15H7.08326L13.2277 8.85005L11.1444 6.76671L4.99992 12.9167Z" fill="white"/>
+                            </svg>
+                          </td>
+                          <td>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <rect x="0.5" y="0.5" width="19" height="19" rx="1.5" stroke="#D9D9D9"/>
+                             <path d="M8.00001 4V4.66667H4.66667V6H5.33334V14.6667C5.33334 15.0203 5.47381 15.3594 5.72386 15.6095C5.97391 15.8595 6.31305 16 6.66667 16H13.3333C13.687 16 14.0261 15.8595 14.2761 15.6095C14.5262 15.3594 14.6667 15.0203 14.6667 14.6667V6H15.3333V4.66667H12V4H8.00001ZM8.00001 7.33333H9.33334V13.3333H8.00001V7.33333ZM10.6667 7.33333H12V13.3333H10.6667V7.33333Z" fill="#DD7554"/>
+                            </svg>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                </div>
+              </div>
+
+              <div id="itemContent5" class="content">
+                <div class="gstAccountContainer">
+                  <div class="form_div gst_tax_rates">
+                    <select class="form_input" required>
+                      <option value="" selected disabled hidden>
+                        Please select list
+                      </option>
+                      <option value="w">test 1</option>
+                      <option value="w">test 2</option>
+                    </select>
+                    <label class="form_label">GST Tax Rates</label>
+                  </div>
+
+                  <div class="csic_gst">
+                    <div class="csic_cgst">
+                      <div class="gstlabelInputContainer">
+                        <div class="gstLabelContainer">
+                          <label for="cgst">CGST:</label>
+                        </div>
+                        <div class="gstinputs">
+                          <input type="text" id="cgst" />
+                          <select>
+                            <option value="1">test1</option>
+                          </select>
+                          <select>
+                            <option value="1">test2</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="csic_sgst">
+                      <div class="gstlabelInputContainer">
+                        <div class="gstLabelContainer">
+                          <label for="sgst">SGST:</label>
+                        </div>
+                        <div class="gstinputs">
+                          <input type="text" id="sgst" />
+                          <select>
+                            <option value="1">test1</option>
+                          </select>
+                          <select>
+                            <option value="1">test2</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="csic_igst">
+                      <div class="gstlabelInputContainer">
+                        <div class="gstLabelContainer">
+                          <label for="igst">IGST:</label>
+                        </div>
+                        <div class="gstinputs">
+                          <input type="text" id="igst" />
+                          <select>
+                            <option value="1">test1</option>
+                          </select>
+                          <select>
+                            <option value="1">test2</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="csic_cess">
+                      <label for="cess">Addtnl. Cess:</label>
+                      <input type="text" id="cess" />
+                    </div>
+                  </div>
+
+                  <div class="gstPurchaseSaleContainer">
+                    <div class="gstPurchaseContainer">
+                      <p>Purchase</p>
+                      <div class="purchaseInputContainer">
+                        <div class="form_div">
+                          <select class="form_input" required>
+                            <option value="" selected disabled hidden>
+                              Please select list
+                            </option>
+                            <option value="w">test 1</option>
+                            <option value="w">test 2</option>
+                          </select>
+                          <label class="form_label">GST Purchase A/C:</label>
+                        </div>
+
+                        <div class="form_div">
+                          <select class="form_input" required>
+                            <option value="" selected disabled hidden>
+                              Please select list
+                            </option>
+                            <option value="w">test 1</option>
+                            <option value="w">test 2</option>
+                          </select>
+                          <label class="form_label">IGST Purchase A/C:</label>
+                        </div>
+
+                        <div class="form_div">
+                          <select class="form_input" required>
+                            <option value="" selected disabled hidden>
+                              Please select list
+                            </option>
+                            <option value="w">test 1</option>
+                            <option value="w">test 2</option>
+                          </select>
+                          <label class="form_label"
+                            >GST Purchase Return A/C:</label
+                          >
+                        </div>
+
+                        <div class="form_div">
+                          <select class="form_input" required>
+                            <option value="" selected disabled hidden>
+                              Please select list
+                            </option>
+                            <option value="w">test 1</option>
+                            <option value="w">test 2</option>
+                          </select>
+                          <label class="form_label"
+                            >IGST Purchase Return A/C:</label
+                          >
+                        </div>
+
+                        <div class="form_div">
+                          <select class="form_input" required>
+                            <option value="" selected disabled hidden>
+                              Please select list
+                            </option>
+                            <option value="w">test 1</option>
+                            <option value="w">test 2</option>
+                          </select>
+                          <label class="form_label">GST Credit Note A/C:</label>
+                        </div>
+
+                        <div class="form_div">
+                          <select class="form_input" required>
+                            <option value="" selected disabled hidden>
+                              Please select list
+                            </option>
+                            <option value="w">test 1</option>
+                            <option value="w">test 2</option>
+                          </select>
+                          <label class="form_label"
+                            >IGST Credit Note A/C:</label
+                          >
+                        </div>
+
+                        <div class="form_div">
+                          <select class="form_input" required>
+                            <option value="" selected disabled hidden>
+                              Please select list
+                            </option>
+                            <option value="w">test 1</option>
+                            <option value="w">test 2</option>
+                          </select>
+                          <label class="form_label"
+                            >GST Service Bill A/C:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="gstSaleContainer">
+                      <p>Sale</p>
+                      <div class="purchaseInputContainer">
+                        <div class="form_div">
+                          <select class="form_input" required>
+                            <option value="" selected disabled hidden>
+                              Please select list
+                            </option>
+                            <option value="w">test 1</option>
+                            <option value="w">test 2</option>
+                          </select>
+                          <label class="form_label">GST Sale A/C:</label>
+                        </div>
+
+                        <div class="form_div">
+                          <select class="form_input" required>
+                            <option value="" selected disabled hidden>
+                              Please select list
+                            </option>
+                            <option value="w">test 1</option>
+                            <option value="w">test 2</option>
+                          </select>
+                          <label class="form_label">IGST Sale A/C:</label>
+                        </div>
+
+                        <div class="form_div">
+                          <select class="form_input" required>
+                            <option value="" selected disabled hidden>
+                              Please select list
+                            </option>
+                            <option value="w">test 1</option>
+                            <option value="w">test 2</option>
+                          </select>
+                          <label class="form_label">GST Sale Return A/C:</label>
+                        </div>
+
+                        <div class="form_div">
+                          <select class="form_input" required>
+                            <option value="" selected disabled hidden>
+                              Please select list
+                            </option>
+                            <option value="w">test 1</option>
+                            <option value="w">test 2</option>
+                          </select>
+                          <label class="form_label"
+                            >IGST Sale Return A/C:</label
+                          >
+                        </div>
+
+                        <div class="form_div">
+                          <select class="form_input" required>
+                            <option value="" selected disabled hidden>
+                              Please select list
+                            </option>
+                            <option value="w">test 1</option>
+                            <option value="w">test 2</option>
+                          </select>
+                          <label class="form_label">GST Debit Note A/C:</label>
+                        </div>
+
+                        <div class="form_div">
+                          <select class="form_input" required>
+                            <option value="" selected disabled hidden>
+                              Please select list
+                            </option>
+                            <option value="w">test 1</option>
+                            <option value="w">test 2</option>
+                          </select>
+                          <label class="form_label">IGST Debit Note A/C:</label>
+                        </div>
+
+                        <div class="form_div">
+                          <select class="form_input" required>
+                            <option value="" selected disabled hidden>
+                              Please select list
+                            </option>
+                            <option value="w">test 1</option>
+                            <option value="w">test 2</option>
+                          </select>
+                          <label class="form_label"
+                            >IGST Service Bill A/C:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="itemContent6" class="content">
+                <div class="additionalFieldContainer">
+                  <div class="additionalFieldInputs">
+                    <input type="checkbox" checked />
+                    <input type="text" placeholder="Field 1" />
+                    <!-- This below field is visible only after checkbox is checked -->
+                    <input
+                      class="fieldValue"
+                      type="text"
+                      placeholder="Enter Value for Field 1"
+                    />
+                  </div>
+
+                  <div class="additionalFieldInputs">
+                    <input type="checkbox" />
+                    <input type="text" placeholder="Additional Field 2 Name" />
+                  </div>
+
+                  <div class="additionalFieldInputs">
+                    <input type="checkbox" />
+                    <input type="text" placeholder="Additional Field 3 Name" />
+                  </div>
+
+                  <div class="additionalFieldInputs">
+                    <input type="checkbox" />
+                    <input type="text" placeholder="Additional Field 4 Name" />
+                  </div>
+
+                  <div class="additionalFieldInputs">
+                    <input type="checkbox" />
+                    <input type="text" placeholder="Additional Field 5 Name" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="saveAndClose_btns">
+                <button class="btn btn_close">Close</button>
+                <button class="btn btn_save">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Temporary theme -->
+        <div class="themeOptions">
+          <div class="theme_buttons">
+            <button
+              class="theme_btns default"
+              onclick="switchTheme('default')"
+            ></button>
+            <button
+              class="theme_btns purple"
+              onclick="switchTheme('purple')"
+            ></button>
+            <button
+              class="theme_btns pink"
+              onclick="switchTheme('pink')"
+            ></button>
+            <button
+              class="theme_btns green"
+              onclick="switchTheme('green')"
+            ></button>
+            <button
+              class="theme_btns blueGreen"
+              onclick="switchTheme('blueGreen')"
+            ></button>
+            <button
+              class="theme_btns googlered"
+              onclick="switchTheme('googlered')"
+            ></button>
+            <button
+              class="theme_btns bigred"
+              onclick="switchTheme('bigred')"
+            ></button>
+            <button
+              class="theme_btns orange"
+              onclick="switchTheme('orange')"
+            ></button>
+          </div>
+        </div>
+        <!-- Temporary theme -->
+      </div>
+    </div>
+    <script src="../../js/accountCreation.js"></script>
+    <script src="../../js/themes.js"></script>
+  </body>
+</html>

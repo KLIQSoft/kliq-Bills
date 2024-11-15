@@ -1,0 +1,122 @@
+.details_input_container,
+.personal_details_container,
+.bank_details_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 10px;
+  align-items: center;
+}
+
+.checkbox_credit label{
+  font-size: 0.8rem;
+}
+
+.details_box_container {
+  background-color: var(--details-box-container-bg);
+  padding: 12px 20px;
+  font-size: 0.8rem;
+  margin-top: 0.7em;
+  margin-bottom: 0.3em;
+}
+
+.details_box_container p {
+  margin-bottom: 0.3em;
+}
+
+.details_box_container input[type="checkbox"] {
+  margin-top: 0.7em;
+}
+
+.multiple_checkboxes {
+  font-size: 0.75em;
+}
+
+.multiple_checkboxes,
+.multiple_checkboxes .checkbox_group {
+  display: flex;
+  align-items: center;
+}
+
+.multiple_checkboxes input,
+.multiple_checkboxes label {
+  display: inline-block;
+}
+
+.multiple_checkboxes input {
+  width: 12px;
+  height: auto;
+}
+
+.multiple_checkboxes .checkbox_group:not(:first-child) {
+  margin-left: 1em;
+}
+
+.multiple_checkboxes label {
+  margin-left: 0.4em;
+}
+
+@media (max-width: 600px) {
+  .tabs {
+    display: none;
+  }
+  .select-menu {
+    display: block;
+    font-size: 0.8rem;
+  }
+  .custom_select {
+    background: var(--primary-color);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .select-wrapper {
+    position: relative;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+  }
+  .select-menu {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: 0;
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    text-align: left;
+    flex-grow: 1;
+    padding-left: 20px;
+  }
+  .arrow {
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background: url("../icons/drop_down_mobile.png") no-repeat center center;
+    background-size: 16px;
+  }
+}
+
+@media (min-width: 601px) {
+  .account_container {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas: "form_container img_container";
+    padding-top: 1em;
+    gap: 10px;
+    margin-top: 0;
+  }
+  .image-container {
+    grid-area: img_container;
+  }
+  .form-container {
+    grid-area: form_container;
+    padding-top: 0;
+  }
+  .form {
+    padding-top: 0;
+  }
+}

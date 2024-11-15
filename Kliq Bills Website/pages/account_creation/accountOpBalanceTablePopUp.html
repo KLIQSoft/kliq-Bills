@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account OpBalance Table PopUp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../styles/normalize.css" />
+    <link rel="stylesheet" href="../../styles/base.css" />
+    <link rel="stylesheet" href="../../styles/tabStyles.css">
+    <link rel="stylesheet" href="../../styles/formStyles.css">
+    <link rel="stylesheet" href="../../styles/accountCreationMain.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationForm.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationTabs.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationTable.css" />
+  </head>
+  <body>
+    <div class="accountOpBalanceTablePopUp">
+
+      <div class="close-thick">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path class="change_colors" d="M16 2.91L13.09 0L8 5.09L2.91 0L0 2.91L5.09 8L0 13.09L2.91 16L8 10.91L13.09 16L16 13.09L10.91 8L16 2.91Z" fill="#185492"/>
+      </svg>
+      </div>
+
+      <div style="overflow: auto">
+        <table class="accountOpBalanceTablePopUpTable">
+          <thead>
+            <tr>
+              <th scope="col">S.No</th>
+              <th scope="col">Date</th>
+              <th scope="col">Branch</th>
+              <th scope="col">Series</th>
+              <th scope="col">No</th>
+              <th scope="col">Ext</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Sign</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1</th>
+              <td>31-03-2023</td>
+              <td>PNN HM</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0.00</td>
+              <td>
+                <select>
+                  <option value="dr">Dr</option>
+                  <option value="cr">Cr</option>
+                </select>
+              </td>
+            </tr>
+
+            <tr>
+              <th>2</th>
+              <td>31-03-2023</td>
+              <td>PNN HM</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0.00</td>
+              <td>
+                <select>
+                  <option value="dr">Dr</option>
+                  <option value="cr">Cr</option>
+                </select>
+              </td>
+            </tr>
+
+            <tr>
+              <th>3</th>
+              <td>31-03-2023</td>
+              <td>PNN HM</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0.00</td>
+              <td>
+                <select>
+                  <option value="dr">Dr</option>
+                  <option value="cr">Cr</option>
+                </select>
+              </td>
+            </tr>
+
+            <tr>
+              <th>4</th>
+              <td>31-03-2023</td>
+              <td>PNN HM</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0.00</td>
+              <td>
+                <select>
+                  <option value="dr">Dr</option>
+                  <option value="cr">Cr</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="opfoottxtright">
+                <button class="btn btn_close">Close</button>
+              </td>
+              <td><button class="btn btn_ok">Save</button></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <div class="themeOptions">
+        <div class="theme_buttons">
+          <button class="theme_btns default" onclick="switchTheme('default')"></button>
+          <button class="theme_btns purple" onclick="switchTheme('purple')"></button>
+          <button class="theme_btns pink" onclick="switchTheme('pink')"></button>
+          <button class="theme_btns green" onclick="switchTheme('green')"></button>
+          <button class="theme_btns blueGreen" onclick="switchTheme('blueGreen')"></button>
+          <button class="theme_btns googlered" onclick="switchTheme('googlered')"></button>
+          <button class="theme_btns bigred" onclick="switchTheme('bigred')"></button>
+          <button class="theme_btns orange" onclick="switchTheme('orange')"></button>
+        </div>
+      </div>
+    </div>
+    <script src="../../js/themes.js"></script>
+  </body>
+</html>
