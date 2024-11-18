@@ -28,3 +28,21 @@ function syncTabContent() {
 
 window.addEventListener("resize", syncTabContent);
 window.addEventListener("load", syncTabContent);
+
+// Inner Tabs
+const displayContent = (id) => {
+  const tabs = document.querySelectorAll(".tab1");
+  const contents = document.querySelectorAll(".content1");
+  const selectMenu = document.querySelector(".select-menu1");
+  tabs.forEach((tab) => tab.classList.remove("innerActive"));
+  contents.forEach((content) => content.classList.remove("innerActive"));
+  document
+    .querySelector(`.tab[onclick="displayContent('${id}')"]`)
+    .classList.add("innerActive");
+  document.getElementById(id).classList.add("innerActive");
+  // Update select menu
+  selectMenu.value = id;
+};
+// Initialize the first tab and content as active
+document.querySelector(".tab1").classList.add("innerActive");
+document.querySelector(".content1").classList.add("innerActive");

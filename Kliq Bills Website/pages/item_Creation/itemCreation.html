@@ -455,7 +455,292 @@
                 </div>
               </div>
 
-              <div id="itemContent2" class="content"></div>
+              <div id="itemContent2" class="content">
+                <div class="tabs">
+                  <div
+                    class="tab tab1"
+                    onclick="displayContent('detailsContent1')"
+                  >
+                    Trader
+                  </div>
+                  <div
+                    class="tab tab1"
+                    onclick="displayContent('detailsContent2')"
+                  >
+                    Ready Made
+                  </div>
+                  <div
+                    class="tab tab1"
+                    onclick="displayContent('detailsContent3')"
+                  >
+                    Super Market
+                  </div>
+                </div>
+
+                <div class="custom_select">
+                  <div class="select-wrapper">
+                    <select
+                      class="select-menu select-menu1"
+                      onchange="displayContent(this.value)"
+                    >
+                      <option value="detailsContent1">Trader</option>
+                      <option value="detailsContent2">Ready Made</option>
+                      <option value="detailsContent3">Super Market</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div id="detailsContent1" class="content1">
+                  <div class="traderContainer">
+                    <div class="form_div">
+                      <input type="text" class="form_input" placeholder=" " />
+                      <label class="form_label">WS Price</label>
+                    </div>
+
+                    <div class="form_div">
+                      <input type="text" class="form_input" placeholder=" " />
+                      <label class="form_label">Dealer Price</label>
+                    </div>
+
+                    <div class="form_div">
+                      <input type="text" class="form_input" placeholder=" " />
+                      <label class="form_label">Item Alias Name</label>
+                    </div>
+
+                    <div class="form_div">
+                      <select class="form_input" required>
+                        <option value="" selected disabled hidden>
+                          Trading (Default)
+                        </option>
+                        <option value="w">test 1</option>
+                        <option value="w">test 2</option>
+                      </select>
+                      <label class="form_label">Product Status</label>
+                    </div>
+
+                    <div class="form_div">
+                      <input type="text" class="form_input" placeholder=" " />
+                      <label class="form_label">Minimum Qty</label>
+                    </div>
+
+                    <div class="form_div">
+                      <input type="text" class="form_input" placeholder=" " />
+                      <label class="form_label">Rack / Store No.</label>
+                    </div>
+
+                    <div class="aOrd">
+                      <label for="aOrd">Item Comission</label>
+                      <select>
+                        <option value="a">A</option>
+                        <option value="p">D</option>
+                      </select>
+                      <input type="text" id="aOrd" />
+                    </div>
+
+                    <div class="form_div">
+                      <select class="form_input" required>
+                        <option value="" selected disabled hidden>
+                          None (Default)
+                        </option>
+                        <option value="w">test 1</option>
+                        <option value="w">test 2</option>
+                      </select>
+                      <label class="form_label">Barcode Printer</label>
+                    </div>
+
+                    <div class="form_div">
+                      <select class="form_input" required>
+                        <option value="" selected disabled hidden>
+                          Gen Barcode
+                        </option>
+                        <option value="w">test 1</option>
+                        <option value="w">test 2</option>
+                      </select>
+                      <label class="form_label">Barcode Gen Profile</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="detailsContent2" class="content1">
+                  <div class="readyMadeContainer">
+                    <div class="form_div">
+                      <select class="form_input" required>
+                        <option value="" selected disabled hidden>No</option>
+                        <option value="w">test 1</option>
+                        <option value="w">test 2</option>
+                      </select>
+                      <label class="form_label">Size Enable</label>
+                    </div>
+
+                    <div class="form_div">
+                      <select class="form_input" required>
+                        <option value="" selected disabled hidden>
+                          Select Style
+                        </option>
+                        <option value="w">test 1</option>
+                        <option value="w">test 2</option>
+                      </select>
+                      <label class="form_label">Style</label>
+                    </div>
+
+                    <div class="form_div">
+                      <select class="form_input" required>
+                        <option value="" selected disabled hidden>
+                          Select Color
+                        </option>
+                        <option value="w">test 1</option>
+                        <option value="w">test 2</option>
+                      </select>
+                      <label class="form_label">Color</label>
+                    </div>
+
+                    <div class="form_div">
+                      <select class="form_input" required>
+                        <option value="" selected disabled hidden>
+                          Select Pattern
+                        </option>
+                        <option value="w">test 1</option>
+                        <option value="w">test 2</option>
+                      </select>
+                      <label class="form_label">Pattern</label>
+                    </div>
+
+                    <div class="form_div">
+                      <select class="form_input" required>
+                        <option value="" selected disabled hidden>
+                          Select Company
+                        </option>
+                        <option value="w">test 1</option>
+                        <option value="w">test 2</option>
+                      </select>
+                      <label class="form_label">Company</label>
+                    </div>
+
+                    <div class="form_div">
+                      <select class="form_input" required>
+                        <option value="" selected disabled hidden>
+                          Textile - Taka Enable
+                        </option>
+                        <option value="w">test 1</option>
+                        <option value="w">test 2</option>
+                      </select>
+                      <label class="form_label">Business Type</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="detailsContent3" class="content1">
+                  <div class="superMarketContainer">
+                    <div class="form_div">
+                      <select class="form_input" required>
+                        <option value="" selected disabled hidden>
+                          Trading (Default)
+                        </option>
+                        <option value="w">test 1</option>
+                        <option value="w">test 2</option>
+                      </select>
+                      <label class="form_label">Report Based on</label>
+                    </div>
+
+                    <div class="form_div">
+                      <select class="form_input" required>
+                        <option value="" selected disabled hidden>
+                          Item Selection
+                        </option>
+                        <option value="w">test 1</option>
+                        <option value="w">test 2</option>
+                      </select>
+                      <label class="form_label">Bulk / Parent Item</label>
+                    </div>
+
+                    <div class="form_div">
+                      <input type="text" class="form_input" placeholder=" " />
+                      <label class="form_label">Repack Conversions</label>
+                    </div>
+
+                    <div class="form_div">
+                      <input type="text" class="form_input" placeholder=" " />
+                      <label class="form_label">Max. Qty/Shelf Store Capacity</label>
+                    </div>
+
+                    <div class="form_div">
+                      <input type="text" class="form_input" placeholder=" " />
+                      <label class="form_label">Shelf Life</label>
+                    </div>
+
+                    <div class="form_div">
+                      <input type="text" class="form_input" placeholder=" " />
+                      <label class="form_label">Is Weighable</label>
+                    </div>
+
+                    <div class="form_div">
+                      <select class="form_input" required>
+                        <option value="" selected disabled hidden>
+                          None (Default)
+                        </option>
+                        <option value="w">test 1</option>
+                        <option value="w">test 2</option>
+                      </select>
+                      <label class="form_label">Sell by Weights / Units</label>
+                    </div>
+
+                    <div class="form_div">
+                      <select class="form_input" required>
+                        <option value="" selected disabled hidden>
+                          MRP - SRate
+                        </option>
+                        <option value="w">test 1</option>
+                        <option value="w">test 2</option>
+                      </select>
+                      <label class="form_label">Multiple Rate</label>
+                    </div>
+
+                    <div class="form_div">
+                      <select class="form_input" required>
+                        <option value="" selected disabled hidden>
+                          Online Display
+                        </option>
+                        <option value="w">test 1</option>
+                        <option value="w">test 2</option>
+                      </select>
+                      <label class="form_label">Prices</label>
+                    </div>
+
+                    <div class="form_div">
+                      <select class="form_input" required>
+                        <option value="" selected disabled hidden>
+                          Vegetarian
+                        </option>
+                        <option value="w">test 1</option>
+                        <option value="w">test 2</option>
+                      </select>
+                      <label class="form_label">Preparation Type</label>
+                    </div>
+
+                    <div class="form_div">
+                      <select class="form_input" required>
+                        <option value="" selected disabled hidden>
+                          Food
+                        </option>
+                        <option value="w">test 1</option>
+                        <option value="w">test 2</option>
+                      </select>
+                      <label class="form_label">Product Type</label>
+                    </div>
+
+                    <div class="form_div">
+                      <select class="form_input" required>
+                        <option value="" selected disabled hidden>
+                          Dine In
+                        </option>
+                        <option value="w">test 1</option>
+                        <option value="w">test 2</option>
+                      </select>
+                      <label class="form_label">Display Type</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
               <div id="itemContent3" class="content">
                 <div class="variantsContainer">
@@ -482,7 +767,10 @@
                   </div>
 
                   <div class="variantsContentContainer">
-                    <p>Variants Under <span class="variantItemName">Item Name</span></p>
+                    <p>
+                      Variants Under
+                      <span class="variantItemName">Item Name</span>
+                    </p>
 
                     <div class="variantsInputContainer">
                       <div class="form_div">
@@ -508,7 +796,7 @@
                     <button class="btn">Add New Variant</button>
                   </div>
 
-                  <div style="overflow: auto;" class="VariantTable">
+                  <div style="overflow: auto" class="VariantTable">
                     <table>
                       <thead>
                         <th>Variant Code</th>
@@ -525,15 +813,46 @@
                           <td class="variantPrice">2000.00</td>
                           <td class="variantOrderBy">1</td>
                           <td>
-                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect class="change_colors" width="20" height="20" rx="2" fill="#185492"/>
-                            <path d="M14.8388 7.24449C15.0555 7.02782 15.0555 6.66671 14.8388 6.46116L13.5388 5.16116C13.3333 4.94449 12.9721 4.94449 12.7555 5.16116L11.7333 6.17782L13.8166 8.26116M4.99992 12.9167V15H7.08326L13.2277 8.85005L11.1444 6.76671L4.99992 12.9167Z" fill="white"/>
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <rect
+                                class="change_colors"
+                                width="20"
+                                height="20"
+                                rx="2"
+                                fill="#185492"
+                              />
+                              <path
+                                d="M14.8388 7.24449C15.0555 7.02782 15.0555 6.66671 14.8388 6.46116L13.5388 5.16116C13.3333 4.94449 12.9721 4.94449 12.7555 5.16116L11.7333 6.17782L13.8166 8.26116M4.99992 12.9167V15H7.08326L13.2277 8.85005L11.1444 6.76671L4.99992 12.9167Z"
+                                fill="white"
+                              />
                             </svg>
                           </td>
                           <td>
-                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                             <rect x="0.5" y="0.5" width="19" height="19" rx="1.5" stroke="#D9D9D9"/>
-                             <path d="M8.00001 4V4.66667H4.66667V6H5.33334V14.6667C5.33334 15.0203 5.47381 15.3594 5.72386 15.6095C5.97391 15.8595 6.31305 16 6.66667 16H13.3333C13.687 16 14.0261 15.8595 14.2761 15.6095C14.5262 15.3594 14.6667 15.0203 14.6667 14.6667V6H15.3333V4.66667H12V4H8.00001ZM8.00001 7.33333H9.33334V13.3333H8.00001V7.33333ZM10.6667 7.33333H12V13.3333H10.6667V7.33333Z" fill="#DD7554"/>
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <rect
+                                x="0.5"
+                                y="0.5"
+                                width="19"
+                                height="19"
+                                rx="1.5"
+                                stroke="#D9D9D9"
+                              />
+                              <path
+                                d="M8.00001 4V4.66667H4.66667V6H5.33334V14.6667C5.33334 15.0203 5.47381 15.3594 5.72386 15.6095C5.97391 15.8595 6.31305 16 6.66667 16H13.3333C13.687 16 14.0261 15.8595 14.2761 15.6095C14.5262 15.3594 14.6667 15.0203 14.6667 14.6667V6H15.3333V4.66667H12V4H8.00001ZM8.00001 7.33333H9.33334V13.3333H8.00001V7.33333ZM10.6667 7.33333H12V13.3333H10.6667V7.33333Z"
+                                fill="#DD7554"
+                              />
                             </svg>
                           </td>
                         </tr>
@@ -543,15 +862,46 @@
                           <td class="variantPrice">2000.00</td>
                           <td class="variantOrderBy">2</td>
                           <td>
-                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect class="change_colors" width="20" height="20" rx="2" fill="#185492"/>
-                            <path d="M14.8388 7.24449C15.0555 7.02782 15.0555 6.66671 14.8388 6.46116L13.5388 5.16116C13.3333 4.94449 12.9721 4.94449 12.7555 5.16116L11.7333 6.17782L13.8166 8.26116M4.99992 12.9167V15H7.08326L13.2277 8.85005L11.1444 6.76671L4.99992 12.9167Z" fill="white"/>
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <rect
+                                class="change_colors"
+                                width="20"
+                                height="20"
+                                rx="2"
+                                fill="#185492"
+                              />
+                              <path
+                                d="M14.8388 7.24449C15.0555 7.02782 15.0555 6.66671 14.8388 6.46116L13.5388 5.16116C13.3333 4.94449 12.9721 4.94449 12.7555 5.16116L11.7333 6.17782L13.8166 8.26116M4.99992 12.9167V15H7.08326L13.2277 8.85005L11.1444 6.76671L4.99992 12.9167Z"
+                                fill="white"
+                              />
                             </svg>
                           </td>
                           <td>
-                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                             <rect x="0.5" y="0.5" width="19" height="19" rx="1.5" stroke="#D9D9D9"/>
-                             <path d="M8.00001 4V4.66667H4.66667V6H5.33334V14.6667C5.33334 15.0203 5.47381 15.3594 5.72386 15.6095C5.97391 15.8595 6.31305 16 6.66667 16H13.3333C13.687 16 14.0261 15.8595 14.2761 15.6095C14.5262 15.3594 14.6667 15.0203 14.6667 14.6667V6H15.3333V4.66667H12V4H8.00001ZM8.00001 7.33333H9.33334V13.3333H8.00001V7.33333ZM10.6667 7.33333H12V13.3333H10.6667V7.33333Z" fill="#DD7554"/>
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <rect
+                                x="0.5"
+                                y="0.5"
+                                width="19"
+                                height="19"
+                                rx="1.5"
+                                stroke="#D9D9D9"
+                              />
+                              <path
+                                d="M8.00001 4V4.66667H4.66667V6H5.33334V14.6667C5.33334 15.0203 5.47381 15.3594 5.72386 15.6095C5.97391 15.8595 6.31305 16 6.66667 16H13.3333C13.687 16 14.0261 15.8595 14.2761 15.6095C14.5262 15.3594 14.6667 15.0203 14.6667 14.6667V6H15.3333V4.66667H12V4H8.00001ZM8.00001 7.33333H9.33334V13.3333H8.00001V7.33333ZM10.6667 7.33333H12V13.3333H10.6667V7.33333Z"
+                                fill="#DD7554"
+                              />
                             </svg>
                           </td>
                         </tr>
@@ -561,15 +911,46 @@
                           <td class="variantPrice">2000.00</td>
                           <td class="variantOrderBy">3</td>
                           <td>
-                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect class="change_colors" width="20" height="20" rx="2" fill="#185492"/>
-                            <path d="M14.8388 7.24449C15.0555 7.02782 15.0555 6.66671 14.8388 6.46116L13.5388 5.16116C13.3333 4.94449 12.9721 4.94449 12.7555 5.16116L11.7333 6.17782L13.8166 8.26116M4.99992 12.9167V15H7.08326L13.2277 8.85005L11.1444 6.76671L4.99992 12.9167Z" fill="white"/>
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <rect
+                                class="change_colors"
+                                width="20"
+                                height="20"
+                                rx="2"
+                                fill="#185492"
+                              />
+                              <path
+                                d="M14.8388 7.24449C15.0555 7.02782 15.0555 6.66671 14.8388 6.46116L13.5388 5.16116C13.3333 4.94449 12.9721 4.94449 12.7555 5.16116L11.7333 6.17782L13.8166 8.26116M4.99992 12.9167V15H7.08326L13.2277 8.85005L11.1444 6.76671L4.99992 12.9167Z"
+                                fill="white"
+                              />
                             </svg>
                           </td>
                           <td>
-                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                             <rect x="0.5" y="0.5" width="19" height="19" rx="1.5" stroke="#D9D9D9"/>
-                             <path d="M8.00001 4V4.66667H4.66667V6H5.33334V14.6667C5.33334 15.0203 5.47381 15.3594 5.72386 15.6095C5.97391 15.8595 6.31305 16 6.66667 16H13.3333C13.687 16 14.0261 15.8595 14.2761 15.6095C14.5262 15.3594 14.6667 15.0203 14.6667 14.6667V6H15.3333V4.66667H12V4H8.00001ZM8.00001 7.33333H9.33334V13.3333H8.00001V7.33333ZM10.6667 7.33333H12V13.3333H10.6667V7.33333Z" fill="#DD7554"/>
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <rect
+                                x="0.5"
+                                y="0.5"
+                                width="19"
+                                height="19"
+                                rx="1.5"
+                                stroke="#D9D9D9"
+                              />
+                              <path
+                                d="M8.00001 4V4.66667H4.66667V6H5.33334V14.6667C5.33334 15.0203 5.47381 15.3594 5.72386 15.6095C5.97391 15.8595 6.31305 16 6.66667 16H13.3333C13.687 16 14.0261 15.8595 14.2761 15.6095C14.5262 15.3594 14.6667 15.0203 14.6667 14.6667V6H15.3333V4.66667H12V4H8.00001ZM8.00001 7.33333H9.33334V13.3333H8.00001V7.33333ZM10.6667 7.33333H12V13.3333H10.6667V7.33333Z"
+                                fill="#DD7554"
+                              />
                             </svg>
                           </td>
                         </tr>
@@ -579,15 +960,46 @@
                           <td class="variantPrice">2000.00</td>
                           <td class="variantOrderBy">4</td>
                           <td>
-                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect class="change_colors" width="20" height="20" rx="2" fill="#185492"/>
-                            <path d="M14.8388 7.24449C15.0555 7.02782 15.0555 6.66671 14.8388 6.46116L13.5388 5.16116C13.3333 4.94449 12.9721 4.94449 12.7555 5.16116L11.7333 6.17782L13.8166 8.26116M4.99992 12.9167V15H7.08326L13.2277 8.85005L11.1444 6.76671L4.99992 12.9167Z" fill="white"/>
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <rect
+                                class="change_colors"
+                                width="20"
+                                height="20"
+                                rx="2"
+                                fill="#185492"
+                              />
+                              <path
+                                d="M14.8388 7.24449C15.0555 7.02782 15.0555 6.66671 14.8388 6.46116L13.5388 5.16116C13.3333 4.94449 12.9721 4.94449 12.7555 5.16116L11.7333 6.17782L13.8166 8.26116M4.99992 12.9167V15H7.08326L13.2277 8.85005L11.1444 6.76671L4.99992 12.9167Z"
+                                fill="white"
+                              />
                             </svg>
                           </td>
                           <td>
-                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                             <rect x="0.5" y="0.5" width="19" height="19" rx="1.5" stroke="#D9D9D9"/>
-                             <path d="M8.00001 4V4.66667H4.66667V6H5.33334V14.6667C5.33334 15.0203 5.47381 15.3594 5.72386 15.6095C5.97391 15.8595 6.31305 16 6.66667 16H13.3333C13.687 16 14.0261 15.8595 14.2761 15.6095C14.5262 15.3594 14.6667 15.0203 14.6667 14.6667V6H15.3333V4.66667H12V4H8.00001ZM8.00001 7.33333H9.33334V13.3333H8.00001V7.33333ZM10.6667 7.33333H12V13.3333H10.6667V7.33333Z" fill="#DD7554"/>
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <rect
+                                x="0.5"
+                                y="0.5"
+                                width="19"
+                                height="19"
+                                rx="1.5"
+                                stroke="#D9D9D9"
+                              />
+                              <path
+                                d="M8.00001 4V4.66667H4.66667V6H5.33334V14.6667C5.33334 15.0203 5.47381 15.3594 5.72386 15.6095C5.97391 15.8595 6.31305 16 6.66667 16H13.3333C13.687 16 14.0261 15.8595 14.2761 15.6095C14.5262 15.3594 14.6667 15.0203 14.6667 14.6667V6H15.3333V4.66667H12V4H8.00001ZM8.00001 7.33333H9.33334V13.3333H8.00001V7.33333ZM10.6667 7.33333H12V13.3333H10.6667V7.33333Z"
+                                fill="#DD7554"
+                              />
                             </svg>
                           </td>
                         </tr>
@@ -599,9 +1011,8 @@
 
               <div id="itemContent4" class="content">
                 <div class="addOnsContainer">
-
                   <div class="form_div">
-                    <select style="width: 50%;" class="form_input" required>
+                    <select style="width: 50%" class="form_input" required>
                       <option value="" selected disabled hidden>
                         Please select list
                       </option>
@@ -609,10 +1020,13 @@
                       <option value="w">test 2</option>
                     </select>
                     <label class="form_label">Variant Name</label>
-                  </div> 
+                  </div>
 
                   <div class="addonsContentContainer">
-                    <p>Add On's Under <span class="addonVariantName">Variant Name</span></p>
+                    <p>
+                      Add On's Under
+                      <span class="addonVariantName">Variant Name</span>
+                    </p>
 
                     <div class="addonsInputContainer">
                       <div class="form_div">
@@ -633,7 +1047,7 @@
                     <button class="btn">Save</button>
                   </div>
 
-                  <div class="addonTable" style="overflow: auto;">
+                  <div class="addonTable" style="overflow: auto">
                     <table>
                       <thead>
                         <th>Variant Name</th>
@@ -650,15 +1064,46 @@
                           <td class="addonPrice">2000.00</td>
                           <td class="addonOrderBy">1</td>
                           <td>
-                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect class="change_colors" width="20" height="20" rx="2" fill="#185492"/>
-                            <path d="M14.8388 7.24449C15.0555 7.02782 15.0555 6.66671 14.8388 6.46116L13.5388 5.16116C13.3333 4.94449 12.9721 4.94449 12.7555 5.16116L11.7333 6.17782L13.8166 8.26116M4.99992 12.9167V15H7.08326L13.2277 8.85005L11.1444 6.76671L4.99992 12.9167Z" fill="white"/>
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <rect
+                                class="change_colors"
+                                width="20"
+                                height="20"
+                                rx="2"
+                                fill="#185492"
+                              />
+                              <path
+                                d="M14.8388 7.24449C15.0555 7.02782 15.0555 6.66671 14.8388 6.46116L13.5388 5.16116C13.3333 4.94449 12.9721 4.94449 12.7555 5.16116L11.7333 6.17782L13.8166 8.26116M4.99992 12.9167V15H7.08326L13.2277 8.85005L11.1444 6.76671L4.99992 12.9167Z"
+                                fill="white"
+                              />
                             </svg>
                           </td>
                           <td>
-                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                             <rect x="0.5" y="0.5" width="19" height="19" rx="1.5" stroke="#D9D9D9"/>
-                             <path d="M8.00001 4V4.66667H4.66667V6H5.33334V14.6667C5.33334 15.0203 5.47381 15.3594 5.72386 15.6095C5.97391 15.8595 6.31305 16 6.66667 16H13.3333C13.687 16 14.0261 15.8595 14.2761 15.6095C14.5262 15.3594 14.6667 15.0203 14.6667 14.6667V6H15.3333V4.66667H12V4H8.00001ZM8.00001 7.33333H9.33334V13.3333H8.00001V7.33333ZM10.6667 7.33333H12V13.3333H10.6667V7.33333Z" fill="#DD7554"/>
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <rect
+                                x="0.5"
+                                y="0.5"
+                                width="19"
+                                height="19"
+                                rx="1.5"
+                                stroke="#D9D9D9"
+                              />
+                              <path
+                                d="M8.00001 4V4.66667H4.66667V6H5.33334V14.6667C5.33334 15.0203 5.47381 15.3594 5.72386 15.6095C5.97391 15.8595 6.31305 16 6.66667 16H13.3333C13.687 16 14.0261 15.8595 14.2761 15.6095C14.5262 15.3594 14.6667 15.0203 14.6667 14.6667V6H15.3333V4.66667H12V4H8.00001ZM8.00001 7.33333H9.33334V13.3333H8.00001V7.33333ZM10.6667 7.33333H12V13.3333H10.6667V7.33333Z"
+                                fill="#DD7554"
+                              />
                             </svg>
                           </td>
                         </tr>
@@ -668,15 +1113,46 @@
                           <td class="addonPrice">2000.00</td>
                           <td class="addonOrderBy">2</td>
                           <td>
-                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect class="change_colors" width="20" height="20" rx="2" fill="#185492"/>
-                            <path d="M14.8388 7.24449C15.0555 7.02782 15.0555 6.66671 14.8388 6.46116L13.5388 5.16116C13.3333 4.94449 12.9721 4.94449 12.7555 5.16116L11.7333 6.17782L13.8166 8.26116M4.99992 12.9167V15H7.08326L13.2277 8.85005L11.1444 6.76671L4.99992 12.9167Z" fill="white"/>
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <rect
+                                class="change_colors"
+                                width="20"
+                                height="20"
+                                rx="2"
+                                fill="#185492"
+                              />
+                              <path
+                                d="M14.8388 7.24449C15.0555 7.02782 15.0555 6.66671 14.8388 6.46116L13.5388 5.16116C13.3333 4.94449 12.9721 4.94449 12.7555 5.16116L11.7333 6.17782L13.8166 8.26116M4.99992 12.9167V15H7.08326L13.2277 8.85005L11.1444 6.76671L4.99992 12.9167Z"
+                                fill="white"
+                              />
                             </svg>
                           </td>
                           <td>
-                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                             <rect x="0.5" y="0.5" width="19" height="19" rx="1.5" stroke="#D9D9D9"/>
-                             <path d="M8.00001 4V4.66667H4.66667V6H5.33334V14.6667C5.33334 15.0203 5.47381 15.3594 5.72386 15.6095C5.97391 15.8595 6.31305 16 6.66667 16H13.3333C13.687 16 14.0261 15.8595 14.2761 15.6095C14.5262 15.3594 14.6667 15.0203 14.6667 14.6667V6H15.3333V4.66667H12V4H8.00001ZM8.00001 7.33333H9.33334V13.3333H8.00001V7.33333ZM10.6667 7.33333H12V13.3333H10.6667V7.33333Z" fill="#DD7554"/>
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <rect
+                                x="0.5"
+                                y="0.5"
+                                width="19"
+                                height="19"
+                                rx="1.5"
+                                stroke="#D9D9D9"
+                              />
+                              <path
+                                d="M8.00001 4V4.66667H4.66667V6H5.33334V14.6667C5.33334 15.0203 5.47381 15.3594 5.72386 15.6095C5.97391 15.8595 6.31305 16 6.66667 16H13.3333C13.687 16 14.0261 15.8595 14.2761 15.6095C14.5262 15.3594 14.6667 15.0203 14.6667 14.6667V6H15.3333V4.66667H12V4H8.00001ZM8.00001 7.33333H9.33334V13.3333H8.00001V7.33333ZM10.6667 7.33333H12V13.3333H10.6667V7.33333Z"
+                                fill="#DD7554"
+                              />
                             </svg>
                           </td>
                         </tr>
@@ -686,15 +1162,46 @@
                           <td class="addonPrice">2000.00</td>
                           <td class="addonOrderBy">3</td>
                           <td>
-                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect class="change_colors" width="20" height="20" rx="2" fill="#185492"/>
-                            <path d="M14.8388 7.24449C15.0555 7.02782 15.0555 6.66671 14.8388 6.46116L13.5388 5.16116C13.3333 4.94449 12.9721 4.94449 12.7555 5.16116L11.7333 6.17782L13.8166 8.26116M4.99992 12.9167V15H7.08326L13.2277 8.85005L11.1444 6.76671L4.99992 12.9167Z" fill="white"/>
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <rect
+                                class="change_colors"
+                                width="20"
+                                height="20"
+                                rx="2"
+                                fill="#185492"
+                              />
+                              <path
+                                d="M14.8388 7.24449C15.0555 7.02782 15.0555 6.66671 14.8388 6.46116L13.5388 5.16116C13.3333 4.94449 12.9721 4.94449 12.7555 5.16116L11.7333 6.17782L13.8166 8.26116M4.99992 12.9167V15H7.08326L13.2277 8.85005L11.1444 6.76671L4.99992 12.9167Z"
+                                fill="white"
+                              />
                             </svg>
                           </td>
                           <td>
-                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                             <rect x="0.5" y="0.5" width="19" height="19" rx="1.5" stroke="#D9D9D9"/>
-                             <path d="M8.00001 4V4.66667H4.66667V6H5.33334V14.6667C5.33334 15.0203 5.47381 15.3594 5.72386 15.6095C5.97391 15.8595 6.31305 16 6.66667 16H13.3333C13.687 16 14.0261 15.8595 14.2761 15.6095C14.5262 15.3594 14.6667 15.0203 14.6667 14.6667V6H15.3333V4.66667H12V4H8.00001ZM8.00001 7.33333H9.33334V13.3333H8.00001V7.33333ZM10.6667 7.33333H12V13.3333H10.6667V7.33333Z" fill="#DD7554"/>
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <rect
+                                x="0.5"
+                                y="0.5"
+                                width="19"
+                                height="19"
+                                rx="1.5"
+                                stroke="#D9D9D9"
+                              />
+                              <path
+                                d="M8.00001 4V4.66667H4.66667V6H5.33334V14.6667C5.33334 15.0203 5.47381 15.3594 5.72386 15.6095C5.97391 15.8595 6.31305 16 6.66667 16H13.3333C13.687 16 14.0261 15.8595 14.2761 15.6095C14.5262 15.3594 14.6667 15.0203 14.6667 14.6667V6H15.3333V4.66667H12V4H8.00001ZM8.00001 7.33333H9.33334V13.3333H8.00001V7.33333ZM10.6667 7.33333H12V13.3333H10.6667V7.33333Z"
+                                fill="#DD7554"
+                              />
                             </svg>
                           </td>
                         </tr>
@@ -704,22 +1211,52 @@
                           <td class="addonPrice">2000.00</td>
                           <td class="addonOrderBy">4</td>
                           <td>
-                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect class="change_colors" width="20" height="20" rx="2" fill="#185492"/>
-                            <path d="M14.8388 7.24449C15.0555 7.02782 15.0555 6.66671 14.8388 6.46116L13.5388 5.16116C13.3333 4.94449 12.9721 4.94449 12.7555 5.16116L11.7333 6.17782L13.8166 8.26116M4.99992 12.9167V15H7.08326L13.2277 8.85005L11.1444 6.76671L4.99992 12.9167Z" fill="white"/>
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <rect
+                                class="change_colors"
+                                width="20"
+                                height="20"
+                                rx="2"
+                                fill="#185492"
+                              />
+                              <path
+                                d="M14.8388 7.24449C15.0555 7.02782 15.0555 6.66671 14.8388 6.46116L13.5388 5.16116C13.3333 4.94449 12.9721 4.94449 12.7555 5.16116L11.7333 6.17782L13.8166 8.26116M4.99992 12.9167V15H7.08326L13.2277 8.85005L11.1444 6.76671L4.99992 12.9167Z"
+                                fill="white"
+                              />
                             </svg>
                           </td>
                           <td>
-                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                             <rect x="0.5" y="0.5" width="19" height="19" rx="1.5" stroke="#D9D9D9"/>
-                             <path d="M8.00001 4V4.66667H4.66667V6H5.33334V14.6667C5.33334 15.0203 5.47381 15.3594 5.72386 15.6095C5.97391 15.8595 6.31305 16 6.66667 16H13.3333C13.687 16 14.0261 15.8595 14.2761 15.6095C14.5262 15.3594 14.6667 15.0203 14.6667 14.6667V6H15.3333V4.66667H12V4H8.00001ZM8.00001 7.33333H9.33334V13.3333H8.00001V7.33333ZM10.6667 7.33333H12V13.3333H10.6667V7.33333Z" fill="#DD7554"/>
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <rect
+                                x="0.5"
+                                y="0.5"
+                                width="19"
+                                height="19"
+                                rx="1.5"
+                                stroke="#D9D9D9"
+                              />
+                              <path
+                                d="M8.00001 4V4.66667H4.66667V6H5.33334V14.6667C5.33334 15.0203 5.47381 15.3594 5.72386 15.6095C5.97391 15.8595 6.31305 16 6.66667 16H13.3333C13.687 16 14.0261 15.8595 14.2761 15.6095C14.5262 15.3594 14.6667 15.0203 14.6667 14.6667V6H15.3333V4.66667H12V4H8.00001ZM8.00001 7.33333H9.33334V13.3333H8.00001V7.33333ZM10.6667 7.33333H12V13.3333H10.6667V7.33333Z"
+                                fill="#DD7554"
+                              />
                             </svg>
                           </td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
-
                 </div>
               </div>
 

@@ -1,67 +1,86 @@
 /* ========== Tab Styles ========== */
 .tabandSelectContainer {
-    margin-top: 0.8em;
-  }
-  
-  .tabs,
-  .select-menu {
-    display: none;
-  }
-  
-  .tabs {
-    background: #fff;
-    color: var(--primary-color);
-    display: flex;
-    font-size: 0.8rem;
-    border-bottom: 1px solid var(--primary-color);
-  }
-  
-  .tab {
-    padding: 7px 10px;
-    cursor: pointer;
-    border: 1px solid var(--primary-color);
-    border-bottom: none;
-    margin-right: -1px;
-    transition: all 0.4s;
-  }
-  
-  .tab.active {
-    background: var(--primary-linear-gradient-bg);
-    color: #fff;
-  }
-  
-  .tabandSelectContainer .content {
-    display: none;
-  }
-  
-  .tabandSelectContainer .content.active {
-    display: block;
-  }
-  
-  .active_checkbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.8rem;
-    margin-top: 0.4em;
-  }
-  
-  .active_checkbox input {
-    margin-right: 4px;
-    width: 11px;
-    height: 11px;
-  }
-  
-  .content {
-    margin-top: 0.8em;
-  }
-  
-  #content1.active {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-  
-  #content1 .tab_content {
-    margin-top: 0.6em;
-  }
+  margin-top: 0.8em;
+}
+
+.tabs,
+.select-menu {
+  display: none;
+}
+
+.tabs {
+  background: #fff;
+  color: var(--primary-color);
+  display: flex;
+  font-size: 0.8rem;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+#itemContent2 .tabs {
+  border: none;
+  margin-top: -0.8em;
+}
+
+.tab {
+  padding: 7px 10px;
+  cursor: pointer;
+  border: 1px solid var(--primary-color);
+  border-bottom: none;
+  margin-right: -1px;
+  transition: all 0.4s;
+}
+
+#itemContent2 .tab {
+  border: 1px solid #727D83;
+  color: #727D83;
+  padding: 4px 8px;
+}
+
+.tab.active{
+  background: var(--primary-linear-gradient-bg);
+  color: #fff;
+}
+
+#itemContent2 .tab.innerActive {
+  background-color: #64A9C9;
+  color: #fff;
+  border: 1px solid #64A9C9;
+}
+
+.tabandSelectContainer .content,
+.tabandSelectContainer .content1 {
+  display: none;
+}
+
+.tabandSelectContainer .content.active,
+.tabandSelectContainer .content1.innerActive {
+  display: block;
+}
+
+.active_checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  margin-top: 0.4em;
+}
+
+.active_checkbox input {
+  margin-right: 4px;
+  width: 11px;
+  height: 11px;
+}
+
+.content {
+  margin-top: 0.8em;
+}
+
+#content1.active {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+#content1 .tab_content {
+  margin-top: 0.6em;
+}
