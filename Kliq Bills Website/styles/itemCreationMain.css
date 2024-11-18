@@ -134,11 +134,29 @@
 /* [Trader] Tab Styles inside [Details] Tab */
 .traderContainer,
 .readyMadeContainer,
-.superMarketContainer {
+.superMarketContainer1,
+.superMarketContainer2,
+.SuperMarketRate {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 10px;
   margin-top: 0.6em;
+}
+
+.SuperMarketRateContainer {
+  margin: 1rem 0;
+  border: 1px solid var(--primary-text-color);
+  padding: 10px;
+}
+
+.SuperMarketRate {
+  margin-bottom: 0.5em;
+}
+
+.plus-box-multiple {
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
 }
 
 #aOrd {
