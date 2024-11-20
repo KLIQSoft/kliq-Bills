@@ -173,6 +173,101 @@
   overflow: auto;
 }
 
+/* Pop Up Styles */
+.popupContainer {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Pop Up Styles  - Ready Made Pop Up*/
+.readyMadeYesPopUp {
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  color: 979797;
+  display: inline-block;
+}
+
+.main_container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.main_container input {
+  width: 100%;
+  max-width: 60px;
+  text-align: right;
+  outline: 0;
+  padding: 4px;
+  color: #979797;
+  border-radius: 3;
+  font-size: 0.8rem;
+}
+
+.readyMadeYesPopUp svg {
+  width: 16px;
+  min-width: 16px;
+  cursor: pointer;
+}
+
+.readyMadeYesPopUp button {
+  background: var(--primary-color);
+  border: none;
+  padding: 4px 8px;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+/* Pop Up Styles  - Rates Display Pop Up*/
+.ratesPopupContainer,
+.productsPopupContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.ratesDisplayPopUp,
+.productTypePopUp {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ratesDisplayContainer input[type="checkbox"],
+.productsPopupContainer input[type="checkbox"] {
+  display: inline-block;
+  margin-right: 0.5em;
+  width: 10px;
+  vertical-align: middle;
+}
+
+.ratesDisplayContainer input[type="checkbox"]:checked ~ label,
+.productsPopupContainer input[type="checkbox"]:checked ~ label {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.ratesDisplayContainer label,
+.productsPopupContainer label {
+  font-size: 0.8rem;
+  color: #797979;
+}
+
+.ratesDisplayContainer,
+.productTypeContainer {
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.5);
+  padding: 1em;
+}
+
 /* [Accounts] Tab Styles */
 .gstlabelInputContainer {
   display: grid;
@@ -412,6 +507,29 @@
   }
 
   .variantsContentContainer .btn {
+    font-size: 0.9rem;
+  }
+
+  /* Pop Up Styles */
+  /* Pop Up Styles  - Ready Made Pop Up*/
+  .readyMadeYesPopUp svg {
+    width: 24px;
+    min-width: 24px;
+  }
+
+  .main_container input,
+  .readyMadeYesPopUp button {
+    font-size: 0.9rem;
+  }
+
+  /* Pop Up Styles  - Rates Display Pop Up*/
+  .ratesDisplayContainer input[type="checkbox"],
+  .productsPopupContainer input[type="checkbox"] {
+    width: 12px;
+  }
+
+  .ratesDisplayContainer label,
+  .productsPopupContainer label {
     font-size: 0.9rem;
   }
 }
