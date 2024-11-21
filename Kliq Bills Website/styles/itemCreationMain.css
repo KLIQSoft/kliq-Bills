@@ -224,15 +224,17 @@
   font-size: 0.8rem;
 }
 
-/* Pop Up Styles  - Rates Display Pop Up*/
+/* Pop Up Styles  - Rates Display, ProductType & Display Type Pop Up*/
 .ratesPopupContainer,
-.productsPopupContainer {
+.productsPopupContainer,
+.displTypePopupContainer {
   display: flex;
   flex-direction: column;
 }
 
 .ratesDisplayPopUp,
-.productTypePopUp {
+.productTypePopUp,
+.displayTypePopUp {
   height: 100vh;
 
   display: flex;
@@ -241,7 +243,8 @@
 }
 
 .ratesDisplayContainer input[type="checkbox"],
-.productsPopupContainer input[type="checkbox"] {
+.productsPopupContainer input[type="checkbox"],
+.displayTypeContainer input[type="checkbox"] {
   display: inline-block;
   margin-right: 0.5em;
   width: 10px;
@@ -249,23 +252,192 @@
 }
 
 .ratesDisplayContainer input[type="checkbox"]:checked ~ label,
-.productsPopupContainer input[type="checkbox"]:checked ~ label {
+.productsPopupContainer input[type="checkbox"]:checked ~ label,
+.displayTypeContainer input[type="checkbox"]:checked ~ label {
   color: var(--primary-color);
   font-weight: bold;
 }
 
 .ratesDisplayContainer label,
-.productsPopupContainer label {
+.productsPopupContainer label,
+.displayTypeContainer label {
   font-size: 0.8rem;
   color: #797979;
 }
 
 .ratesDisplayContainer,
-.productTypeContainer {
+.productTypeContainer,
+.displayTypeContainer {
   border-radius: 10px;
   background: #fff;
   box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.5);
   padding: 1em;
+}
+
+/* Pop Up Styles - IMEI, CESS, UQC */
+
+.imeiPopupContainer,
+.cessPopupContainer {
+  max-width: 480px;
+  margin: auto;
+  position: relative;
+}
+
+.cessPopupContainer {
+  background: #fff;
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.5);
+}
+
+.imeiPopupContainer .closeIcon,
+.cessPopupContainer .closeIcon,
+.imeiPopupContainer .buttons {
+  position: absolute;
+}
+
+.imeiPopupContainer .closeIcon,
+.cessPopupContainer .closeIcon {
+  cursor: pointer;
+  width: 18px;
+  right: 0;
+  top: 0;
+}
+
+.imeiPopupContainer .buttons {
+  bottom: 0;
+  right: 0;
+}
+
+.imeiPopupWrapper {
+  background: #fff;
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.5);
+  padding: 20px 10px 10px;
+}
+
+.cessWrapper {
+  padding: 1.5em 1.5em 0.25em;
+  border-radius: 0.4em;
+}
+
+.cessWrapper div {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 0.6em;
+}
+
+.cessWrapper div label {
+  flex: 0.6;
+  font-size: 0.8rem;
+}
+
+.cessWrapper div input,
+.cessWrapper div select:not(.cessWrapper .addtnlCess select) {
+  flex: 1;
+}
+
+.imeiPopupWrapper table {
+  white-space: nowrap;
+}
+
+.imeiPopupContainer tfoot {
+  background: #fff;
+}
+
+.imeiPopupContainer tfoot td {
+  text-align: right;
+}
+
+.imeiPopupContainer table td:last-child {
+  border: none;
+}
+
+.imeiPopupContainer tfoot td:last-child {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.cessWrapper .btn,
+.uqcWrapper .uqcPopUpContent .buttons .btn {
+  font-size: 0.8rem;
+}
+
+.cessWrapper .buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.imeiPopupContainer tfoot .btn,
+.cessWrapper .btn,
+.uqcWrapper .uqcPopUpContent .buttons .btn {
+  background: none;
+  border: none;
+  border-radius: 4px;
+  padding: 3px 14px;
+  cursor: pointer;
+}
+
+.imeiPopupContainer tfoot .btnClose,
+.cessWrapper .btnClose,
+.uqcWrapper .uqcPopUpContent .buttons .btnClose {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.imeiPopupContainer tfoot .btnOk,
+.cessWrapper .btnOk,
+.uqcWrapper .uqcPopUpContent .buttons .btnSave {
+  background: var(--primary-linear-gradient-bg);
+  color: #fff;
+}
+
+/* UQC POPUP */
+.uqcWrapper {
+  max-width: 480px;
+  margin: 16em auto;
+}
+
+.uqcWrapper .uqcPopUpTitle {
+  background: #185492;
+  color: #fff;
+  padding: 5px 10px;
+}
+
+.uqcWrapper .uqcPopUpContent {
+  background: #fff;
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.5);
+  padding: 10px 15px;
+}
+
+.uqcWrapper .uqcPopUpContent div {
+  display: grid;
+}
+
+.uqcWrapper .uqcPopUpContent div label {
+  color: #185492;
+  font-size: 0.625rem;
+}
+
+.uqcWrapper .uqcPopUpContent div select {
+  border-radius: 3px;
+  border: 1px solid #D9D9D9;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.00), 0px 0px 0px 1px rgba(0, 0, 0, 0.00);
+  height: 25px;
+}
+
+.uqcWrapper .uqcPopUpContent .uqcMainContent,
+.uqcWrapper .uqcPopUpContent .buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.uqcWrapper .uqcPopUpContent .uqcMainContent div {
+  flex: 1;
+}
+
+.uqcWrapper .uqcPopUpContent .buttons {
+  justify-content: flex-end;
+  margin-top: 0.8em;
 }
 
 /* [Accounts] Tab Styles */
@@ -522,14 +694,16 @@
     font-size: 0.9rem;
   }
 
-  /* Pop Up Styles  - Rates Display Pop Up*/
+  /* Pop Up Styles  - Rates Display, ProductType & Display Type Pop Up*/
   .ratesDisplayContainer input[type="checkbox"],
-  .productsPopupContainer input[type="checkbox"] {
+  .productsPopupContainer input[type="checkbox"],
+  .displayTypeContainer input[type="checkbox"] {
     width: 12px;
   }
 
   .ratesDisplayContainer label,
-  .productsPopupContainer label {
+  .productsPopupContainer label,
+  .displayTypeContainer label {
     font-size: 0.9rem;
   }
 }

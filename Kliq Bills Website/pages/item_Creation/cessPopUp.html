@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CESS Pop Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../styles/normalize.css" />
+    <link rel="stylesheet" href="../../styles/base.css" />
+    <link rel="stylesheet" href="../../styles/tabStyles.css" />
+    <link rel="stylesheet" href="../../styles/formStyles.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationMain.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationForm.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationTabs.css" />
+    <link rel="stylesheet" href="../../styles/itemCreationMain.css" />
+    <!-- <link rel="stylesheet" href="../../styles/accountCreationTable.css" /> -->
+  </head>
+  <body>
+    <div class="cessPopupContainer">
+      <svg
+        class="change_colors closeIcon"
+        width="22"
+        height="22"
+        viewBox="0 0 22 22"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M3.66659 18.3333H16.4999V20.1666H3.66659C2.65825 20.1666 1.83325 19.3508 1.83325 18.3333V5.49992H3.66659V18.3333ZM18.5349 1.83325H7.13159C6.23325 1.83325 5.49992 2.56659 5.49992 3.46492V14.8683C5.49992 15.7666 6.23325 16.4999 7.13159 16.4999H18.5349C19.4333 16.4999 20.1666 15.7666 20.1666 14.8683V3.46492C20.1666 2.56659 19.4333 1.83325 18.5349 1.83325ZM17.4166 12.4666L16.1333 13.7499L12.8333 10.4499L9.53325 13.7499L8.24992 12.4666L11.5499 9.16659L8.24992 5.86659L9.53325 4.58325L12.8333 7.88325L16.1333 4.58325L17.4166 5.86659L14.1166 9.16659L17.4166 12.4666Z"
+          fill="#185492"
+        />
+      </svg>
+
+      <div class="cessWrapper">
+        <div><label for="">Cess %</label><input type="text" /></div>
+        <div>
+          <label for="">Cess Input</label
+          ><select name="" id="">
+            <option value="1">select</option>
+          </select>
+        </div>
+        <div>
+          <label for="">Cess Output</label
+          ><select name="" id="">
+            <option value="1">select</option>
+          </select>
+        </div>
+        <div class="addtnlCess">
+          <label for="">Addtnl. Cess %</label
+          ><select name="" id="">
+            <option value="1">A</option>
+            <option value="2">D</option></select
+          ><input type="text" />
+        </div>
+
+        <div class="buttons">
+          <button class="btn btnClose">Close</button>
+          <button class="btn btnOk">Ok</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
