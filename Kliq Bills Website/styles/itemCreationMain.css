@@ -398,7 +398,7 @@
 }
 
 .uqcWrapper .uqcPopUpTitle {
-  background: #185492;
+  background: var(--primary-color);
   color: #fff;
   padding: 5px 10px;
 }
@@ -414,7 +414,7 @@
 }
 
 .uqcWrapper .uqcPopUpContent div label {
-  color: #185492;
+  color: var(--primary-color);
   font-size: 0.625rem;
 }
 
