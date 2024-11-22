@@ -1,0 +1,485 @@
+/* ========== HSN, Category, Brand, Company Styles ========== */
+/* --- HSN ↓ */
+.hsnPopupContainer,
+/* --- Category ↓ */
+.categoryPopupContainer,
+/* --- Brand ↓ */
+.brandPopupContainer,
+/* --- Company ↓ */
+.companyPopupContainer {
+  background: linear-gradient(180deg, #fff 0%, #fffefe 100%);
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.5);
+  font-size: 0.5rem;
+  padding: 0.625rem;
+
+  max-width: 180px;
+  margin: auto;
+
+  position: relative;
+}
+
+/* --- HSN ↓ */
+.hsnPopupContainer .close_icon,
+/* --- Category ↓ */
+.categoryPopupContainer .close_icon,
+/* --- Brand ↓ */
+.brandPopupContainer .close_icon,
+/* --- Company ↓ */
+.companyPopupContainer .close_icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+/* --- HSN ↓ */
+.hsnPopupContainer div:not(:last-child),
+/* --- Category ↓ */
+.categoryPopupContainer div:not(:last-child),
+/* --- Brand ↓ */
+.brandPopupContainer div:not(:last-child),
+/* --- Company ↓ */
+.companyPopupContainer div:not(:last-child) {
+  margin-bottom: 0.38rem;
+}
+
+/* --- Company ↓ */
+.companyTypeWrapper.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 0 !important;
+}
+
+/* --- HSN ↓ */
+.hsnPopupContainer h2,
+/* --- Category ↓ */
+.categoryPopupContainer h2,
+/* --- Brand ↓ */
+.brandPopupContainer h2,
+/* --- Company ↓ */
+.companyPopupContainer h2 {
+  font-size: 0.625rem;
+  color: var(--primary-color);
+  margin-bottom: 0.625rem;
+}
+
+/* --- HSN ↓ */
+.hsnPopupContainer .addHsn label,
+.hsnPopupContainer .addHsn select,
+.hsnPopupContainer .addHsn textarea,
+/* --- Category ↓ */
+.categoryPopupContainer .addCategory label,
+.categoryPopupContainer .addCategory input,
+.categoryPopupContainer .addCategory select,
+.categoryPopupContainer .addCategory textarea,
+/* --- Brand ↓ */
+.brandPopupContainer .addBrand label,
+.brandPopupContainer .addBrand input,
+.brandPopupContainer .addBrand select,
+.brandPopupContainer .addBrand textarea,
+/* --- Company ↓ */
+.companyPopupContainer .addCompany label,
+.companyPopupContainer .addCompany input,
+.companyPopupContainer .addCompany select,
+.companyPopupContainer .addCompany textarea {
+  display: block;
+  width: 100%;
+  font-size: 0.6rem;
+}
+
+/* --- HSN ↓ */
+.hsnPopupContainer .addHsn select,
+/* --- Category ↓ */
+.categoryPopupContainer .addCategory input,
+.categoryPopupContainer .addCategory select,
+/* --- Brand ↓ */
+.brandPopupContainer .addBrand input,
+.brandPopupContainer .addBrand select,
+/* --- Company ↓ */
+.companyPopupContainer .addCompany input,
+.companyPopupContainer .addCompany select {
+  padding: 0.2rem;
+}
+
+/* --- HSN ↓ */
+.hsnCodeWrapper div {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+/* --- HSN ↓ */
+.hsnCodeWrapper p {
+  background: var(--primary-linear-gradient-bg);
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+  color: #fff;
+  width: 16px;
+  height: 16px;
+  padding: 12px;
+  line-height: 16px;
+  border-radius: 50%;
+  font-size: 0.625rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* --- HSN ↓ */
+.hsnPopupContainer .addHsn .buttons,
+/* --- Category ↓ */
+.categoryPopupContainer .addCategory .buttons,
+/* --- Brand ↓ */
+.brandPopupContainer .addBrand .buttons,
+/* --- Company ↓ */
+.companyPopupContainer .addCompany .buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  font-size: 0.625rem;
+}
+
+/* --- HSN ↓ */
+.hsnPopupContainer .buttons .btn,
+/* --- Category ↓ */
+.categoryPopupContainer .buttons .btn,
+/* --- Brand ↓ */
+.brandPopupContainer .buttons .btn,
+/* --- Company ↓ */
+.companyPopupContainer .buttons .btn {
+  background: none;
+  border: none;
+  padding: 3px 8px;
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+/* --- HSN ↓ */
+.hsnPopupContainer .buttons .btnClose,
+.hsnPopupContainer .buttons .btnEdit,
+/* --- Category ↓ */
+.categoryPopupContainer .buttons .btnClose,
+.categoryPopupContainer .buttons .btnEdit,
+/* --- Brand ↓ */
+.brandPopupContainer .buttons .btnClose,
+.brandPopupContainer .buttons .btnEdit,
+/* --- Company ↓ */
+.companyPopupContainer .buttons .btnClose,
+.companyPopupContainer .buttons .btnEdit {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* --- HSN ↓ */
+.hsnPopupContainer .buttons .btnSave,
+/* --- Category ↓ */
+.categoryPopupContainer .buttons .btnSave,
+/* --- Brand ↓ */
+.brandPopupContainer .buttons .btnSave,
+/* --- Company ↓ */
+.companyPopupContainer .buttons .btnSave {
+  background: var(--primary-linear-gradient-bg);
+  color: #fff;
+}
+
+/* HSN Main Content Styles */
+
+/* --- HSN ↓ */
+.hsnMainContent,
+/* --- Category ↓ */
+.categoryMainContent,
+/* --- Brand ↓ */
+.brandMainContent,
+/* --- Company ↓ */
+.companyMainContent {
+  border: 1px solid var(--primary-text-color);
+  padding: 0.375rem;
+  height: 164px;
+  overflow: auto;
+}
+
+/* --- HSN ↓ */
+.hsnSearchAndCode,
+/* --- Category ↓ */
+.categorySearchAndCode,
+/* --- Brand ↓ */
+.brandSearchAndCode,
+/* --- Company ↓ */
+.companySearchAndCode {
+  margin-top: 1rem;
+}
+
+/* --- HSN ↓ */
+.hsnSearchAndCode .hsnSearch,
+/* --- Category ↓ */
+.categorySearchAndCode .categorySearch,
+/* --- Brand ↓ */
+.brandSearchAndCode .brandSearch,
+/* --- Company ↓ */
+.companySearchAndCode .companySearch {
+  position: relative;
+}
+
+/* --- HSN ↓ */
+.hsnSearchAndCode .hsnSearch .searchIcon,
+/* --- Category ↓ */
+.categorySearchAndCode .categorySearch .searchIcon,
+/* --- Brand ↓ */
+.brandSearchAndCode .brandSearch .searchIcon,
+/* --- Company ↓ */
+.companySearchAndCode .companySearch .searchIcon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+/* --- HSN ↓ */
+.hsnMainContent .hsnCodeListItem,
+.hsnCodeListItem .hsnCodeListItemContent,
+.hsnCodeListItem .editAndDeleteButtons,
+/* --- Category ↓ */
+.categoryMainContent .categoryCodeListItem,
+.categoryCodeListItem .categoryCodeListItemContent,
+.categoryCodeListItem .editAndDeleteButtons,
+/* --- Brand ↓ */
+.brandMainContent .brandCodeListItem,
+.brandCodeListItem .brandCodeListItemContent,
+.brandCodeListItem .editAndDeleteButtons,
+/* --- Company ↓ */
+.companyMainContent .companyCodeListItem,
+.companyCodeListItem .companyCodeListItemContent,
+.companyCodeListItem .editAndDeleteButtons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* --- HSN ↓ */
+.hsnCodeListItem .hsnCodeListItemContent,
+/* --- Category ↓ */
+.categoryCodeListItem .categoryCodeListItemContent,
+/* --- Brand ↓ */
+.brandCodeListItem .brandCodeListItemContent,
+/* --- Company ↓ */
+.companyCodeListItem .companyCodeListItemContent {
+  flex: 1;
+  /* background: ; */
+  background: #f4f6f8;
+  background: linear-gradient(
+    90deg,
+    rgba(244, 246, 248, 1) 0%,
+    rgba(242, 248, 255, 1) 100%
+  );
+  box-shadow: 0px 1px 2px 0px rgba(60, 64, 67, 0.03),
+    0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+  border-radius: 2px;
+}
+
+/* --- HSN ↓ */
+.hsnMainContent .editDeleteSvg,
+/* --- Category ↓ */
+.categoryMainContent .editDeleteSvg,
+/* --- Brand ↓ */
+.brandMainContent .editDeleteSvg,
+/* --- Company ↓ */
+.companyMainContent .editDeleteSvg {
+  width: 12px;
+  height: 12px;
+}
+
+/* --- HSN ↓ */
+.hsnMainContent .hsnCodeListItem p,
+/* --- Category ↓ */
+.categoryMainContent .categoryCodeListItem p,
+/* --- Brand ↓ */
+.brandMainContent .brandCodeListItem p,
+/* --- Company ↓ */
+.companyMainContent .companyCodeListItem p {
+  padding: 2px 4px;
+}
+
+/* --- HSN ↓ */
+.hsnMainContent .hsnCodeListItem,
+.hsnCodeListItem > svg,
+.hsnCodeListItem .editAndDeleteButtons,
+/* --- Category ↓ */
+.categoryMainContent .categoryCodeListItem,
+.categoryCodeListItem > svg,
+.categoryCodeListItem .editAndDeleteButtons,
+/* --- Brand ↓ */
+.brandMainContent .brandCodeListItem,
+.brandCodeListItem > svg,
+.brandCodeListItem .editAndDeleteButtons,
+/* --- Company ↓ */
+.companyMainContent .companyCodeListItem,
+.companyCodeListItem > svg,
+.companyCodeListItem .editAndDeleteButtons {
+  margin-top: -6px;
+  gap: 6px;
+}
+
+/* --- HSN ↓ */
+.hsnCodeListItem .editAndDeleteButtons,
+/* --- Category ↓ */
+.categoryCodeListItem .editAndDeleteButtons,
+/* --- Brand ↓ */
+.brandCodeListItem .editAndDeleteButtons,
+/* --- Company ↓ */
+.companyCodeListItem .editAndDeleteButtons {
+  cursor: pointer;
+}
+
+@media (min-width: 672px) {
+  ::placeholder {
+    font-size: 0.7rem;
+  }
+
+  /* --- HSN ↓ */
+  .hsnPopupContainer,
+  /* --- Category ↓ */
+  .categoryPopupContainer,
+  /* --- Brand ↓ */
+  .brandPopupContainer,
+  /* --- Company ↓ */
+  .companyPopupContainer {
+    display: flex;
+    width: 672px;
+    max-width: 672px;
+    gap: 16px;
+    padding: 24px;
+  }
+
+  /* --- HSN ↓ */
+  .addHsn,
+  .hsnSearchAndCode,
+  /* --- Category ↓ */
+  .categorySearchAndCode,
+  .addCategory,
+  /* --- Brand ↓ */
+  .brandSearchAndCode,
+  .addBrand,
+  /* --- Brand ↓ */
+  .companySearchAndCode,
+  .addCompany {
+    flex: 1;
+  }
+
+  /* --- HSN ↓ */
+  .hsnMainContent,
+  /* --- Category ↓ */
+  .categoryMainContent,
+  /* --- Brand ↓ */
+  .brandMainContent {
+    height: 340px;
+  }
+
+  /* --- Company ↓ */
+  .companyPopupContainer .addCompany div:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  /* --- Company ↓ */
+  .companyMainContent {
+    height: 444px;
+  }
+
+  /* --- HSN ↓ */
+  .hsnMainContent .editDeleteSvg,
+  .hsnPopupContainer .close_icon,
+  /* --- Category ↓ */
+  .categoryMainContent .editDeleteSvg,
+  .categoryPopupContainer .close_icon,
+  /* --- Brand ↓ */
+  .brandMainContent .editDeleteSvg,
+  .brandPopupContainer .close_icon,
+  /* --- Company ↓ */
+  .companyMainContent .editDeleteSvg,
+  .companyPopupContainer .close_icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* --- HSN ↓ */
+  .hsnPopupContainer h2,
+  /* --- Category ↓ */
+  .categoryPopupContainer h2,
+  /* --- Brand ↓ */
+  .brandPopupContainer h2,
+  /* --- Company ↓ */
+  .companyPopupContainer h2 {
+    font-size: 1rem;
+  }
+
+  /* --- HSN ↓ */
+  .hsnMainContent .hsnCodeListItem p,
+  .hsnPopupContainer .addHsn label,
+  .hsnPopupContainer .addHsn select,
+  .hsnPopupContainer .addHsn textarea,
+  .hsnPopupContainer .buttons .btn,
+  /* --- Category ↓ */
+  .categoryMainContent .categoryCodeListItem p,
+  .categoryPopupContainer .addCategory label,
+  .categoryPopupContainer .addCategory select,
+  .categoryPopupContainer .addCategory input,
+  .categoryPopupContainer .addCategory textarea,
+  .categoryPopupContainer .buttons .btn,
+  /* --- Brand ↓ */
+  .brandMainContent .brandCodeListItem p,
+  .brandPopupContainer .addBrand label,
+  .brandPopupContainer .addBrand select,
+  .brandPopupContainer .addBrand input,
+  .brandPopupContainer .addBrand textarea,
+  .brandPopupContainer .buttons .btn,
+  /* --- Company ↓ */
+  .companyMainContent .companyCodeListItem p,
+  .companyPopupContainer .addCompany label,
+  .companyPopupContainer .addCompany select,
+  .companyPopupContainer .addCompany input,
+  .companyPopupContainer .addCompany textarea,
+  .companyPopupContainer .buttons .btn {
+    font-size: 0.8rem;
+  }
+
+  /* --- HSN ↓ */
+  .hsnPopupContainer .addHsn select,
+/* --- Category ↓ */
+.categoryPopupContainer .addCategory input,
+.categoryPopupContainer .addCategory select,
+/* --- Brand ↓ */
+.brandPopupContainer .addBrand input,
+.brandPopupContainer .addBrand select,
+/* --- Company ↓ */
+.companyPopupContainer .addCompany input,
+.companyPopupContainer .addCompany select {
+    padding: 0.2rem 0.3rem;
+  }
+
+  /* --- HSN ↓ */
+  .hsnPopupContainer .addHsn select,
+  .hsnPopupContainer .addHsn textarea::placeholder,
+  /* --- Category ↓ */
+  .categoryPopupContainer .addCategory select,
+  .categoryPopupContainer .addCategory textarea::placeholder,
+  /* --- Brand ↓ */
+  .brandPopupContainer .addBrand select,
+  .brandPopupContainer .addBrand textarea::placeholder,
+  /* --- Company ↓ */
+  .companyPopupContainer .addCompany select,
+  .companyPopupContainer .addCompany textarea::placeholder {
+    font-size: 0.75rem;
+  }
+
+  /* --- HSN ↓ */
+  .hsnSearchAndCode,
+  /* --- Category ↓ */
+  .categorySearchAndCode,
+  /* --- Brand ↓ */
+  .brandSearchAndCode,
+  /* --- Company ↓ */
+  .companySearchAndCode {
+    margin-top: 0;
+  }
+}

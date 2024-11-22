@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UQC Pop Up</title>
+    <title>HSN Pop Up</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,149 +18,8 @@
     <link rel="stylesheet" href="../../styles/accountCreationForm.css" />
     <link rel="stylesheet" href="../../styles/accountCreationTabs.css" />
     <link rel="stylesheet" href="../../styles/itemCreationMain.css" />
+    <link rel="stylesheet" href="../../styles/itemCreationHsn_Category_Brand_CompanyPopUp.css">
     <!-- <link rel="stylesheet" href="../../styles/accountCreationTable.css" /> -->
-    <style>
-      .hsnPopupContainer {
-        background: linear-gradient(180deg, #fff 0%, #fffefe 100%);
-        box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.5);
-        font-size: 0.5rem;
-        padding: 0.625rem;
-
-        max-width: 180px;
-        margin: auto;
-
-        position: relative;
-      }
-
-      .hsnPopupContainer .close_icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-        cursor: pointer;
-      }
-
-      .hsnPopupContainer div:not(:last-child) {
-        margin-bottom: 0.38rem;
-      }
-
-      .hsnPopupContainer h2 {
-        font-size: 0.625rem;
-        color: #185492;
-        margin-bottom: 0.625rem;
-      }
-
-      .hsnPopupContainer .addHsn label,
-      .hsnPopupContainer .addHsn select,
-      .hsnPopupContainer .addHsn textarea {
-        display: block;
-        width: 100%;
-        font-size: 0.6rem;
-      }
-
-      .hsnCodeWrapper div {
-        display: flex;
-        gap: 6px;
-        align-items: center;
-      }
-
-      .hsnCodeWrapper p {
-        background: linear-gradient(90deg, #185492 0%, #043e7a 100%);
-        filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
-        color: #fff;
-        width: 16px;
-        height: 16px;
-        padding: 12px;
-        line-height: 16px;
-        border-radius: 50%;
-        font-size: 0.625rem;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-      }
-
-      .hsnPopupContainer .addHsn .buttons {
-        display: flex;
-        gap: 10px;
-        justify-content: flex-end;
-        font-size: 0.625rem;
-      }
-
-      .hsnPopupContainer .buttons .btn {
-        background: none;
-        border: none;
-        padding: 3px 8px;
-        filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
-        border-radius: 2px;
-        cursor: pointer;
-      }
-
-      .hsnPopupContainer .buttons .btnClose,
-      .hsnPopupContainer .buttons .btnEdit {
-        border: 1px solid #185492;
-        color: #185492;
-      }
-
-      .hsnPopupContainer .buttons .btnSave {
-        background: linear-gradient(90deg, #185492 0%, #043e7a 100%);
-        color: #fff;
-      }
-
-      /*  */
-
-      .hsnMainContent {
-        border: 1px solid #1a1a1a;
-        padding: 0.375rem;
-        height: 164px;
-        overflow: auto;
-      }
-
-      .hsnSearchAndCode {
-        margin-top: 1rem;
-      }
-
-      .hsnSearchAndCode .hsnSearch {
-        position: relative;
-      }
-
-      .hsnSearchAndCode .hsnSearch .searchIcon {
-        position: absolute;
-        top: 8px;
-        right: 8px;
-      }
-
-      .hsnMainContent .hsnCodeListItem,
-      .hsnCodeListItem .hsnCodeListItemContent,
-      .hsnCodeListItem .editAndDeleteButtons {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-
-      .hsnCodeListItem .hsnCodeListItemContent {
-        flex: 1;
-        background: linear-gradient(180deg, #d6e1ea 0%, #b0bac1 100%);
-        box-shadow: 0px 1px 2px 0px rgba(60, 64, 67, 0.03),
-          0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-        border-radius: 2px;
-      }
-
-      .hsnMainContent .hsnCodeListItem p {
-        padding: 2px 4px;
-      }
-
-      .hsnMainContent .hsnCodeListItem,
-      .hsnCodeListItem > svg,
-      .hsnCodeListItem .editAndDeleteButtons {
-        margin-top: -6px;
-        gap: 6px;
-      }
-
-      .hsnCodeListItem .editAndDeleteButtons {
-        cursor: pointer;
-      }
-    </style>
   </head>
   <body>
     <div class="hsnPopupContainer">
@@ -251,8 +110,7 @@
             </div>
             <div class="editAndDeleteButtons">
               <svg
-                width="12"
-                height="12"
+                class="editDeleteSvg"
                 viewBox="0 0 12 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -266,13 +124,13 @@
                   stroke="#185492"
                 />
                 <path
+                  class="change_colors"
                   d="M8.90333 4.34665C9.03333 4.21665 9.03333 3.99998 8.90333 3.87665L8.12333 3.09665C8 2.96665 7.78333 2.96665 7.65333 3.09665L7.04 3.70665L8.29 4.95665M3 7.74998V8.99998H4.25L7.93667 5.30998L6.68667 4.05998L3 7.74998Z"
                   fill="#185492"
                 />
               </svg>
               <svg
-                width="12"
-                height="12"
+                class="editDeleteSvg"
                 viewBox="0 0 12 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -308,8 +166,7 @@
             </div>
             <div class="editAndDeleteButtons">
               <svg
-                width="12"
-                height="12"
+                class="editDeleteSvg"
                 viewBox="0 0 12 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -323,13 +180,13 @@
                   stroke="#185492"
                 />
                 <path
+                  class="change_colors"
                   d="M8.90333 4.34665C9.03333 4.21665 9.03333 3.99998 8.90333 3.87665L8.12333 3.09665C8 2.96665 7.78333 2.96665 7.65333 3.09665L7.04 3.70665L8.29 4.95665M3 7.74998V8.99998H4.25L7.93667 5.30998L6.68667 4.05998L3 7.74998Z"
                   fill="#185492"
                 />
               </svg>
               <svg
-                width="12"
-                height="12"
+                class="editDeleteSvg"
                 viewBox="0 0 12 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -365,8 +222,7 @@
             </div>
             <div class="editAndDeleteButtons">
               <svg
-                width="12"
-                height="12"
+                class="editDeleteSvg"
                 viewBox="0 0 12 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -380,13 +236,13 @@
                   stroke="#185492"
                 />
                 <path
+                  class="change_colors"
                   d="M8.90333 4.34665C9.03333 4.21665 9.03333 3.99998 8.90333 3.87665L8.12333 3.09665C8 2.96665 7.78333 2.96665 7.65333 3.09665L7.04 3.70665L8.29 4.95665M3 7.74998V8.99998H4.25L7.93667 5.30998L6.68667 4.05998L3 7.74998Z"
                   fill="#185492"
                 />
               </svg>
               <svg
-                width="12"
-                height="12"
+                class="editDeleteSvg"
                 viewBox="0 0 12 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -422,8 +278,7 @@
             </div>
             <div class="editAndDeleteButtons">
               <svg
-                width="12"
-                height="12"
+                class="editDeleteSvg"
                 viewBox="0 0 12 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -437,13 +292,13 @@
                   stroke="#185492"
                 />
                 <path
+                  class="change_colors"
                   d="M8.90333 4.34665C9.03333 4.21665 9.03333 3.99998 8.90333 3.87665L8.12333 3.09665C8 2.96665 7.78333 2.96665 7.65333 3.09665L7.04 3.70665L8.29 4.95665M3 7.74998V8.99998H4.25L7.93667 5.30998L6.68667 4.05998L3 7.74998Z"
                   fill="#185492"
                 />
               </svg>
               <svg
-                width="12"
-                height="12"
+                class="editDeleteSvg"
                 viewBox="0 0 12 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -479,8 +334,7 @@
             </div>
             <div class="editAndDeleteButtons">
               <svg
-                width="12"
-                height="12"
+                class="editDeleteSvg"
                 viewBox="0 0 12 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -494,13 +348,13 @@
                   stroke="#185492"
                 />
                 <path
+                  class="change_colors"
                   d="M8.90333 4.34665C9.03333 4.21665 9.03333 3.99998 8.90333 3.87665L8.12333 3.09665C8 2.96665 7.78333 2.96665 7.65333 3.09665L7.04 3.70665L8.29 4.95665M3 7.74998V8.99998H4.25L7.93667 5.30998L6.68667 4.05998L3 7.74998Z"
                   fill="#185492"
                 />
               </svg>
               <svg
-                width="12"
-                height="12"
+                class="editDeleteSvg"
                 viewBox="0 0 12 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -536,8 +390,7 @@
             </div>
             <div class="editAndDeleteButtons">
               <svg
-                width="12"
-                height="12"
+                class="editDeleteSvg"
                 viewBox="0 0 12 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -551,13 +404,13 @@
                   stroke="#185492"
                 />
                 <path
+                  class="change_colors"
                   d="M8.90333 4.34665C9.03333 4.21665 9.03333 3.99998 8.90333 3.87665L8.12333 3.09665C8 2.96665 7.78333 2.96665 7.65333 3.09665L7.04 3.70665L8.29 4.95665M3 7.74998V8.99998H4.25L7.93667 5.30998L6.68667 4.05998L3 7.74998Z"
                   fill="#185492"
                 />
               </svg>
               <svg
-                width="12"
-                height="12"
+                class="editDeleteSvg"
                 viewBox="0 0 12 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -593,8 +446,7 @@
             </div>
             <div class="editAndDeleteButtons">
               <svg
-                width="12"
-                height="12"
+                class="editDeleteSvg"
                 viewBox="0 0 12 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -608,13 +460,13 @@
                   stroke="#185492"
                 />
                 <path
+                  class="change_colors"
                   d="M8.90333 4.34665C9.03333 4.21665 9.03333 3.99998 8.90333 3.87665L8.12333 3.09665C8 2.96665 7.78333 2.96665 7.65333 3.09665L7.04 3.70665L8.29 4.95665M3 7.74998V8.99998H4.25L7.93667 5.30998L6.68667 4.05998L3 7.74998Z"
                   fill="#185492"
                 />
               </svg>
               <svg
-                width="12"
-                height="12"
+                class="editDeleteSvg"
                 viewBox="0 0 12 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -650,8 +502,7 @@
             </div>
             <div class="editAndDeleteButtons">
               <svg
-                width="12"
-                height="12"
+                class="editDeleteSvg"
                 viewBox="0 0 12 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -665,13 +516,68 @@
                   stroke="#185492"
                 />
                 <path
+                  class="change_colors"
                   d="M8.90333 4.34665C9.03333 4.21665 9.03333 3.99998 8.90333 3.87665L8.12333 3.09665C8 2.96665 7.78333 2.96665 7.65333 3.09665L7.04 3.70665L8.29 4.95665M3 7.74998V8.99998H4.25L7.93667 5.30998L6.68667 4.05998L3 7.74998Z"
                   fill="#185492"
                 />
               </svg>
               <svg
-                width="12"
-                height="12"
+                class="editDeleteSvg"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="11"
+                  height="11"
+                  rx="1.5"
+                  stroke="#DD7554"
+                />
+                <path
+                  d="M4.70006 2.36658V2.75547H2.75562V3.53324H3.1445V8.5888C3.1445 8.79508 3.22645 8.99291 3.37231 9.13877C3.51817 9.28463 3.716 9.36658 3.92228 9.36658H7.81117C8.01745 9.36658 8.21528 9.28463 8.36114 9.13877C8.507 8.99291 8.58895 8.79508 8.58895 8.5888V3.53324H8.97784V2.75547H7.03339V2.36658H4.70006ZM4.70006 4.31102H5.47784V7.81102H4.70006V4.31102ZM6.25561 4.31102H7.03339V7.81102H6.25561V4.31102Z"
+                  fill="#DD7554"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="hsnCodeListItem">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="5"
+              height="8"
+              viewBox="0 0 5 8"
+              fill="none"
+            >
+              <path d="M0 8L5 4L0 0V8Z" fill="#797979" />
+            </svg>
+            <div class="hsnCodeListItemContent">
+              <p>0020</p>
+            </div>
+            <div class="editAndDeleteButtons">
+              <svg
+                class="editDeleteSvg"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="11"
+                  height="11"
+                  rx="1.5"
+                  stroke="#185492"
+                />
+                <path
+                  class="change_colors"
+                  d="M8.90333 4.34665C9.03333 4.21665 9.03333 3.99998 8.90333 3.87665L8.12333 3.09665C8 2.96665 7.78333 2.96665 7.65333 3.09665L7.04 3.70665L8.29 4.95665M3 7.74998V8.99998H4.25L7.93667 5.30998L6.68667 4.05998L3 7.74998Z"
+                  fill="#185492"
+                />
+              </svg>
+              <svg
+                class="editDeleteSvg"
                 viewBox="0 0 12 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -707,8 +613,7 @@
             </div>
             <div class="editAndDeleteButtons">
               <svg
-                width="12"
-                height="12"
+                class="editDeleteSvg"
                 viewBox="0 0 12 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -722,13 +627,69 @@
                   stroke="#185492"
                 />
                 <path
+                  class="change_colors"
                   d="M8.90333 4.34665C9.03333 4.21665 9.03333 3.99998 8.90333 3.87665L8.12333 3.09665C8 2.96665 7.78333 2.96665 7.65333 3.09665L7.04 3.70665L8.29 4.95665M3 7.74998V8.99998H4.25L7.93667 5.30998L6.68667 4.05998L3 7.74998Z"
                   fill="#185492"
                 />
               </svg>
               <svg
-                width="12"
-                height="12"
+                class="editDeleteSvg"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="11"
+                  height="11"
+                  rx="1.5"
+                  stroke="#DD7554"
+                />
+                <path
+                  d="M4.70006 2.36658V2.75547H2.75562V3.53324H3.1445V8.5888C3.1445 8.79508 3.22645 8.99291 3.37231 9.13877C3.51817 9.28463 3.716 9.36658 3.92228 9.36658H7.81117C8.01745 9.36658 8.21528 9.28463 8.36114 9.13877C8.507 8.99291 8.58895 8.79508 8.58895 8.5888V3.53324H8.97784V2.75547H7.03339V2.36658H4.70006ZM4.70006 4.31102H5.47784V7.81102H4.70006V4.31102ZM6.25561 4.31102H7.03339V7.81102H6.25561V4.31102Z"
+                  fill="#DD7554"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <div class="hsnCodeListItem">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="5"
+              height="8"
+              viewBox="0 0 5 8"
+              fill="none"
+            >
+              <path d="M0 8L5 4L0 0V8Z" fill="#797979" />
+            </svg>
+            <div class="hsnCodeListItemContent">
+              <p>0020</p>
+            </div>
+            <div class="editAndDeleteButtons">
+              <svg
+                class="editDeleteSvg"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="11"
+                  height="11"
+                  rx="1.5"
+                  stroke="#185492"
+                />
+                <path
+                  class="change_colors"
+                  d="M8.90333 4.34665C9.03333 4.21665 9.03333 3.99998 8.90333 3.87665L8.12333 3.09665C8 2.96665 7.78333 2.96665 7.65333 3.09665L7.04 3.70665L8.29 4.95665M3 7.74998V8.99998H4.25L7.93667 5.30998L6.68667 4.05998L3 7.74998Z"
+                  fill="#185492"
+                />
+              </svg>
+              <svg
+                class="editDeleteSvg"
                 viewBox="0 0 12 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
