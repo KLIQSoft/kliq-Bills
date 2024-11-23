@@ -1,0 +1,144 @@
+.transactionTypesContainer table tbody tr:nth-child(odd) {
+    background: #fff;
+}
+
+/* ============== General Tab ============== */
+.transactionTypeInputsCRandActivateCheckbox input[type="checkbox"],
+.transactionTypeInputsCRandActivateCheckbox input[type="radio"] {
+  width: 14px;
+}
+
+.transactionTypeInputsCRandActivateCheckbox label {
+  font-size: 0.875rem;
+}
+
+.transactionTypeInputsCRandActivateCheckbox,
+.transactionTypeInputsCR {
+  display: flex;
+  gap: 20px;
+}
+
+.transactionTypeInputsCRandActivateCheckbox {
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.6em;
+}
+
+.transactionTypeInputsC,
+.transactionTypeInputsR .radio,
+.transactionTypeActivateCheckbox {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.transactionTypeInputsR .radio #touch ~ label {
+  margin-right: 0.4em;
+}
+
+.transactionTypeContainer .restartEveryday,
+.transactionTypeContainer .inclusive,
+.transactionTypeContainer .weightList {
+  position: absolute;
+  right: 0;
+  bottom: -14px;
+  display: flex;
+  gap: 5px;
+}
+
+.transactionTypesGeneralTableContainer tbody th {
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+.transactionTypesGeneralTableContainer tbody tr {
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 450px) {
+  .transactionTypeInputsCRandActivateCheckbox,
+  .transactionTypeInputsCR {
+    display: block;
+  }
+}
+
+.transactionTypesContainer .tabandSelectContainer {
+  margin-top: 0;
+}
+
+.transactionTypesContainer #content1.active {
+  display: block;
+}
+
+.transactionTypesContainer #content1.active .transactionTypeContainer {
+  display: grid;
+  grid-template-columns: minmax(130px, 1fr);
+  gap: 20px;
+}
+
+.transactionTypesGeneralTableContainer {
+  margin-top: 1em;
+  max-width: 600px;
+}
+
+.transactionTypesGeneralTableContainer table {
+  white-space: nowrap;
+}
+
+.transactionTypesGeneralTableContainer .editDeleteSvg {
+  cursor: pointer;
+  width: 12px;
+}
+
+/* ============== General Tab ============== */
+/* if we use auto-fit, it will break the layout - START */
+@media (min-width: 320px) {
+  .transactionTypesContainer #content1.active .transactionTypeContainer {
+    grid-template-columns: repeat(2, minmax(130px, 1fr));
+  }
+}
+@media (min-width: 620px) {
+  .transactionTypesContainer #content1.active .transactionTypeContainer {
+    grid-template-columns: repeat(3, minmax(130px, 1fr));
+  }
+
+  .transactionTypesGeneralTableContainer .editDeleteSvg {
+    width: 14px;
+  }
+}
+@media (min-width: 1160px) {
+  .transactionTypesContainer #content1.active .transactionTypeContainer {
+    grid-template-columns: repeat(4, minmax(130px, 1fr));
+  }
+}
+@media (min-width: 1440px) {
+  .transactionTypesContainer #content1.active .transactionTypeContainer {
+    grid-template-columns: repeat(5, minmax(130px, 1fr));
+  }
+}
+/* if we use auto-fit, it will break the layout - END */
+
+/* ============== Parameters Tab ============== */
+.transactionTypeParameterContainer {
+    max-width: 600px;
+}
+
+.transactionTypeParameterContainer table {
+    white-space: nowrap;
+}
+
+.transactionTypeParameterContainer table tr {
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25), 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+.transactionTypeParameterContainer .editDeleteSvg {
+    width: 12px;
+    cursor: pointer;
+}
+
+@media (min-width: 600px) {
+    .transactionTypeParameterContainer .editDeleteSvg {
+        width: 14px;
+    }
+}
