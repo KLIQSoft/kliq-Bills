@@ -27,4 +27,4 @@
 ## Transaction Types Page
 /pages/transaction_types/transactionType.html
 
-http://127.0.0.1:3000/Kliq%20Bills%20Website/pages/transaction_types/transactionTypePopUp.html
+/pages/transaction_types/transactionTypePopUp.html
