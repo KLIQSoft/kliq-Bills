@@ -23,3 +23,8 @@
 /pages/item_Creation/itemList.html
 
 /pages/item_Creation/itemCreation.html [not completed fully]
+
+## Transaction Types Page
+/pages/transaction_types/transactionType.html
+
+http://127.0.0.1:3000/Kliq%20Bills%20Website/pages/transaction_types/transactionTypePopUp.html
