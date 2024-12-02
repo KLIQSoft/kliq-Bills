@@ -1,5 +1,9 @@
 .transactionTypesContainer table tbody tr:nth-child(odd) {
-    background: #fff;
+  background: #fff;
+}
+
+.transactionTypesContainer .content {
+  padding: 1em;
 }
 
 /* ============== General Tab ============== */
@@ -56,6 +60,42 @@
     0px 1px 2px 0px rgba(0, 0, 0, 0.25);
 }
 
+.transactionTypeItemGroupsContainer th > div {
+  display: flex;
+  gap: 20px;
+}
+
+.transactionTypeBillFormatsContainer .BillFormatInputs {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.transactionTypeBillFormatsContainer .BillFormatInputs input,
+.transactionTypeBillFormatsContainer .BillFormatInputs select {
+  width: 170px;
+  min-width: 130px;
+}
+
+.transactionTypeBillFormatsContainer .BillFormatInputs label {
+  display: flex;
+}
+
+.transactionTypeBillFormatsContainer .BillFormatInputs #askBillF {
+  display: inline-block;
+  width: auto;
+  min-width: auto;
+}
+
+.transactionTypeBillFormatsContainer .BillFormatInputs .ask_Bill_Formats {
+  display: flex;
+  gap: 5px;
+  margin-top: 15px;
+  width: 170px;
+  min-width: 130px;
+}
+
 @media (max-width: 450px) {
   .transactionTypeInputsCRandActivateCheckbox,
   .transactionTypeInputsCR {
@@ -86,9 +126,61 @@
   white-space: nowrap;
 }
 
-.transactionTypesGeneralTableContainer .editDeleteSvg {
+.transactionTypesGeneralTableContainer .editDeleteSvg,
+.transactionTypeColumnsContainer .editDeleteSvg,
+.transactionTypeChargesContainer .editDeleteSvg {
   cursor: pointer;
   width: 12px;
+}
+
+.transactionTypeBillFormatsContainer .footNotes h3 {
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+  color: var(--primary-color);
+}
+
+.transactionTypeBillFormatsContainer .footNotes .footInputs input,
+.transactionTypeBillFormatsContainer .footNotes .footInputs textarea {
+  width: 100%;
+  margin-bottom: 0.6em;
+}
+
+.copiesPopUp {
+  display: flex;
+  flex-direction: column;
+  width: 170px;
+  margin: auto;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.5);
+  padding: 1em;
+}
+
+.copiesPopUp input {
+  width: 100%;
+  margin-bottom: 0.6em;
+}
+
+.copiesPopUp .buttons {
+  align-self: flex-end;
+}
+
+.copiesPopUp .buttons .btn {
+  border: none;
+  padding: 0.2em 0.4em;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 1px solid var(--primary-color);
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0),
+    0px 0px 0px 1px rgba(0, 0, 0, 0);
+  background: #fff;
+  font-size: 0.8rem;
+  color: var(--primary-color);
+}
+
+.copiesPopUp .buttons .btnSave {
+  background: var(--primary-color);
+  color: #fff;
 }
 
 /* ============== General Tab ============== */
@@ -103,7 +195,10 @@
     grid-template-columns: repeat(3, minmax(130px, 1fr));
   }
 
-  .transactionTypesGeneralTableContainer .editDeleteSvg {
+  .transactionTypesGeneralTableContainer .editDeleteSvg,
+  .transactionTypeColumnsContainer .editDeleteSvg,
+  .transactionTypeChargesContainer .editDeleteSvg,
+  .transactionTypeItemGroupsContainer .editDeleteSvg {
     width: 14px;
   }
 }
@@ -121,24 +216,33 @@
 
 /* ============== Parameters Tab ============== */
 .transactionTypeParameterContainer {
-    max-width: 600px;
+  max-width: 600px;
 }
 
 .transactionTypeParameterContainer table {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 .transactionTypeParameterContainer table tr {
-    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25), 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.25);
 }
 
-.transactionTypeParameterContainer .editDeleteSvg {
-    width: 12px;
-    cursor: pointer;
+.transactionTypeParameterContainer .editDeleteSvg,
+.transactionTypeColumnsContainer .editDeleteSvg,
+.transactionTypeChargesContainer .editDeleteSvg,
+.transactionTypeItemGroupsContainer .editDeleteSvg {
+  width: 12px;
+  cursor: pointer;
 }
 
 @media (min-width: 600px) {
-    .transactionTypeParameterContainer .editDeleteSvg {
-        width: 14px;
-    }
+  .transactionTypeParameterContainer
+    .editDeleteSvg
+    .transactionTypeColumnsContainer
+    .editDeleteSvg,
+  .transactionTypeChargesContainer .editDeleteSvg,
+  .transactionTypeItemGroupsContainer .editDeleteSvg {
+    width: 14px;
+  }
 }

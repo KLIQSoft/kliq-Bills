@@ -878,7 +878,6 @@
             </div>
 
             <div id="content1" class="content">
-
               <div class="transactionTypeInputsCRandActivateCheckbox">
                 <div class="transactionTypeInputsCR">
                   <div class="transactionTypeInputsC">
@@ -902,7 +901,11 @@
                 </div>
 
                 <div class="transactionTypeActivateCheckbox">
-                  <input type="checkbox" name="transactionTypeActivate" id="TTypeActivate">
+                  <input
+                    type="checkbox"
+                    name="transactionTypeActivate"
+                    id="TTypeActivate"
+                  />
                   <label for="TTypeActivate">Activate</label>
                 </div>
               </div>
@@ -956,8 +959,15 @@
                   <label class="form_label">Series</label>
 
                   <div class="restartEveryday">
-                    <input style="width: 10px;" type="checkbox" name="Restart Everyday" id="restartEveryday">
-                    <label style="font-size: 10px;" for="restartEveryday">B.No. Restart Everyday</label>
+                    <input
+                      style="width: 10px"
+                      type="checkbox"
+                      name="Restart Everyday"
+                      id="restartEveryday"
+                    />
+                    <label style="font-size: 10px" for="restartEveryday"
+                      >B.No. Restart Everyday</label
+                    >
                   </div>
                 </div>
 
@@ -972,8 +982,15 @@
                   <label class="form_label">Voucher Mode</label>
 
                   <div class="inclusive">
-                    <input style="width: 10px;" type="checkbox" name="Inclusive Tax" id="inclusiveTax">
-                    <label style="font-size: 10px;" for="inclusiveTax">Inclusive Tax</label>
+                    <input
+                      style="width: 10px"
+                      type="checkbox"
+                      name="Inclusive Tax"
+                      id="inclusiveTax"
+                    />
+                    <label style="font-size: 10px" for="inclusiveTax"
+                      >Inclusive Tax</label
+                    >
                   </div>
                 </div>
 
@@ -1079,10 +1096,17 @@
                     <option value="w">test 2</option>
                   </select>
                   <label class="form_label">Calculation Type</label>
-                  
+
                   <div class="weightList">
-                    <input style="width: 10px;" type="checkbox" name="Weight List" id="weightList">
-                    <label style="font-size: 10px;" for="weightList">Weight List</label>
+                    <input
+                      style="width: 10px"
+                      type="checkbox"
+                      name="Weight List"
+                      id="weightList"
+                    />
+                    <label style="font-size: 10px" for="weightList"
+                      >Weight List</label
+                    >
                   </div>
                 </div>
 
@@ -1337,7 +1361,10 @@
               </div>
             </div>
             <div id="content2" class="content">
-              <div class="transactionTypeParameterContainer" style="overflow: auto;">
+              <div
+                class="transactionTypeParameterContainer"
+                style="overflow: auto"
+              >
                 <table>
                   <thead>
                     <th>S.No</th>
@@ -1601,10 +1628,488 @@
                 </table>
               </div>
             </div>
-            <div id="content3" class="content"></div>
-            <div id="content4" class="content"></div>
-            <div id="content5" class="content"></div>
-            <div id="content6" class="content"></div>
+            <div id="content3" class="content">
+              <div
+                class="transactionTypeBillFormatsContainer"
+                style="overflow: auto"
+              >
+                <div class="BillFormatInputs">
+                  <div class="inputs_div">
+                    <label>Document Title</label>
+                    <input type="text" />
+                  </div>
+
+                  <div class="inputs_div">
+                    <label>Select Printer Type</label>
+                    <select>
+                      <option value="1">Microsoft Print to PDF</option>
+                    </select>
+                  </div>
+
+                  <div class="inputs_div">
+                    <label>Paper Size</label>
+                    <select>
+                      <option value="1">Letter</option>
+                    </select>
+                  </div>
+
+                  <div class="inputs_div">
+                    <label>Page Orientation</label>
+                    <select>
+                      <option value="1">Default Printer Settings</option>
+                    </select>
+                  </div>
+
+                  <div class="inputs_div">
+                    <label>Select Bill Format</label>
+                    <select>
+                      <option value="1">Microsoft Print to PDF</option>
+                    </select>
+                  </div>
+
+                  <div class="inputs_div">
+                    <div class="ask_Bill_Formats">
+                      <input type="checkbox" id="askBillF" />
+                      <label for="askBillF">Ask Bill Formats</label>
+                    </div>
+                  </div>
+
+                  <div class="inputs_div">
+                    <label>No. of Copies</label>
+                    <input type="number" />
+                  </div>
+
+                  <div class="inputs_div">
+                    <label>Barcode Printer</label>
+                    <select>
+                      <option value="1">CrPurchaseA4GST.rpt</option>
+                    </select>
+                  </div>
+
+                  <div class="inputs_div">
+                    <label>Barcode Bill Format</label>
+                    <select>
+                      <option value="1">Select</option>
+                    </select>
+                  </div>
+
+                  <div class="inputs_div">
+                    <label>Barcode Paper Size</label>
+                    <select>
+                      <option value="1">25Xp34434</option>
+                    </select>
+                  </div>
+
+                  <div class="inputs_div">
+                    <label>Label Per Row</label>
+                    <select>
+                      <option value="1">0-Barcode Print Crystal</option>
+                    </select>
+                  </div>
+
+                  <div class="inputs_div">
+                    <label>Page Orientation</label>
+                    <select>
+                      <option value="1">Default Printer Settings</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="footNotes">
+                  <h3>Foot Notes</h3>
+
+                  <div class="footInputs">
+
+                    <div class="footNote1">
+                      <label for="note1">Foot Note 1</label>
+                      <input type="text" id="note1">
+                    </div>
+
+                    <div class="footNote2">
+                      <label for="note2">Foot Note 2</label>
+                      <input type="text" id="note2">
+                    </div>
+
+                    <div class="footNote3">
+                      <label for="note3">Foot Note 3</label>
+                      <input type="text" id="note3">
+                    </div>
+
+                    <div class="footNote4">
+                      <label for="note4">Foot Note 4</label>
+                      <input type="text" id="note4">
+                    </div>
+
+                    <div class="footMessage">
+                      <label for="footMessageDesc">Message</label>
+                      <textarea id="footMessageDesc"></textarea>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="content4" class="content">
+              <div
+                class="transactionTypeItemGroupsContainer"
+                style="overflow: auto"
+              >
+                <table>
+                  <thead>
+                    <th>
+                      <div>
+                        <div>
+                          <input type="radio" name="catOrComp" id="category" />
+                          <label for="category">Category</label>
+                        </div>
+                        <div>
+                          <input type="radio" name="catOrComp" id="company" />
+                          <label for="company">Company</label>
+                        </div>
+                      </div>
+                    </th>
+                    <th></th>
+                    <th></th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="checkbox" /> Auto Weight</td>
+                      <td style="text-align: right">
+                        <svg
+                          class="editDeleteSvg"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            x="0.5"
+                            y="0.5"
+                            width="11"
+                            height="11"
+                            rx="1.5"
+                            stroke="#185492"
+                          />
+                          <path
+                            class="change_colors"
+                            d="M8.90333 4.34665C9.03333 4.21665 9.03333 3.99998 8.90333 3.87665L8.12333 3.09665C8 2.96665 7.78333 2.96665 7.65333 3.09665L7.04 3.70665L8.29 4.95665M3 7.74998V8.99998H4.25L7.93667 5.30998L6.68667 4.05998L3 7.74998Z"
+                            fill="#185492"
+                          />
+                        </svg>
+                      </td>
+                      <td>
+                        <svg
+                          class="editDeleteSvg"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            x="0.5"
+                            y="0.5"
+                            width="11"
+                            height="11"
+                            rx="1.5"
+                            stroke="#DD7554"
+                          />
+                          <path
+                            d="M4.70006 2.36658V2.75547H2.75562V3.53324H3.1445V8.5888C3.1445 8.79508 3.22645 8.99291 3.37231 9.13877C3.51817 9.28463 3.716 9.36658 3.92228 9.36658H7.81117C8.01745 9.36658 8.21528 9.28463 8.36114 9.13877C8.507 8.99291 8.58895 8.79508 8.58895 8.5888V3.53324H8.97784V2.75547H7.03339V2.36658H4.70006ZM4.70006 4.31102H5.47784V7.81102H4.70006V4.31102ZM6.25561 4.31102H7.03339V7.81102H6.25561V4.31102Z"
+                            fill="#DD7554"
+                          />
+                        </svg>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td><input type="checkbox" /> Baby Care</td>
+                      <td style="text-align: right">
+                        <svg
+                          class="editDeleteSvg"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            x="0.5"
+                            y="0.5"
+                            width="11"
+                            height="11"
+                            rx="1.5"
+                            stroke="#185492"
+                          />
+                          <path
+                            class="change_colors"
+                            d="M8.90333 4.34665C9.03333 4.21665 9.03333 3.99998 8.90333 3.87665L8.12333 3.09665C8 2.96665 7.78333 2.96665 7.65333 3.09665L7.04 3.70665L8.29 4.95665M3 7.74998V8.99998H4.25L7.93667 5.30998L6.68667 4.05998L3 7.74998Z"
+                            fill="#185492"
+                          />
+                        </svg>
+                      </td>
+                      <td>
+                        <svg
+                          class="editDeleteSvg"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            x="0.5"
+                            y="0.5"
+                            width="11"
+                            height="11"
+                            rx="1.5"
+                            stroke="#DD7554"
+                          />
+                          <path
+                            d="M4.70006 2.36658V2.75547H2.75562V3.53324H3.1445V8.5888C3.1445 8.79508 3.22645 8.99291 3.37231 9.13877C3.51817 9.28463 3.716 9.36658 3.92228 9.36658H7.81117C8.01745 9.36658 8.21528 9.28463 8.36114 9.13877C8.507 8.99291 8.58895 8.79508 8.58895 8.5888V3.53324H8.97784V2.75547H7.03339V2.36658H4.70006ZM4.70006 4.31102H5.47784V7.81102H4.70006V4.31102ZM6.25561 4.31102H7.03339V7.81102H6.25561V4.31102Z"
+                            fill="#DD7554"
+                          />
+                        </svg>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div id="content5" class="content">
+              <div
+                class="transactionTypeChargesContainer"
+                style="overflow: auto"
+              >
+                <table>
+                  <thead>
+                    <th>Charge Name</th>
+                    <th>Adj Account</th>
+                    <th>Charge Type</th>
+                    <th>Adj Style</th>
+                    <th>Cost Type</th>
+                    <th>Default Value</th>
+                    <th>Order</th>
+                    <th></th>
+                    <th></th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="checkbox" /> Discount Amount</td>
+                      <td>Freight A/C</td>
+                      <td>Add</td>
+                      <td>Net Amount</td>
+                      <td>Amount</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td style="text-align: right">
+                        <svg
+                          class="editDeleteSvg"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            x="0.5"
+                            y="0.5"
+                            width="11"
+                            height="11"
+                            rx="1.5"
+                            stroke="#185492"
+                          />
+                          <path
+                            class="change_colors"
+                            d="M8.90333 4.34665C9.03333 4.21665 9.03333 3.99998 8.90333 3.87665L8.12333 3.09665C8 2.96665 7.78333 2.96665 7.65333 3.09665L7.04 3.70665L8.29 4.95665M3 7.74998V8.99998H4.25L7.93667 5.30998L6.68667 4.05998L3 7.74998Z"
+                            fill="#185492"
+                          />
+                        </svg>
+                      </td>
+                      <td>
+                        <svg
+                          class="editDeleteSvg"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            x="0.5"
+                            y="0.5"
+                            width="11"
+                            height="11"
+                            rx="1.5"
+                            stroke="#DD7554"
+                          />
+                          <path
+                            d="M4.70006 2.36658V2.75547H2.75562V3.53324H3.1445V8.5888C3.1445 8.79508 3.22645 8.99291 3.37231 9.13877C3.51817 9.28463 3.716 9.36658 3.92228 9.36658H7.81117C8.01745 9.36658 8.21528 9.28463 8.36114 9.13877C8.507 8.99291 8.58895 8.79508 8.58895 8.5888V3.53324H8.97784V2.75547H7.03339V2.36658H4.70006ZM4.70006 4.31102H5.47784V7.81102H4.70006V4.31102ZM6.25561 4.31102H7.03339V7.81102H6.25561V4.31102Z"
+                            fill="#DD7554"
+                          />
+                        </svg>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td><input type="checkbox" /> Discount Amount</td>
+                      <td>Freight A/C</td>
+                      <td>Add</td>
+                      <td>Net Amount</td>
+                      <td>Amount</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td style="text-align: right">
+                        <svg
+                          class="editDeleteSvg"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            x="0.5"
+                            y="0.5"
+                            width="11"
+                            height="11"
+                            rx="1.5"
+                            stroke="#185492"
+                          />
+                          <path
+                            class="change_colors"
+                            d="M8.90333 4.34665C9.03333 4.21665 9.03333 3.99998 8.90333 3.87665L8.12333 3.09665C8 2.96665 7.78333 2.96665 7.65333 3.09665L7.04 3.70665L8.29 4.95665M3 7.74998V8.99998H4.25L7.93667 5.30998L6.68667 4.05998L3 7.74998Z"
+                            fill="#185492"
+                          />
+                        </svg>
+                      </td>
+                      <td>
+                        <svg
+                          class="editDeleteSvg"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            x="0.5"
+                            y="0.5"
+                            width="11"
+                            height="11"
+                            rx="1.5"
+                            stroke="#DD7554"
+                          />
+                          <path
+                            d="M4.70006 2.36658V2.75547H2.75562V3.53324H3.1445V8.5888C3.1445 8.79508 3.22645 8.99291 3.37231 9.13877C3.51817 9.28463 3.716 9.36658 3.92228 9.36658H7.81117C8.01745 9.36658 8.21528 9.28463 8.36114 9.13877C8.507 8.99291 8.58895 8.79508 8.58895 8.5888V3.53324H8.97784V2.75547H7.03339V2.36658H4.70006ZM4.70006 4.31102H5.47784V7.81102H4.70006V4.31102ZM6.25561 4.31102H7.03339V7.81102H6.25561V4.31102Z"
+                            fill="#DD7554"
+                          />
+                        </svg>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div id="content6" class="content">
+              <div
+                class="transactionTypeColumnsContainer"
+                style="overflow: auto"
+              >
+                <table>
+                  <thead>
+                    <th><input type="checkbox" />Column Caption</th>
+                    <th>Column Original Name</th>
+                    <th>Order</th>
+                    <th></th>
+                    <th></th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="checkbox" /> Auto Weight</td>
+                      <td>Auto Weight</td>
+                      <td>0</td>
+                      <td style="text-align: right">
+                        <svg
+                          class="editDeleteSvg"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            x="0.5"
+                            y="0.5"
+                            width="11"
+                            height="11"
+                            rx="1.5"
+                            stroke="#185492"
+                          />
+                          <path
+                            class="change_colors"
+                            d="M8.90333 4.34665C9.03333 4.21665 9.03333 3.99998 8.90333 3.87665L8.12333 3.09665C8 2.96665 7.78333 2.96665 7.65333 3.09665L7.04 3.70665L8.29 4.95665M3 7.74998V8.99998H4.25L7.93667 5.30998L6.68667 4.05998L3 7.74998Z"
+                            fill="#185492"
+                          />
+                        </svg>
+                      </td>
+                      <td>
+                        <svg
+                          class="editDeleteSvg"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            x="0.5"
+                            y="0.5"
+                            width="11"
+                            height="11"
+                            rx="1.5"
+                            stroke="#DD7554"
+                          />
+                          <path
+                            d="M4.70006 2.36658V2.75547H2.75562V3.53324H3.1445V8.5888C3.1445 8.79508 3.22645 8.99291 3.37231 9.13877C3.51817 9.28463 3.716 9.36658 3.92228 9.36658H7.81117C8.01745 9.36658 8.21528 9.28463 8.36114 9.13877C8.507 8.99291 8.58895 8.79508 8.58895 8.5888V3.53324H8.97784V2.75547H7.03339V2.36658H4.70006ZM4.70006 4.31102H5.47784V7.81102H4.70006V4.31102ZM6.25561 4.31102H7.03339V7.81102H6.25561V4.31102Z"
+                            fill="#DD7554"
+                          />
+                        </svg>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" /> Baby Care</td>
+                      <td>Baby Care</td>
+                      <td>1</td>
+                      <td style="text-align: right">
+                        <svg
+                          class="editDeleteSvg"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            x="0.5"
+                            y="0.5"
+                            width="11"
+                            height="11"
+                            rx="1.5"
+                            stroke="#185492"
+                          />
+                          <path
+                            class="change_colors"
+                            d="M8.90333 4.34665C9.03333 4.21665 9.03333 3.99998 8.90333 3.87665L8.12333 3.09665C8 2.96665 7.78333 2.96665 7.65333 3.09665L7.04 3.70665L8.29 4.95665M3 7.74998V8.99998H4.25L7.93667 5.30998L6.68667 4.05998L3 7.74998Z"
+                            fill="#185492"
+                          />
+                        </svg>
+                      </td>
+                      <td>
+                        <svg
+                          class="editDeleteSvg"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            x="0.5"
+                            y="0.5"
+                            width="11"
+                            height="11"
+                            rx="1.5"
+                            stroke="#DD7554"
+                          />
+                          <path
+                            d="M4.70006 2.36658V2.75547H2.75562V3.53324H3.1445V8.5888C3.1445 8.79508 3.22645 8.99291 3.37231 9.13877C3.51817 9.28463 3.716 9.36658 3.92228 9.36658H7.81117C8.01745 9.36658 8.21528 9.28463 8.36114 9.13877C8.507 8.99291 8.58895 8.79508 8.58895 8.5888V3.53324H8.97784V2.75547H7.03339V2.36658H4.70006ZM4.70006 4.31102H5.47784V7.81102H4.70006V4.31102ZM6.25561 4.31102H7.03339V7.81102H6.25561V4.31102Z"
+                            fill="#DD7554"
+                          />
+                        </svg>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
 
             <div class="saveAndClose_btns">
               <button class="btn btn_close">Close</button>
