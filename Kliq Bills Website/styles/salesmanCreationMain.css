@@ -1,0 +1,91 @@
+.container.salesmanCreationContainer {
+  padding: 0;
+}
+
+.container.salesmanCreationContainer .saveAndClose_btns {
+  padding: 0.6em;
+}
+
+.salesmanContainer {
+  padding: 0.5em 1em;
+}
+
+#content1.active.salesman {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.salesmanContainer .salesmanInputContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 0.8em;
+  background: #fff;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+  padding: 1em;
+}
+
+.targetsAndIncentivesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 40%;
+  margin: auto;
+}
+
+.targetsAndIncentivesContainer div {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
+  gap: 10px;
+  margin-bottom: 0.4em;
+}
+
+.targetsAndIncentivesContainer div input {
+  border-radius: 3px;
+  border: 1px solid #797979;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0),
+    0px 0px 0px 1px rgba(0, 0, 0, 0);
+}
+
+.targetsAndIncentivesContainer div div:first-child:not(.headings div) {
+  border-radius: 2px;
+  background: #d9e1e5;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  padding-top: 4px;
+}
+
+@media (max-width: 524px) {
+    .targetsAndIncentivesContainer div {
+        
+        grid-template-columns: repeat(3, minmax(80px, 1fr));
+      }
+    
+}
+
+@media (min-width: 600px) {
+  .salesmanContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .salesmanContainer .image-container {
+    grid-area: 1/-1;
+  }
+
+  .salesmanContainer .salesmanInputContainer {
+    margin-top: 0;
+  }
+
+  .salesmanContainer .salesmanInputContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1080px) {
+  .salesmanContainer .salesmanInputContainer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
