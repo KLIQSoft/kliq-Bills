@@ -23,3 +23,8 @@
 /pages/item_Creation/itemList.html
 
 /pages/item_Creation/itemCreation.html [not completed fully]
+
+## Transaction Types Page
+/pages/transaction_types/transactionType.html
+
+/pages/transaction_types/transactionTypePopUp.html
