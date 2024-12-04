@@ -56,7 +56,7 @@
             </svg>
             Items
             <svg
-              class="arrow"
+              class="menu_arrow"
               width="10"
               height="10"
               viewBox="0 0 6 8"
@@ -96,7 +96,7 @@
             </svg>
             Accounts
             <svg
-              class="arrow"
+              class="menu_arrow"
               width="10"
               height="10"
               viewBox="0 0 6 8"
@@ -139,7 +139,7 @@
             </svg>
             Sales
             <svg
-              class="arrow"
+              class="menu_arrow"
               width="10"
               height="10"
               viewBox="0 0 6 8"
@@ -210,7 +210,7 @@
             </svg>
             Purchases
             <svg
-              class="arrow"
+              class="menu_arrow"
               width="10"
               height="10"
               viewBox="0 0 6 8"
@@ -253,7 +253,7 @@
             </svg>
             Financial Transactions
             <svg
-              class="arrow"
+              class="menu_arrow"
               width="10"
               height="10"
               viewBox="0 0 6 8"
@@ -301,7 +301,7 @@
             </svg>
             Settings
             <svg
-              class="arrow"
+              class="menu_arrow"
               width="10"
               height="10"
               viewBox="0 0 6 8"
@@ -350,7 +350,7 @@
             </svg>
             Admin Settings
             <svg
-              class="arrow"
+              class="menu_arrow"
               width="10"
               height="10"
               viewBox="0 0 6 8"
@@ -460,7 +460,7 @@
               </svg>
               Items
               <svg
-                class="arrow"
+                class="menu_arrow"
                 width="10"
                 height="10"
                 viewBox="0 0 6 8"
@@ -500,7 +500,7 @@
               </svg>
               Accounts
               <svg
-                class="arrow"
+                class="menu_arrow"
                 width="10"
                 height="10"
                 viewBox="0 0 6 8"
@@ -543,7 +543,7 @@
               </svg>
               Sales
               <svg
-                class="arrow"
+                class="menu_arrow"
                 width="10"
                 height="10"
                 viewBox="0 0 6 8"
@@ -614,7 +614,7 @@
               </svg>
               Purchases
               <svg
-                class="arrow"
+                class="menu_arrow"
                 width="10"
                 height="10"
                 viewBox="0 0 6 8"
@@ -657,7 +657,7 @@
               </svg>
               Financial Transactions
               <svg
-                class="arrow"
+                class="menu_arrow"
                 width="10"
                 height="10"
                 viewBox="0 0 6 8"
@@ -705,7 +705,7 @@
               </svg>
               Settings
               <svg
-                class="arrow"
+                class="menu_arrow"
                 width="10"
                 height="10"
                 viewBox="0 0 6 8"
@@ -753,7 +753,7 @@
               </svg>
               Admin Settings
               <svg
-                class="arrow"
+                class="menu_arrow"
                 width="10"
                 height="10"
                 viewBox="0 0 6 8"
@@ -847,6 +847,26 @@
           </p>
         </div>
         <div class="container salesmanCreationContainer">
+          <div class="salesmanMenu-container">
+            <div class="salesmanMenu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="salesmanMenu-content" id="menuContent">
+              <input type="text" class="searchInput" placeholder="Search Salesman" />
+              <div class="salesmanList">
+                <p><a class="active" href="#">Salesman - 1</a></p>
+                <p><a href="#">Salesman - 2</a></p>
+                <p><a href="#">Salesman - 3</a></p>
+                <p><a href="#">Salesman - 4</a></p>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Overlay Element -->
+          <div class="salesmanOverlay" id="salesmanOverlay"></div>
+          
           <div class="tabandSelectContainer">
             <div class="tabs">
               <div class="tab" onclick="showContent('content1')">
@@ -1017,6 +1037,23 @@
                     <label class="form_label">Salesman</label>
                   </div>
                 </div>
+
+                <div class="branchPermissionContainer">
+                  <h3>Branch Permission(s)</h3>
+                  <table>
+                    <thead>
+                      <th><input style="width: 10px; vertical-align: middle; margin-right: 4px;" type="checkbox"> Branch Name</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><input style="width: 10px; vertical-align: middle; margin-right: 4px;" type="checkbox"> Head Office</td>
+                      </tr>
+                      <tr>
+                        <td><input style="width: 10px; vertical-align: middle; margin-right: 4px;" type="checkbox"> Branch Office</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
 
@@ -1101,6 +1138,46 @@
         </div>
       </section>
     </main>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const menuBtn = document.getElementById('menuBtn');
+        const menuContent = document.getElementById('menuContent');
+        const salesmanOverlay = document.getElementById('salesmanOverlay');
+  
+        // Toggle function
+        menuBtn.addEventListener('click', function() {
+          menuBtn.classList.toggle('open');
+          menuContent.classList.toggle('active');
+          salesmanOverlay.classList.toggle('active');
+  
+          // Update aria-expanded attribute
+          const isExpanded = menuBtn.classList.contains('open');
+          menuBtn.setAttribute('aria-expanded', isExpanded);
+        });
+  
+        // Close menu when clicking on overlay
+        salesmanOverlay.addEventListener('click', function() {
+          menuBtn.classList.remove('open');
+          menuContent.classList.remove('active');
+          salesmanOverlay.classList.remove('active');
+  
+          // Update aria-expanded attribute
+          menuBtn.setAttribute('aria-expanded', 'false');
+        });
+  
+        // Optional: Close menu with Esc key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && menuContent.classList.contains('active')) {
+            menuBtn.classList.remove('open');
+            menuContent.classList.remove('active');
+            salesmanOverlay.classList.remove('active');
+  
+            // Update aria-expanded attribute
+            menuBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+    </script>
     <script src="../../js/menu.js"></script>
     <script src="../../js/accountCreation.js"></script>
     <script src="../../js/themes.js"></script>

@@ -56,12 +56,152 @@
   padding-top: 4px;
 }
 
+.salesmanCreationContainer .branchPermissionContainer td:last-child {
+  border: none;
+}
+
+.salesmanCreationContainer {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 10px;
+}
+
+.salesmanSearch {
+  padding-left: 1em;
+  padding-top: 1em;
+}
+
+.salesmanList {
+  margin-top: 1em;
+}
+
+.salesmanList p a {
+  color: var(--primary-color);
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 3px;
+  transition: all 0.4s;
+}
+
+.salesmanList p a.active {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.salesmanList p a:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+/* Container Styling */
+.salesmanMenu-container {
+  position: relative;
+  display: inline-block; /* Allows the menu to wrap around content */
+}
+
+/* Hamburger Menu Styling */
+.salesmanMenu-btn {
+  width: 25px;
+  height: 20px;
+  margin: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.salesmanMenu-btn span {
+  display: block;
+  height: 4px;
+  background: var(--primary-color);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+/* Cross Transformation */
+.salesmanMenu-btn.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.salesmanMenu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.salesmanMenu-btn.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Dropdown Menu Content */
+.salesmanMenu-content {
+  position: absolute;
+  top: 40px; /* Adjust based on menu button height */
+  left: 0;
+  width: 250px;
+  background-color: #f4f4f4;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.salesmanMenu-content.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Search Input Styling */
+.searchInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Salesman List Styling */
+.salesmanList p {
+  margin-bottom: 10px;
+}
+
+.salesmanList a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.salesmanList a.active {
+  font-weight: bold;
+}
+
+/* Overlay to prevent interaction with the page when menu is open */
+.salesmanOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 900;
+}
+
+.salesmanOverlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 @media (max-width: 524px) {
-    .targetsAndIncentivesContainer div {
-        
-        grid-template-columns: repeat(3, minmax(80px, 1fr));
-      }
-    
+  .targetsAndIncentivesContainer div {
+    grid-template-columns: repeat(3, minmax(80px, 1fr));
+  }
 }
 
 @media (min-width: 600px) {

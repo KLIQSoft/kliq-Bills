@@ -1,7 +1,7 @@
 /* ================================================== 
         Below Styles works on all Screen Widths 
    ================================================== */
-.arrow {
+.menu_arrow {
   margin-left: auto;
   transition: transform 0.4s;
 }
@@ -69,7 +69,7 @@ path.fill {
   fill: #fff;
 }
 
-.panel_active .arrow {
+.panel_active .menu_arrow {
   transform: rotate(90deg);
   transition: transform 0.4s;
 }
@@ -117,7 +117,7 @@ path.fill {
     transition: 0.3s ease;
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
     overflow-y: auto;
-    z-index: 3;
+    z-index: 3000;
   }
 
   .off-screen-menu a {
@@ -167,7 +167,7 @@ path.fill {
     position: relative;
     margin-left: 0.6rem;
     cursor: pointer;
-    z-index: 4;
+    z-index: 4000;
   }
 
   .ham-menu span {
