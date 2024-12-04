@@ -75,6 +75,17 @@
   margin-top: 1em;
 }
 
+.salesmanList p {
+  position: relative;
+}
+
+.deleteSalesman {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  cursor: pointer;
+}
+
 .salesmanList p a {
   color: var(--primary-color);
   display: inline-block;
@@ -159,7 +170,7 @@
 .searchInput {
   width: 100%;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
@@ -172,7 +183,6 @@
 .salesmanList a {
   text-decoration: none;
   color: #333;
-  font-size: 16px;
 }
 
 .salesmanList a.active {
@@ -196,6 +206,18 @@
 .salesmanOverlay.active {
   opacity: 1;
   visibility: visible;
+}
+
+.salesmanCreationContainer .add_icon_container {
+  position: relative;
+}
+
+.salesmanCreationContainer .add_icon {
+  position: absolute;
+  right: 16px;
+  top: 8px;
+  cursor: pointer;
+  z-index: 100;
 }
 
 @media (max-width: 524px) {

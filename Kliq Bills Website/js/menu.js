@@ -21,3 +21,44 @@ for (var i = 0; i < acc.length; i++) {
     }
   });
 }
+
+//
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuBtn = document.getElementById("menuBtn");
+  const menuContent = document.getElementById("menuContent");
+  const salesmanOverlay = document.getElementById("salesmanOverlay");
+
+  // Toggle function
+  menuBtn.addEventListener("click", function () {
+    menuBtn.classList.toggle("open");
+    menuContent.classList.toggle("active");
+    salesmanOverlay.classList.toggle("active");
+
+    // Update aria-expanded attribute
+    const isExpanded = menuBtn.classList.contains("open");
+    menuBtn.setAttribute("aria-expanded", isExpanded);
+  });
+
+  // Close menu when clicking on overlay
+  salesmanOverlay.addEventListener("click", function () {
+    menuBtn.classList.remove("open");
+    menuContent.classList.remove("active");
+    salesmanOverlay.classList.remove("active");
+
+    // Update aria-expanded attribute
+    menuBtn.setAttribute("aria-expanded", "false");
+  });
+
+  // Optional: Close menu with Esc key
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && menuContent.classList.contains("active")) {
+      menuBtn.classList.remove("open");
+      menuContent.classList.remove("active");
+      salesmanOverlay.classList.remove("active");
+
+      // Update aria-expanded attribute
+      menuBtn.setAttribute("aria-expanded", "false");
+    }
+  });
+});
