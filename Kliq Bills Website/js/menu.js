@@ -22,12 +22,12 @@ for (var i = 0; i < acc.length; i++) {
   });
 }
 
-//
-
+/* ========== Salesman Creation and charges menu Script ========== */
 document.addEventListener("DOMContentLoaded", function () {
   const menuBtn = document.getElementById("menuBtn");
   const menuContent = document.getElementById("menuContent");
   const salesmanOverlay = document.getElementById("salesmanOverlay");
+  const chargesOverlay = document.getElementById("chargesOverlay");
 
   // Toggle function
   menuBtn.addEventListener("click", function () {
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     menuBtn.setAttribute("aria-expanded", isExpanded);
   });
 
-  // Close menu when clicking on overlay
+  // Close salesman menu when clicking on overlay
   salesmanOverlay.addEventListener("click", function () {
     menuBtn.classList.remove("open");
     menuContent.classList.remove("active");
