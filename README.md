@@ -22,7 +22,7 @@
 ## Item Creation Page
 /pages/item_Creation/itemList.html
 
-/pages/item_Creation/itemCreation.html [not completed fully]
+/pages/item_Creation/itemCreation.html
 
 ## Transaction Types Page
 /pages/transaction_types/transactionType.html

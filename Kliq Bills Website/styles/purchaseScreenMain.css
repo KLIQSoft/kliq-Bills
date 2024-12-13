@@ -1,0 +1,273 @@
+.purchaseScreenContainer #content1.active {
+  grid-template-columns: 1fr;
+}
+
+.purchaseScreenContainer {
+  padding: 0;
+  background: #fff;
+}
+
+/* ================ partyInfoContainer Style - START ================ */
+.partyInfoContainer {
+  padding: 1em;
+}
+
+.purchaseScreenContainer .form_div {
+  position: relative;
+}
+
+.purchaseScreenContainer .v {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: var(--primary-linear-gradient-bg);
+  color: #fff;
+  width: 14px;
+  height: 14px;
+  border-radius: 50px;
+  padding: 10px;
+  font-size: 0.6rem;
+  font-weight: bold;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paymentandInclExclContainer,
+.paymentRadiContainer,
+.exclinclRadi {
+  display: flex;
+}
+
+.paymentandInclExclContainer {
+  justify-content: space-between;
+  background: var(--primary-linear-gradient-bg);
+  color: #fff;
+  padding: 0.4rem;
+}
+
+.paymentRadi,
+.ieRadi {
+  display: flex;
+  align-items: center;
+  margin-right: 0.8rem;
+}
+
+.paymentandInclExclContainer input[type="radio"] {
+  margin-right: 0.2rem;
+}
+
+.paymenyInfo .tabs {
+  display: flex;
+}
+
+.paymenyInfo .select-wrapper,
+.paymenyInfo .custom_select {
+  display: none;
+}
+
+.paymentInfoAndShippingAddress .content {
+  margin-top: 0;
+  padding-top: 0.8em;
+}
+
+.paymentInfoAndShippingAddress #content1 {
+  background: #f1f7fb;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05),
+    0px 0px 0px 1px rgba(0, 0, 0, 0.08);
+}
+
+.paymentInfoAndShippingAddress input,
+.paymentInfoAndShippingAddress select {
+  background: #fff;
+  z-index: 0;
+}
+
+.partyInfoContainer .row {
+  margin-bottom: 0.8em;
+}
+
+.partyInfoContainer .row.row1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.partyInfoContainer .row.row2 {
+  display: grid;
+  grid-template-columns: 1fr 20px 20px;
+  align-items: center;
+  gap: 5px;
+}
+
+.partyInfoContainer .row.row2 .turnover {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
+.partyInfoContainer .row.row2 .b {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  border-radius: 50px;
+  background: linear-gradient(180deg, #185492 0%, #0e4074 100%);
+  color: #fff;
+  font-size: 0.6rem;
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partyInfoContainer .row.row3 {
+  display: grid;
+  grid-template-columns: 18px 0.4fr 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.partyInfoContainer .row.row3 span {
+  color: #ff390e;
+  text-shadow: 0px 1px 0px #ccc, 0px 2px 0px #c9c9c9, 0px 3px 0px #bbb,
+    0px 4px 0px #b9b9b9, 0px 5px 0px #aaa, 0px 6px 1px rgba(0, 0, 0, 0.1),
+    0px 0px 5px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.3);
+  font-family: helvetica;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.partyInfoContainer .row.row4 {
+  display: grid;
+  grid-template-columns: 1fr 0.6fr 0.6fr;
+  gap: 10px;
+}
+
+.partyInfoContainer .row.row5 {
+  display: grid;
+  grid-template-columns: 1fr 0.6fr 0.6fr;
+  gap: 10px;
+}
+
+.purchaseScreenContainer .barcode_scanner_icon {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.purchaseScreenContainer .barcode_scanner_icon img {
+  cursor: pointer;
+}
+/* ================ partyInfoContainer Style - END ================ */
+
+/* ================ shippingAddressContainer Style - START ================ */
+.purchaseScreenContainer #content2 {
+  background: #f1f7fb;
+}
+
+.shippingAddressContainer {
+  padding: 1em;
+}
+
+.shippingAddressContainer .s {
+  border-radius: 2px;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 5px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shippingAddressContainer .row {
+  display: grid;
+  gap: 10px;
+}
+
+.shippingAddressContainer .row1 {
+  grid-template-columns: 1fr 25px;
+}
+
+.shippingAddressContainer .row2 {
+  grid-template-columns: 1fr 0.4fr;
+}
+
+.shippingAddressContainer .row {
+  margin-bottom: 0.8em;
+}
+/* ================ shippingAddressContainer Style - END ================ */
+
+@media (max-width: 480px) {
+  /* ================ partyInfoContainer Style - START ================ */
+  .paymentRadi,
+  .ieRadi {
+    font-size: 0.5rem;
+  }
+
+  .paymentandInclExclContainer input[type="radio"] {
+    width: 8px;
+    height: 8px;
+  }
+
+  .paymenyInfo .tabs {
+    font-size: 0.5rem;
+  }
+
+  .partyInfoContainer .form_input {
+    height: 25px;
+    font-size: 0.4rem;
+  }
+
+  .partyInfoContainer .form_label {
+    font-size: 0.4rem;
+  }
+
+  .partyInfoContainer
+    .form_input:not(:placeholder-shown).form_input:not(:focus)
+    + .form_label {
+    font-size: 0.4rem;
+    top: -0.5em;
+  }
+
+  .purchaseScreenContainer .v {
+    width: 10px;
+    height: 10px;
+    font-size: 0.5rem;
+    padding: 8px;
+
+    top: 5px;
+    right: 4px;
+  }
+  /* ================ partyInfoContainer Style - END ================ */
+
+  /* ================ shippingAddressContainer Style - START ================ */
+  .shippingAddressContainer .form_input {
+    height: 25px;
+    font-size: 0.4rem;
+  }
+
+  .shippingAddressContainer .form_label {
+    font-size: 0.4rem;
+  }
+
+  .shippingAddressContainer .row1 .s {
+    height: 25px;
+  }
+
+  .shippingAddressContainer
+    .form_input:not(:placeholder-shown).form_input:not(:focus)
+    + .form_label {
+    font-size: 0.4rem;
+    top: -0.5em;
+  }
+  /* ================ shippingAddressContainer Style - END ================ */
+}
+
+
+.content2 { display: none; } .active { display: block; }

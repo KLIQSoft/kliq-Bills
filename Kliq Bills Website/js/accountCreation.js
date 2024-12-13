@@ -46,3 +46,20 @@ const displayContent = (id) => {
 // Initialize the first tab and content as active
 document.querySelector(".tab1").classList.add("innerActive");
 document.querySelector(".content1").classList.add("innerActive");
+
+// For Details, Parameters, and GST Tabs in Purchase Screen
+
+function showContent1(id) {
+  var contents = document.getElementsByClassName("content2");
+  for (var i = 0; i < contents.length; i++) {
+    contents[i].classList.remove("active");
+  }
+  document.getElementById(id).classList.add("active");
+  var tabs = document.getElementsByClassName("tab2");
+  for (var i = 0; i < tabs.length; i++) {
+    tabs[i].classList.remove("active");
+  }
+  document
+    .querySelector(".tab2[onclick=\"showContent1('" + id + "')\"]")
+    .classList.add("active");
+}
