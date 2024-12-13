@@ -28,3 +28,9 @@
 /pages/transaction_types/transactionType.html
 
 /pages/transaction_types/transactionTypePopUp.html
+
+## Charges Page
+/pages/charges/charges.html
+
+## Salesman Creation Page
+/pages/salesman_creation/salesmanCreation.html
