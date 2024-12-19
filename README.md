@@ -1,13 +1,18 @@
 # kliq-Bills
 
 ## Login Screens
-/login.html
+/pages/loginAndRegistration/login/login.html
 
-/login_company_year.html
+/pages/loginAndRegistration/login/login_company_year.html
 
-/reset_login.html
+/pages/loginAndRegistration/login/reset_login.html
 
-/verify_Otp_login.html
+/pages/loginAndRegistration/login/verify_Otp_login.html
+
+## Register Screens
+/pages/loginAndRegistration/registration/register.html
+
+/pages/loginAndRegistration/registration/verifyOtpRegister.html
 
 ## Menu Creation Screen
 /index.html
