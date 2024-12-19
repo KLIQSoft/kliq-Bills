@@ -1,0 +1,218 @@
+/* ========== image-container Styles - START ========== */
+.companyCreationContainer .replaceImage {
+  display: flex;
+  flex-direction: column;
+}
+
+.companyCreationContainer .image-container {
+  place-items: center;
+}
+
+.companyCreationContainer .replaceImage {
+  width: 100px;
+  height: 100px;
+  border: 1px dashed #82addb;
+  border-radius: 2px;
+  background: #f0f7ff;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.companyCreationContainer .img_btn {
+  font-size: 0.55rem;
+  margin-top: 0.5em;
+  border: none;
+  background: var(--primary-linear-gradient-bg);
+  color: #fff;
+  padding: 0.4em;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.companyCreationContainer .active_checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3em;
+}
+
+.companyCreationContainer .active_checkbox input[type="checkbox"] {
+  width: 10px;
+  height: 10px;
+}
+
+/* ========== image-container Styles - END ========== */
+
+.companyMain,
+.stockPointCreationContainer,
+.stockPointCreationMain {
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+}
+
+.companyCreationContainer .form_div input,
+.companyCreationContainer .form_div select {
+  height: 25px;
+}
+
+.companyCreationContainer .form_div label {
+  font-size: 0.5rem;
+  top: 7px;
+}
+
+/*Input focus move up label*/
+.companyCreationContainer .form_input:focus + .form_label,
+/*Input focus sticky top label*/
+.companyCreationContainer .form_input:not(:placeholder-shown).form_input:not(:focus) + .form_label {
+  font-size: 0.5rem;
+}
+
+.companyMain,
+.stockPointCreationMain {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.stockPointCreationContainer h2 {
+  font-size: 0.75rem;
+}
+
+.stockPointCreationContainer .buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.stockPointCreationContainer .buttons .btn {
+  border: 1px solid var(--primary-color);
+  background: white;
+  color: var(--primary-color);
+  padding: 4px 8px;
+  border-radius: 2px;
+  font-size: 0.5rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.stockPointCreationContainer .buttons .btn2 {
+  background: var(--primary-linear-gradient-bg);
+  color: #fff;
+}
+
+.companyTableContainer table {
+  font-size: 0.5rem;
+  margin-top: 0.4rem;
+}
+
+.companyTableContainer table thead {
+  background: linear-gradient(90deg, #d4e8f0 0%, #c6d5dc 100%);
+  box-shadow: 0px 1px 2px 0px rgba(60, 64, 67, 0.03),
+    0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+  color: #707273;
+  font-weight: 700;
+}
+
+.companyTableContainer table tr:nth-child(even) {
+  background: #edf8fc;
+  box-shadow: 0px 1px 2px 0px rgba(60, 64, 67, 0.03),
+    0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+
+.companyTableContainer table td:last-child {
+  border: none;
+}
+
+.companyTableContainer table svg {
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+
+  .container.companyContainer {
+    padding: 1em;
+  }
+
+  .companyCreationContainer .replaceImage { 
+    width: 150px;
+    height: 150px;
+  }
+
+  .companyCreationContainer .placeholder_img {
+    width: 62px;
+    height: 62px;
+  }
+
+  .companyCreationContainer .img_btn {
+    font-size: 0.875rem;
+  }
+
+  .image-container {
+    float: left;
+    margin-right: 1em;
+  }
+
+  .companyCreationContainer::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .companyMain,
+  .stockPointCreationMain {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+  }
+
+  .companyCreationContainer .form_div label {
+    font-size: 0.65rem;
+    top: 6px;
+  }
+
+  /*Input focus move up label*/
+  .companyCreationContainer .form_input:focus + .form_label,
+    /*Input focus sticky top label*/
+    .companyCreationContainer .form_input:not(:placeholder-shown).form_input:not(:focus) + .form_label {
+    font-size: 0.65rem;
+    top: -0.4rem;
+  }
+
+  .companyCreationContainer .form_div input,
+  .companyCreationContainer .form_div select {
+    height: 30px;
+  }
+
+  .stockPointCreationContainer h2 {
+    font-size: 1.125rem;
+  }
+
+  .stockPointCreationContainer .buttons {
+    gap: 16px;
+    margin-bottom: 1rem;
+  }
+
+  .stockPointCreationContainer .buttons .btn {
+    font-size: 1rem;
+    border-radius: 4px;
+  }
+
+  .companyTableContainer table {
+    max-width: 480px;
+  }
+
+  .companyTableContainer table {
+    font-size: 0.875rem;
+  }
+
+  .companyTableContainer table tbody {
+    font-size: 0.75rem;
+  }
+
+  .companyTableContainer table svg {
+    width: 12px;
+    height: 12px;
+  }
+
+}
