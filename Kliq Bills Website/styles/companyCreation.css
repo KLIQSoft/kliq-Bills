@@ -150,8 +150,8 @@
   }
 
   .image-container {
-    float: left;
-    margin-right: 1em;
+    float: right;
+    margin-left: 1em;
   }
 
   .companyCreationContainer::after {
