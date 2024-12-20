@@ -46,7 +46,8 @@
 
 .companyMain,
 .stockPointCreationContainer,
-.stockPointCreationMain {
+.stockPointCreationMain,
+.branchMain {
   margin-top: 0.6em;
   margin-bottom: 0.6em;
 }
@@ -66,13 +67,16 @@
 
 /*Input focus move up label*/
 .companyCreationContainer .form_input:focus + .form_label,
+.branchCreationContainer .form_input:focus + .form_label,
 /*Input focus sticky top label*/
-.companyCreationContainer .form_input:not(:placeholder-shown).form_input:not(:focus) + .form_label {
+.companyCreationContainer .form_input:not(:placeholder-shown).form_input:not(:focus) + .form_label,
+.branchCreationContainer .form_input:not(:placeholder-shown).form_input:not(:focus) + .form_label {
   font-size: 0.5rem;
 }
 
 .companyMain,
-.stockPointCreationMain {
+.stockPointCreationMain,
+.branchMain {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
@@ -82,14 +86,20 @@
   font-size: 0.75rem;
 }
 
-.stockPointCreationContainer .buttons {
+.stockPointCreationContainer .buttons,
+.branchCreationWrapper .buttons {
   display: flex;
   gap: 8px;
   justify-content: flex-end;
   align-items: center;
 }
 
-.stockPointCreationContainer .buttons .btn {
+.branchCreationWrapper .buttons {
+  margin-bottom: 0.4em;
+}
+
+.stockPointCreationContainer .buttons .btn,
+.branchCreationWrapper .buttons .btn {
   border: 1px solid var(--primary-color);
   background: white;
   color: var(--primary-color);
@@ -100,17 +110,20 @@
   cursor: pointer;
 }
 
-.stockPointCreationContainer .buttons .btn2 {
+.stockPointCreationContainer .buttons .btn2,
+.branchCreationWrapper .buttons .btn2 {
   background: var(--primary-linear-gradient-bg);
   color: #fff;
 }
 
-.companyTableContainer table {
+.companyTableContainer table,
+.branchTableContainer table {
   font-size: 0.5rem;
   margin-top: 0.4rem;
 }
 
-.companyTableContainer table thead {
+.companyTableContainer table thead,
+.branchTableContainer table thead {
   background: linear-gradient(90deg, #d4e8f0 0%, #c6d5dc 100%);
   box-shadow: 0px 1px 2px 0px rgba(60, 64, 67, 0.03),
     0px 1px 3px 1px rgba(60, 64, 67, 0.15);
@@ -118,28 +131,94 @@
   font-weight: 700;
 }
 
-.companyTableContainer table tr:nth-child(even) {
+.companyTableContainer table tr:nth-child(even),
+.branchTableContainer table tr:nth-child(even) {
   background: #edf8fc;
   box-shadow: 0px 1px 2px 0px rgba(60, 64, 67, 0.03),
     0px 1px 3px 1px rgba(60, 64, 67, 0.15);
 }
 
-.companyTableContainer table td:last-child {
+.companyTableContainer table td:last-child,
+.branchTableContainer table td:last-child {
   border: none;
 }
 
-.companyTableContainer table svg {
+.companyTableContainer table svg,
+.branchTableContainer table svg {
   cursor: pointer;
 }
 
-@media (min-width: 768px) {
+/* ========== Toggle Switch - START ========== */
 
+.branchTableContainer .switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+}
+
+.branchTableContainer .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.branchTableContainer .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.branchTableContainer .slider:before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.branchTableContainer input:checked + .slider {
+  background-color: #185492;
+}
+
+.branchTableContainer input:focus + .slider {
+  box-shadow: 0 0 1px #185492;
+}
+
+.branchTableContainer input:checked + .slider:before {
+  -webkit-transform: translateX(12px);
+  -ms-transform: translateX(12px);
+  transform: translateX(12px);
+}
+
+/* Rounded sliders */
+.branchTableContainer .slider.round {
+  border-radius: 30px;
+}
+
+.branchTableContainer .slider.round:before {
+  border-radius: 50%;
+}
+
+/* ========== Toggle Switch - END ========== */
+
+@media (min-width: 768px) {
   .container.companyContainer,
   .container.branchContainer {
     padding: 1em;
   }
 
-  .companyCreationContainer .replaceImage { 
+  .companyCreationContainer .replaceImage {
     width: 150px;
     height: 150px;
   }
@@ -165,26 +244,32 @@
   }
 
   .companyMain,
-  .stockPointCreationMain {
+  .stockPointCreationMain,
+  .branchMain {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 16px;
   }
 
-  .companyCreationContainer .form_div label {
+  .companyCreationContainer .form_div label,
+  .branchCreationContainer .form_div label {
     font-size: 0.65rem;
     top: 6px;
   }
 
   /*Input focus move up label*/
   .companyCreationContainer .form_input:focus + .form_label,
+  .branchCreationContainer .form_input:focus + .form_label,
     /*Input focus sticky top label*/
-    .companyCreationContainer .form_input:not(:placeholder-shown).form_input:not(:focus) + .form_label {
+    .companyCreationContainer .form_input:not(:placeholder-shown).form_input:not(:focus) + .form_label,
+    .branchCreationContainer .form_input:not(:placeholder-shown).form_input:not(:focus) + .form_label {
     font-size: 0.65rem;
     top: -0.4rem;
   }
 
   .companyCreationContainer .form_div input,
-  .companyCreationContainer .form_div select {
+  .companyCreationContainer .form_div select,
+  .branchCreationContainer .form_div input,
+  .branchCreationContainer .form_div select {
     height: 30px;
   }
 
@@ -192,29 +277,31 @@
     font-size: 1.125rem;
   }
 
-  .stockPointCreationContainer .buttons {
+  .stockPointCreationContainer .buttons,
+  .branchCreationWrapper .buttons {
     gap: 16px;
     margin-bottom: 1rem;
   }
 
-  .stockPointCreationContainer .buttons .btn {
+  .stockPointCreationContainer .buttons .btn,
+  .branchCreationWrapper .buttons .btn {
     font-size: 1rem;
     border-radius: 4px;
   }
 
-  .companyTableContainer table {
+  .companyTableContainer table,
+  .branchTableContainer table {
     max-width: 480px;
-  }
-
-  .companyTableContainer table {
     font-size: 0.875rem;
   }
 
-  .companyTableContainer table tbody {
+  .companyTableContainer table tbody,
+  .branchTableContainer table tbody {
     font-size: 0.75rem;
   }
 
-  .companyTableContainer table svg {
+  .companyTableContainer table svg,
+  .branchTableContainer table svg {
     width: 12px;
     height: 12px;
   }
