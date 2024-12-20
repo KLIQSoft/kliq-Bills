@@ -52,11 +52,14 @@
 }
 
 .companyCreationContainer .form_div input,
-.companyCreationContainer .form_div select {
+.companyCreationContainer .form_div select,
+.branchCreationContainer .form_div input,
+.branchCreationContainer .form_div select {
   height: 25px;
 }
 
-.companyCreationContainer .form_div label {
+.companyCreationContainer .form_div label,
+.branchCreationContainer .form_div label {
   font-size: 0.5rem;
   top: 7px;
 }
@@ -131,7 +134,8 @@
 
 @media (min-width: 768px) {
 
-  .container.companyContainer {
+  .container.companyContainer,
+  .container.branchContainer {
     padding: 1em;
   }
 
