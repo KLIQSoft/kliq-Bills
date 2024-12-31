@@ -12,14 +12,11 @@
   padding: 1em;
 }
 
-.purchaseScreenContainer .form_div {
-  position: relative;
-}
-
 .purchaseScreenContainer .v {
   position: absolute;
   top: 6px;
   right: 6px;
+  z-index: 100;
   background: var(--primary-linear-gradient-bg);
   color: #fff;
   width: 14px;
@@ -74,15 +71,19 @@
 }
 
 .paymentInfoAndShippingAddress #content1 {
-  background: #f1f7fb;
+  /* background: #f1f7fb; */
   box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05),
     0px 0px 0px 1px rgba(0, 0, 0, 0.08);
 }
 
-.paymentInfoAndShippingAddress input,
+/* .paymentInfoAndShippingAddress input,
 .paymentInfoAndShippingAddress select {
   background: #fff;
   z-index: 0;
+} */
+
+.paymentInfoAndShippingAddress .form_label {
+  /* background: #F1F7FB; */
 }
 
 .partyInfoContainer .row {
@@ -166,7 +167,7 @@
 
 /* ================ shippingAddressContainer Style - START ================ */
 .purchaseScreenContainer #content2 {
-  background: #f1f7fb;
+  /* background: #f1f7fb; */
 }
 
 .shippingAddressContainer {
@@ -238,14 +239,18 @@
 /* ================ detailsTabContainer Style - START ================ */
 .detailsTabContainer {
   padding: 1em;
-  background: #F4F9FA;
+  /* background: #F4F9FA; */
   box-shadow: 0px 1px 1px 0px rgba(9, 30, 66, 0.25), 0px 0px 1px 1px rgba(9, 30, 66, 0.13);
 }
 
-.detailsTabContainer input,
+/* .detailsTabContainer input,
 .detailsTabContainer select {
   background: #fff;
   z-index: 0;
+} */
+
+.detailsTabContainer .form_label {
+  /* background: #F1F7FB; */
 }
 
 .detailsTabContainer .row {
@@ -293,6 +298,39 @@
   cursor: pointer;
 }
 
+.detailsTabContainer .pymtcontainer {
+  position: relative;
+}
+
+.detailsTabContainer .pymtcontainer p {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5px 6px;
+  background: #D9D9D9;
+  border-radius: 0px 3px 3px 0px;
+}
+
+.poContainer p {
+  position: absolute;
+  top: 4px;
+  right: 20px;
+  z-index: 100;
+  border-radius: 50px;
+  background: linear-gradient(180deg, #185492 0%, #0E4074 100%);
+  color: #fff;
+  padding: 4px;
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* ================ detailsTabContainer Style - END ================ */
 
 @media (max-width: 480px) {
@@ -325,6 +363,12 @@
     + .form_label {
     font-size: 0.4rem;
     top: -0.5em;
+  }
+
+  /*Input focus move up label*/
+  .partyInfoContainer .form_input:focus + .form_label,
+  .purchaseScreenContainer .form_input:focus + .form_label {
+    font-size: 0.4rem;
   }
 
   .purchaseScreenContainer .v {
@@ -388,5 +432,15 @@
     padding: 4px;
   }
 
+  .detailsTabContainer .pymtcontainer p {
+    padding: 7px 4px;
+    font-size: 7px;
+  }
+
+  .poContainer p {
+    width: 18px;
+    height: 18px;
+    font-size: 8px;
+  }
   /* ================ detailsTabContainer Style - END ================ */
 }
