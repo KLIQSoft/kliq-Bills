@@ -3,8 +3,14 @@
 }
 
 .purchaseScreenContainer {
-  padding: 0;
   background: #fff;
+}
+
+.purchaseContainer,
+.purchaseDetailsContainer {
+  background: #fff;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05),
+    0px 0px 0px 1px rgba(0, 0, 0, 0.08);
 }
 
 /* ================ partyInfoContainer Style - START ================ */
@@ -68,22 +74,6 @@
 .paymentInfoAndShippingAddress .content {
   margin-top: 0;
   padding-top: 0.8em;
-}
-
-.paymentInfoAndShippingAddress #content1 {
-  /* background: #f1f7fb; */
-  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05),
-    0px 0px 0px 1px rgba(0, 0, 0, 0.08);
-}
-
-/* .paymentInfoAndShippingAddress input,
-.paymentInfoAndShippingAddress select {
-  background: #fff;
-  z-index: 0;
-} */
-
-.paymentInfoAndShippingAddress .form_label {
-  /* background: #F1F7FB; */
 }
 
 .partyInfoContainer .row {
@@ -166,9 +156,6 @@
 /* ================ partyInfoContainer Style - END ================ */
 
 /* ================ shippingAddressContainer Style - START ================ */
-.purchaseScreenContainer #content2 {
-  /* background: #f1f7fb; */
-}
 
 .shippingAddressContainer {
   padding: 1em;
@@ -232,25 +219,13 @@
 
 .tab2.active {
   background: var(--primary-linear-gradient-bg);
-    color: #fff;
+  color: #fff;
 }
 /* ================ purchaseDetailsContainer - END ================ */
 
 /* ================ detailsTabContainer Style - START ================ */
 .detailsTabContainer {
   padding: 1em;
-  /* background: #F4F9FA; */
-  box-shadow: 0px 1px 1px 0px rgba(9, 30, 66, 0.25), 0px 0px 1px 1px rgba(9, 30, 66, 0.13);
-}
-
-/* .detailsTabContainer input,
-.detailsTabContainer select {
-  background: #fff;
-  z-index: 0;
-} */
-
-.detailsTabContainer .form_label {
-  /* background: #F1F7FB; */
 }
 
 .detailsTabContainer .row {
@@ -277,21 +252,32 @@
   grid-template-columns: 1fr;
 }
 
-.detailsTabContainer .row.row5 {
+.detailsTabContainer .row.row5,
+.parameterTableContainer .row.row5,
+.gstDetailsTableContainer .row.row5 {
   display: flex;
   gap: 10px;
   align-items: center;
 }
 
-.detailsTabContainer .row.row5 .stock {
+.detailsTabContainer .row.row5 .stock,
+.parameterTableContainer .row.row5 .stock,
+.gstDetailsTableContainer .row.row5 .stock {
   padding: 6px 5px;
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
   border-radius: 3px;
 }
 
-.detailsTabContainer .row.row5 .reports_icon {
+.detailsTabContainer .row.row5 .reports_icon,
+.parameterTableContainer .row.row5 .reports_icon,
+.gstDetailsTableContainer .row.row5 .reports_icon {
   margin-left: auto;
+}
+
+.parameterTableContainer .row.row5,
+.gstDetailsTableContainer .row.row5 {
+  padding: 1em;
 }
 
 .detailsTabContainer svg {
@@ -307,7 +293,7 @@
   right: 0;
   top: 0;
   padding: 5px 6px;
-  background: #D9D9D9;
+  background: #d9d9d9;
   border-radius: 0px 3px 3px 0px;
 }
 
@@ -317,7 +303,7 @@
   right: 20px;
   z-index: 100;
   border-radius: 50px;
-  background: linear-gradient(180deg, #185492 0%, #0E4074 100%);
+  background: linear-gradient(180deg, #185492 0%, #0e4074 100%);
   color: #fff;
   padding: 4px;
   width: 24px;
@@ -332,6 +318,201 @@
 }
 
 /* ================ detailsTabContainer Style - END ================ */
+
+/* ================ parameterTableContainer Style - START ================ */
+
+.parameterTableContainer table,
+.gstDetailsTableContainer table {
+  font-size: 0.875rem;
+  border: 1px solid #c7d2de;
+}
+
+.parameterTableContainer thead,
+.parameterTableContainer tfoot,
+.gstDetailsTableContainer thead,
+.gstDetailsTableContainer tfoot {
+  background: #c7d2de;
+  color: #40484a;
+}
+
+.parameterTableContainer tr td,
+.gstDetailsTableContainer tr td {
+  height: 30px;
+  border: 1px solid #c7d2de;
+}
+
+.parameterTableContainer tr input[type="text"],
+.gstDetailsTableContainer tr input[type="text"] {
+  border-radius: 3px;
+  border: 1px solid #40484a;
+  height: 20px;
+  width: 100%;
+}
+
+.parameterTableContainer tr:nth-child(even),
+.gstDetailsTableContainer tr:nth-child(even) {
+  background: #e9f0f6;
+}
+/* ================ parameterTableContainer Style - END ================ */
+
+.gstDetailsTableContainer table {
+  height: 200px;
+  overflow-y: auto;
+}
+
+.gstDetailsTableContainer .gstDetailTotal {
+  background: #000;
+  color: #fff;
+}
+
+.gstDetailsTableContainer td {
+  border: none !important;
+}
+
+.gstDetailsTableContainer .gstDetailsCheckbox {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 400;
+}
+
+.gstDetailsTableContainer .gstDetailsCheckbox input[type="checkbox"] {
+  width: 12px;
+  height: 12px;
+}
+
+.purchaseScreenContainer .table-container {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* ================ addItemContainer Style - START ================ */
+.addItemContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.addItemContainer .itemTextContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.itemTextContainer input,
+.itemTextContainer select,
+.itemTextContainer textarea {
+  flex: 1 1 auto;
+  height: 30px;
+
+  border-radius: 3px;
+  border: 1px solid #40484a;
+  color: #40484a;
+}
+
+.itemTextContainer textarea {
+  height: 40px;
+}
+
+.addItemSizes {
+  width: 70px;
+}
+
+.addItemContainer button {
+  border-radius: 3px;
+  background: var(--primary-linear-gradient-bg);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 5px 10px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+/* ================ addItemContainer Style - END ================ */
+
+/* ================ mainTableContainer Style - START ================ */
+.mainTableContainer {
+  margin-top: 1em;
+}
+
+.mainTableContainer table {
+  font-size: 0.75rem;
+  overflow: hidden;
+  border-radius: 0.2rem;
+  white-space: nowrap;
+}
+
+.mainTableContainer table select {
+  height: 20px;
+  font-size: 0.75rem;
+  padding: 2px;
+}
+
+.mainTableContainer thead {
+  background: linear-gradient(90deg, #d4e8f0 0%, #c6d5dc 100%);
+  color: #40484a;
+}
+
+.mainTableContainer tr {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.mainTableContainer tr:nth-child(even) {
+  background: linear-gradient(90deg, #d4e8f0 0%, #c6d5dc 100%);
+}
+
+.mainTableContainer td {
+  border: none;
+}
+
+.mainTableContainer tfoot {
+  background: #65777e;
+}
+/* ================ mainTableContainer Style - END ================ */
+
+/* ================ tcsAndRoundOff Style - START ================ */
+
+.tcsAndRoundOff table {
+  white-space: nowrap;
+  overflow: hidden;
+  border-radius: 0.2rem;
+}
+
+.tcsAndRoundOff thead {
+  background: #C7D2DE;
+  color: #40484A;
+}
+
+.tcsAndRoundOff td {
+  border: 1px solid #C7D2DE;
+}
+
+.tcsAndRoundOff tr:nth-child(even) {
+  background: #E9F0F6;
+}
+
+.purchaseScreenContainer .tcsRoundOffAndTotal {
+  margin-top: 0.7em;
+  justify-content: space-between;
+}
+
+/* ================ tcsAndRoundOff Style - END ================ */
+
+.purchaseScreenContainer .totals div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.6em;
+  font-weight: 700;
+  color: #40484A;
+}
+
+.purchaseScreenContainer .btn {
+  background: var(--primary-linear-gradient-bg);
+  color: #fff;
+  border: 1px solid var(--primary-color);
+  padding: 4px 12px;
+}
 
 @media (max-width: 480px) {
   /* ================ partyInfoContainer Style - START ================ */
@@ -427,7 +608,9 @@
     top: -0.5em;
   }
 
-  .detailsTabContainer .row.row5 .stock{
+  .detailsTabContainer .row.row5 .stock,
+  .parameterTableContainer .row.row5 .stock,
+  .gstDetailsTableContainer .row.row5 .stock {
     font-size: 0.43rem;
     padding: 4px;
   }
@@ -443,4 +626,86 @@
     font-size: 8px;
   }
   /* ================ detailsTabContainer Style - END ================ */
+
+  /* ================ parameterTableContainer Style - START ================ */
+  .parameterTableContainer table,
+  .gstDetailsTableContainer table {
+    font-size: 0.5rem;
+  }
+
+  .parameterTableContainer tr td,
+  .gstDetailsTableContainer tr td {
+    height: 20px;
+  }
+
+  .parameterTableContainer tr input[type="text"],
+  .gstDetailsTableContainer tr input[type="text"] {
+    height: 14px;
+  }
+  /* ================ parameterTableContainer Style - END ================ */
+
+  .gstDetailsTableContainer .gstDetailsCheckbox input[type="checkbox"] {
+    width: 8px;
+    height: 8px;
+  }
+
+  /* ================ addItemContainer Style - START ================ */
+  .addItemContainer {
+    display: block;
+  }
+  /* ================ addItemContainer Style - END ================ */
+
+  /* ================ mainTableContainer Style - START ================ */
+  .mainTableContainer {
+    margin-top: 1em;
+  }
+
+  .mainTableContainer table {
+    font-size: 0.44rem;
+  }
+
+  .mainTableContainer table select {
+    height: 14px;
+    font-size: 0.44rem;
+  }
+  /* ================ mainTableContainer Style - END ================ */
+
+  /* ================ tcsAndRoundOff Style - START ================ */
+  .tcsAndRoundOff thead {
+    font-size: 0.5rem;
+  }
+
+  .tcsAndRoundOff tbody {
+    font-size: 0.4375rem;
+  }
+  /* ================ tcsAndRoundOff Style - END ================ */
+}
+
+@media (min-width: 768px) {
+  .tcsAndRoundOff {
+    width: 65%;
+  }
+}
+
+@media (max-width: 900px) {
+  .purchaseScreenContainer .totals {
+    width: 60%;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 1037px) {
+  .partyAndDetailsContainer {
+    display: flex;
+    gap: 5px;
+  }
+
+  .purchaseContainer,
+  .purchaseDetailsContainer {
+    flex: 1;
+  }
+
+  .purchaseScreenContainer .tcsRoundOffAndTotal {
+    display: flex;
+  }
 }

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purchase</title>
+    <link rel="stylesheet" href="../../styles/normalize.css" />
+    <link rel="stylesheet" href="../../styles/base.css" />
+    <link rel="stylesheet" href="../../styles/menu.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <link rel="stylesheet" href="../../styles/tabStyles.css" />
+    <link rel="stylesheet" href="../../styles/formStyles.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationMain.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationForm.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationTabs.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationTable.css" />
+    <link rel="stylesheet" href="../../styles/purchaseScreenMain.css" />
+
+    <style>
+
+        .showAcountsPopUp {
+            border-radius: 8px;
+            background: #FFF;
+            box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.50);
+            width: 170px;
+            margin: auto;
+            padding: 10px;
+        }
+
+        .showAcountsPopUp h1 {
+            font-size: 0.5rem;
+            color: var(--primary-color);
+            margin-bottom: 4px;
+        }
+
+        .AccountSelectList {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+        }
+
+        .AccountSelectList select {
+            width: 150px;
+            height: 20px;
+            padding: 2px;
+            border-radius: 3px;
+            border: 1px solid #40484A;
+            font-size: 0.44rem;
+        }
+
+        .setBtn {
+            font-size: 0.5rem;
+            font-weight: 700;
+            padding: 5px 7px;
+            border: none;
+            border-radius: 4px;
+            background: var(--primary-linear-gradient-bg);
+            color: #fff;
+            display: flex;
+            margin-left: auto;
+            margin-top: 6px;
+        }
+
+        @media (min-width: 600px) {
+
+            .showAcountsPopUp {
+                width: 250px;
+            }
+
+            .showAcountsPopUp h1 {
+                font-size: 0.875rem;
+            }
+
+            .AccountSelectList select {
+                width: 230px;
+                height: 30px;
+                font-size: 0.75rem;
+            }
+
+            .setBtn {
+                font-size: 0.875rem;
+                font-weight: 700;
+                padding: 4px 8px;
+            }   
+            
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="showAcountsPopUp">
+        <h1>Show Accounts</h1>
+        <div class="AccountSelectList">
+            <select>
+                <option value="1" selected disabled>Purchase Account</option>
+                <option value="2">Other Options</option>
+            </select>
+
+            <select>
+                <option value="1" selected disabled>SGST A/C</option>
+                <option value="2">Other Options</option>
+            </select>
+
+            <select>
+                <option value="1" selected disabled>CGST A/C</option>
+                <option value="2">Other Options</option>
+            </select>
+
+            <select>
+                <option value="1" selected disabled>IGST A/C</option>
+                <option value="2">Other Options</option>
+            </select>
+
+            <select>
+                <option value="1" selected disabled>Cess A/C</option>
+                <option value="2">Other Options</option>
+            </select>
+        </div>
+        <button class="setBtn">SET</button>
+    </div>
+  </body>
+</html>
