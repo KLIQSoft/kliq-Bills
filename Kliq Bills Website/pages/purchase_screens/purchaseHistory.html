@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purchase History Pop Up</title>
+    <link rel="stylesheet" href="../../styles/normalize.css" />
+    <link rel="stylesheet" href="../../styles/base.css" />
+    <link rel="stylesheet" href="../../styles/menu.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <link rel="stylesheet" href="../../styles/tabStyles.css" />
+    <link rel="stylesheet" href="../../styles/formStyles.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationMain.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationForm.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationTabs.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationTable.css" />
+    <link rel="stylesheet" href="../../styles/purchaseScreenMain.css" />
+    <style>
+      .purhcaseHistoryPopUp {
+        border: 1px solid #40484A;
+        background: #FFF;
+        box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.24);
+        padding: 6px;
+        max-width: 300px;
+        margin: auto;
+      }
+
+      .purhcaseHistoryPopUp p {
+        color: #40484a;
+        text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+        font-size: 0.5rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 6px;
+      }
+
+      .purhcaseHistoryPopUp .historyTableContainer {
+        overflow-x: auto;
+      }
+
+      .purhcaseHistoryPopUp table {
+        width: 100%;
+        color: rgba(0, 0, 0, 0.90);
+        white-space: nowrap;
+      }
+
+      .purhcaseHistoryPopUp thead {
+        font-size: 0.5rem;
+        font-weight: 400;
+        background: linear-gradient(90deg, #D4E8F0 0%, #C6D5DC 100%);
+        color: rgba(0, 0, 0, 0.90);
+      }
+
+      .purhcaseHistoryPopUp tbody {
+        font-size: 0.44rem;
+      }
+
+      .purhcaseHistoryPopUp tbody td {
+        border: none;
+      }
+
+      .purhcaseHistoryPopUp tbody tr:nth-child(even) {
+        background: #D8E9EF;
+      }
+
+      .purchaseHistoryClsIcon {
+        width: 8px;
+        height: 8px;
+        display: flex;
+        margin-left: auto;
+        margin-right: -6px;
+        margin-top: -6px;
+        cursor: pointer;
+      }
+
+      @media (min-width: 600px) {
+        .purhcaseHistoryPopUp {
+            max-width: 900px;
+        }
+
+        .purhcaseHistoryPopUp p {
+            font-size: 1rem;
+        }
+
+        .purhcaseHistoryPopUp thead {
+            font-size: 0.875rem;
+        }
+
+        .purhcaseHistoryPopUp tbody {
+            font-size: 0.75rem;
+        }
+
+        .purchaseHistoryClsIcon {
+            width: 16px;
+            height: 16px;
+            /* margin-right: -6px;
+            margin-top: -6px; */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="purhcaseHistoryPopUp">
+        <svg class="purchaseHistoryClsIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <rect class="change_colors" width="16" height="16" fill="#40484A"/>
+            <path d="M2.66732 13.3333H12.0007V14.6666H2.66732C1.93398 14.6666 1.33398 14.0733 1.33398 13.3333V3.99992H2.66732V13.3333ZM13.4806 1.33325H5.18732C4.53398 1.33325 4.00065 1.86659 4.00065 2.51992V10.8133C4.00065 11.4666 4.53398 11.9999 5.18732 11.9999H13.4806C14.134 11.9999 14.6673 11.4666 14.6673 10.8133V2.51992C14.6673 1.86659 14.134 1.33325 13.4806 1.33325ZM12.6673 9.06659L11.734 9.99992L9.33398 7.59992L6.93398 9.99992L6.00065 9.06659L8.40065 6.66658L6.00065 4.26659L6.93398 3.33325L9.33398 5.73325L11.734 3.33325L12.6673 4.26659L10.2673 6.66658L12.6673 9.06659Z" fill="white"/>
+          </svg>
+      <p>
+        Purchase History - Last 5 Transactions for the item: Item Code -Item
+        Name
+      </p>
+      <div class="historyTableContainer">
+        <table>
+            <thead>
+            <th>Bill No</th>
+            <th>Bill Date</th>
+            <th>Supplier Name</th>
+            <th>Sup Bill No</th>
+            <th>Sup Date</th>
+            <th>Qty</th>
+            </thead>
+            <tbody>
+            <tr>
+                <td>3917</td>
+                <td>08/07/2024</td>
+                <td>Sree Ganesha Corpora</td>
+                <td>01594</td>
+                <td>08/07/2024</td>
+                <td>20.00</td>
+            </tr>
+            <tr>
+                <td>3917</td>
+                <td>08/07/2024</td>
+                <td>Sree Ganesha Corpora</td>
+                <td>01594</td>
+                <td>08/07/2024</td>
+                <td>20.00</td>
+            </tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
