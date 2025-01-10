@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purchase Party Details Pop Up</title>
+    <link rel="stylesheet" href="../../styles/normalize.css" />
+    <link rel="stylesheet" href="../../styles/base.css" />
+    <link rel="stylesheet" href="../../styles/menu.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <link rel="stylesheet" href="../../styles/tabStyles.css" />
+    <link rel="stylesheet" href="../../styles/formStyles.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationMain.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationForm.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationTabs.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationTable.css" />
+    <link rel="stylesheet" href="../../styles/purchaseScreenMain.css" />
+    <style>
+      /* ========= addressVPopUpContainer ========= */
+      .addressVPopUpContainer {
+        width: 130px;
+        border-radius: 3px;
+        background: #d9ebf2;
+        box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.3);
+        padding: 10px;
+        margin: auto;
+      }
+
+      .addressVPopUpContainer input {
+        width: 100%;
+        height: 20px;
+        border-radius: 3px;
+        border: 1px solid #40484a;
+        background: #d9ebf2;
+        color: rgba(0, 0, 0, 0.9);
+        font-size: 0.44rem;
+      }
+
+      .addressVPopUpContainer input:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ========= BPopUpContainer ========= */
+      .BPopUpContainer {
+        width: 150px;
+        background: #fff;
+        box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.5);
+        font-size: 0.5rem;
+        color: #40484a;
+        padding: 0.1rem;
+        margin: auto;
+
+        position: relative;
+      }
+
+      .BPopUpContainer .payableAmt,
+      .BPopUpContainer .duesPayable {
+        background: #dee9ed;
+        margin-bottom: 0.1rem;
+      }
+
+      .BPopUpContainer .ledgerAc {
+        background: #ebf3f6;
+        margin-bottom: 0.1rem;
+      }
+
+      .BPopUpContainer .payableAmt,
+      .BPopUpContainer .ledgerAc,
+      .BPopUpContainer .duesPayable {
+        display: flex;
+        justify-content: space-between;
+        padding: 2px 6px;
+        padding-right: 10px;
+      }
+
+      /* ========= Cls Btn Styles ========= */
+      .purchaseVClsIcon,
+      .purchaseBClsIcon {
+        width: 8px;
+        height: 8px;
+        cursor: pointer;
+      }
+
+      .purchaseVClsIcon {
+        display: flex;
+        margin-left: auto;
+        margin-right: -10px;
+        margin-top: -10px;
+      }
+
+      .purchaseBClsIcon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      @media (min-width: 600px) {
+        /* ========= addressVPopUpContainer ========= */
+        .addressVPopUpContainer {
+          width: 250px;
+          padding: 15px;
+        }
+
+        .addressVPopUpContainer input {
+          height: 30px;
+          margin-bottom: 10px;
+          font-size: 0.75rem;
+        }
+
+        .addressVPopUpContainer input:last-child {
+          margin-bottom: 0;
+        }
+
+        /* ========= BPopUpContainer ========= */
+        .BPopUpContainer {
+          width: 250px;
+          font-size: 0.625rem;
+        }
+
+        .BPopUpContainer .payableAmt,
+        .BPopUpContainer .ledgerAc,
+        .BPopUpContainer .duesPayable {
+          padding: 10px 8px;
+          padding-right: 16px;
+        }
+
+        /* ========= Cls Btn Styles ========= */
+        .purchaseVClsIcon,
+        .purchaseBClsIcon {
+          width: 12px;
+          height: 12px;
+        }
+
+        .purchaseVClsIcon {
+          margin-right: -14px;
+          margin-top: -14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="addressVPopUpContainer">
+      <svg
+        class="purchaseVClsIcon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+      >
+        <rect width="16" height="16" fill="#40484A" />
+        <path
+          d="M2.66732 13.3333H12.0007V14.6666H2.66732C1.93398 14.6666 1.33398 14.0733 1.33398 13.3333V3.99992H2.66732V13.3333ZM13.4806 1.33325H5.18732C4.53398 1.33325 4.00065 1.86659 4.00065 2.51992V10.8133C4.00065 11.4666 4.53398 11.9999 5.18732 11.9999H13.4806C14.134 11.9999 14.6673 11.4666 14.6673 10.8133V2.51992C14.6673 1.86659 14.134 1.33325 13.4806 1.33325ZM12.6673 9.06659L11.734 9.99992L9.33398 7.59992L6.93398 9.99992L6.00065 9.06659L8.40065 6.66658L6.00065 4.26659L6.93398 3.33325L9.33398 5.73325L11.734 3.33325L12.6673 4.26659L10.2673 6.66658L12.6673 9.06659Z"
+          fill="white"
+        />
+      </svg>
+      <input type="text" placeholder="Address 2" />
+      <input type="text" placeholder="City" />
+    </div>
+
+    <div class="BPopUpContainer">
+      <svg
+        class="purchaseBClsIcon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+      >
+        <rect width="16" height="16" fill="#40484A" />
+        <path
+          d="M2.66732 13.3333H12.0007V14.6666H2.66732C1.93398 14.6666 1.33398 14.0733 1.33398 13.3333V3.99992H2.66732V13.3333ZM13.4806 1.33325H5.18732C4.53398 1.33325 4.00065 1.86659 4.00065 2.51992V10.8133C4.00065 11.4666 4.53398 11.9999 5.18732 11.9999H13.4806C14.134 11.9999 14.6673 11.4666 14.6673 10.8133V2.51992C14.6673 1.86659 14.134 1.33325 13.4806 1.33325ZM12.6673 9.06659L11.734 9.99992L9.33398 7.59992L6.93398 9.99992L6.00065 9.06659L8.40065 6.66658L6.00065 4.26659L6.93398 3.33325L9.33398 5.73325L11.734 3.33325L12.6673 4.26659L10.2673 6.66658L12.6673 9.06659Z"
+          fill="white"
+        />
+      </svg>
+      <div class="payableAmt">
+        <p>Payable Amount</p>
+        <p>1000</p>
+      </div>
+
+      <div class="ledgerAc">
+        <p>Ledger A/C</p>
+        <p>123456</p>
+      </div>
+
+      <div class="duesPayable">
+        <p>Dues Payables</p>
+        <p>1000</p>
+      </div>
+    </div>
+  </body>
+</html>
