@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="./styles/base.css" />
     <link rel="stylesheet" href="./styles/menu.css" />
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/dashboard.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <header>
@@ -75,7 +77,9 @@
             </svg>
           </li>
           <div class="panel">
-            <p><a href="./pages/item_Creation/itemCreation.html">Add Item</a></p>
+            <p>
+              <a href="./pages/item_Creation/itemCreation.html">Add Item</a>
+            </p>
             <p><a href="./pages/item_Creation/itemList.html">List Item</a></p>
           </div>
           <li class="accordion">
@@ -115,10 +119,18 @@
             </svg>
           </li>
           <div class="panel">
-            <p><a href="./pages/account_creation/accountCreation.html">Add Account</a></p>
+            <p>
+              <a href="./pages/account_creation/accountCreation.html"
+                >Add Account</a
+              >
+            </p>
             <p><a href="#">Chart of Accounts</a></p>
             <p><a href="#">Account Group</a></p>
-            <p><a href="./pages/salesman_creation/salesmanCreation.html">Salesman</a></p>
+            <p>
+              <a href="./pages/salesman_creation/salesmanCreation.html"
+                >Salesman</a
+              >
+            </p>
             <p><a href="./pages/charges/charges.html">Charges</a></p>
           </div>
           <li class="accordion">
@@ -369,19 +381,43 @@
             </svg>
           </li>
           <div class="panel">
-            <p><a href="#">Transaction Types</a></p>
+            <p><a href="./pages/transaction_types/transactionType.html">Transaction Types</a></p>
           </div>
         </ul>
         <div class="themeOptions">
           <div class="theme_buttons">
-            <button class="theme_btns default" onclick="switchTheme('default')"></button>
-            <button class="theme_btns purple" onclick="switchTheme('purple')"></button>
-            <button class="theme_btns pink" onclick="switchTheme('pink')"></button>
-            <button class="theme_btns green" onclick="switchTheme('green')"></button>
-            <button class="theme_btns blueGreen" onclick="switchTheme('blueGreen')"></button>
-            <button class="theme_btns googlered" onclick="switchTheme('googlered')"></button>
-            <button class="theme_btns bigred" onclick="switchTheme('bigred')"></button>
-            <button class="theme_btns orange" onclick="switchTheme('orange')"></button>
+            <button
+              class="theme_btns default"
+              onclick="switchTheme('default')"
+            ></button>
+            <button
+              class="theme_btns purple"
+              onclick="switchTheme('purple')"
+            ></button>
+            <button
+              class="theme_btns pink"
+              onclick="switchTheme('pink')"
+            ></button>
+            <button
+              class="theme_btns green"
+              onclick="switchTheme('green')"
+            ></button>
+            <button
+              class="theme_btns blueGreen"
+              onclick="switchTheme('blueGreen')"
+            ></button>
+            <button
+              class="theme_btns googlered"
+              onclick="switchTheme('googlered')"
+            ></button>
+            <button
+              class="theme_btns bigred"
+              onclick="switchTheme('bigred')"
+            ></button>
+            <button
+              class="theme_btns orange"
+              onclick="switchTheme('orange')"
+            ></button>
           </div>
         </div>
       </div>
@@ -455,7 +491,9 @@
               </svg>
             </li>
             <div class="panel">
-              <p><a href="./pages/item_Creation/itemCreation.html">Add Item</a></p>
+              <p>
+                <a href="./pages/item_Creation/itemCreation.html">Add Item</a>
+              </p>
               <p><a href="./pages/item_Creation/itemList.html">List Item</a></p>
             </div>
             <li class="accordion">
@@ -495,10 +533,18 @@
               </svg>
             </li>
             <div class="panel">
-              <p><a href="./pages/account_creation/accountCreation.html">Add Account</a></p>
+              <p>
+                <a href="./pages/account_creation/accountCreation.html"
+                  >Add Account</a
+                >
+              </p>
               <p><a href="#">Chart of Accounts</a></p>
               <p><a href="#">Account Group</a></p>
-              <p><a href="./pages/salesman_creation/salesmanCreation.html">Salesman</a></p>
+              <p>
+                <a href="./pages/salesman_creation/salesmanCreation.html"
+                  >Salesman</a
+                >
+              </p>
               <p><a href="./pages/charges/charges.html">Charges</a></p>
             </div>
             <li class="accordion">
@@ -748,23 +794,46 @@
               </svg>
             </li>
             <div class="panel">
-              <p><a href="#">Transaction Types</a></p>
+              <p><a href="./pages/transaction_types/transactionType.html">Transaction Types</a></p>
             </div>
           </ul>
           <div class="themeOptions">
             <div class="theme_buttons">
-              <button class="theme_btns default" onclick="switchTheme('default')"></button>
-              <button class="theme_btns purple" onclick="switchTheme('purple')"></button>
-              <button class="theme_btns pink" onclick="switchTheme('pink')"></button>
-              <button class="theme_btns green" onclick="switchTheme('green')"></button>
-              <button class="theme_btns blueGreen" onclick="switchTheme('blueGreen')"></button>
-              <button class="theme_btns googlered" onclick="switchTheme('googlered')"></button>
-              <button class="theme_btns bigred" onclick="switchTheme('bigred')"></button>
-              <button class="theme_btns orange" onclick="switchTheme('orange')"></button>
+              <button
+                class="theme_btns default"
+                onclick="switchTheme('default')"
+              ></button>
+              <button
+                class="theme_btns purple"
+                onclick="switchTheme('purple')"
+              ></button>
+              <button
+                class="theme_btns pink"
+                onclick="switchTheme('pink')"
+              ></button>
+              <button
+                class="theme_btns green"
+                onclick="switchTheme('green')"
+              ></button>
+              <button
+                class="theme_btns blueGreen"
+                onclick="switchTheme('blueGreen')"
+              ></button>
+              <button
+                class="theme_btns googlered"
+                onclick="switchTheme('googlered')"
+              ></button>
+              <button
+                class="theme_btns bigred"
+                onclick="switchTheme('bigred')"
+              ></button>
+              <button
+                class="theme_btns orange"
+                onclick="switchTheme('orange')"
+              ></button>
             </div>
           </div>
         </div>
-        
       </section>
       <section class="main-content">
         <div class="main-navigation">
@@ -798,12 +867,168 @@
             </a>
           </p>
         </div>
-        <div class="container">
-          <p>Main Content</p>
+        <div class="container dashboardContainer">
+          <div class="receivablesAndPayablesWrapper">
+            <div class="receivables">
+              <div class="totalReceivables">
+                <p>Total Receivables</p>
+              </div>
+              <div class="totalUnpaid">
+                <p>Total Unpaid Invoices ₹372,580.05</p>
+                <div class="bar"></div>
+              </div>
+              <div class="currentAndOverdraft">
+                <div class="current">
+                  <p style="color: #185492">CURRENT</p>
+                  <p>₹ 0.00</p>
+                </div>
+                <div class="overdue">
+                  <p style="color: #ff4a4d">OVERDUE</p>
+                  <p>₹372,580.05</p>
+                </div>
+              </div>
+            </div>
+            <div class="payables">
+              <div class="totalPayables">
+                <p>Total Payables</p>
+              </div>
+              <div class="totalUnpaid">
+                <p>Total Unpaid Bills ₹249,849.46</p>
+                <div class="bar">
+                  <div class="paybar"></div>
+                </div>
+              </div>
+              <div class="currentAndOverdraft">
+                <div class="current">
+                  <p style="color: #185492">CURRENT</p>
+                  <p>₹244,012.67</p>
+                </div>
+                <div class="overdue">
+                  <p style="color: #ff4a4d">OVERDUE</p>
+                  <p>₹244,012.67</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="saleGraph">
+            <div class="saleGraphHead">
+              <p>Sale</p>
+              <div class="saleAndMonthly">
+                <div class="sale">
+                  <select name="Sale" id="sale">
+                    <option value="1">Sale</option>
+                    <option value="1">Sale 1</option>
+                    <option value="1">Sale 2</option>
+                  </select>
+                </div>
+
+                <div class="monthly">
+                  <select name="Monthly" id="monthly">
+                    <option value="1">Monthly</option>
+                    <option value="1">Monthly 1</option>
+                    <option value="1">Monthly 2</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="saleschartAndCash">
+              <div class="salesChart">
+                <canvas id="myChart"></canvas>
+              </div>
+
+              <div class="cash">
+                <div class="cashOnStart">
+                  <p>Cash as on 01/01/2024</p>
+                  <p>₹ 7,790,083.99</p>
+                </div>
+                <div class="totalIncome">
+                  <p>Total Income</p>
+                  <p>₹ 7,790,083.99</p>
+                </div>
+                <div class="totalReturns">
+                  <p>Total Returns</p>
+                  <p>₹ 7,790,083.99</p>
+                </div>
+                <div class="cashOnEnd">
+                  <p>Cash as on 31/12/2024</p>
+                  <p>₹ 7,790,083.99</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="saleAndTotalIncomeCharts">
+            <div class="saleAndPurchaseChart">
+              <div class="saleAndPurchase">
+                <p>Sale and Purchase</p>
+
+                <div class="saleMonthly">
+                  <select name="Monthly" id="monthly">
+                    <option value="1">Monthly</option>
+                    <option value="1">Monthly 1</option>
+                    <option value="1">Monthly 2</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="chart-container" id="chartContainer">
+                <canvas id="myBarChart"></canvas>
+              </div>
+
+              <div class="saleAndPurchaseWrapper">
+                <div class="totalSaleAndtotalPurchase">
+                  <div class="totalSale">
+                    <p>Total sale</p>
+                    <p>₹ 7,790,83.99</p>
+                  </div>
+
+                  <div class="totalPurchase">
+                    <p>Total Purchase</p>
+                    <p>₹ 7,790,83.99</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="totalIncomeandExpensesChart">
+              <div class="totalIncomeandExpenses">
+                <p>Total Income and Expenses</p>
+
+                <div class="totalMonthly">
+                  <select name="Monthly" id="monthly">
+                    <option value="1">Monthly</option>
+                    <option value="1">Monthly 1</option>
+                    <option value="1">Monthly 2</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="totalBar">
+                <div class="chart-container" id="chartContainer">
+                  <canvas class="pieChart" id="myPieChart"></canvas>
+                </div>
+                <div class="totalIncomeandExpensesWrapper">
+                  <div class="total-income">
+                    <p>Total Income:</p>
+                    <p>₹ 7,790,083.99</p>
+                  </div>
+                  <div class="total-expenses">
+                    <p>Total Expenses:</p>
+                    <p>₹ 7,790,083.99</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
     <script src="./js/menu.js"></script>
     <script src="./js/themes.js"></script>
+    <script src="./js/chart.js"></script>
+    <script src="./js/bar.js"></script>
+    <script src="./js/totalBar.js"></script>
   </body>
 </html>

@@ -1,0 +1,520 @@
+/* <============= receivablesAndPayablesWrapperStart==============> */
+.dashboardContainer .container {
+  padding: 1em;
+}
+.dashboardContainer .receivables,
+.dashboardContainer .payables {
+  border-radius: 3px;
+  box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, 0.16);
+  margin-bottom: 0.625em;
+}
+
+.dashboardContainer .totalReceivables,
+.dashboardContainer .totalPayables {
+  background-color: #e7eff2;
+  box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, 0.16);
+  font-size: 0.5rem;
+  padding: 0.938em;
+}
+
+.dashboardContainer .totalUnpaid {
+  background-color: #fbfbfb;
+  box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, 0.16);
+  padding: 1em;
+}
+
+.dashboardContainer .totalUnpaid p:first-child {
+  margin-bottom: 0.375em;
+}
+
+.dashboardContainer .totalUnpaid p {
+  font-size: 0.438rem;
+}
+
+.dashboardContainer .totalUnpaid .bar {
+  height: 10px;
+  width: 100%;
+  border-radius: 2px;
+  background-color: #ffa500;
+  filter: drop-shadow(0px 1px 4px 0px rgba(0, 0, 0, 0.25));
+}
+
+.dashboardContainer .totalUnpaid .bar .paybar {
+  width: 49px;
+  height: 10px;
+  background-color: #185492;
+  border-radius: 2px;
+}
+
+.dashboardContainer .currentAndOverdraft {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.dashboardContainer .current,
+.dashboardContainer .overdue {
+  min-width: 154px;
+  width: 50%;
+  margin-left: 0.5em;
+  font-size: 0.438rem;
+}
+
+.dashboardContainer .overdue {
+  border-left: 1px solid lightgrey;
+  padding-left: 1em;
+}
+
+.dashboardContainer .current p:last-child,
+.dashboardContainer .overdue p:last-child {
+  font-size: 0.5rem;
+}
+/* <============= receivablesAndPayablesWrapperEnd==============> */
+
+/* <============= saleGraphrStart==============> */
+.dashboardContainer .saleGraph {
+  margin-bottom: 0.75em;
+}
+.dashboardContainer .saleGraphHead {
+  background-color: #e7eff2;
+  box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, 0.16);
+}
+.dashboardContainer .saleGraphHead {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboardContainer .saleGraphHead p {
+  padding: 15px;
+  font-size: 0.5rem;
+}
+
+.dashboardContainer .saleAndMonthly {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0.5em;
+}
+
+.dashboardContainer .sale select,
+.dashboardContainer .monthly select {
+  font-size: 0.5rem;
+  font-family: "Inter", sans-serif;
+  color: #000000;
+  background: none;
+  border: none;
+}
+
+.dashboardContainer .saleschartAndCash {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, 0.16);
+}
+
+.dashboardContainer .salesChart {
+  display: flex;
+  width: 80%;
+  margin: 1rem;
+}
+
+.dashboardContainer .cash {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-top: 0;
+  line-height: 15px;
+}
+
+.dashboardContainer .cashOnStart p:first-child {
+  color: #747778;
+  font-family: "Inter", sans-serif;
+  font-size: 0.438rem;
+}
+
+.dashboardContainer .totalIncome p:first-child {
+  color: #45a963;
+  font-family: "Inter", sans-serif;
+  font-size: 0.438rem;
+}
+
+.dashboardContainer .totalReturns p:first-child {
+  color: #dd5f60;
+  font-family: "Inter", sans-serif;
+  font-size: 0.438rem;
+}
+
+.dashboardContainer .cashOnEnd p:first-child {
+  color: #185492;
+  font-family: "Inter", sans-serif;
+  font-size: 0.438rem;
+}
+
+.dashboardContainer .cashOnStart p:nth-child(even),
+.dashboardContainer .totalIncome p:nth-child(even),
+.dashboardContainer .totalReturns p:nth-child(even),
+.dashboardContainer .cashOnEnd p:nth-child(even) {
+  color: #000000;
+  font-size: 0.5rem;
+  font-family: "Inter", sans-serif;
+}
+/* <============= saleGraphrEnd==============> */
+
+/* <============= saleAndPurchaseChartStart==============> */
+.dashboardContainer .saleAndTotalIncomeCharts {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.dashboardContainer .saleAndPurchaseChart,
+.dashboardContainer .totalIncomeandExpensesChart {
+  box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, 0.16);
+  margin-bottom: 1em;
+}
+
+.dashboardContainer .saleAndPurchase,
+.dashboardContainer .totalIncomeandExpenses {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background-color: #e7eff2;
+  box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, 0.16);
+}
+
+.dashboardContainer .saleAndPurchase p,
+.dashboardContainer .totalIncomeandExpenses p {
+  padding: 0.8em;
+  font-size: 0.5rem;
+  font-family: "Inter", sans-serif;
+}
+.dashboardContainer .saleMonthly select,
+.dashboardContainer .totalMonthly select {
+  font-size: 0.5rem;
+  font-family: "Inter", sans-serif;
+  color: #000000;
+  background: none;
+  border: none;
+}
+                       
+.dashboardContainer .pieChart {                         
+  width: 47% !important;
+  height: 47% !important;
+  margin: auto;
+}
+.dashboardContainer .chart-container {
+  margin: 1em 2em;
+  border-bottom: 1px solid #a0a3a4;
+}
+.dashboardContainer .totalSaleAndtotalPurchase {
+  display: flex;
+  margin: 1em 2em;
+  gap: 10px;  
+}
+
+.dashboardContainer .totalSaleAndtotalPurchase .totalSale,
+.dashboardContainer .totalSaleAndtotalPurchase .totalPurchase {
+  background: #e7eff2;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  flex: 1;
+}
+
+.dashboardContainer .totalSale p:first-child {
+  font-family: "Inter", sans-serif;
+  font-size: 0.438rem;
+  color: #45a963;
+}
+
+.dashboardContainer .totalPurchase p:first-child {
+  font-family: "Inter", sans-serif;
+  font-size: 0.438rem;
+  color: #dd5f60;
+}
+
+.dashboardContainer .totalSale p:last-child,
+.dashboardContainer .totalPurchase p:last-child {
+  font-family: "Inter", sans-serif;
+  font-size: 0.5rem;
+  color: #000000;
+}
+/* <============= saleAndPurchaseChartEnd==============> */
+
+/* <============= totalIncomeandExpensesChartStart==============> */
+.dashboardContainer .totalBar {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboardContainer .total-income p:first-child {
+  color: #45a963;
+  font-size: 0.438rem;
+  font-family: "Inter", sans-serif;
+}
+.dashboardContainer .total-expenses p:first-child {
+  color: #dd5f60;
+  font-size: 0.438rem;
+  font-family: "Inter", sans-serif;
+}
+.dashboardContainer .total-income p:last-child,
+.dashboardContainer .total-expenses p:last-child {
+  margin-top: 3px;
+  color: #000000;
+  font-size: 0.5rem;
+  font-family: "Inter", sans-serif;
+}
+
+.dashboardContainer .totalIncomeandExpensesWrapper {
+  display: flex;
+  margin: 0em 2em 1em;
+  gap: 10px;
+}
+
+.dashboardContainer .totalIncomeandExpensesWrapper .total-income,
+.dashboardContainer .totalIncomeandExpensesWrapper .total-expenses {
+  background: #e7eff2;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  flex: 1;
+}
+/* <============= totalIncomeandExpensesChartEnd==============> */
+
+/* <============= receivablesAndPayablesWrapperStart==============> */
+
+@media (min-width: 768px) {
+  .dashboardContainer .receivablesAndPayablesWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .dashboardContainer .receivables,
+  .dashboardContainer .payables {
+    flex-grow: 1;
+  }
+
+  .dashboardContainer .totalReceivables,
+  .dashboardContainer .totalPayables {
+    padding: 1rem;
+    font-size: 1.125rem;
+  }
+  .dashboardContainer .totalUnpaid p {
+    font-size: 0.75rem;
+  }
+  .dashboardContainer .totalUnpaid .bar {
+    height: 16px;
+  }
+  .dashboardContainer .totalUnpaid .bar .paybar {
+    height: 16px;
+  }
+  .dashboardContainer .current,
+  .dashboardContainer .overdue {
+    font-size: 0.875rem;
+  }
+  .dashboardContainer .current p:last-child,
+  .dashboardContainer .overdue p:last-child {
+    font-size: 1rem;
+  }
+  /* <============= receivablesAndPayablesWrapperStart==============> */
+
+  /* <============= saleGraphStart==============> */
+  .dashboardContainer .saleGraphHead p {
+    padding: 1em;
+    font-size: 1.125rem;
+  }
+
+  .dashboardContainer .saleAndMonthly {
+    padding: 0.563em;
+  }
+
+  .dashboardContainer .sale select,
+  .dashboardContainer .monthly select {
+    font-size: 1.125rem;
+    padding-top: 0.65em;
+  }
+
+  .dashboardContainer .saleschartAndCash {
+    flex-direction: row;
+  }
+
+  .dashboardContainer canvas {
+    margin-left: 2em;
+    padding: 1em;
+  }
+
+  .dashboardContainer .cash {
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 1.25em;
+    margin: 0;
+    line-height: 25px;
+  }
+
+  .dashboardContainer .cashOnStart p:first-child,
+  .dashboardContainer .totalIncome p:first-child,
+  .dashboardContainer .totalReturns p:first-child,
+  .dashboardContainer .cashOnEnd p:first-child {
+    font-size: 0.875rem;
+  }
+
+  .dashboardContainer .cashOnStart p:nth-child(even),
+  .dashboardContainer .totalIncome p:nth-child(even),
+  .dashboardContainer .totalReturns p:nth-child(even),
+  .dashboardContainer .cashOnEnd p:nth-child(even) {
+    font-size: 1rem;
+  }
+  /* <============= saleGraphStart==============> */
+
+  /* <============= saleAndPurchaseChartStart==============> */
+  .dashboardContainer .saleAndTotalIncomeCharts {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 30%;
+  }
+
+  .dashboardContainer .saleAndPurchaseChart,
+  .dashboardContainer .totalIncomeandExpensesChart {
+    width: 49.5%;
+    gap: 10px;
+  }
+  .dashboardContainer .saleAndPurchase p,
+  .dashboardContainer .totalIncomeandExpenses p {
+    padding: 0.313em;
+    font-size: 1rem;
+  }
+  .dashboardContainer .saleMonthly select,
+  .dashboardContainer .totalMonthly select {
+    font-size: 1rem;
+    padding-bottom: 0.5em;
+  }
+
+  .dashboardContainer .totalSale p:first-child,
+  .dashboardContainer .totalPurchase p:first-child {
+    font-size: 0.875rem;
+  }
+
+  .dashboardContainer .totalSale p:last-child,
+  .dashboardContainer .totalPurchase p:last-child {
+    font-size: 1rem;
+  }
+  /* <============= saleAndPurchaseChartStart==============> */
+
+  /* <============= totalIncomeandExpensesChartStart==============> */
+  .dashboardContainer .total-income p:first-child,
+  .dashboardContainer .total-expenses p:first-child {
+    font-size: 0.875rem;
+  }
+
+  .dashboardContainer .total-income p:last-child,
+  .dashboardContainer .total-expenses p:last-child {
+    font-size: 1rem;
+  }
+
+  .dashboardContainer .totalIncomeandExpensesWrapper {
+    display: flex;
+    margin: 0em 2em 1em;
+    gap: 10px;
+  }
+  
+  .dashboardContainer .totalIncomeandExpensesWrapper .total-income,
+  .dashboardContainer .totalIncomeandExpensesWrapper .total-expenses {
+    background: #e7eff2;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    flex: 1;
+  }
+  /* <============= totalIncomeandExpensesChartEnd==============> */
+}
+
+@media (min-width: 768px) and (max-width: 1109px) {
+  .dashboardContainer .saleschartAndCash,
+  .dashboardContainer .cash {
+    flex-wrap: wrap;
+  }
+ 
+  .dashboardContainer .cash {
+    flex-direction: row;
+    padding: 0.3rem;
+    margin-top: 0;
+    line-height: 15px;
+  }
+
+  .dashboardContainer .cashOnStart p:first-child,
+  .dashboardContainer .totalIncome p:first-child,
+  .dashboardContainer .totalReturns p:first-child, 
+  .dashboardContainer .cashOnEnd p:first-child  {
+    font-size: 0.438rem;
+    margin-left: 2.5rem;
+  }
+ 
+  .dashboardContainer .cashOnStart p:nth-child(even),
+  .dashboardContainer .totalIncome p:nth-child(even),
+  .dashboardContainer .totalReturns p:nth-child(even),
+  .dashboardContainer .cashOnEnd p:nth-child(even) {
+    font-size: 0.6rem;
+    margin-left: 2.5rem;
+  }
+
+  .dashboardContainer .saleAndPurchase,
+  .dashboardContainer .totalIncomeandExpenses {
+    padding: 0.5rem;
+  }
+  .dashboardContainer .saleAndPurchase p,
+  .dashboardContainer .totalIncomeandExpenses p {
+    padding: 0.8em;
+    font-size: 0.5rem;
+  }
+  .dashboardContainer .saleMonthly select,
+  .dashboardContainer .totalMonthly select {
+    font-size: 0.5rem;
+  }
+
+  .dashboardContainer .totalSaleAndtotalPurchase {
+    margin: 1em 2em;
+  }
+  
+  .dashboardContainer .totalSaleAndtotalPurchase .totalSale,
+  .dashboardContainer .totalSaleAndtotalPurchase .totalPurchase {
+    padding: 0.5em 1em;
+  }
+  
+  .dashboardContainer .totalSale p:first-child {
+    font-size: 0.438rem;
+  }
+  
+  .dashboardContainer .totalPurchase p:first-child {
+    font-size: 0.438rem;
+  }
+  
+  .dashboardContainer .totalSale p:last-child,
+  .dashboardContainer .totalPurchase p:last-child {
+    font-size: 0.5rem;
+  }
+
+  .dashboardContainer .totalIncomeandExpensesWrapper {
+    margin: 0em 2em 1em;
+  } 
+  
+  .dashboardContainer .totalIncomeandExpensesWrapper .total-income,
+  .dashboardContainer .totalIncomeandExpensesWrapper .total-expenses {
+    padding: 0.5em 1em;
+  }
+
+  .dashboardContainer .total-income p:first-child {
+    font-size: 0.438rem;
+  }
+  .dashboardContainer .total-expenses p:first-child {
+    font-size: 0.438rem;
+  }
+  .dashboardContainer .total-income p:last-child,
+  .dashboardContainer .total-expenses p:last-child {
+    font-size: 0.5rem;
+  }
+}
