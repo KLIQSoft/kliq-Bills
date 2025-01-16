@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purchase Barcode Before Pop Up</title>
+    <link rel="stylesheet" href="../../styles/normalize.css" />
+    <link rel="stylesheet" href="../../styles/base.css" />
+    <link rel="stylesheet" href="../../styles/menu.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <link rel="stylesheet" href="../../styles/tabStyles.css" />
+    <link rel="stylesheet" href="../../styles/formStyles.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationMain.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationForm.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationTabs.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationTable.css" />
+    <link rel="stylesheet" href="../../styles/purchaseScreenMain.css" />
+    <style>
+      .purchaseBarcodeBeforeContainer {
+        width: 340px;
+        margin: auto;
+        border-radius: 4px;
+        background: #fff;
+        box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.5);
+      }
+
+      .purchaseBarcodeBeforeContainer h3 {
+        font-size: 0.625rem;
+        color: rgba(0, 0, 0, 0.9);
+        border-bottom: 1px solid rgba(170, 164, 164, 0.9);
+        padding: 6px;
+      }
+
+      .purchaseBarcodeBeforeContainer .inputAndButtons,
+      .purchaseBarcodeBeforeContainer .addNewItemAndAccountbuttons  {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .purchaseBarcodeBeforeContainer .addNewItemAndAccountbuttons {
+        gap: 6px;
+      }
+
+      .purchaseBarcodeBeforeContainer .inputAndButtons {
+        padding: 6px;
+      }
+
+      .purchaseBarcodeBeforeContainer .inputAndButtons input {
+        border-radius: 3px;
+        border: 1px solid #40484a;
+        font-size: 0.44rem;
+        width: 150px;
+        height: 20px;
+      }
+
+      .purchaseBarcodeBeforeContainer .addNewItemAndAccountbuttons button {
+        border-radius: 2px;
+        background: var(--primary-linear-gradient-bg);
+        color: #fff;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        font-size: 0.44rem;
+        padding: 4px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .purchaseBarcodeBeforeContainer table {
+        font-size: 0.5rem;
+        white-space: nowrap;
+      }
+
+      .purchaseBarcodeBeforeContainer table thead {
+        background: linear-gradient(90deg, #D4E8F0 0%, #C6D5DC 100%);
+        color: rgba(0, 0, 0, 0.90);
+      }
+
+      .purchaseBarcodeBeforeContainer .barcodeContiner {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.5rem;
+        padding: 10px;
+      }
+
+      .purchaseBarcodeBeforeContainer .buttons {
+        display: flex;
+        gap: 6px;
+        justify-content: flex-end;
+        padding: 6px 10px;
+      }
+
+      .purchaseBarcodeBeforeContainer .buttons .btn {
+        border: none;
+        padding: 3px 5px;
+        border-radius: 2px;
+        font-size: 0.5rem;
+        font-weight: bold;
+        background: var(--primary-linear-gradient-bg);
+        color: #fff;
+      }
+
+      .purchaseBarcodeBeforeContainer .buttons .btnCls {
+        background: none;
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="purchaseBarcodeBeforeContainer">
+      <h3>Add Items</h3>
+      <div class="inputAndButtons">
+        <input type="text" placeholder="Enter Item Code / Scan Barcode Code" />
+        <div class="addNewItemAndAccountbuttons">
+          <button>Add New Item</button>
+          <button>Add New Account</button>
+        </div>
+      </div>
+
+      <div class="purchaseBarcodetableContainer" style="overflow: auto;">
+        <table>
+          <thead>
+            <th>Item Code</th>
+            <th>Item Name</th>
+            <th>Qty</th>
+            <th>Sales Price</th>
+            <th>Purchase Price</th>
+            <th>Current Price</th>
+          </thead>
+        </table>
+      </div>
+
+      <div class="barcodeContiner">
+        <img src="../../images/barcodeImage.png" alt="Barcode image" />
+        <p>Scan items to add</p>
+      </div>
+
+      <div class="buttons">
+        <button class="btn btnCls">Close</button>
+        <button class="btn btnDone">Done</button>
+      </div>
+    </div>
+  </body>
+</html>
