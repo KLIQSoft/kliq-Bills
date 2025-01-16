@@ -42,6 +42,11 @@
         gap: 6px;
       }
 
+      .purchaseBarcodeBeforeContainer .addNewItemAndAccountbuttons img {
+        width: 7px;
+        height: 7px;
+      }
+
       .purchaseBarcodeBeforeContainer .inputAndButtons {
         padding: 6px;
       }
@@ -63,6 +68,10 @@
         padding: 4px;
         border: none;
         cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        gap: 2px;
       }
 
       .purchaseBarcodeBeforeContainer table {
@@ -123,8 +132,13 @@
         }
 
         .purchaseBarcodeBeforeContainer .addNewItemAndAccountbuttons button {
-          font-size: 0.75rem;
+          font-size: 0.7rem;
           padding: 6px;
+        }
+
+        .purchaseBarcodeBeforeContainer .addNewItemAndAccountbuttons img {
+          width: 12px;
+          height: 12px;
         }
 
         .purchaseBarcodeBeforeContainer table {
@@ -153,8 +167,10 @@
       <div class="inputAndButtons">
         <input type="text" placeholder="Enter Item Code / Scan Barcode Code" />
         <div class="addNewItemAndAccountbuttons">
-          <button>Add New Item</button>
-          <button>Add New Account</button>
+          <button><img src="../../images/addIcon.png" /> Add New Item</button>
+          <button>
+            <img src="../../images/addIcon.png" /> Add New Account
+          </button>
         </div>
       </div>
 
