@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purchase Barcode After Pop Up</title>
+    <link rel="stylesheet" href="../../styles/normalize.css" />
+    <link rel="stylesheet" href="../../styles/base.css" />
+    <link rel="stylesheet" href="../../styles/menu.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <link rel="stylesheet" href="../../styles/tabStyles.css" />
+    <link rel="stylesheet" href="../../styles/formStyles.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationMain.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationForm.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationTabs.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationTable.css" />
+    <link rel="stylesheet" href="../../styles/purchaseScreenMain.css" />
+    <style>
+      .purchaseBarcodeBeforeContainer {
+        width: 340px;
+        margin: auto;
+        border-radius: 4px;
+        background: #fff;
+        box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.5);
+      }
+
+      .purchaseBarcodeBeforeContainer h3 {
+        font-size: 0.625rem;
+        color: rgba(0, 0, 0, 0.9);
+        border-bottom: 1px solid rgba(170, 164, 164, 0.9);
+        padding: 6px;
+      }
+
+      .purchaseBarcodeBeforeContainer .inputAndButtons,
+      .purchaseBarcodeBeforeContainer .addNewItemAndAccountbuttons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .purchaseBarcodeBeforeContainer .addNewItemAndAccountbuttons {
+        gap: 6px;
+      }
+
+      .purchaseBarcodeBeforeContainer .inputAndButtons {
+        padding: 6px;
+      }
+
+      .purchaseBarcodeBeforeContainer .inputAndButtons input {
+        border-radius: 3px;
+        border: 1px solid #40484a;
+        font-size: 0.44rem;
+        width: 150px;
+        height: 20px;
+      }
+
+      .purchaseBarcodeBeforeContainer .addNewItemAndAccountbuttons button {
+        border-radius: 2px;
+        background: var(--primary-linear-gradient-bg);
+        color: #fff;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        font-size: 0.44rem;
+        padding: 4px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .purchaseBarcodeBeforeContainer table {
+        font-size: 0.5rem;
+        white-space: nowrap;
+      }
+
+      .purchaseBarcodeBeforeContainer table thead {
+        background: linear-gradient(90deg, #d4e8f0 0%, #c6d5dc 100%);
+        color: rgba(0, 0, 0, 0.9);
+      }
+
+      .purchaseBarcodeBeforeContainer table td {
+        border: none;
+      }
+
+      .purchaseBarcodeBeforeContainer table tr:nth-child(even) {
+        background: #DAE9F0;
+      }
+
+      .purchaseBarcodeBeforeContainer .qty .AddSub {
+        padding: 3px;
+      }
+
+      .purchaseBarcodeBeforeContainer .qty span {
+        border-radius: 0px 4px 4px 0px;
+        background: #87aab7;
+        color: #2d3a3f;
+        padding: 5px;
+        margin-right: -2px;
+      }
+
+      .purchaseBarcodeBeforeContainer .btnDecr,
+      .purchaseBarcodeBeforeContainer .btnIncr {
+        border: none;
+        border-radius: 2px;
+        background: linear-gradient(90deg, #185492 0%, #043e7a 100%);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        color: #fff;
+        padding: 2px 8px;
+        cursor: pointer;
+      }
+
+      .purchaseBarcodeBeforeContainer .qty {
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+        border: 1px solid #87aab7;
+        gap: 4px;
+      }
+
+      .purchaseBarcodeBeforeContainer .buttons {
+        display: flex;
+        gap: 6px;
+        justify-content: flex-end;
+        padding: 6px 10px;
+      }
+
+      .purchaseBarcodeBeforeContainer .buttons .btn {
+        border: none;
+        padding: 3px 5px;
+        border-radius: 2px;
+        font-size: 0.5rem;
+        font-weight: bold;
+        background: var(--primary-linear-gradient-bg);
+        color: #fff;
+        cursor: pointer;
+      }
+
+      .purchaseBarcodeBeforeContainer .buttons .btnCls {
+        background: none;
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+      }
+
+      @media (min-width: 600px) {
+        .purchaseBarcodeBeforeContainer {
+          width: 600px;
+        }
+
+        .purchaseBarcodeBeforeContainer h3 {
+          font-size: 0.875rem;
+        }
+
+        .purchaseBarcodeBeforeContainer .inputAndButtons input {
+          font-size: 0.75rem;
+          width: 350px;
+          height: 30px;
+        }
+
+        .purchaseBarcodeBeforeContainer .addNewItemAndAccountbuttons button {
+          font-size: 0.75rem;
+          padding: 6px;
+        }
+
+        .purchaseBarcodeBeforeContainer table {
+          font-size: 0.75rem;
+          white-space: nowrap;
+        }
+
+        .purchaseBarcodeBeforeContainer .buttons {
+          gap: 10px;
+        }
+
+        .purchaseBarcodeBeforeContainer .buttons .btn {
+          font-size: 0.75rem;
+          padding: 5px 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="purchaseBarcodeBeforeContainer">
+      <h3>Add Items</h3>
+      <div class="inputAndButtons">
+        <input type="text" placeholder="Enter Item Code / Scan Barcode Code" />
+        <div class="addNewItemAndAccountbuttons">
+          <button>Add New Item</button>
+          <button>Add New Account</button>
+        </div>
+      </div>
+
+      <div class="purchaseBarcodetableContainer" style="overflow: auto">
+        <table>
+          <thead>
+            <th>Item Code</th>
+            <th>Item Name</th>
+            <th>Qty</th>
+            <th>Sales Price</th>
+            <th>Purchase Price</th>
+            <th>Current Stock</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox" /> 123456</td>
+              <td>APK TAP LA</td>
+              <td>
+                <div class="qty">
+                  <div class="AddSub">
+                    <button class="btnDecr">-</button>
+                    1
+                    <button class="btnIncr">+</button>
+                  </div>
+                  <span>PCS</span>
+                </div>
+              </td>
+              <td>200</td>
+              <td>200</td>
+              <td>45 PCS</td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" /> 123456</td>
+                <td>APK TAP LA</td>
+                <td>
+                  <div class="qty">
+                    <div class="AddSub">
+                      <button class="btnDecr">-</button>
+                      1
+                      <button class="btnIncr">+</button>
+                    </div>
+                    <span>PCS</span>
+                  </div>
+                </td>
+                <td>200</td>
+                <td>200</td>
+                <td>45 PCS</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="buttons">
+        <button class="btn btnCls">Close</button>
+        <button class="btn btnDone">Done</button>
+      </div>
+    </div>
+  </body>
+</html>
