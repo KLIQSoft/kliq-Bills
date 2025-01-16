@@ -98,12 +98,52 @@
         font-weight: bold;
         background: var(--primary-linear-gradient-bg);
         color: #fff;
+        cursor: pointer;
       }
 
       .purchaseBarcodeBeforeContainer .buttons .btnCls {
         background: none;
         border: 1px solid var(--primary-color);
         color: var(--primary-color);
+      }
+
+      @media (min-width: 600px) {
+        .purchaseBarcodeBeforeContainer {
+          width: 750px;
+        }
+
+        .purchaseBarcodeBeforeContainer h3 {
+          font-size: 0.875rem;
+        }
+
+        .purchaseBarcodeBeforeContainer .inputAndButtons input {
+          font-size: 0.75rem;
+          width: 350px;
+          height: 30px;
+        }
+
+        .purchaseBarcodeBeforeContainer .addNewItemAndAccountbuttons button {
+          font-size: 0.75rem;
+          padding: 6px;
+        }
+
+        .purchaseBarcodeBeforeContainer table {
+          font-size: 0.75rem;
+          white-space: nowrap;
+        }
+
+        .purchaseBarcodeBeforeContainer .barcodeContiner {
+          font-size: 0.75rem;
+        }
+
+        .purchaseBarcodeBeforeContainer .buttons {
+          gap: 10px;
+        }
+
+        .purchaseBarcodeBeforeContainer .buttons .btn {
+          font-size: 0.75rem;
+          padding: 5px 14px;
+        }
       }
     </style>
   </head>
@@ -126,7 +166,7 @@
             <th>Qty</th>
             <th>Sales Price</th>
             <th>Purchase Price</th>
-            <th>Current Price</th>
+            <th>Current Stock</th>
           </thead>
         </table>
       </div>
