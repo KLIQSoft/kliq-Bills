@@ -2,29 +2,429 @@
   background: var(--primary-color);
   color: #fff;
   padding: 5px;
-  margin: -8PX;
+  margin: -8px;
   margin-bottom: 0.375rem;
+  font-size: 0.5rem;
 }
 
-.purchaseMaintenanceScreenContainer .purchaseMaintenanceEntryScreenContainer {
+.purchaseMaintenanceScreenContainer svg {
+  cursor: pointer;
+}
+
+.purchaseMaintenanceScreenContainer .purchaseMaintenanceEntryScreenWrapper {
   background: #f1f7fb;
   box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05),
     0px 0px 0px 1px rgba(0, 0, 0, 0.08);
+    margin-bottom: 10px;
+}
+
+.purchaseMaintenanceScreenContainer .purchaseMaintenanceEntryScreenContainer {
   padding: 10px;
   padding-top: 15px;
 }
 
 .purchaseMaintenanceScreenContainer .form_div {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
+  height: 20px;
 }
 
+/* -------------------- */
+.purchaseMaintenanceScreenContainer .form_div .form_label {
+  font-size: 0.375rem !important;
+}
+
+.purchaseMaintenanceScreenContainer .form_div select,
+.purchaseMaintenanceEntryScreenContainer .form_div input {
+  font-size: 0.44rem !important;
+  padding: 5px;
+}
+
+.purchaseMaintenanceEntryScreenContainer .form_div .form_label {
+  top: 0.4rem;
+  background: #F1F7FB;
+}
+
+/*Input focus move up label*/
+.purchaseMaintenanceScreenContainer .form_input:focus + .form_label {
+  top: -0.3rem;
+}
+
+/*Input focus sticky top label*/
+.purchaseMaintenanceScreenContainer
+  .form_input:not(:placeholder-shown).form_input:not(:focus)
+  + .form_label {
+  top: -0.3rem;
+}
+/* -------------------- */
+
 .purchaseMaintenanceScreenContainer .purchaseMaintenanceBranchAndStock,
+.purchaseMaintenanceScreenContainer .nameTownMobile,
+.purchaseMaintenanceScreenContainer .fromToAndInv,
+.purchaseMaintenanceScreenContainer .InvUpto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
 .purchaseMaintenanceScreenContainer .nameTownMobile {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.purchaseMaintenanceScreenContainer .fromToAndInv {
+  grid-template-columns: 0.6fr 0.6fr 1fr;
+}
+
+.purchaseMaintenanceScreenContainer .purchaseMaintenanceRadioContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.purchaseMaintenanceScreenContainer .purchaseMaintenanceRadioContainer p {
+  font-size: 0.5rem;
+  font-weight: bold;
+}
+
+.purchaseMaintenanceScreenContainer
+  .purchaseMaintenanceRadioContainer
+  input[type="radio"],
+.purchaseMaintenanceScreenContainer .purchaseMaintenanceRadioContainer label {
+  font-size: 0.5rem;
+}
+
+.purchaseMaintenanceScreenContainer
+  .purchaseMaintenanceRadioContainer
+  input[type="radio"] {
+  width: 7px;
+  height: 7px;
+  border-radius: 9px;
+  border: 1px solid #bd9d9d;
+}
+
+.purchaseMaintenanceScreenContainer .purchaseMaintenancePageSize {
+  font-size: 0.5rem;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.purchaseMaintenanceScreenContainer .purchaseMaintenancePageSize select {
+  height: 14px;
+  font-size: 7px;
+  padding: 2px 5px;
+}
+
+.purchaseMaintenanceScreenContainer .purchaseMaintenancePageSize button {
+  border: none;
+  border-radius: 3px;
+  padding: 3px 4px;
+  background: linear-gradient(180deg, #185492 0%, #0e4074 100%);
+  color: #fff;
+  cursor: pointer;
+}
+
+.purchaseMaintenanceScreenContainer .purchaseMaintenancePageSize .pageSize {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.purchaseMaintenanceScreenContainer .itemAccordion {
+  background-color: #5A8C9E;
+  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.25));
+  color: #fff;
+  cursor: pointer;
+  padding: 6px 16px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 0.5rem;
+  transition: 0.4s;
+}
+
+.purchaseMaintenanceScreenContainer .itemPanel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.purchaseMaintenanceScreenContainer .itemPanel span,
+.purchaseMaintenanceScreenContainer .itemPanel label {
+  font-size: 0.5rem;
+}
+
+.purchaseMaintenanceScreenContainer .itemPanel span {
+  font-weight: bold;
+}
+
+.purchaseMaintenanceScreenContainer .itemPanel input[type="radio"] {
+  width: 7px;
+  height: 7px;
+}
+
+.purchaseMaintenanceScreenContainer .itemPanel input[type="text"] {
+  border-radius: 3px;
+  border: 1px solid #B7C3CC;
+  background: #FFF;
+  width: 174px;
+  height: 15px;
+}
+
+.purchaseMaintenanceScreenContainer .itemAccordion::before {
+  content: '\002B';
+  color: #fff;
+  font-weight: bold;
+  float: left;
+  margin-right: 5px;
+}
+
+.purchaseMaintenanceScreenContainer .active::before {
+  content: "\2212";
+}
+
+.purchaseMaintenanceScreenContainer .itemPanel {
+  padding: 0 18px;
+  background: #FAFEFF;
+  color: #40484A;
+  box-shadow: 0px 0px 1px 1px rgba(9, 30, 66, 0.13), 0px 1px 1px 0px rgba(9, 30, 66, 0.25);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.purchaseMaintenanceScreenContainer .itemAccordion.active + .itemPanel {
+  padding: 20px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.purchaseMaintenanceScreenContainer .purchaseItemAddAndTable {
+  margin-top: 10px;
+}
+
+.purchaseMaintenanceScreenContainer .purchaseItemAddAndTable table .purchaseBillAmount {
+  text-align: right;
+}
+
+.purchaseMaintenanceScreenContainer .purchaseItemAddAndTable svg {
+  width: 8px;
+  height: 8px;
+}
+
+.purchaseMaintenanceScreenContainer .purchaseItemAddAndTable button {
+  color: #185492;
+  font-size: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: none;
+  margin-right: 8px;
+}
+
+.purchaseMaintenanceScreenContainer .purchaseItemAddAndTable select {
+  width: 70px;
+  height: 15px;
+  font-size: 0.44rem;
+  padding: 2px;
+}
+
+.purchaseMaintenanceScreenContainer .purchaseItemTable table {
+  font-size: 0.5rem;
+}
+
+.purchaseMaintenanceScreenContainer .purchaseItemTable table .purchaseEditDeleteButtons {
+  text-align: center;
+}
+
+.purchaseMaintenanceScreenContainer .purchaseItemTable table .purchaseEditDeleteButtons div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.purchaseMaintenanceScreenContainer .purchaseItemTable table svg {
+  width: 10px;
+  height: 10px;
+}
+
+.purchaseMaintenanceScreenContainer .purchaseItemTable {
+  margin-top: 2px;
+}
+
+.purchaseMaintenanceScreenContainer .purchaseItemTable table td {
+  border: none;
+}
+
+.purchaseMaintenanceScreenContainer .purchaseItemTable table thead th,
+.purchaseMaintenanceScreenContainer .purchaseItemTable table tbody td {
+  border: 1px solid #c5d4d9;
+}
+
+.purchaseMaintenanceScreenContainer .purchaseItemTable table tbody tr:nth-child(even) {
+  background: #DAE9F0;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.purchaseMaintenanceScreenContainer .purchaseItemTable table tbody tr:nth-child(odd) {
+  background: #FDFDFD;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.purchaseMaintenanceScreenContainer .purchaseItemTable table thead{
+  background: linear-gradient(90deg, #D4E8F0 0%, #C6D5DC 100%);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #40484A;
+}
+
+.purchaseMaintenanceScreenContainer .purchaseItemTable table tfoot {
+  background: #65777E;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+  color: #E3F5FC;
+}
+
+@media (min-width: 768px) {
+
+  .purchaseMaintenanceScreenContainer .purchaseMaintenanceHeading P {
+    padding: 5px 10px;
+  }
+
+  .purchaseMaintenanceScreenContainer .purchaseMaintenanceHeading p {
+    font-size: 0.875rem;
+  }
+
+  .purchaseMaintenanceScreenContainer .form_div {
+    height: 30px;
+    margin-bottom: 15px;
+  }
+  /* -------------------- */
+  .purchaseMaintenanceScreenContainer .form_div .form_label {
+    font-size: 0.625rem !important;
+  }
+
+  .purchaseMaintenanceScreenContainer .form_div select,
+  .purchaseMaintenanceEntryScreenContainer .form_div input {
+    font-size: 0.75rem !important;
+    padding: 5px;
+  }
+
+  .purchaseMaintenanceEntryScreenContainer .form_div .form_label {
+    top: 0.5rem;
+  }
+
+  /*Input focus move up label*/
+  .purchaseMaintenanceScreenContainer .form_input:focus + .form_label {
+    top: -0.5rem;
+  }
+
+  /*Input focus sticky top label*/
+  .purchaseMaintenanceScreenContainer
+    .form_input:not(:placeholder-shown).form_input:not(:focus)
+    + .form_label {
+    top: -0.5rem;
+  }
+  /* -------------------- */
+
+  .purchaseMaintenanceScreenContainer .purchaseMaintenanceRadioContainer p,
+  .purchaseMaintenanceScreenContainer
+    .purchaseMaintenanceRadioContainer
+    input[type="radio"],
+  .purchaseMaintenanceScreenContainer .purchaseMaintenanceRadioContainer label {
+    font-size: 0.875rem;
+  }
+  
+  .purchaseMaintenanceScreenContainer
+    .purchaseMaintenanceRadioContainer
+    input[type="radio"] {
+    width: 12px;
+    height: 12px;
+  }
+
+  /* ======================================================= */
+  .purchaseMaintenanceScreenContainer .purchaseMaintenancePageSize {
+    font-size: 0.875rem;
+    margin-top: 10px;
+  }
+  
+  .purchaseMaintenanceScreenContainer .purchaseMaintenancePageSize select {
+    height: 30px;
+    font-size: 14px;
+  }
+  
+  .purchaseMaintenanceScreenContainer .purchaseMaintenancePageSize button {
+    padding: 6px 12px;
+  }
+  
+  .purchaseMaintenanceScreenContainer .purchaseMaintenancePageSize .pageSize {
+    gap: 10px;
+  }
+  /* ======================================================= */
+
+  .purchaseMaintenanceScreenContainer .itemAccordion,
+  .purchaseMaintenanceScreenContainer .itemPanel span,
+  .purchaseMaintenanceScreenContainer .itemPanel label {
+    font-size: 0.875rem;
+  }
+  
+  .purchaseMaintenanceScreenContainer .itemPanel input[type="radio"] {
+    width: 12px;
+    height: 12px;
+  }
+  
+  .purchaseMaintenanceScreenContainer .itemPanel input[type="text"] {
+    width: 300px;
+    height: 30px;
+  }
+
+  /* ======================================================= */
+
+  .purchaseMaintenanceScreenContainer .purchaseItemAddAndTable svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .purchaseMaintenanceScreenContainer .purchaseItemAddAndTable button {
+    font-size: 0.875rem;
+  }
+  
+  .purchaseMaintenanceScreenContainer .purchaseItemAddAndTable select {
+    width: 130px;
+    height: 20px;
+    font-size: 0.75rem;
+    padding: 2px;
+  }
+
+  .purchaseMaintenanceScreenContainer .purchaseItemTable table {
+    font-size: 0.875rem;
+  }
+  
+  .purchaseMaintenanceScreenContainer .purchaseItemTable table svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* ======================================================= */
+
+}
+
+@media (min-width: 1072px) {
+  .purchaseMaintenanceScreenContainer .purchaseBranchAndFrom {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 16px;
+  }
 }
-   
-.purchaseMaintenanceScreenContainer .nameTownMobile {
-    grid-template-columns: repeat(3, 1fr);
+
+@media (min-width: 1200px) {
+  .purchaseMaintenanceScreenContainer .purchaseMaintenanceEntryScreenContainer {
+    width: 65%;
+    margin: auto;
+  } 
 }
+
+
