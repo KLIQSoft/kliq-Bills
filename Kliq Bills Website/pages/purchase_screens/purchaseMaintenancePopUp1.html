@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purchase Maintenance Pop Up 1</title>
+    <link rel="stylesheet" href="../../styles/normalize.css" />
+    <link rel="stylesheet" href="../../styles/base.css" />
+    <link rel="stylesheet" href="../../styles/menu.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <link rel="stylesheet" href="../../styles/tabStyles.css" />
+    <link rel="stylesheet" href="../../styles/formStyles.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationMain.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationForm.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationTabs.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationTable.css" />
+    <link rel="stylesheet" href="../../styles/purchaseScreenMain.css" />
+    <style>
+
+      /* ========== reportsPopUp - START ========== */
+      .reportsPopUp {
+        width: 125px;
+        background: #fff;
+        color: #40484a;
+        box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.5);
+        padding: 0.1rem;
+        margin: 20px;
+        font-size: 0.5rem;
+        position: relative;
+      }
+
+      .reportsPopUp div:nth-child(odd) {
+        background: #DEE9ED;
+      }
+
+      .reportsPopUp div:nth-child(even) {
+        background: #EBF3F6;
+      }
+
+      .reportsPopUp input[type="radio"] {
+        width: 7px;
+        height: 7px;
+      }
+
+      .reportsPopUp div {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        padding: 4px 6px;
+        margin-bottom: 0.1rem;
+      }
+
+      .reportsPopUp button {
+        width: 100%;
+        font-weight: bold;
+        cursor: pointer;
+        background: #abb7bb;
+        color: #40484a;
+        border: none;
+        padding: 3px;
+      }
+      /* ========== reportsPopUp - END ========== */
+
+      /* ========== Button Cls Styles - START ========== */
+      .reportsPopUp .reportsclsPopUp {
+        width: 8px;
+        height: 8px;
+
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        cursor: pointer;
+      }
+
+      /* ========== Button Cls Styles - END ========== */
+
+      @media (min-width: 600px) {
+        /* ========== reportsPopUp - START ========== */
+        .reportsPopUp {
+          font-size: 0.625rem;
+        }
+
+        .reportsPopUp input[type="radio"] {
+          width: 8px;
+          height: 8px;
+        }
+        /* ========== reportsPopUp - END ========== */
+
+        /* ========== Button Cls Styles - START ========== */
+        .reportsPopUp .reportsclsPopUp {
+          width: 10px;
+          height: 10px;
+        }
+        /* ========== Button Cls Styles - END ========== */
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="reportsPopUp">
+      <svg
+        class="reportsclsPopUp"
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+      >
+        <rect width="16" height="16" fill="#40484A" />
+        <path
+          d="M2.66732 13.3333H12.0007V14.6666H2.66732C1.93398 14.6666 1.33398 14.0733 1.33398 13.3333V3.99992H2.66732V13.3333ZM13.4806 1.33325H5.18732C4.53398 1.33325 4.00065 1.86659 4.00065 2.51992V10.8133C4.00065 11.4666 4.53398 11.9999 5.18732 11.9999H13.4806C14.134 11.9999 14.6673 11.4666 14.6673 10.8133V2.51992C14.6673 1.86659 14.134 1.33325 13.4806 1.33325ZM12.6673 9.06659L11.734 9.99992L9.33398 7.59992L6.93398 9.99992L6.00065 9.06659L8.40065 6.66658L6.00065 4.26659L6.93398 3.33325L9.33398 5.73325L11.734 3.33325L12.6673 4.26659L10.2673 6.66658L12.6673 9.06659Z"
+          fill="white"
+        />
+      </svg>
+      <div><input type="radio" name="report" /> A/C Ledger</div>
+      <div><input type="radio" name="report" /> Outstanding Report</div>
+      <div><input type="radio" name="report" /> Creditors List</div>
+      <button>Ok</button>
+    </div>
+
+  </body>
+</html>
