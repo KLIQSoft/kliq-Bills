@@ -168,13 +168,13 @@
 }
 
 .dashboardContainer .saleAndPurchaseChart,
-.dashboardContainer .totalIncomeandExpensesChart {
+.dashboardContainer .tradingAndProfitChart {
   box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, 0.16);
   margin-bottom: 1em;
 }
 
 .dashboardContainer .saleAndPurchase,
-.dashboardContainer .totalIncomeandExpenses {
+.dashboardContainer .tradingAndProfit {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -184,7 +184,7 @@
 }
 
 .dashboardContainer .saleAndPurchase p,
-.dashboardContainer .totalIncomeandExpenses p {
+.dashboardContainer .tradingAndProfit p {
   padding: 0.8em;
   font-size: 0.5rem;
   font-family: "Inter", sans-serif;
@@ -198,11 +198,11 @@
   border: none;
 }
                        
-.dashboardContainer .pieChart {                         
+/* .dashboardContainer .pieChart {                         
   width: 47% !important;
   height: 47% !important;
   margin: auto;
-}
+} */
 .dashboardContainer .chart-container {
   margin: 1em 2em;
   border-bottom: 1px solid #a0a3a4;
@@ -242,7 +242,7 @@
 }
 /* <============= saleAndPurchaseChartEnd==============> */
 
-/* <============= totalIncomeandExpensesChartStart==============> */
+/* <============= tradingAndProfitChart Start==============> */
 .dashboardContainer .totalBar {
   font-family: Arial, sans-serif;
   background-color: #ffffff;
@@ -250,39 +250,51 @@
   flex-direction: column;
 }
 
-.dashboardContainer .total-income p:first-child {
-  color: #45a963;
+.dashboardContainer .total-grossProfit p:first-child {
+  color: #c899dc;
   font-size: 0.438rem;
   font-family: "Inter", sans-serif;
 }
-.dashboardContainer .total-expenses p:first-child {
-  color: #dd5f60;
+.dashboardContainer .total-netProfit p:first-child {
+  color: #4682b4;
   font-size: 0.438rem;
   font-family: "Inter", sans-serif;
 }
-.dashboardContainer .total-income p:last-child,
-.dashboardContainer .total-expenses p:last-child {
+.dashboardContainer .total-grossProfit p:last-child,
+.dashboardContainer .total-netProfit p:last-child {
   margin-top: 3px;
   color: #000000;
   font-size: 0.5rem;
   font-family: "Inter", sans-serif;
 }
 
-.dashboardContainer .totalIncomeandExpensesWrapper {
+.dashboardContainer .tradingAndProfitWrapper {
   display: flex;
   margin: 0em 2em 1em;
   gap: 10px;
 }
 
-.dashboardContainer .totalIncomeandExpensesWrapper .total-income,
-.dashboardContainer .totalIncomeandExpensesWrapper .total-expenses {
+.dashboardContainer .tradingAndProfitWrapper .total-grossProfit,
+.dashboardContainer .tradingAndProfitWrapper .total-netProfit {
   background: #e7eff2;
   padding: 0.5em 1em;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   flex: 1;
 }
-/* <============= totalIncomeandExpensesChartEnd==============> */
+
+.dashboardContainer .tradingAndProfitWrapper .total-grossProfit div,
+.dashboardContainer .tradingAndProfitWrapper .total-netProfit div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboardContainer .tradingAndProfitWrapper .total-grossProfit div div,
+.dashboardContainer .tradingAndProfitWrapper .total-netProfit div div {
+  display: grid;
+}
+
+/* <============= tradingAndProfitChart End==============> */
 
 /* <============= receivablesAndPayablesWrapperStart==============> */
 
@@ -371,20 +383,20 @@
   /* <============= saleGraphStart==============> */
 
   /* <============= saleAndPurchaseChartStart==============> */
-  .dashboardContainer .saleAndTotalIncomeCharts {
+  /* .dashboardContainer .saleAndTotalIncomeCharts {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     height: 30%;
-  }
+  } */
 
   .dashboardContainer .saleAndPurchaseChart,
-  .dashboardContainer .totalIncomeandExpensesChart {
-    width: 49.5%;
+  .dashboardContainer .tradingAndProfitChart {
+    /* width: 49.5%; */
     gap: 10px;
   }
   .dashboardContainer .saleAndPurchase p,
-  .dashboardContainer .totalIncomeandExpenses p {
+  .dashboardContainer .tradingAndProfit p {
     padding: 0.313em;
     font-size: 1rem;
   }
@@ -405,32 +417,32 @@
   }
   /* <============= saleAndPurchaseChartStart==============> */
 
-  /* <============= totalIncomeandExpensesChartStart==============> */
-  .dashboardContainer .total-income p:first-child,
-  .dashboardContainer .total-expenses p:first-child {
+  /* <============= tradingAndProfitChart Start==============> */
+  .dashboardContainer .total-grossProfit p:first-child,
+  .dashboardContainer .total-netProfit p:first-child {
     font-size: 0.875rem;
   }
 
-  .dashboardContainer .total-income p:last-child,
-  .dashboardContainer .total-expenses p:last-child {
+  .dashboardContainer .total-grossProfit p:last-child,
+  .dashboardContainer .total-netProfit p:last-child {
     font-size: 1rem;
   }
 
-  .dashboardContainer .totalIncomeandExpensesWrapper {
+  .dashboardContainer .tradingAndProfitWrapper {
     display: flex;
     margin: 0em 2em 1em;
     gap: 10px;
   }
   
-  .dashboardContainer .totalIncomeandExpensesWrapper .total-income,
-  .dashboardContainer .totalIncomeandExpensesWrapper .total-expenses {
+  .dashboardContainer .tradingAndProfitWrapper .total-grossProfit,
+  .dashboardContainer .tradingAndProfitWrapper .total-netProfit {
     background: #e7eff2;
     padding: 0.5em 1em;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     flex: 1;
   }
-  /* <============= totalIncomeandExpensesChartEnd==============> */
+  /* <============= tradingAndProfitChart End==============> */
 }
 
 @media (min-width: 768px) and (max-width: 1109px) {
@@ -463,11 +475,11 @@
   }
 
   .dashboardContainer .saleAndPurchase,
-  .dashboardContainer .totalIncomeandExpenses {
+  .dashboardContainer .tradingAndProfit {
     padding: 0.5rem;
   }
   .dashboardContainer .saleAndPurchase p,
-  .dashboardContainer .totalIncomeandExpenses p {
+  .dashboardContainer .tradingAndProfit p {
     padding: 0.8em;
     font-size: 0.5rem;
   }
@@ -498,23 +510,39 @@
     font-size: 0.5rem;
   }
 
-  .dashboardContainer .totalIncomeandExpensesWrapper {
+  .dashboardContainer .tradingAndProfitWrapper {
     margin: 0em 2em 1em;
   } 
   
-  .dashboardContainer .totalIncomeandExpensesWrapper .total-income,
-  .dashboardContainer .totalIncomeandExpensesWrapper .total-expenses {
+  .dashboardContainer .tradingAndProfitWrapper .total-grossProfit,
+  .dashboardContainer .tradingAndProfitWrapper .total-netProfit {
     padding: 0.5em 1em;
   }
 
-  .dashboardContainer .total-income p:first-child {
+  .dashboardContainer .total-grossProfit p:first-child {
     font-size: 0.438rem;
   }
-  .dashboardContainer .total-expenses p:first-child {
+  .dashboardContainer .total-netProfit p:first-child {
     font-size: 0.438rem;
   }
-  .dashboardContainer .total-income p:last-child,
-  .dashboardContainer .total-expenses p:last-child {
+  .dashboardContainer .total-grossProfit p:last-child,
+  .dashboardContainer .total-netProfit p:last-child {
     font-size: 0.5rem;
+  }
+}
+
+
+@media (min-width: 1400px) {
+  .dashboardContainer .saleAndTotalIncomeCharts {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 30%;
+  }
+
+  .dashboardContainer .saleAndPurchaseChart,
+  .dashboardContainer .tradingAndProfitChart {
+    width: 49.5%;
+    gap: 10px;
   }
 }
