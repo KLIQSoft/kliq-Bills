@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../../styles/accountCreationForm.css" />
     <link rel="stylesheet" href="../../styles/accountCreationTabs.css" />
     <link rel="stylesheet" href="../../styles/accountCreationTable.css" />
-    <link rel="stylesheet" href="../../styles/purchaseScreenMain.css" />
+    <link rel="stylesheet" href="../../styles/purchaseInvoice.css" />
   </head>
   <body>
     <header>
@@ -846,7 +846,70 @@
             </a>
           </p>
         </div>
-        <div class="container purchaseScreenContainer">
+        <div class="container purchaseInvoiceContainer">
+          <div>
+            <p>Invoice Payment</p>
+          </div>
+
+          <div class="purchaseInvoiceInputsContainer">
+            <div class="form_div">
+              <select class="form_input" required>
+                <option value="w">test 1</option>
+                <option value="w">test 2</option>
+              </select>
+              <label class="form_label">Customer Name</label>
+            </div>
+
+            <div class="form_div">
+              <input type="text" class="form_input" placeholder=" " />
+              <label class="form_label">Amount Received</label>
+            </div>
+
+            <div class="form_div">
+              <input type="text" class="form_input" placeholder=" " />
+              <label class="form_label">Bank Charges (if any)</label>
+            </div>
+
+            <div class="form_div">
+              <input type="date" class="form_input" placeholder=" " />
+              <label class="form_label">Payment Date</label>
+            </div>
+
+            <div class="form_div">
+              <input type="text" class="form_input" placeholder=" " />
+              <label class="form_label">Payment #</label>
+            </div>
+
+            <div class="form_div">
+              <select class="form_input" required>
+                <option value="w">test 1</option>
+                <option value="w">test 2</option>
+              </select>
+              <label class="form_label">Payment Mode</label>
+            </div>
+
+            <div class="form_div">
+              <select class="form_input" required>
+                <option value="w">test 1</option>
+                <option value="w">test 2</option>
+              </select>
+              <label class="form_label">Deposit To</label>
+            </div>
+
+            <div class="form_div">
+              <input type="text" class="form_input" placeholder=" " />
+              <label class="form_label">Reference #</label>
+            </div>
+          </div>
+
+          <div class="purchaseInvoiceRadio">
+            <p>Tax deducted?</p>
+            <input type="radio" name="tds" id="noTax">
+            <label for="noTax">No Tax deducted</label>
+
+            <input type="radio" name="tds" id="yesTax">
+            <label for="yesTax">Yes, TDS (Income Tax)</label>
+          </div>
 
         </div>
       </section>
