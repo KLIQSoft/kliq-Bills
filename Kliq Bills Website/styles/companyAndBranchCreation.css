@@ -44,7 +44,7 @@
 
 /* ========== image-container Styles - END ========== */
 
-.companyMain,
+/* .companyMain, */
 .stockPointCreationContainer,
 .stockPointCreationMain,
 .branchMain {
@@ -74,12 +74,19 @@
   font-size: 0.5rem;
 }
 
-.companyMain,
+/* .companyMain, */
 .stockPointCreationMain,
 .branchMain {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
+}
+
+.companyMain .companySection1,
+.companyMain .companySection2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
 
 .stockPointCreationContainer h2 {
@@ -233,8 +240,8 @@
   }
 
   .image-container {
-    float: right;
-    margin-left: 1em;
+    float: left;
+    margin-right: 1em;
   }
 
   .companyCreationContainer::after {
@@ -243,7 +250,7 @@
     clear: both;
   }
 
-  .companyMain,
+  /* .companyMain, */
   .stockPointCreationMain,
   .branchMain {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));

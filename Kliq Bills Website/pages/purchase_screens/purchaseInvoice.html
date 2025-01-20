@@ -847,7 +847,7 @@
           </p>
         </div>
         <div class="container purchaseInvoiceContainer">
-          <div>
+          <div class="purchaseInvoicePaymentText">
             <p>Invoice Payment</p>
           </div>
 
@@ -904,11 +904,102 @@
 
           <div class="purchaseInvoiceRadio">
             <p>Tax deducted?</p>
-            <input type="radio" name="tds" id="noTax">
-            <label for="noTax">No Tax deducted</label>
+            <div class="purchaseradioButtons">
+              <div>
+                <input type="radio" name="tds" id="noTax">
+                <label for="noTax">No Tax deducted</label>
+              </div>
 
-            <input type="radio" name="tds" id="yesTax">
-            <label for="yesTax">Yes, TDS (Income Tax)</label>
+              <div>
+                <input type="radio" name="tds" id="yesTax">
+                <label for="yesTax">Yes, TDS (Income Tax)</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="purchaseTableContainer">
+
+            <div class="purchaseMainTextContainer">
+              <p>Unpaid Invoices</p>
+              <div>
+                <img src="" alt="">
+                <p>Filter by Date Range</p>
+                <img src="" alt="">
+              </div>
+              <p>Clear Applied Amount</p>
+            </div>
+
+            <div class="purchaseMainTableContainer">
+              <table>
+                <thead>
+                  <th>Date</th>
+                  <th>Invoice Number</th>
+                  <th>Invoice Amount</th>
+                  <th>Amount Due</th>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>
+                      <div>
+                        <p>14 Jun 2024</p>
+                        <p>Due Date: 27 Apr 2025</p>
+                      </div>
+                    </td>
+                    <td>Invoice 2</td>
+                    <td>36174</td>
+                    <td>36174</td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div>
+                        <p>14 Jun 2024</p>
+                        <p>Due Date: 27 Apr 2025</p>
+                      </div>
+                    </td>
+                    <td>Invoice 2</td>
+                    <td>36174</td>
+                    <td>36174</td>
+                  </tr>
+                </tbody>
+
+                <tfoot>
+                  <td colspan="6">Total: 0.00</td>
+                </tfoot>
+              </table>
+            </div>
+
+            <div class="purchaseAmountListContainer">
+              <p>
+                <span>Amount Received:</span> 
+                <span>0.000</span>
+              </p>
+              <p>
+                <span>Amount used for Payments:</span>
+                <span>0.000</span>
+              </p>
+              <p>
+                <span>Amount Refunded:</span> 
+                <span>0.000</span>
+              </p>
+              <p>
+                <img src="" alt="">
+                <span>Amount in Excess:</span>
+                <span>0.000</span>
+              </p>
+            </div>
+
+          </div>
+
+          <div class="purchaseNotesContainer">
+            <p>Notes (Internal use. Not visible to customer)</p>
+            <textarea name="" id=""></textarea>
+          </div>
+
+          <div class="purchaseCloseAndSaveButtons">
+            <button>Close</button>
+            <button>Save</button>
           </div>
 
         </div>
