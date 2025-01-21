@@ -1,3 +1,25 @@
+/* ========== Madatory Fields Styles - START ========== */
+.companyCreationContainer .mandatoryFields {
+  border: 1px solid #DD7554;
+}
+
+.companyCreationContainer .mandatoryFields.filled {
+  border: 1px solid #53CA2E;
+}
+/* ========== Madatory Fields Styles - END ========== */
+
+/* ========== view more, view less Styles - START ========== */
+.companyCreationContainer #myBtn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #185492;
+  font-weight: bold;
+}
+
+.companyCreationContainer #more {display: none;}
+/* ========== view more, view less Styles - END ========== */
+
 /* ========== image-container Styles - START ========== */
 .companyCreationContainer .replaceImage {
   display: flex;
@@ -87,6 +109,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .stockPointCreationContainer h2 {
@@ -257,6 +281,12 @@
     gap: 16px;
   }
 
+  .companyMain .companySection1,
+  .companyMain .companySection2 {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    margin-top: 0.5rem;
+  }
+
   .companyCreationContainer .form_div label,
   .branchCreationContainer .form_div label {
     font-size: 0.65rem;
@@ -312,5 +342,4 @@
     width: 12px;
     height: 12px;
   }
-
 }

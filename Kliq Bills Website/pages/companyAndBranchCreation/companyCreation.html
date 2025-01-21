@@ -882,7 +882,6 @@
 
             <div class="companyAndStockCreationWrapper">
               <div class="companyMain">
-
                 <div class="companySection1">
                   <div class="form_div">
                     <select class="form_input" required>
@@ -912,27 +911,27 @@
                   </div>
 
                   <div class="form_div">
-                    <input type="text" class="form_input" placeholder=" " />
+                    <input type="text" class="form_input mandatoryFields filled" placeholder=" " required />
                     <label class="form_label">Company Name</label>
                   </div>
 
                   <div class="form_div">
-                    <input type="text" class="form_input" placeholder=" " />
+                    <input type="text" class="form_input mandatoryFields" placeholder=" " required />
                     <label class="form_label">Company Code</label>
                   </div>
 
                   <div class="form_div">
-                    <input type="text" class="form_input" placeholder=" " />
+                    <input type="text" class="form_input mandatoryFields" placeholder=" " required />
                     <label class="form_label">Town</label>
                   </div>
 
                   <div class="form_div">
-                    <input type="text" class="form_input" placeholder=" " />
+                    <input type="text" class="form_input mandatoryFields" placeholder=" " required />
                     <label class="form_label">PinCode</label>
                   </div>
 
                   <div class="form_div">
-                    <select class="form_input" required>
+                    <select class="form_input mandatoryFields" required>
                       <option value="" selected disabled hidden>
                         Please select list
                       </option>
@@ -943,7 +942,7 @@
                   </div>
 
                   <div class="form_div">
-                    <select class="form_input" required>
+                    <select class="form_input mandatoryFields" required>
                       <option value="" selected disabled hidden>
                         Please select list
                       </option>
@@ -965,7 +964,7 @@
                   </div>
 
                   <div class="form_div">
-                    <input type="text" class="form_input" placeholder=" " />
+                    <input type="text" class="form_input mandatoryFields" placeholder=" " required />
                     <label class="form_label">Mobile Number 1</label>
                   </div>
 
@@ -975,7 +974,7 @@
                   </div>
                 </div>
 
-                <div class="companySection2">
+                <div id="more" class="companySection2">
                   <div class="form_div">
                     <input type="text" class="form_input" placeholder=" " />
                     <label class="form_label">Mobile Number 2</label>
@@ -1082,18 +1081,20 @@
                     <label class="form_label">Other Information 3</label>
                   </div>
                 </div>
-                
+
+                <span id="dots"></span>
+                <button onclick="myFunction()" id="myBtn">+ View more</button>
               </div>
 
               <div class="stockPointCreationContainer">
                 <h2>Stock Point Creation</h2>
                 <div class="stockPointCreationMain">
                   <div class="form_div">
-                    <input type="text" class="form_input" placeholder=" " />
+                    <input type="text" class="form_input mandatoryFields" placeholder=" " required />
                     <label class="form_label">Stock Point Name</label>
                   </div>
                   <div class="form_div">
-                    <input type="text" class="form_input" placeholder=" " />
+                    <input type="text" class="form_input mandatoryFields" placeholder=" " required />
                     <label class="form_label">Stock Point Code</label>
                   </div>
                   <div class="form_div">
@@ -1109,7 +1110,7 @@
                     <label class="form_label">Address 2</label>
                   </div>
                   <div class="form_div">
-                    <select class="form_input" required>
+                    <select class="form_input mandatoryFields" required>
                       <option value="" selected disabled hidden>
                         Please select list
                       </option>
@@ -1119,7 +1120,7 @@
                     <label class="form_label">State</label>
                   </div>
                   <div class="form_div">
-                    <select class="form_input" required>
+                    <select class="form_input mandatoryFields" required>
                       <option value="" selected disabled hidden>
                         Please select list
                       </option>
@@ -1129,11 +1130,11 @@
                     <label class="form_label">District</label>
                   </div>
                   <div class="form_div">
-                    <input type="text" class="form_input" placeholder=" " />
+                    <input type="text" class="form_input mandatoryFields" placeholder=" " required />
                     <label class="form_label">Town</label>
                   </div>
                   <div class="form_div">
-                    <input type="text" class="form_input" placeholder=" " />
+                    <input type="text" class="form_input mandatoryFields" placeholder=" " required />
                     <label class="form_label">PinCode</label>
                   </div>
                   <div class="form_div">
@@ -1141,7 +1142,7 @@
                     <label class="form_label">Mobile Number</label>
                   </div>
                   <div class="form_div">
-                    <input type="text" class="form_input" placeholder=" " />
+                    <input type="text" class="form_input mandatoryFields filled" placeholder=" " required />
                     <label class="form_label">Email</label>
                   </div>
                   <div class="form_div">
@@ -1254,7 +1255,25 @@
         </div>
       </section>
     </main>
+
     <script src="../../js/menu.js"></script>
     <script src="../../js/themes.js"></script>
+    <script>
+      function myFunction() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("myBtn");
+
+        if (dots.style.display === "none") {
+          dots.style.display = "inline";
+          btnText.innerHTML = "+ View more";
+          moreText.style.display = "none";
+        } else {
+          dots.style.display = "none";
+          btnText.innerHTML = "- View less";
+          moreText.style.display = "grid";
+        }
+      }
+    </script>
   </body>
 </html>
