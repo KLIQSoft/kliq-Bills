@@ -1,4 +1,4 @@
-/* =============================== Creadit Note Header - START =============================== */
+/* =============================== credit Note Header - START =============================== */
 .creditNoteContainer .creditNoteHeader {
   margin: -8px;
   margin-bottom: 10px;
@@ -14,7 +14,7 @@
 .creditNoteContainer .creditNoteHeader {
   justify-content: space-between;
   padding: 5px 10px;
-  background: #185492;
+  background: var(--primary-color);
   color: #fff;
   border-radius: 2px;
 }
@@ -91,9 +91,20 @@
 .creditNoteContainer .creditNoteHeader .slider.round:before {
   border-radius: 50%;
 }
-/* =============================== Creadit Note Header - END =============================== */
+/* =============================== credit Note Header - END =============================== */
 
-/* =============================== Creadit Note Inputs - START =============================== */
+/* =============================== credit Note Inputs - START =============================== */
+.creditNoteContainer .creditNotesInputs1 {
+  width: 70%;
+}
+
+.creditNoteContainer input,
+.creditNoteContainer select,
+.creditNoteContainer textarea {
+  border-radius: 3px;
+  border: 1px solid #adafb0;
+}
+
 .creditNoteContainer .creditNoteInputsContainer .form_div input,
 .creditNoteContainer .creditNoteInputsContainer .form_div select {
   height: 25px;
@@ -137,16 +148,145 @@
   margin-bottom: 5px;
 }
 
-.creditNoteContainer .creditNoteInputsContainer .creditNotesInputs2 {
-    width: 50%;
+/* ------- */
+.creditNoteContainer .creditNoteInputsContainer .creditNotesInputs2 .form_div {
+  margin-bottom: 0;
 }
 
+.creditNoteContainer
+  .creditNoteInputsContainer
+  .creditNotesInputs2
+  .form_input {
+  position: static;
+}
 
+.creditNoteContainer .creditNoteNumber1 input,
+.creditNoteContainer .refNumber1 input {
+  height: 25px;
+  width: 70px;
+}
+.creditNoteContainer .creditNoteInputsContainer .creditNoteNumber,
+.creditNoteContainer .creditNoteInputsContainer .creditNoteNumber1,
+.creditNoteContainer .creditNoteInputsContainer .refNumber,
+.creditNoteContainer .creditNoteInputsContainer .refNumber1 {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
 
-/* =============================== Creadit Note Inputs - END =============================== */
+.creditNoteContainer .creditNoteInputsContainer .creditNoteNumber1 p,
+.creditNoteContainer .creditNoteInputsContainer .refNumber1 p {
+  font-size: 0.5rem;
+}
+
+.creditNoteContainer .creditNoteInputsContainer .creditNoteNumber {
+  margin-bottom: 10px;
+}
+
+.creditNoteContainer .creditNoteInputsContainer .refNumber1 p {
+  margin-right: 15px;
+}
+/* ------- */
+
+/* =============================== credit Note Inputs - END =============================== */
+
+/* =============================== credit Note Table - START =============================== */
+.creditNoteContainer .creditNoteMainTable table {
+  white-space: nowrap;
+}
+
+.creditNoteContainer .creditNoteMainTable table svg {
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+}
+
+.creditNoteContainer .creditNoteMainTable table thead {
+  border-radius: 3px 3px 0px 0px;
+  background: #f4f4f4;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #40484a;
+  font-size: 0.5rem;
+}
+
+.creditNoteContainer .creditNoteMainTable table tbody tr {
+  background: #f9fcff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-top: 1px solid #adafb0;
+  font-size: 0.44rem;
+}
+
+.creditNoteContainer .creditNoteMainTable table tbody tr td {
+  border: none;
+}
+
+.creditNoteContainer .creditNoteMainTable table tbody tr input,
+.creditNoteContainer .creditNoteMainTable table tbody tr select {
+  font-size: 0.44rem;
+  height: 14px;
+}
+
+.creditNoteContainer .creditNoteMainTable table tbody tr select {
+  padding: 2px;
+}
+
+.creditNoteContainer .creditNoteMainTable table .accountCode input,
+.creditNoteContainer .creditNoteMainTable table .town input,
+.creditNoteContainer .creditNoteMainTable table .amount input,
+.creditNoteContainer .creditNoteMainTable table .gstAmount input,
+.creditNoteContainer .creditNoteMainTable table .grossAmount input,
+.creditNoteContainer .creditNoteMainTable table .netAmount input {
+  width: 60px;
+}
+
+.creditNoteContainer .creditNoteMainTable table .tds div select {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.creditNoteContainer .creditNoteMainTable table .tds div {
+  display: flex;
+  align-items: center;
+}
+
+.creditNoteContainer .creditNoteMainTable table .tds div input:nth-child(2) {
+  width: 40px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-left: -1px;
+}
+
+.creditNoteContainer .creditNoteMainTable table .tds div input:last-child {
+  width: 60px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: -1px;
+}
+
+.creditNoteContainer .creditNoteMainTable table .gstP input {
+  width: 30px;
+}
+/* =============================== credit Note Table - END =============================== */
+
+/* =============================== credit Note Add Row Button - START =============================== */
+.creditNoteContainer .addrowButton .addRowBtn {
+  border: none;
+  border-radius: 2px;
+  background: #185492;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font-size: 0.5rem;
+  padding: 4px;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-top: 2px;
+}
+/* =============================== credit Note Add Row Button - END =============================== */
 
 @media (min-width: 600px) {
-  /* =============================== Creadit Note Header - START =============================== */
+  /* =============================== credit Note Header - START =============================== */
   .creditNoteContainer .creditNoteHeader {
     margin-bottom: 16px;
   }
@@ -177,9 +317,18 @@
   .creditNoteContainer .creditNoteHeader .slider.round {
     border-radius: 12px;
   }
-  /* =============================== Creadit Note Header - END =============================== */
+  /* =============================== credit Note Header - END =============================== */
 
-  /* =============================== Creadit Note Inputs - START =============================== */
+  /* =============================== credit Note Inputs - START =============================== */
+  .creditNoteContainer .creditNotesInputs1 {
+    width: 400px;
+  }
+
+  .creditNoteContainer .creditNoteInputsContainer {
+    display: flex;
+    gap: 30px;
+  }
+
   .creditNoteContainer .creditNoteInputsContainer .form_div input,
   .creditNoteContainer .creditNoteInputsContainer .form_div select {
     height: 30px;
@@ -209,5 +358,84 @@
   .creditNoteContainer .creditNoteInputsContainer .form_div {
     margin-bottom: 10px;
   }
-  /* =============================== Creadit Note Inputs - END =============================== */
+
+  /* ------- */
+  .creditNoteContainer .creditNoteNumber1 input,
+  .creditNoteContainer .refNumber1 input {
+    width: 100px;
+    height: 30px;
+  }
+
+  .creditNoteContainer .creditNoteInputsContainer .creditNoteNumber1 p,
+  .creditNoteContainer .creditNoteInputsContainer .refNumber1 p {
+    font-size: 0.875rem;
+  }
+
+  .creditNoteContainer .creditNoteInputsContainer .refNumber1 p {
+    margin-right: 25px;
+  }
+  /* ------- */
+  /* =============================== credit Note Inputs - END =============================== */
+
+  /* =============================== credit Note Table - START =============================== */
+  .creditNoteContainer .creditNoteMainTable table svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .creditNoteContainer .creditNoteMainTable table thead {
+    font-size: 0.875rem;
+  }
+
+  .creditNoteContainer .creditNoteMainTable table tbody tr,
+  .creditNoteContainer .creditNoteMainTable table tbody tr input,
+  .creditNoteContainer .creditNoteMainTable table tbody tr select {
+    font-size: 0.75rem;
+  }
+
+  .creditNoteContainer .creditNoteMainTable table tbody tr input,
+  .creditNoteContainer .creditNoteMainTable table tbody tr select {
+    height: 20px;
+  }
+
+  .creditNoteContainer .creditNoteMainTable table .accountCode input,
+  .creditNoteContainer .creditNoteMainTable table .town input,
+  .creditNoteContainer .creditNoteMainTable table .amount input,
+  .creditNoteContainer .creditNoteMainTable table .gstAmount input,
+  .creditNoteContainer .creditNoteMainTable table .grossAmount input,
+  .creditNoteContainer .creditNoteMainTable table .netAmount input {
+    width: 100px;
+  }
+
+  .creditNoteContainer .creditNoteMainTable table .tds div input:nth-child(2) {
+    width: 60px;
+  }
+
+  .creditNoteContainer .creditNoteMainTable table .tds div input:last-child {
+    width: 80px;
+  }
+
+  .creditNoteContainer .creditNoteMainTable table .gstP input {
+    width: 50px;
+  }
+  /* =============================== credit Note Table - END =============================== */
+
+  /* =============================== credit Note Add Row Button - START =============================== */
+  .creditNoteContainer .addrowButton .addRowBtn {
+    font-size: 0.75rem;
+    padding: 7px 6px;
+  }
+  /* =============================== credit Note Add Row Button - END =============================== */
+}
+
+@media (min-width: 769px) and (max-width: 1041px) {
+  .creditNoteContainer .creditNoteInputsContainer {
+    display: block;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .creditNoteContainer .creditNoteInputsContainer {
+    display: block;
+  }
 }
