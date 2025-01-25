@@ -970,6 +970,22 @@
 
           </div>
 
+          <div class="creditNoteTdsContainer">
+            <div>
+              <p>Tax deducted?</p>
+              <div class="creditNoteTdsInputs">
+                <div>
+                  <input type="checkbox" name="tds" id="tds">
+                  <label for="tds">Yes, TDS (Income Tax)</label>
+                </div>
+                <div>
+                  <input type="checkbox" name="disc" id="disc">
+                  <label for="disc">Allow Discount</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="creditNoteTableContainer">
             <p>Service</p>
             <div class="creditNoteMainTable" style="overflow-x: auto;">
@@ -1105,8 +1121,41 @@
             </div>
           </div>
 
-          <div class="addrowButton">
-            <button class="addRowBtn">+ Add Row</button>
+          <div class="buttonsAndTotals">
+            <div class="addrowButton">
+              <button class="btn addRowBtn">+ Add Row</button>
+            </div>
+
+            <div class="totalsButtons">
+              <div class="totals">
+                <div>
+                  <p>Taxable Amount:</p>
+                  <p>0.00</p>
+                </div>
+                <div>
+                  <p>GST Amount:</p>
+                  <p>0.00</p>
+                </div>
+                <div>
+                  <p>Gross Amount:</p>
+                  <p>0.00</p>
+                </div>
+                <div>
+                  <p>TDS:</p>
+                  <p>0.00</p>
+                </div>
+                <div>
+                  <p>Total Amount:</p>
+                  <p>0.00</p>
+                </div>
+              </div>
+
+              <div class="saveAndCloseBtns">
+                <button class="btn btnSave">Save</button>
+                <button class="btn">Save & New</button>
+                <button class="btn btnClose">Close</button>
+              </div>
+            </div>
           </div>
 
         </div>

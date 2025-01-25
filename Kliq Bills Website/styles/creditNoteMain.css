@@ -190,7 +190,44 @@
 
 /* =============================== credit Note Inputs - END =============================== */
 
+/* =============================== credit Note creditNoteTdsContainer - START =============================== */
+.creditNoteContainer .creditNoteTdsContainer {
+  font-size: 0.5rem;
+  margin-top: 1em;
+  margin-bottom: 0.6em;
+}
+
+.creditNoteContainer .creditNoteTdsInputs {
+  display: flex;
+}
+
+.creditNoteContainer .creditNoteTdsInputs div:nth-child(1) {
+  padding-right: 20px;
+}
+
+.creditNoteContainer .creditNoteTdsInputs div:nth-child(2) {
+  border-left: 1px solid #b9c1c1;
+  padding-left: 20px;
+}
+
+
+.creditNoteContainer .creditNoteTdsContainer p {
+  margin-bottom: 0.2rem;
+}
+
+.creditNoteContainer .creditNoteTdsContainer  input {
+  width: 7px;
+  height: 7px;
+}
+/* =============================== credit Note creditNoteTdsContainer - END =============================== */
+
 /* =============================== credit Note Table - START =============================== */
+.creditNoteContainer .creditNoteTableContainer {
+  font-size: 0.5rem;
+  font-weight: bold;
+  color: #185492;
+}
+
 .creditNoteContainer .creditNoteMainTable table {
   white-space: nowrap;
 }
@@ -270,20 +307,54 @@
 }
 /* =============================== credit Note Table - END =============================== */
 
-/* =============================== credit Note Add Row Button - START =============================== */
-.creditNoteContainer .addrowButton .addRowBtn {
+/* =============================== credit Note Buttons and Totals - START =============================== */
+.creditNoteContainer .btn {
   border: none;
   border-radius: 2px;
-  background: #185492;
+  background: var(--primary-linear-gradient-bg);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   color: #fff;
   font-size: 0.5rem;
-  padding: 4px;
+  padding: 3px 4px;
   border-radius: 2px;
   cursor: pointer;
-  margin-top: 2px;
+  margin-top: 0.2rem;
 }
-/* =============================== credit Note Add Row Button - END =============================== */
+
+.creditNoteContainer .btnClose {
+  background: none;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.creditNoteContainer .totalsButtons .totals {
+  font-size: 0.5rem;
+  border-radius: 2px;
+  background: #F4F4F4;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 6px;
+}
+
+
+.creditNoteContainer .buttonsAndTotals,
+.creditNoteContainer .totalsButtons .totals div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.creditNoteContainer .totals {
+  margin-top: 0.3rem;
+  width: 150px;
+}
+
+.creditNoteContainer .totalsButtons .totals div {
+  margin-bottom: 6px;
+}
+
+.creditNoteContainer .saveAndCloseBtns {
+  justify-self: flex-end;
+}
+/* =============================== credit Note Buttons and Totals - END =============================== */
 
 @media (min-width: 600px) {
   /* =============================== credit Note Header - START =============================== */
@@ -377,7 +448,22 @@
   /* ------- */
   /* =============================== credit Note Inputs - END =============================== */
 
+  /* =============================== credit Note creditNoteTdsContainer - START =============================== */
+  .creditNoteContainer .creditNoteTdsContainer {
+    font-size: 0.875rem;
+  }
+
+  .creditNoteContainer .creditNoteTdsContainer  input {
+    width: 10px;
+    height: 10px;
+  }
+  /* =============================== credit Note creditNoteTdsContainer - END =============================== */
+
   /* =============================== credit Note Table - START =============================== */
+  .creditNoteContainer .creditNoteTableContainer {
+    font-size: 0.875rem;
+  }
+
   .creditNoteContainer .creditNoteMainTable table svg {
     width: 18px;
     height: 18px;
@@ -420,12 +506,25 @@
   }
   /* =============================== credit Note Table - END =============================== */
 
-  /* =============================== credit Note Add Row Button - START =============================== */
-  .creditNoteContainer .addrowButton .addRowBtn {
+  /* =============================== credit Note Buttons - START =============================== */
+  .creditNoteContainer  .btn {
     font-size: 0.75rem;
-    padding: 7px 6px;
+    padding: 6px 6px;
   }
-  /* =============================== credit Note Add Row Button - END =============================== */
+
+  .creditNoteContainer .totalsButtons .totals {
+    font-size: 0.875rem;
+    padding: 10px;
+  }
+
+  .creditNoteContainer .totals {
+    width: 250px;
+  }
+
+  .creditNoteContainer .totalsButtons .totals div {
+    margin-bottom: 10px;
+  }
+  /* =============================== credit Note Buttons - END =============================== */
 }
 
 @media (min-width: 769px) and (max-width: 1041px) {
