@@ -450,16 +450,16 @@
 }
 
 .mainTableContainer thead {
-  background: linear-gradient(90deg, #d4e8f0 0%, #c6d5dc 100%);
+  border-radius: 3px 3px 0px 0px;
+  background: #f4f4f4;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   color: #40484a;
 }
 
-.mainTableContainer tr {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.mainTableContainer tr:nth-child(even) {
-  background: linear-gradient(90deg, #d4e8f0 0%, #c6d5dc 100%);
+.mainTableContainer tbody tr {
+  background: #f9fcff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-top: 1px solid #ADAFB0;
 }
 
 .mainTableContainer td {
@@ -467,7 +467,9 @@
 }
 
 .mainTableContainer tfoot {
-  background: #65777e;
+  background: #f0f1f1;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #40484a;
 }
 /* ================ mainTableContainer Style - END ================ */
 
@@ -480,16 +482,16 @@
 }
 
 .tcsAndRoundOff thead {
-  background: #C7D2DE;
-  color: #40484A;
+  background: #c7d2de;
+  color: #40484a;
 }
 
 .tcsAndRoundOff td {
-  border: 1px solid #C7D2DE;
+  border: 1px solid #c7d2de;
 }
 
 .tcsAndRoundOff tr:nth-child(even) {
-  background: #E9F0F6;
+  background: #e9f0f6;
 }
 
 .purchaseScreenContainer .tcsRoundOffAndTotal {
@@ -499,19 +501,39 @@
 
 /* ================ tcsAndRoundOff Style - END ================ */
 
+.purchaseScreenContainer .totals {
+  border-radius: 2px;
+  background: #F4F4F4;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 6px;
+}
+
 .purchaseScreenContainer .totals div {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.6em;
   font-weight: 700;
-  color: #40484A;
+  color: #40484a;
 }
 
 .purchaseScreenContainer .btn {
   background: var(--primary-linear-gradient-bg);
   color: #fff;
   border: 1px solid var(--primary-color);
-  padding: 4px 12px;
+  padding: 4px 6px;
+  font-size: 0.5rem;
+}
+
+.purchaseScreenContainer .buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+}
+
+.purchaseScreenContainer svg {
+  cursor: pointer;
+  margin-right: 5px;
 }
 
 @media (max-width: 480px) {
@@ -679,11 +701,26 @@
     font-size: 0.4375rem;
   }
   /* ================ tcsAndRoundOff Style - END ================ */
+  .purchaseScreenContainer .totals {
+    font-size: 0.5rem;
+    width: 150px;
+  }
+}
+
+@media (min-width: 480px) {
+  .purchaseScreenContainer .btn { 
+    font-size: 14px;
+  }
 }
 
 @media (min-width: 768px) {
   .tcsAndRoundOff {
     width: 65%;
+  }
+
+  .purchaseScreenContainer .totals {
+    font-size: 0.875rem;
+    width: 250px;
   }
 }
 
@@ -691,6 +728,12 @@
   .purchaseScreenContainer .totals {
     width: 60%;
     margin-left: auto;
+  }
+}
+
+@media (max-width: 1033px) {
+  .purchaseScreenContainer .totals {
+    margin-top: 0.5rem
   }
 }
 
