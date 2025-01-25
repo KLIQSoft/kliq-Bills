@@ -210,12 +210,11 @@
   padding-left: 20px;
 }
 
-
 .creditNoteContainer .creditNoteTdsContainer p {
   margin-bottom: 0.2rem;
 }
 
-.creditNoteContainer .creditNoteTdsContainer  input {
+.creditNoteContainer .creditNoteTdsContainer input {
   width: 7px;
   height: 7px;
 }
@@ -226,6 +225,7 @@
   font-size: 0.5rem;
   font-weight: bold;
   color: #185492;
+  margin-top: 0.4rem;
 }
 
 .creditNoteContainer .creditNoteMainTable table {
@@ -272,8 +272,14 @@
 .creditNoteContainer .creditNoteMainTable table .amount input,
 .creditNoteContainer .creditNoteMainTable table .gstAmount input,
 .creditNoteContainer .creditNoteMainTable table .grossAmount input,
+.creditNoteContainer .creditNoteMainTable table .netAmount input,
+.creditNoteContainer .creditNoteMainTable table .purPrice input,
+.creditNoteContainer .creditNoteMainTable table .mrp input,
+.creditNoteContainer .creditNoteMainTable table .disAmount input,
+.creditNoteContainer .creditNoteMainTable table .taxAmount input,
 .creditNoteContainer .creditNoteMainTable table .netAmount input {
   width: 60px;
+  text-align: right;
 }
 
 .creditNoteContainer .creditNoteMainTable table .tds div select {
@@ -302,8 +308,15 @@
   margin-left: -1px;
 }
 
-.creditNoteContainer .creditNoteMainTable table .gstP input {
+.creditNoteContainer .creditNoteMainTable table .gstP input,
+.creditNoteContainer .creditNoteMainTable table .qty input,
+.creditNoteContainer .creditNoteMainTable table .disP input {
   width: 30px;
+  text-align: right;
+}
+
+.creditNoteContainer .creditNoteMainTable table .qty input {
+  text-align: center;
 }
 /* =============================== credit Note Table - END =============================== */
 
@@ -330,11 +343,10 @@
 .creditNoteContainer .totalsButtons .totals {
   font-size: 0.5rem;
   border-radius: 2px;
-  background: #F4F4F4;
+  background: #f4f4f4;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   padding: 6px;
 }
-
 
 .creditNoteContainer .buttonsAndTotals,
 .creditNoteContainer .totalsButtons .totals div {
@@ -453,7 +465,7 @@
     font-size: 0.875rem;
   }
 
-  .creditNoteContainer .creditNoteTdsContainer  input {
+  .creditNoteContainer .creditNoteTdsContainer input {
     width: 10px;
     height: 10px;
   }
@@ -489,6 +501,11 @@
   .creditNoteContainer .creditNoteMainTable table .amount input,
   .creditNoteContainer .creditNoteMainTable table .gstAmount input,
   .creditNoteContainer .creditNoteMainTable table .grossAmount input,
+  .creditNoteContainer .creditNoteMainTable table .netAmount input,
+  .creditNoteContainer .creditNoteMainTable table .purPrice input,
+  .creditNoteContainer .creditNoteMainTable table .mrp input,
+  .creditNoteContainer .creditNoteMainTable table .disAmount input,
+  .creditNoteContainer .creditNoteMainTable table .taxAmount input,
   .creditNoteContainer .creditNoteMainTable table .netAmount input {
     width: 100px;
   }
@@ -501,13 +518,15 @@
     width: 80px;
   }
 
-  .creditNoteContainer .creditNoteMainTable table .gstP input {
+  .creditNoteContainer .creditNoteMainTable table .gstP input,
+  .creditNoteContainer .creditNoteMainTable table .qty input,
+  .creditNoteContainer .creditNoteMainTable table .disP input {
     width: 50px;
   }
   /* =============================== credit Note Table - END =============================== */
 
   /* =============================== credit Note Buttons - START =============================== */
-  .creditNoteContainer  .btn {
+  .creditNoteContainer .btn {
     font-size: 0.75rem;
     padding: 6px 6px;
   }
