@@ -15,7 +15,7 @@
   background: #f1f7fb;
   box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05),
     0px 0px 0px 1px rgba(0, 0, 0, 0.08);
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .purchaseMaintenanceScreenContainer .purchaseMaintenanceEntryScreenContainer {
@@ -41,7 +41,7 @@
 
 .purchaseMaintenanceEntryScreenContainer .form_div .form_label {
   top: 0.4rem;
-  background: #F1F7FB;
+  background: #f1f7fb;
 }
 
 /*Input focus move up label*/
@@ -134,7 +134,7 @@
 /* -------------------------------------------------------------------------- */
 
 .purchaseMaintenanceScreenContainer .itemAccordion {
-  background-color: #5A8C9E;
+  background-color: #5a8c9e;
   filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.25));
   color: #fff;
   cursor: pointer;
@@ -170,14 +170,14 @@
 
 .purchaseMaintenanceScreenContainer .itemPanel input[type="text"] {
   border-radius: 3px;
-  border: 1px solid #B7C3CC;
-  background: #FFF;
+  border: 1px solid #b7c3cc;
+  background: #fff;
   width: 174px;
   height: 15px;
 }
 
 .purchaseMaintenanceScreenContainer .itemAccordion::before {
-  content: '\002B';
+  content: "\002B";
   color: #fff;
   font-weight: bold;
   float: left;
@@ -190,9 +190,10 @@
 
 .purchaseMaintenanceScreenContainer .itemPanel {
   padding: 0 18px;
-  background: #FAFEFF;
-  color: #40484A;
-  box-shadow: 0px 0px 1px 1px rgba(9, 30, 66, 0.13), 0px 1px 1px 0px rgba(9, 30, 66, 0.25);
+  background: #fafeff;
+  color: #40484a;
+  box-shadow: 0px 0px 1px 1px rgba(9, 30, 66, 0.13),
+    0px 1px 1px 0px rgba(9, 30, 66, 0.25);
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
@@ -208,7 +209,10 @@
   margin-top: 10px;
 }
 
-.purchaseMaintenanceScreenContainer .purchaseItemAddAndTable table .purchaseBillAmount {
+.purchaseMaintenanceScreenContainer
+  .purchaseItemAddAndTable
+  table
+  .purchaseBillAmount {
   text-align: right;
 }
 
@@ -238,11 +242,18 @@
   font-size: 0.5rem;
 }
 
-.purchaseMaintenanceScreenContainer .purchaseItemTable table .purchaseEditDeleteButtons {
+.purchaseMaintenanceScreenContainer
+  .purchaseItemTable
+  table
+  .purchaseEditDeleteButtons {
   text-align: center;
 }
 
-.purchaseMaintenanceScreenContainer .purchaseItemTable table .purchaseEditDeleteButtons div {
+.purchaseMaintenanceScreenContainer
+  .purchaseItemTable
+  table
+  .purchaseEditDeleteButtons
+  div {
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -267,25 +278,55 @@
 }
 
 .purchaseMaintenanceScreenContainer .purchaseItemTable table tbody tr {
-  background: #F9FCFF;
+  background: #f9fcff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.purchaseMaintenanceScreenContainer .purchaseItemTable table thead{
+.purchaseMaintenanceScreenContainer .purchaseItemTable table thead {
   border-radius: 3px 3px 0px 0px;
-  background: #F4F4F4;
+  background: #f4f4f4;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  color: #40484A;
+  color: #40484a;
 }
 
 .purchaseMaintenanceScreenContainer .purchaseItemTable table tfoot {
-  background: #F4F4F4;
+  background: #f4f4f4;
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
-  color: #40484A;
+  color: #40484a;
+}
+
+/* -------------------------------------------------------------------------- */
+.purchaseMaintenanceScreenContainer .purchasePaymentSummary {
+  border-radius: 2px;
+  background: #ecf4fa;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 6px;
+  white-space: nowrap;
+  overflow: auto;
+}
+
+.purchaseMaintenanceScreenContainer .purchasePaymentSummary .paymentSummary {
+  font-size: 0.44rem;
+}
+
+.purchaseMaintenanceScreenContainer
+  .purchasePaymentSummary
+  .paymentSummaryValues
+  div
+  p:first-child {
+  color: #747a7b;
+  font-weight: bold
+}
+
+.purchaseMaintenanceScreenContainer
+  .purchasePaymentSummary
+  .paymentSummaryValues {
+  display: flex;
+  gap: 10px;
+  font-size: 0.5rem;
 }
 
 @media (min-width: 768px) {
-
   .purchaseMaintenanceScreenContainer .purchaseMaintenanceHeading P {
     padding: 5px 10px;
   }
@@ -333,7 +374,7 @@
   .purchaseMaintenanceScreenContainer .purchaseMaintenanceRadioContainer label {
     font-size: 0.875rem;
   }
-  
+
   .purchaseMaintenanceScreenContainer
     .purchaseMaintenanceRadioContainer
     input[type="radio"] {
@@ -346,16 +387,16 @@
     font-size: 0.875rem;
     margin-top: 10px;
   }
-  
+
   .purchaseMaintenanceScreenContainer .purchaseMaintenancePageSize select {
     height: 30px;
     font-size: 14px;
   }
-  
+
   .purchaseMaintenanceScreenContainer .purchaseMaintenancePageSize button {
     padding: 6px 12px;
   }
-  
+
   .purchaseMaintenanceScreenContainer .purchaseMaintenancePageSize .pageSize {
     gap: 10px;
   }
@@ -366,12 +407,12 @@
   .purchaseMaintenanceScreenContainer .itemPanel label {
     font-size: 0.875rem;
   }
-  
+
   .purchaseMaintenanceScreenContainer .itemPanel input[type="radio"] {
     width: 12px;
     height: 12px;
   }
-  
+
   .purchaseMaintenanceScreenContainer .itemPanel input[type="text"] {
     width: 300px;
     height: 30px;
@@ -387,7 +428,7 @@
   .purchaseMaintenanceScreenContainer .purchaseItemAddAndTable button {
     font-size: 0.875rem;
   }
-  
+
   .purchaseMaintenanceScreenContainer .purchaseItemAddAndTable select {
     width: 130px;
     height: 20px;
@@ -398,14 +439,29 @@
   .purchaseMaintenanceScreenContainer .purchaseItemTable table {
     font-size: 0.875rem;
   }
-  
+
   .purchaseMaintenanceScreenContainer .purchaseItemTable table svg {
     /* width: 16px;
     height: 16px; */
   }
 
   /* ======================================================= */
+  /* -------------------------------------------------------------------------- */
+  .purchaseMaintenanceScreenContainer .purchasePaymentSummary {
+    padding: 16px;
+  }
 
+  .purchaseMaintenanceScreenContainer .purchasePaymentSummary .paymentSummary {
+    font-size: 0.75rem;
+  }
+
+  .purchaseMaintenanceScreenContainer
+    .purchasePaymentSummary
+    .paymentSummaryValues {
+    display: flex;
+    gap: 20px;
+    font-size: 0.875rem;
+  }
 }
 
 @media (min-width: 1072px) {
@@ -420,7 +476,5 @@
   .purchaseMaintenanceScreenContainer .purchaseMaintenanceEntryScreenContainer {
     width: 65%;
     margin: auto;
-  } 
+  }
 }
-
-
