@@ -303,6 +303,7 @@
   padding: 6px;
   white-space: nowrap;
   overflow: auto;
+  margin: 6px 0;
 }
 
 .purchaseMaintenanceScreenContainer .purchasePaymentSummary .paymentSummary {
@@ -449,6 +450,7 @@
   /* -------------------------------------------------------------------------- */
   .purchaseMaintenanceScreenContainer .purchasePaymentSummary {
     padding: 16px;
+    margin: 10px 0;
   }
 
   .purchaseMaintenanceScreenContainer .purchasePaymentSummary .paymentSummary {
