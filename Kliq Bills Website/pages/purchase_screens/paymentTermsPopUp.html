@@ -25,7 +25,7 @@
       }
 
       .purchasePaymentTermsContainer p {
-        color: #40484A;
+        color: #40484a;
         font-size: 0.625rem;
         font-weight: 700;
         margin-bottom: 10px;
@@ -33,11 +33,30 @@
 
       .purchasePaymentTermsContainer table {
         white-space: nowrap;
+        width: 100%;
+      }
+
+      .purchasePaymentTermsContainer table tbody td {
+        padding: 0;
+      }
+
+      .purchasePaymentTermsContainer table tbody td:nth-child(2) input {
+        text-align: right;
+      }
+
+      .purchasePaymentTermsContainer table input {
+        border: 1px solid transparent;
+        font-size: 0.5rem;
+        border-radius: 0;
+      }
+
+      .purchasePaymentTermsContainer table input:focus {
+        border: 1px solid var(--primary-color);
       }
 
       .purchasePaymentTermsContainer table thead {
-        background: none; 
-        color: #40484A;
+        background: none;
+        color: #40484a;
         font-weight: 700;
       }
 
@@ -61,21 +80,28 @@
         border: none;
         text-align: center;
         cursor: pointer;
-      }  
+        padding: 6px;
+        visibility: hidden;
+      }
+
+      .purchasePaymentTermsContainer table:hover .markDefault,
+      .purchasePaymentTermsContainer table:hover .closeIcon {
+        visibility: visible;
+      }
 
       .purchasePaymentTermsContainer .markDefault {
-        color: #BAB5B5;
+        color: #bab5b5;
       }
 
       .purchasePaymentTermsContainer .markDefault.active div {
         border-radius: 2px;
-        background: #3CAF41;
-        color: #FFF;
+        background: #3caf41;
+        color: #fff;
         padding: 2px 4px;
       }
 
       .purchasePaymentTermsContainer .addNew button {
-        font-size: 0.625rem;
+        font-size: 0.5rem;
         border: none;
         background: none;
         color: var(--primary-color);
@@ -90,16 +116,40 @@
         padding: 3px 5px;
         border-radius: 2px;
         font-size: bold;
+        border: 1px solid var(--primary-color);
+        cursor: pointer;
       }
 
       .purchasePaymentTermsContainer .buttons .btnSave {
         background: var(--primary-linear-gradient-bg);
         color: #fff;
+        margin-right: 3px;
       }
 
       .purchasePaymentTermsContainer .buttons .btnClose {
-        border: 1px solid var(--primary-color);
         color: var(--primary-color);
+      }
+
+      @media (min-width: 600px) {
+        .purchasePaymentTermsContainer {
+          width: 360px;
+          padding: 14px;
+        }
+
+        .purchasePaymentTermsContainer p {
+          font-size: 0.75rem;
+        }
+
+        .purchasePaymentTermsContainer table th,
+        .purchasePaymentTermsContainer table td {
+          font-size: 0.625rem;
+        }
+
+        .purchasePaymentTermsContainer table input,
+        .purchasePaymentTermsContainer .addNew button,
+        .purchasePaymentTermsContainer .buttons .btn {
+          font-size: 0.625rem;
+        }
       }
     </style>
   </head>
@@ -110,14 +160,16 @@
         <table>
           <thead>
             <tr>
-              <th>Term Name</td>
-              <th>Number of Days</td>
+              <th>Term Name</th>
+              <th>Number of Days</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Net 15</td>
-              <td>15</td>
+              <td>
+                <input style="width: 100%" type="text" value="Net 15" />
+              </td>
+              <td><input style="width: 100%" type="text" value="15" /></td>
               <td class="markDefault">
                 <div>Mark as Default</div>
               </td>
@@ -150,8 +202,10 @@
               </td>
             </tr>
             <tr>
-              <td>Net 15</td>
-              <td>15</td>
+              <td>
+                <input style="width: 100%" type="text" value="Net 15" />
+              </td>
+              <td><input style="width: 100%" type="text" value="15" /></td>
               <td class="markDefault active">
                 <div>Default</div>
               </td>
