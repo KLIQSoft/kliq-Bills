@@ -327,6 +327,39 @@
   font-size: 0.5rem;
 }
 
+/* -------------------------------------------------------------------------- */
+.purchaseMaintenanceScreenContainer .overdueColor {
+  color: #DF6B57;
+}
+
+.purchaseMaintenanceScreenContainer .partiallyPaidColor {
+  color: #3CAF41;
+}
+
+.purchaseMaintenanceScreenContainer .approvedColor {
+  color: #185492;
+}
+
+.purchaseMaintenanceScreenContainer .paidColor {
+  color: #01AB48;
+}
+
+.purchaseMaintenanceScreenContainer .openColor {
+  color: #007DFF;
+}
+
+.purchaseMaintenanceScreenContainer .pendingColor {
+  color: #E28C2A;
+}
+
+.purchaseMaintenanceScreenContainer .draftColor {
+  color: #797979;
+}
+
+.purchaseMaintenanceScreenContainer .voidColor {
+  color: #7B8285;
+}
+
 @media (min-width: 768px) {
   .purchaseMaintenanceScreenContainer .purchaseMaintenanceHeading P {
     padding: 5px 10px;
