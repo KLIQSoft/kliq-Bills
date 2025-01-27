@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Configure Payment Terms Pop Up</title>
+    <link rel="stylesheet" href="../../styles/normalize.css" />
+    <link rel="stylesheet" href="../../styles/base.css" />
+    <link rel="stylesheet" href="../../styles/menu.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <link rel="stylesheet" href="../../styles/tabStyles.css" />
+    <link rel="stylesheet" href="../../styles/formStyles.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationMain.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationForm.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationTabs.css" />
+    <link rel="stylesheet" href="../../styles/accountCreationTable.css" />
+    <link rel="stylesheet" href="../../styles/purchaseScreenMain.css" />
+    <style>
+      .purchasePaymentTermsContainer {
+        width: 300px;
+        border: 1px solid #d6cece;
+        background: #fff;
+        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+        padding: 6px;
+      }
+
+      .purchasePaymentTermsContainer p {
+        color: #40484A;
+        font-size: 0.625rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .purchasePaymentTermsContainer table {
+        white-space: nowrap;
+      }
+
+      .purchasePaymentTermsContainer table thead {
+        background: none; 
+        color: #40484A;
+        font-weight: 700;
+      }
+
+      .purchasePaymentTermsContainer table tr {
+        background: none;
+      }
+
+      .purchasePaymentTermsContainer table th,
+      .purchasePaymentTermsContainer table td {
+        border: 1px solid #797979;
+        font-size: 0.5rem;
+      }
+
+      .purchasePaymentTermsContainer table th:last-child,
+      .purchasePaymentTermsContainer table td:nth-child(2) {
+        text-align: right;
+      }
+
+      .purchasePaymentTermsContainer .markDefault,
+      .purchasePaymentTermsContainer .closeIcon {
+        border: none;
+        text-align: center;
+        cursor: pointer;
+      }  
+
+      .purchasePaymentTermsContainer .markDefault {
+        color: #BAB5B5;
+      }
+
+      .purchasePaymentTermsContainer .markDefault.active div {
+        border-radius: 2px;
+        background: #3CAF41;
+        color: #FFF;
+        padding: 2px 4px;
+      }
+
+      .purchasePaymentTermsContainer .addNew button {
+        font-size: 0.625rem;
+        border: none;
+        background: none;
+        color: var(--primary-color);
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .purchasePaymentTermsContainer .buttons .btn {
+        border: none;
+        background: none;
+        font-size: 0.5rem;
+        padding: 3px 5px;
+        border-radius: 2px;
+        font-size: bold;
+      }
+
+      .purchasePaymentTermsContainer .buttons .btnSave {
+        background: var(--primary-linear-gradient-bg);
+        color: #fff;
+      }
+
+      .purchasePaymentTermsContainer .buttons .btnClose {
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="purchasePaymentTermsContainer">
+      <p>Configure Payment Terms</p>
+      <div class="listContainer">
+        <table>
+          <thead>
+            <tr>
+              <th>Term Name</td>
+              <th>Number of Days</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Net 15</td>
+              <td>15</td>
+              <td class="markDefault">
+                <div>Mark as Default</div>
+              </td>
+              <td class="closeIcon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="10"
+                  height="10"
+                  viewBox="0 0 10 10"
+                  fill="none"
+                >
+                  <mask
+                    id="mask0_4900_444"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="10"
+                    height="10"
+                  >
+                    <rect width="10" height="10" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_4900_444)">
+                    <path
+                      d="M3.49992 7.08333L4.99992 5.58334L6.49992 7.08333L7.08325 6.5L5.58325 5L7.08325 3.5L6.49992 2.91667L4.99992 4.41667L3.49992 2.91667L2.91658 3.5L4.41658 5L2.91658 6.5L3.49992 7.08333ZM4.99992 9.16667C4.42353 9.16667 3.88186 9.05729 3.37492 8.83854C2.86797 8.61979 2.427 8.32292 2.052 7.94792C1.677 7.57292 1.38013 7.13195 1.16138 6.625C0.942627 6.11806 0.833252 5.57639 0.833252 5C0.833252 4.42361 0.942627 3.88195 1.16138 3.375C1.38013 2.86806 1.677 2.42709 2.052 2.05209C2.427 1.67709 2.86797 1.38021 3.37492 1.16146C3.88186 0.942711 4.42353 0.833336 4.99992 0.833336C5.57631 0.833336 6.11797 0.942711 6.62492 1.16146C7.13186 1.38021 7.57283 1.67709 7.94783 2.05209C8.32283 2.42709 8.61971 2.86806 8.83846 3.375C9.05721 3.88195 9.16658 4.42361 9.16658 5C9.16658 5.57639 9.05721 6.11806 8.83846 6.625C8.61971 7.13195 8.32283 7.57292 7.94783 7.94792C7.57283 8.32292 7.13186 8.61979 6.62492 8.83854C6.11797 9.05729 5.57631 9.16667 4.99992 9.16667ZM4.99992 8.33333C5.93047 8.33333 6.71867 8.01042 7.3645 7.36458C8.01033 6.71875 8.33325 5.93056 8.33325 5C8.33325 4.06945 8.01033 3.28125 7.3645 2.63542C6.71867 1.98959 5.93047 1.66667 4.99992 1.66667C4.06936 1.66667 3.28117 1.98959 2.63534 2.63542C1.9895 3.28125 1.66659 4.06945 1.66659 5C1.66659 5.93056 1.9895 6.71875 2.63534 7.36458C3.28117 8.01042 4.06936 8.33333 4.99992 8.33333Z"
+                      fill="#EE6161"
+                    />
+                  </g>
+                </svg>
+              </td>
+            </tr>
+            <tr>
+              <td>Net 15</td>
+              <td>15</td>
+              <td class="markDefault active">
+                <div>Default</div>
+              </td>
+              <td class="closeIcon"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="addNew">
+          <button>+ Add New</button>
+        </div>
+
+        <div class="buttons">
+          <button class="btn btnSave">Save</button>
+          <button class="btn btnClose">Close</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
