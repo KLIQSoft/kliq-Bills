@@ -13,45 +13,65 @@
 
 /* ============================ .purchaseInvoiceInputsContainer - START ============================ */
 .purchaseInvoiceContainer .purchaseInvoiceInputsContainer .form_div {
-  margin-bottom: 5px;
-  width: 50%;
+  margin-bottom: 10px;
+  width: 500px;
 }
 
-.purchaseInvoiceContainer .purchaseInvoiceInputsContainer .form_div input,
-.purchaseInvoiceContainer .purchaseInvoiceInputsContainer .form_div select {
-  height: 20px;
-  padding: 4px;
-}
+@media (max-width: 600px) {
+  .purchaseInvoiceContainer .purchaseInvoiceInputsContainer .form_div {
+    margin-bottom: 5px;
+    width: 160px;
+    height: 1.45rem;
+  }
 
-.purchaseInvoiceContainer .purchaseInvoiceInputsContainer .form_div select {
-  font-size: 0.44rem !important;
-}
+  .purchaseInvoiceContainer .purchaseInvoiceInputsContainer .form_div input,
+  .purchaseInvoiceContainer .purchaseInvoiceInputsContainer .form_div select {
+    height: 20px;
+    padding: 4px;
+  }
 
-.purchaseInvoiceContainer .purchaseInvoiceInputsContainer .form_label {
-  left: 0.3rem;
-  top: 0.4rem;
-  padding: 0 0.25rem;
-  font-size: 0.44rem !important;
-}
+  .purchaseInvoiceContainer .purchaseInvoiceInputsContainer .form_div select {
+    font-size: 0.44rem !important;
+  }
 
-/*Input focus move up label*/
-.purchaseInvoiceContainer .purchaseInvoiceInputsContainer .form_input:focus + .form_label,
+  .purchaseInvoiceContainer .purchaseInvoiceInputsContainer .form_label {
+    left: 0.3rem;
+    top: 0.4rem;
+    padding: 0 0.25rem;
+    font-size: 0.44rem !important;
+  }
+
+  /*Input focus move up label*/
+  .purchaseInvoiceContainer .purchaseInvoiceInputsContainer .form_input:focus + .form_label,
   /*Input focus sticky top label*/
   .purchaseInvoiceContainer .purchaseInvoiceInputsContainer .form_input:not(:placeholder-shown).form_input:not(:focus) + .form_label {
-  top: -0.3rem;
-  left: 0.7rem;
-  font-size: 0.375rem !important;
+    top: -0.3rem;
+    left: 0.7rem;
+    font-size: 0.375rem !important;
+  }
 }
 /* ============================ .purchaseInvoiceInputsContainer - END ============================ */
 
 /* ============================ .purchaseInvoiceRadio - START ============================ */
 .purchaseInvoiceContainer .purchaseInvoiceRadio {
   font-size: 0.5rem;
+  margin-bottom: 10px;
+}
+
+.purchaseInvoiceContainer .purchaseInvoiceRadio p {
+  margin-bottom: 5px;
 }
 
 .purchaseInvoiceContainer .purchaseInvoiceRadio input[type="radio"] {
   width: 8px;
   height: 8px;
+}
+
+.purchaseInvoiceContainer
+  .purchaseInvoiceRadio
+  input[type="radio"]:checked
+  ~ label {
+  font-weight: bold;
 }
 
 .purchaseInvoiceContainer .purchaseInvoiceRadio .purchaseradioButtons {
@@ -62,8 +82,170 @@
 
 /* ============================ .purchaseTableContainer - START ============================ */
 .purchaseInvoiceContainer .purchaseTableContainer .purchaseMainTextContainer {
-    background: #F4F4F4;
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background: #f4f4f4;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 10px;
+  margin-bottom: 2px;
+  font-size: 0.5rem;
+
+  display: flex;
+  justify-content: space-between;
 }
 
+.purchaseInvoiceContainer .purchaseTableContainer table {
+  font-size: 0.44rem;
+}
+
+.purchaseInvoiceContainer .purchaseTableContainer table thead {
+  background: #f4f4f4;
+  color: #40484a;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.purchaseInvoiceContainer .purchaseTableContainer table tr {
+  background: #f9fcff;
+  color: #40484a;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.purchaseInvoiceContainer .purchaseTableContainer table tr td:last-child {
+  border: none;
+}
+
+.purchaseInvoiceContainer .purchaseTableContainer table tfoot tr {
+  background: #f0f1f1;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
 /* ============================ .purchaseTableContainer - END ============================ */
+
+/* ============================ .purchaseAmountListContainer - START ============================ */
+.purchaseInvoiceContainer .purchaseAmountListContainer {
+  width: 171px;
+  background: #f4f4f4;
+  color: #40484a;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 6px;
+  font-size: 0.5rem;
+  margin-left: auto;
+  margin-top: 4px;
+}
+
+.purchaseInvoiceContainer .purchaseAmountListContainer p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.purchaseInvoiceContainer .purchaseAmountListContainer p:not(:last-child) {
+  margin-bottom: 6px;
+}
+/* ============================ .purchaseAmountListContainer - END ============================ */
+
+/* ============================ .purchaseNotesContainer - START ============================ */
+.purchaseInvoiceContainer .purchaseNotesContainer textarea {
+  width: 100%;
+}
+/* ============================ .purchaseNotesContainer - END ============================ */
+
+/* ============================ .purchaseCloseAndSaveButtons - START ============================ */
+.purchaseInvoiceContainer .purchaseCloseAndSaveButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 2px;
+  max-width: 1024px;
+}
+
+.purchaseInvoiceContainer .purchaseCloseAndSaveButtons .btn {
+  padding: 5px 8px;
+  font-weight: bold;
+  border: 1px solid var(--primary-color);
+  border-radius: 2px;
+  background: var(--primary-linear-gradient-bg);
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.5rem;
+}
+
+.purchaseInvoiceContainer .purchaseCloseAndSaveButtons .btnClose {
+  background: #fff;
+  color: var(--primary-color);
+}
+/* ============================ .purchaseCloseAndSaveButtons - START ============================ */
+
+@media (min-width: 600px) {
+  /* ============================ .purchaseTableContainer - START ============================ */
+  .purchaseInvoiceContainer .purchaseTableContainer .purchaseMainTextContainer {
+    font-size: 0.875rem;
+  }
+
+  .purchaseInvoiceContainer .purchaseTableContainer table {
+    font-size: 0.875rem;
+  }
+
+  .purchaseInvoiceContainer .purchaseTableContainer table tbody,
+  .purchaseInvoiceContainer .purchaseTableContainer table tfoot {
+    font-size: 0.75rem;
+  }
+  /* ============================ .purchaseTableContainer - END ============================ */
+
+  /* ============================ .purchaseInvoiceRadio - START ============================ */
+  .purchaseInvoiceContainer .purchaseInvoiceRadio {
+    font-size: 0.875rem;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .purchaseInvoiceContainer .purchaseInvoiceRadio p {
+    margin-bottom: 10px;
+  }
+
+  .purchaseInvoiceContainer .purchaseInvoiceRadio input[type="radio"] {
+    width: 14px;
+    height: 14px;
+  }
+
+  .purchaseInvoiceContainer .purchaseInvoiceRadio .purchaseradioButtons {
+    gap: 10px;
+  }
+  /* ============================ .purchaseInvoiceRadio - END ============================ */
+
+  /* ============================ .purchaseTableAndListContainer - START ============================ */
+  .purchaseInvoiceContainer .purchaseMainTextContainer,
+  .purchaseInvoiceContainer .purchaseTableAndListContainer,
+  .purchaseInvoiceContainer .purchaseNotesContainer textarea {
+    max-width: 1024px;
+  }
+  /* ============================ .purchaseTableAndListContainer - END ============================ */
+
+  /* ============================ .purchaseAmountListContainer - START ============================ */
+  .purchaseInvoiceContainer .purchaseAmountListContainer {
+    width: 364px;
+    padding: 16px;
+    font-size: 0.875rem;
+    margin-top: 4px;
+  }
+
+  .purchaseInvoiceContainer .purchaseAmountListContainer p:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  /* ============================ .purchaseAmountListContainer - END ============================ */
+
+  /* ============================ .purchaseNotesContainer - START ============================ */
+  .purchaseInvoiceContainer .purchaseNotesContainer textarea {
+    height: 60px;
+  }
+  /* ============================ .purchaseNotesContainer - END ============================ */
+
+  /* ============================ .purchaseCloseAndSaveButtons - START ============================ */
+  .purchaseInvoiceContainer .purchaseCloseAndSaveButtons {
+    gap: 16px;
+    margin-top: 8px;
+  }
+
+  .purchaseInvoiceContainer .purchaseCloseAndSaveButtons .btn {
+    padding: 7px 10px;
+    font-size: 0.875rem;
+  }
+  /* ============================ .purchaseCloseAndSaveButtons - START ============================ */
+}
