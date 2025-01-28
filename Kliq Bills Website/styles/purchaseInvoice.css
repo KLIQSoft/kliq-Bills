@@ -13,15 +13,111 @@
 
 /* ============================ .purchaseInvoiceInputsContainer - START ============================ */
 .purchaseInvoiceContainer .purchaseInvoiceInputsContainer .form_div {
-  margin-bottom: 10px;
+  margin-bottom: 16px;
   width: 500px;
 }
 
+.purchaseInvoiceInputsContainer .settingsIcon {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.purchaseInvoiceInputsContainer .fullAmountContainer {
+  position: absolute;
+  top: 27px;
+}
+
+.purchaseInvoiceContainer
+  .purchaseInvoiceInputsContainer
+  .form_div.amountReceived {
+  margin-bottom: 26px;
+}
+
+.purchaseInvoiceInputsContainer #fullAmount {
+  width: 8px;
+  height: 8px;
+}
+
+.purchaseInvoiceInputsContainer #fullAmount ~ label {
+  font-size: 0.625rem;
+}
+
+.purchaseInvoiceInputsContainer .customerNameContainer {
+  position: absolute;
+  top: 32px;
+  font-size: 0.675rem;
+
+  display: flex;
+  gap: 20px;
+}
+
+.purchaseInvoiceInputsContainer .customerNameContainer p:first-child {
+  color: #01ab48;
+  font-weight: 700;
+}
+
+.purchaseInvoiceInputsContainer .customerNameContainer p:last-child {
+  color: var(--primary-color);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.purchaseInvoiceContainer
+  .purchaseInvoiceInputsContainer
+  .form_div.customerName {
+  margin-bottom: 26px;
+}
+
 @media (max-width: 600px) {
+  .purchaseInvoiceInputsContainer .settingsIcon {
+    width: 14px;
+    height: 14px;
+    right: 3px;
+    top: 3px;
+  }
+
   .purchaseInvoiceContainer .purchaseInvoiceInputsContainer .form_div {
     margin-bottom: 5px;
     width: 160px;
     height: 1.45rem;
+  }
+
+  .purchaseInvoiceInputsContainer .fullAmountContainer {
+    top: 12px;
+  }
+
+  .purchaseInvoiceInputsContainer #fullAmount {
+    width: 6px;
+    height: 6px;
+  }
+
+  .purchaseInvoiceContainer
+    .purchaseInvoiceInputsContainer
+    .form_div.amountReceived {
+    margin-bottom: 10px;
+  }
+
+  .purchaseInvoiceInputsContainer .customerNameContainer {
+    top: 21px;
+    font-size: 0.375rem;
+  }
+
+  .purchaseInvoiceInputsContainer .customerNameContainer p:last-child svg {
+    width: 6px;
+    height: 6px;
+  }
+
+  .purchaseInvoiceContainer
+    .purchaseInvoiceInputsContainer
+    .form_div.customerName {
+    margin-bottom: 10px;
+  }
+
+  .purchaseInvoiceInputsContainer #fullAmount ~ label {
+    font-size: 0.375rem;
   }
 
   .purchaseInvoiceContainer .purchaseInvoiceInputsContainer .form_div input,
@@ -134,6 +230,7 @@
 .purchaseInvoiceContainer .purchaseAmountListContainer p {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .purchaseInvoiceContainer .purchaseAmountListContainer p:not(:last-child) {
@@ -228,6 +325,17 @@
 
   .purchaseInvoiceContainer .purchaseAmountListContainer p:not(:last-child) {
     margin-bottom: 16px;
+  }
+
+  .purchaseInvoiceContainer .purchaseAmountListContainer .amountSvgContainer {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+  }
+
+  .purchaseInvoiceContainer .purchaseAmountListContainer svg {
+    width: 18px;
+    height: 18px;
   }
   /* ============================ .purchaseAmountListContainer - END ============================ */
 
