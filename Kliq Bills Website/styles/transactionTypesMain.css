@@ -50,6 +50,11 @@
   gap: 5px;
 }
 
+.transactionTypesGeneralTableContainer h2 {
+  color: var(--primary-color);
+  font-size: 14px;
+}
+
 .transactionTypesGeneralTableContainer tbody th {
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25),
     0px 1px 2px 0px rgba(0, 0, 0, 0.25);
@@ -67,7 +72,7 @@
 
 .transactionTypeBillFormatsContainer .BillFormatInputs {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   flex-wrap: wrap;
   align-items: center;
 }
@@ -96,6 +101,8 @@
   min-width: 130px;
 }
 
+
+
 @media (max-width: 450px) {
   .transactionTypeInputsCRandActivateCheckbox,
   .transactionTypeInputsCR {
@@ -118,11 +125,22 @@
 }
 
 .transactionTypesGeneralTableContainer {
-  margin-top: 1em;
+  max-width: 700px;
+  padding: 1em;
+}
+
+.transactionTypeChargesContainer {
+  max-width: 800px;
+}
+
+.transactionTypeItemGroupsContainer,
+.transactionTypeColumnsContainer {
   max-width: 600px;
 }
 
-.transactionTypesGeneralTableContainer table {
+.transactionTypesGeneralTableContainer table,
+.transactionTypeColumnsContainer table,
+.transactionTypeChargesContainer table {
   white-space: nowrap;
 }
 
@@ -191,6 +209,11 @@
   }
 }
 @media (min-width: 620px) {
+
+  .transactionTypesGeneralTableContainer h2 {
+    font-size: 16px;
+  }
+
   .transactionTypesContainer #content1.active .transactionTypeContainer {
     grid-template-columns: repeat(3, minmax(130px, 1fr));
   }

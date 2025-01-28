@@ -64,7 +64,7 @@
   width: 6px;
   left: 1px;
   bottom: 1px;
-  background-color: #185492;
+  background-color: var(--primary-color);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }

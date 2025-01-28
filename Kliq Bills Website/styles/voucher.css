@@ -1,0 +1,443 @@
+/* @media screen and (min-width: 320px) and (max-width: 350px) {
+.voucherWrapper .voucherNoAndPnn .pnn1,
+.voucherWrapper .voucherNoAndPnn .pnn2,
+.voucherWrapper .refNoAndCpp .cpp1,
+.voucherWrapper .refNoAndCpp .cpp2  {
+
+}
+ } */
+
+/* <============= receivablesAndPayablesWrapperStart==============> */
+.main-navigation p {
+    display: flex;
+    font-weight: 700;
+    padding: 0.5em;
+  }
+  .voucherWrapper .transactionAndVoucher {
+    padding: 1em 0.5em 0.5em;
+  }
+  .voucherWrapper .transaction {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+    flex-grow: 1;
+  }a
+  .voucherWrapper .form_div {
+    margin-bottom: 1em;
+  }
+  .voucherWrapper .voucherAccountnameContainer .form_input {
+    position: static;
+  }
+  .voucherWrapper .voucherAccountnameContainer {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+  .voucherWrapper .voucherAccountnameContainer .form_div {
+    flex: 1;
+  }
+  .voucherWrapper .voucherAccountnameContainer p {
+    margin-top: -13px;
+  }
+  .voucherWrapper .form_input,
+  .voucherWrapper input {
+    border-color: #adafb0;
+  }
+  
+  .voucherWrapper .form_div + p {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-size: 0.75em;
+    padding: 9px;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0px 4px 4px 0px rgb(0, 0, 0, 0.25);
+  }
+  .voucherWrapper .transaction .form_div:last-child {
+    height: 4rem;
+  }
+  /*-----------------voucherStart----------------- */
+  
+  .voucherWrapper .voucherContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 0.5em 0.4em;
+    flex-grow: 1;
+  }
+  .voucherWrapper .voucherDateAndVoucherNo {
+    display: flex;
+    gap: 25px;
+  }
+  .voucherWrapper .voucherDate {
+    width: 25%;
+  }
+  .voucherWrapper .voucherNoAndPnn {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-shrink: 1;
+    gap: 5px;
+    font-size: 0.5em;
+  }
+  .voucherWrapper .voucherNo {
+    width: 50%;
+    padding-top: 1.5em;
+  }
+  .voucherWrapper .refDateAndRefNo {
+    display: flex;
+    gap: 25px;
+  }
+  .voucherWrapper .refDate {
+    width: 25%;
+  }
+  .voucherWrapper .refNoAndCpp {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+  .voucherWrapper .refNo {
+    width: 50%;
+    padding-top: 1.5em;
+    font-size: 0.5em;
+  }
+  .voucherWrapper .cpp1 {
+    margin-left: -0.3em;
+  }
+  .voucherWrapper .cpp1,
+  .voucherWrapper .cpp2,
+  .voucherWrapper .pnn1,
+  .voucherWrapper .pnn2 {
+    font-size: 0.438em;
+  }
+  .voucherWrapper .voucherDate .form_input,
+  .voucherWrapper .refDate .form_input {
+    position: static;
+  }
+  .voucherWrapper .voucherNoAndPnn .pnn1 input,
+  .voucherWrapper .voucherNoAndPnn .pnn2 input,
+  .voucherWrapper .refNoAndCpp .cpp1 input,
+  .voucherWrapper .refNoAndCpp .cpp2 input {
+    line-height: 1.35em;
+  }
+  .voucherWrapper .voucherNoAndPnn .pnn1 input,
+  .voucherWrapper .voucherNoAndPnn .pnn2 input,
+  .voucherWrapper .refNoAndCpp .cpp1 input,
+  .voucherWrapper .refNoAndCpp .cpp2 input {
+    width: 80px;
+  }
+  /*-----------------voucherEnd----------------- */
+  
+  /*-----------------taxDeductAndTdsStart----------------- */
+  
+  .voucherWrapper .taxDeductAndTds {
+    display: flex;
+    flex-direction: column;
+    padding: 0em 1em 0.4em;
+    font-size: 0.5rem;
+    margin-left: 1em;
+  }
+  .voucherWrapper .taxDeduct {
+    padding-bottom: 0.5em;
+  }
+  .voucherWrapper .tdsAndDiscount {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+  .voucherWrapper .tds {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+  .voucherWrapper .discount {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+  .voucherWrapper .taxDeductAndTds [type="checkbox"] {
+    width: 10px;
+    height: 10px;
+  }
+  /*-----------------taxDeductAndTdsEnd----------------- */
+  
+  /*-----------------uploadStart----------------- */
+  .voucherWrapper .uploadAndFile {
+    margin: 0;
+  }
+  .voucherWrapper .upload {
+    display: flex;
+  }
+  .voucherWrapper .size {
+    margin: 0.5em;
+    font-size: 0.375em;
+    font-style: italic;
+    font-family: "Inter", sans-serif;
+    color: #ff0000;
+  }
+  .voucherWrapper .upload input {
+    border: none;
+    padding: 0px;
+    line-height: 2em;
+  }
+  /*-----------------uploadEnd----------------- */
+  
+  /* ---------------TableStart----------- */
+  .voucherWrapper .tableAndBtn {
+    padding-top: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .voucherWrapper thead {
+    background-color: #f4f4f4;
+  }
+  .voucherWrapper tfoot {
+    background-color: #f0f1f1;
+  }
+  .voucherWrapper thead,
+  .voucherWrapper tfoot {
+    color: #40484a;
+    font-size: 0.5rem;
+  }
+  .voucherWrapper tbody {
+    font-size: 0.438rem;
+    color: #40484a;
+    background-color: #f9fcff;
+  }
+  .voucherWrapper table {
+    border-collapse: collapse;
+    font-family: "Inter", sans-serif;
+    letter-spacing: 1px;
+  }
+  .voucherWrapper th,
+  .voucherWrapper td {
+    padding: 8px 10px;
+  }
+  .voucherWrapper thead th,
+  .voucherWrapper td {
+    text-align: center;
+  }
+  .voucherWrapper td:last-child {
+    border-left: none;
+  }
+  .voucherWrapper td input {
+    width: 70px;
+    height: 25px;
+    text-align: right;
+  }
+  
+  .voucherWrapper .tableAndBtn input,
+  .voucherWrapper .tableAndBtn select {
+    border: 1px solid #adafb0 !important;
+  }
+  
+  .voucherWrapper .tableAndBtn .narration {
+    display: grid;
+  }
+  
+  .voucherWrapper .tableAndBtn .narration input {
+    width: 25%;
+    text-align: left;
+    height: 25px;
+  }
+  
+  .discountAndPercent {
+    display: flex;
+  }
+  .discountAndPercent input {
+    width: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .discountAndPercent select {
+    width: 50px;
+    height: 25px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: -2px;
+  }
+  
+  .tdsWithPercentAndAmount {
+    display: flex;
+  }
+  .tdsWithPercentAndAmount select {
+    width: 50px;
+    height: 25px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-right: -2px;
+  }
+  .tdsWithPercentAndAmount .ratio {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-right: -1px;
+    width: 40px;
+    height: 25px;
+  }
+  .tdsWithPercentAndAmount .amount {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-right: -2px;
+    height: 25px;
+  }
+  
+  table tbody tr:nth-child(even) {
+    background-color: #f9fcff !important;
+  }
+  .tableAndBtn table {
+    border-collapse: separate;
+    border-spacing: 0 1px;
+  }
+  
+  thead tr,
+  tbody tr,
+  tfoot tr {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+  }
+  
+  /* ---------------TableEnd----------- */
+  
+  /* ---------------saveAndCloseButtonStart----------- */
+  .voucherWrapper .saveAndCloseButton {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0.5em 1em 1em 0;
+  }
+  .voucherWrapper .save,
+  .voucherWrapper .saveAndClear {
+    margin-right: 0.5em;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    box-shadow: none;
+    border: none;
+    box-shadow: 0px 4px 4px 0px rgba(8, 4, 4, 0.25);
+  }
+  .voucherWrapper .save,
+  .voucherWrapper .saveAndClear,
+  .voucherWrapper .close {
+    padding: 0.4em;
+    border-radius: 3px;
+  }
+  .voucherWrapper .close {
+    background-color: #ffffff;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+  }
+  
+  /* ---------------saveAndCloseButtonEnd----------- */
+  
+  @media only screen and (min-width: 600px) {
+    /* <============= receivablesAndPayablesWrapperStart==============> */
+    .voucherWrapper {
+      background-color: #ffffff;
+      border: 1px solid #e0d8d8;
+    }
+    .voucherWrapper .transactionAndVoucher {
+      padding: 1em 0.5em 0em 0.5em;
+      display: flex;
+      gap: 10px;
+      flex-shrink: 1;
+    }
+    .voucherWrapper .transaction,
+    .voucherWrapper .voucher {
+      width: 49.5%;
+    }
+    /*-----------------voucher2Start----------------- */
+  
+    .voucherWrapper .voucherDateAndVoucherNo {
+      gap: 10px;
+    }
+    .voucherWrapper .voucherDate {
+      width: 30%;
+    }
+    .voucherWrapper .voucherNoAndPnn {
+      width: 70%;
+      font-size: 0.875rem;
+    }
+    .voucherWrapper .voucherNo {
+      width: 30%;
+      padding-top: 0.35em;
+    }
+    .voucherWrapper .refDateAndRefNo {
+      gap: 16px;
+    }
+    .voucherWrapper .refDate {
+      width: 30%;
+    }
+    .voucherWrapper .refNoAndCpp {
+      width: 70%;
+    }
+    .voucherWrapper .refNo {
+      width: 30%;
+      font-size: 0.875rem;
+      padding-top: 0.35em;
+    }
+    .voucherWrapper .cpp1,
+    .voucherWrapper .cpp2 {
+      font-size: 0.75rem;
+    }
+    /*-----------------voucherEnd----------------- */
+  
+    /*-----------------taxDeductAndTdsStart----------------- */
+  
+    .voucherWrapper .taxDeductAndTds {
+      font-size: 0.875rem;
+      margin-left: 0em;
+    }
+    .voucherWrapper .taxDeductAndTds [type="checkbox"] {
+      width: 14px;
+      height: 14px;
+    }
+    /*-----------------taxDeductAndTdsEnd----------------- */
+  
+    /*-----------------uploadStart----------------- */
+    .voucherWrapper .size {
+      font-size: 0.5rem;
+    }
+    /*-----------------uploadEnd----------------- */
+  
+    /* ---------------TableStart----------- */
+    .voucherWrapper .tableAndBtn {
+      padding-top: 0.5em;
+    }
+    .voucherWrapper thead,
+    .voucherWrapper tfoot {
+      font-size: 0.875rem;
+    }
+    .voucherWrapper tbody {
+      font-size: 0.75rem;
+    }
+    .voucherWrapper .tableAndBtn .narration input {
+      width: 40%;
+      height: 28px;
+    }
+    .voucherWrapper td input {
+      width: 80px;
+      height: 28px;
+    }
+    .discountAndPercent input {
+      width: 20px;
+    }
+    .discountAndPercent select {
+      width: 50px;
+      height: 28px;
+    }
+  
+    .tdsWithPercentAndAmount select {
+      width: 50px;
+      height: 28px;
+    }
+    .tdsWithPercentAndAmount .ratio {
+      width: 40px;
+      height: 28px;
+    }
+    .tdsWithPercentAndAmount .amount {
+      height: 28px;
+    }
+  
+    /* ---------------TableEnd----------- */
+  }
+  
