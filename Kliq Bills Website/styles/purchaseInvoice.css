@@ -14,7 +14,7 @@
 /* ============================ .purchaseInvoiceInputsContainer - START ============================ */
 .purchaseInvoiceContainer .purchaseInvoiceInputsContainer .form_div {
   margin-bottom: 16px;
-  width: 500px;
+  width: 50%;
 }
 
 .purchaseInvoiceInputsContainer .settingsIcon {
@@ -81,7 +81,7 @@
 
   .purchaseInvoiceContainer .purchaseInvoiceInputsContainer .form_div {
     margin-bottom: 5px;
-    width: 160px;
+    width: 60%;
     height: 1.45rem;
   }
 
@@ -223,6 +223,7 @@
   display: flex;
   align-items: center;
   gap: 5px;
+  cursor: pointer;
 }
 /* ============================ .purchaseTableContainer - END ============================ */
 
