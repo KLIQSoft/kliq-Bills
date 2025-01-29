@@ -1,7 +1,45 @@
+.purchaseInvoiceNavigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.purchaseInvoiceNavigation .addNewAccountandItem {
+  display: flex;
+  gap: 6px;
+}
+
+.purchaseInvoiceNavigation button {
+  background: var(--primary-linear-gradient-bg);
+  color: #fff;
+  padding: 4px 6px;
+  border-radius: 3px;
+  border: none;
+  font-size: 0.625rem;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+@media (min-width: 600px) {
+  .purchaseInvoiceNavigation button {
+    font-size: 0.9rem;
+    padding: 6px 8px;
+    gap: 8px;
+  }
+}
+
 /* ============================ .purchaseInvoicePaymentText - START ============================ */
 .purchaseInvoiceContainer .purchaseInvoicePaymentText {
   margin: -8px;
   margin-bottom: 0.8rem;
+}
+
+.purchaseInvoiceNavigation .addNewAccountandItem svg {
+  width: 14px;
+  height: 14px;
 }
 
 .purchaseInvoiceContainer .purchaseInvoicePaymentText p {
