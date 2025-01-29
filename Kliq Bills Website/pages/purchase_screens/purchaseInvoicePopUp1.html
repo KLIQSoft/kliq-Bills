@@ -22,6 +22,40 @@
         background: #fff;
         box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
         padding: 10px;
+
+        position: relative;
+      }
+
+      .purchaseInvoicePopUp1Container .closeIcon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+      }
+
+      .purchaseInvoicePopUp1Container .addNew {
+        font-size: 0.625rem;
+        background: none;
+        border: none;
+        color: var(--primary-color);
+        cursor: pointer;
+        margin: 10px 0;
+        font-weight: bold;
+      }
+
+      .purchaseInvoicePopUp1Container .buttons .btn {
+        font-size: 0.625rem;
+        padding: 2px 8px;
+        cursor: pointer;
+        background: var(--primary-linear-gradient-bg);
+        border: 1px solid var(--primary-color);
+        color: #fff;
+        border-radius: 2px;
+      }
+
+      .purchaseInvoicePopUp1Container .buttons .btnClose {
+        background: none;
+        color: var(--primary-color);
       }
 
       .purchaseInvoicePopUp1Container .pymtHeading {
@@ -36,6 +70,9 @@
         align-items: center;
         gap: 10px;
         font-size: 0.625rem;
+      }
+
+      .purchaseInvoicePopUp1Container .inputsContainer div:not(:last-of-type) {
         margin-bottom: 10px;
       }
 
@@ -65,24 +102,18 @@
         color: #fff;
         padding: 2px 7px;
       }
-
-      .purchaseInvoicePopUp1Container .inputsContainer div .markasDefault,
-      .purchaseInvoicePopUp1Container .inputsContainer div svg {
-        visibility: hidden;
-      }
-
-      .purchaseInvoicePopUp1Container .inputsContainer div:hover input ~ p {
-        visibility: visible;
-      }
-
-      .purchaseInvoicePopUp1Container .inputsContainer div:hover svg {
-        visibility: visible;
-      }
-      
     </style>
   </head>
   <body>
     <div class="purchaseInvoicePopUp1Container">
+      <svg class="closeIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <mask id="mask0_4817_206" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+          <rect width="16" height="16" fill="#D9D9D9"/>
+        </mask>
+        <g mask="url(#mask0_4817_206)">
+          <path d="M5.60033 11.3333L4.66699 10.4L7.06699 7.99999L4.66699 5.61665L5.60033 4.68332L8.00033 7.08332L10.3837 4.68332L11.317 5.61665L8.91699 7.99999L11.317 10.4L10.3837 11.3333L8.00033 8.93332L5.60033 11.3333Z" fill="#185492"/>
+        </g>
+      </svg>
       <p class="pymtHeading">Payment Mode</p>
       <div class="inputsContainer">
         <div>
@@ -116,38 +147,46 @@
         </div>
 
         <div>
-            <input type="text" value="Bank Remittance" />
-            <p class="markasDefault">Mark as Default</p>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
+          <input type="text" value="Bank Remittance" />
+          <p class="markasDefault">Mark as Default</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            viewBox="0 0 10 10"
+            fill="none"
+            class="r"
+          >
+            <mask
+              id="mask0_4817_213"
+              style="mask-type: alpha"
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
               width="10"
               height="10"
-              viewBox="0 0 10 10"
-              fill="none"
             >
-              <mask
-                id="mask0_4817_213"
-                style="mask-type: alpha"
-                maskUnits="userSpaceOnUse"
-                x="0"
-                y="0"
-                width="10"
-                height="10"
-              >
-                <rect width="10" height="10" fill="#D9D9D9" />
-              </mask>
-              <g mask="url(#mask0_4817_213)">
-                <path
-                  d="M3.4987 7.08328L4.9987 5.58328L6.4987 7.08328L7.08203 6.49995L5.58203 4.99995L7.08203 3.49995L6.4987 2.91662L4.9987 4.41662L3.4987 2.91662L2.91536 3.49995L4.41536 4.99995L2.91536 6.49995L3.4987 7.08328ZM4.9987 9.16661C4.42231 9.16661 3.88064 9.05724 3.3737 8.83849C2.86675 8.61974 2.42578 8.32287 2.05078 7.94787C1.67578 7.57287 1.37891 7.13189 1.16016 6.62495C0.941406 6.118 0.832031 5.57634 0.832031 4.99995C0.832031 4.42356 0.941406 3.88189 1.16016 3.37495C1.37891 2.868 1.67578 2.42703 2.05078 2.05203C2.42578 1.67703 2.86675 1.38016 3.3737 1.16141C3.88064 0.942657 4.42231 0.833282 4.9987 0.833282C5.57509 0.833282 6.11675 0.942657 6.6237 1.16141C7.13064 1.38016 7.57161 1.67703 7.94661 2.05203C8.32161 2.42703 8.61849 2.868 8.83724 3.37495C9.05599 3.88189 9.16536 4.42356 9.16536 4.99995C9.16536 5.57634 9.05599 6.118 8.83724 6.62495C8.61849 7.13189 8.32161 7.57287 7.94661 7.94787C7.57161 8.32287 7.13064 8.61974 6.6237 8.83849C6.11675 9.05724 5.57509 9.16661 4.9987 9.16661ZM4.9987 8.33328C5.92925 8.33328 6.71745 8.01036 7.36328 7.36453C8.00911 6.7187 8.33203 5.9305 8.33203 4.99995C8.33203 4.06939 8.00911 3.2812 7.36328 2.63537C6.71745 1.98953 5.92925 1.66662 4.9987 1.66662C4.06814 1.66662 3.27995 1.98953 2.63411 2.63537C1.98828 3.2812 1.66536 4.06939 1.66536 4.99995C1.66536 5.9305 1.98828 6.7187 2.63411 7.36453C3.27995 8.01036 4.06814 8.33328 4.9987 8.33328Z"
-                  fill="#EE6161"
-                />
-              </g>
-            </svg>
-          </div>
+              <rect width="10" height="10" fill="#D9D9D9" />
+            </mask>
+            <g mask="url(#mask0_4817_213)">
+              <path
+                d="M3.4987 7.08328L4.9987 5.58328L6.4987 7.08328L7.08203 6.49995L5.58203 4.99995L7.08203 3.49995L6.4987 2.91662L4.9987 4.41662L3.4987 2.91662L2.91536 3.49995L4.41536 4.99995L2.91536 6.49995L3.4987 7.08328ZM4.9987 9.16661C4.42231 9.16661 3.88064 9.05724 3.3737 8.83849C2.86675 8.61974 2.42578 8.32287 2.05078 7.94787C1.67578 7.57287 1.37891 7.13189 1.16016 6.62495C0.941406 6.118 0.832031 5.57634 0.832031 4.99995C0.832031 4.42356 0.941406 3.88189 1.16016 3.37495C1.37891 2.868 1.67578 2.42703 2.05078 2.05203C2.42578 1.67703 2.86675 1.38016 3.3737 1.16141C3.88064 0.942657 4.42231 0.833282 4.9987 0.833282C5.57509 0.833282 6.11675 0.942657 6.6237 1.16141C7.13064 1.38016 7.57161 1.67703 7.94661 2.05203C8.32161 2.42703 8.61849 2.868 8.83724 3.37495C9.05599 3.88189 9.16536 4.42356 9.16536 4.99995C9.16536 5.57634 9.05599 6.118 8.83724 6.62495C8.61849 7.13189 8.32161 7.57287 7.94661 7.94787C7.57161 8.32287 7.13064 8.61974 6.6237 8.83849C6.11675 9.05724 5.57509 9.16661 4.9987 9.16661ZM4.9987 8.33328C5.92925 8.33328 6.71745 8.01036 7.36328 7.36453C8.00911 6.7187 8.33203 5.9305 8.33203 4.99995C8.33203 4.06939 8.00911 3.2812 7.36328 2.63537C6.71745 1.98953 5.92925 1.66662 4.9987 1.66662C4.06814 1.66662 3.27995 1.98953 2.63411 2.63537C1.98828 3.2812 1.66536 4.06939 1.66536 4.99995C1.66536 5.9305 1.98828 6.7187 2.63411 7.36453C3.27995 8.01036 4.06814 8.33328 4.9987 8.33328Z"
+                fill="#EE6161"
+              />
+            </g>
+          </svg>
+        </div>
 
         <div>
           <input type="text" value="Cash" />
           <p class="markasDefault active">Default</p>
+        </div>
+
+        <button class="addNew">+ Add New</button>
+
+        <div class="buttons">
+          <button class="btn btnSave">Save</button>
+          <button class="btn btnClose">Close</button>
         </div>
       </div>
     </div>
