@@ -1,3 +1,38 @@
+.purchaseNavigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.purchaseNavigation .addNewAccountandItem {
+  display: flex;
+  gap: 6px;
+}
+
+.purchaseNavigation button {
+  background: var(--primary-linear-gradient-bg);
+  color: #fff;
+  padding: 4px 6px;
+  border-radius: 3px;
+  border: none;
+  font-size: 0.625rem;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+@media (min-width: 600px) {
+  .purchaseNavigation button {
+    font-size: 0.9rem;
+    padding: 6px 8px;
+    gap: 8px;
+  }
+}
+
+/* ------------------------------------------------------------------- */
+
 .purchaseScreenContainer #content1.active {
   grid-template-columns: 1fr;
 }
