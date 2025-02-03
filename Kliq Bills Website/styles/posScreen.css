@@ -4,14 +4,31 @@
   }
 }
 
+.posHeaderContainer nav {
+  margin: -8px;
+  margin-bottom: 8px;
+}
+
+html, body {
+  height: 100%
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+main {
+  flex: 1;
+  background-color: #f0f0f0; 
+}
+
 .posBody {
   display: block;
   background: #fff !important;
 }
 
-.posBody main {
-  margin: 10px;
-}
 
 .posBody .posScreenSearchContainer {
   border-radius: 2px;
@@ -46,7 +63,7 @@
 
 .posBody .posTableContainer {
   margin-top: 6px;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 
 .posBody .posTableContainer table td {
@@ -151,7 +168,6 @@
 .posBody .posMainContainer .row {
   display: flex;
   gap: 6px;
-  margin-top: 10px;
 }
 
 .posBody .posMainContainer .col1 {
