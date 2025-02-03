@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../styles/base.css" />
     <link rel="stylesheet" href="../../styles/menu.css" />
     <link rel="stylesheet" href="../../styles/main.css" />
-    <link rel="stylesheet" href="./styles/dashboard.css" />
+    <link rel="stylesheet" href="../../styles/dashboard.css" />
     <link rel="stylesheet" href="../../styles/posScreen.css" />
   </head>
   <body class="posBody">
@@ -19,78 +19,197 @@
     </header>
 
     <main class="posMainContainer">
-      <div class="posScreenSearchContainer">
-        <input
-          type="text"
-          placeholder="Scan or Search by item code, or item name"
-        />
-        <svg
-          class="posSearchIcon"
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          viewBox="0 0 16 16"
-          fill="none"
-        >
-          <path
-            d="M15.8485 15.1295L11.7175 11.0646C12.7993 9.88931 13.4639 8.33496 13.4639 6.62455C13.4634 2.96568 10.4497 0 6.73171 0C3.01376 0 0 2.96568 0 6.62455C0 10.2834 3.01376 13.2491 6.73171 13.2491C8.33812 13.2491 9.81149 12.6935 10.9688 11.7698L15.1158 15.8507C15.3179 16.0498 15.646 16.0498 15.848 15.8507C15.8961 15.8038 15.9343 15.7477 15.9604 15.6858C15.9865 15.6239 16 15.5574 16 15.4902C16 15.423 15.9867 15.3565 15.9606 15.2946C15.9346 15.2327 15.8965 15.1765 15.8485 15.1295ZM6.73171 12.2299C3.58592 12.2299 1.03577 9.72029 1.03577 6.62455C1.03577 3.52881 3.58592 1.01923 6.73171 1.01923C9.87753 1.01923 12.4277 3.52881 12.4277 6.62455C12.4277 9.72029 9.87753 12.2299 6.73171 12.2299Z"
-            fill="#67767C"
-          />
-        </svg>
+      <div class="row">
+        <div class="col col1">
+          <div class="posScreenSearchContainer">
+            <input
+              type="text"
+              placeholder="Scan or Search by item code, or item name"
+            />
+            <svg
+              class="posSearchIcon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+            >
+              <path
+                d="M15.8485 15.1295L11.7175 11.0646C12.7993 9.88931 13.4639 8.33496 13.4639 6.62455C13.4634 2.96568 10.4497 0 6.73171 0C3.01376 0 0 2.96568 0 6.62455C0 10.2834 3.01376 13.2491 6.73171 13.2491C8.33812 13.2491 9.81149 12.6935 10.9688 11.7698L15.1158 15.8507C15.3179 16.0498 15.646 16.0498 15.848 15.8507C15.8961 15.8038 15.9343 15.7477 15.9604 15.6858C15.9865 15.6239 16 15.5574 16 15.4902C16 15.423 15.9867 15.3565 15.9606 15.2946C15.9346 15.2327 15.8965 15.1765 15.8485 15.1295ZM6.73171 12.2299C3.58592 12.2299 1.03577 9.72029 1.03577 6.62455C1.03577 3.52881 3.58592 1.01923 6.73171 1.01923C9.87753 1.01923 12.4277 3.52881 12.4277 6.62455C12.4277 9.72029 9.87753 12.2299 6.73171 12.2299Z"
+                fill="#67767C"
+              />
+            </svg>
+          </div>
+
+          <div class="posTableContainer" style="overflow-x: auto">
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Item Code</th>
+                  <th>Item Name</th>
+                  <th>Qty</th>
+                  <th>Unit</th>
+                  <th>Rate</th>
+                  <th>Discount %</th>
+                  <th>TAX APPLIED</th>
+                  <th>FREE QTY</th>
+                  <th>TOTAL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="posDelAndNum">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <path
+                          d="M5.99984 2V2.66667H2.6665V4H3.33317V12.6667C3.33317 13.0203 3.47365 13.3594 3.72369 13.6095C3.97374 13.8595 4.31288 14 4.6665 14H11.3332C11.6868 14 12.0259 13.8595 12.276 13.6095C12.526 13.3594 12.6665 13.0203 12.6665 12.6667V4H13.3332V2.66667H9.99984V2H5.99984ZM5.99984 5.33333H7.33317V11.3333H5.99984V5.33333ZM8.6665 5.33333H9.99984V11.3333H8.6665V5.33333Z"
+                          fill="#DD7554"
+                        />
+                      </svg>
+                      <span>1</span>
+                    </div>
+                  </td>
+                  <td>38678765382</td>
+                  <td>Abc</td>
+                  <td class="quantity">
+                    <div>
+                      <button>-</button>
+                      <span>10</span>
+                      <button>+</button>
+                    </div>
+                  </td>
+                  <td class="textAlignRight">-</td>
+                  <td class="textAlignRight">121.70</td>
+                  <td class="textAlignRight">0.00</td>
+                  <td class="textAlignRight">0.68</td>
+                  <td class="textAlignRight">0.00</td>
+                  <td class="textAlignRight">274.51</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="posDelAndNum">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <path
+                          d="M5.99984 2V2.66667H2.6665V4H3.33317V12.6667C3.33317 13.0203 3.47365 13.3594 3.72369 13.6095C3.97374 13.8595 4.31288 14 4.6665 14H11.3332C11.6868 14 12.0259 13.8595 12.276 13.6095C12.526 13.3594 12.6665 13.0203 12.6665 12.6667V4H13.3332V2.66667H9.99984V2H5.99984ZM5.99984 5.33333H7.33317V11.3333H5.99984V5.33333ZM8.6665 5.33333H9.99984V11.3333H8.6665V5.33333Z"
+                          fill="#DD7554"
+                        />
+                      </svg>
+                      <span>2</span>
+                    </div>
+                  </td>
+                  <td>38678765382</td>
+                  <td>Abc</td>
+                  <td class="quantity">
+                    <div>
+                      <button>-</button>
+                      <span>10</span>
+                      <button>+</button>
+                    </div>
+                  </td>
+                  <td class="textAlignRight">-</td>
+                  <td class="textAlignRight">121.70</td>
+                  <td class="textAlignRight">0.00</td>
+                  <td class="textAlignRight">0.68</td>
+                  <td class="textAlignRight">0.00</td>
+                  <td class="textAlignRight">274.51</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="20">
+                    <div class="footerContent">
+                      <div class="footerTextAndInputContainer">
+                        <span class="footerText">Gross Amt</span>
+                        <input class="footerInput" type="text" />
+                      </div>
+                      <div class="footerTextAndInputContainer">
+                        <span class="footerText">Discount Amt</span>
+                        <input class="footerInput" type="text" />
+                      </div>
+                      <div class="footerTextAndInputContainer">
+                        <span class="footerText">Net Value</span>
+                        <input class="footerInput" type="text" />
+                      </div>
+                      <div class="footerTextAndInputContainer">
+                        <span class="footerText">Taxable Amt</span>
+                        <input class="footerInput" type="text" />
+                      </div>
+                      <div class="footerTextAndInputContainer">
+                        <span class="footerText">Gst</span>
+                        <input class="footerInput" type="text" />
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+
+        <div class="col col2">
+          <div class="posCustomerDetails">
+            <h2>Customer Details</h2>
+            <input type="text" placeholder="Search for a Customer by name, phone number">
+          </div>
+
+          <div class="posTotal">
+            <svg class="posTotalIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12 22C11.0966 22.0162 10.2112 21.7467 9.47001 21.23C9.04581 20.9144 8.52861 20.749 8 20.76C7.47107 20.7467 6.95312 20.9123 6.53 21.23C6.31 21.36 6.1 21.49 5.86 21.61C5.55482 21.7554 5.21776 21.821 4.88033 21.8008C4.5429 21.7805 4.2161 21.6751 3.93046 21.4943C3.64482 21.3136 3.40966 21.0633 3.24694 20.767C3.08423 20.4707 2.99927 20.138 3 19.8V5C3 4.20435 3.31608 3.44129 3.87868 2.87868C4.44129 2.31607 5.20436 2 6 2H18C18.7957 2 19.5587 2.31607 20.1213 2.87868C20.6839 3.44129 21 4.20435 21 5V19.8C20.9991 20.1372 20.9129 20.4687 20.7494 20.7636C20.586 21.0586 20.3507 21.3074 20.0653 21.487C19.7799 21.6666 19.4538 21.7712 19.1172 21.7909C18.7806 21.8107 18.4444 21.745 18.14 21.6C17.9103 21.4886 17.6866 21.3651 17.47 21.23C17.0476 20.9109 16.5292 20.7451 16 20.76C15.4713 20.7483 14.9538 20.9137 14.53 21.23C13.7891 21.7473 12.9035 22.0168 12 22ZM8 18.76C8.90338 18.7438 9.7888 19.0133 10.53 19.53C10.9659 19.8471 11.491 20.0178 12.03 20.0178C12.569 20.0178 13.0941 19.8471 13.53 19.53C14.2767 19.0287 15.1557 18.761 16.055 18.761C16.9543 18.761 17.8333 19.0287 18.58 19.53C18.7319 19.628 18.8888 19.7181 19.05 19.8V5C19.05 4.73478 18.9446 4.48043 18.7571 4.29289C18.5696 4.10536 18.3152 4 18.05 4H6C5.73479 4 5.48043 4.10536 5.2929 4.29289C5.10536 4.48043 5 4.73478 5 5V19.8C5.16646 19.722 5.3269 19.6317 5.48 19.53C6.21813 19.0147 7.09993 18.7453 8 18.76Z" fill="#185492"/>
+              <path d="M12 16H8C7.73478 16 7.48043 15.8946 7.29289 15.7071C7.10536 15.5196 7 15.2652 7 15C7 14.7348 7.10536 14.4804 7.29289 14.2929C7.48043 14.1054 7.73478 14 8 14H12C12.2652 14 12.5196 14.1054 12.7071 14.2929C12.8946 14.4804 13 14.7348 13 15C13 15.2652 12.8946 15.5196 12.7071 15.7071C12.5196 15.8946 12.2652 16 12 16ZM16 12H8C7.73478 12 7.48043 11.8946 7.29289 11.7071C7.10536 11.5196 7 11.2652 7 11C7 10.7348 7.10536 10.4804 7.29289 10.2929C7.48043 10.1054 7.73478 10 8 10H16C16.2652 10 16.5196 10.1054 16.7071 10.2929C16.8946 10.4804 17 10.7348 17 11C17 11.2652 16.8946 11.5196 16.7071 11.7071C16.5196 11.8946 16.2652 12 16 12ZM16 8H8C7.73478 8 7.48043 7.89464 7.29289 7.70711C7.10536 7.51957 7 7.26522 7 7C7 6.73478 7.10536 6.48043 7.29289 6.29289C7.48043 6.10536 7.73478 6 8 6H16C16.2652 6 16.5196 6.10536 16.7071 6.29289C16.8946 6.48043 17 6.73478 17 7C17 7.26522 16.8946 7.51957 16.7071 7.70711C16.5196 7.89464 16.2652 8 16 8Z" fill="#185492"/>
+            </svg>
+
+            <div>
+              <h3>Total ₹487.00</h3>
+              <p>Items: <span>3</span>, Quantity: <span>6</span></p>
+              <span>6.6 points awarded</span>
+            </div>
+
+            <p>Full Breakup</p>
+
+          </div>
+        </div>
       </div>
 
-      <div class="posTableContainer" style="overflow-x: auto">
-        <table>
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Item Code</th>
-              <th>Item Name</th>
-              <th>Qty</th>
-              <th>Unit</th>
-              <th>Rate</th>
-              <th>Discount %</th>
-              <th>TAX APPLIED</th>
-              <th>FREE QTY</th>
-              <th>TOTAL</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <div class="posDelAndNum">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                  >
-                    <path
-                      d="M5.99984 2V2.66667H2.6665V4H3.33317V12.6667C3.33317 13.0203 3.47365 13.3594 3.72369 13.6095C3.97374 13.8595 4.31288 14 4.6665 14H11.3332C11.6868 14 12.0259 13.8595 12.276 13.6095C12.526 13.3594 12.6665 13.0203 12.6665 12.6667V4H13.3332V2.66667H9.99984V2H5.99984ZM5.99984 5.33333H7.33317V11.3333H5.99984V5.33333ZM8.6665 5.33333H9.99984V11.3333H8.6665V5.33333Z"
-                      fill="#DD7554"
-                    />
-                  </svg>
-                  <span>1</span>
-                </div>
-              </td>
-              <td>38678765382</td>
-              <td>Abc</td>
-              <td>1</td>
-              <td>-</td>
-              <td>121.70</td>
-              <td>0.00</td>
-              <td>0.68</td>
-              <td>0.00</td>
-              <td>274.51</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td colspan="20">Gross Amt</td>
-            </tr>
-          </tfoot>
-        </table>
+      <div class="posMainButtons">
+        <div class="posButtons1">
+          <div>
+            <button>Change Quantity</button>
+            <button>Item Discount</button>
+            <button>Remove Item</button>
+            <button>Bill Tax</button>
+          </div>
+          <div>
+            <button>Additional Charges</button>
+            <button>Bill Discount</button>
+            <button>Loyalty Points</button>
+            <button>Remarks</button>
+          </div>
+        </div>
+
+        <div class="posButtons2">
+          <div class="saveAndPrintBtn">
+            <button>Save & Print Bill</button>
+          </div>
+          <div class="partialAndMultipay">
+            <button>Partial Pay</button>
+            <button>Multi Pay</button>
+          </div>
+        </div>
+        
       </div>
     </main>
   </body>
