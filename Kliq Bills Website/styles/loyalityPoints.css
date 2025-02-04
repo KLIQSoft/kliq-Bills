@@ -1,0 +1,255 @@
+.loyalityPointsContainer {
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.loyalityPointsContainer .rewardPointsImg {
+  width: 60px;
+  height: 65px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* =============================== rewardSetupContainer - START =============================== */
+.loyalityPointsContainer .rewardSetupContainer {
+  margin-top: 60px;
+  color: #40484a;
+}
+
+.loyalityPointsContainer .rewardSetupContainer h2,
+.loyalityPointsContainer .redeemSetupContainer h2,
+.loyalityPointsContainer .royalCustomers h2 {
+  font-size: 0.875rem;
+  margin-bottom: 10px;
+}
+
+.loyalityPointsContainer .redeemSetupContainer,
+.loyalityPointsContainer .royalCustomers {
+  padding-top: 20px;
+}
+/* =============================== rewardSetupContainer - END =============================== */
+
+/* =============================== rewardSetupContainer, redeemSetupContainer - START =============================== */
+.loyalityPointsContainer .rewardSetupContainer .loyalPointConversion,
+.loyalityPointsContainer .rewardSetupContainer .minValueEarningPoints,
+.loyalityPointsContainer .redeemSetupContainer .loyalPointConversion,
+.loyalityPointsContainer .redeemSetupContainer .minValueEarningPoints,
+.loyalityPointsContainer .redeemSetupContainer .maxValueEarningPoints {
+  margin-bottom: 10px;
+}
+
+.loyalityPointsContainer .rewardSetupContainer label,
+.loyalityPointsContainer .redeemSetupContainer label {
+  font-size: 0.75rem;
+  display: inline-block;
+}
+
+.loyalityPointsContainer .rewardSetupContainer input,
+.loyalityPointsContainer .amountInput,
+.loyalityPointsContainer .redeemSetupContainer .minValueEarningPoints input,
+.loyalityPointsContainer .redeemSetupContainer .pointInput,
+.loyalityPointsContainer .redeemSetupContainer .maxValueEarningPoints input {
+  width: 90px;
+  height: 20px;
+  border-radius: 2px;
+  border: 1px solid #98a0a3;
+  font-size: 0.5rem;
+}
+
+.loyalityPointsContainer .rewardSetupContainer p,
+.loyalityPointsContainer .redeemSetupContainer p {
+  font-size: 0.5rem;
+  margin-top: 2px;
+}
+
+.loyalityPointsContainer .rewardSetupContainer .minValueEarningPoints input,
+.loyalityPointsContainer .rewardSetupContainer .setPointExpiry input,
+.loyalityPointsContainer .redeemSetupContainer .minValueEarningPoints input,
+.loyalityPointsContainer .redeemSetupContainer .maxValueEarningPoints input {
+  width: 202px;
+}
+
+.loyalityPointsContainer #setPointExpry {
+  width: 10px;
+  height: 10px;
+}
+
+.loyalityPointsContainer .rewardSetupContainer .pointInput,
+.loyalityPointsContainer .redeemSetupContainer .pointInput {
+  background: #dae2eb;
+  border: none;
+  color: #5f6771;
+  font-weight: 700;
+}
+
+.loyalityPointsContainer .rewardSetupContainer {
+  border-bottom: 1px solid #98a0a3;
+  padding-bottom: 20px;
+}
+/* =============================== rewardSetupContainer, redeemSetupContainer - END =============================== */
+
+.loyalityPointsContainer .royalCustomers div input,
+.loyalityPointsContainer .royalCustomers div select {
+  border-radius: 2px;
+  border: 1px solid #98a0a3;
+  height: 20px;
+}
+
+.loyalityPointsContainer .royalCustomers div {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 6px;
+
+  position: relative;
+}
+
+.loyalityPointsContainer .royalCustomers div .editIcon {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.loyalityPointsContainer .royalCustomers input:first-child {
+  background: #f9ebc0;
+  color: #98917a;
+  border: none;
+  font-weight: 700;
+}
+
+.loyalityPointsContainer .royalCustomers div select {
+  padding: 2px;
+}
+
+.loyalityPointsContainer .royalCustomers input:last-child {
+  width: 60px;
+}
+
+.loyalityPointsContainer .saveContainer {
+  height: 30px;
+  background: #fff;
+  box-shadow: 0px -2px 2px 0px rgba(0, 0, 0, 0.25);
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-bottom: -8px;
+
+  display: flex;
+  align-items: center;
+}
+
+.loyalityPointsContainer .saveContainer button {
+  margin-left: auto;
+  margin-right: 20px;
+  padding: 3px 6px;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+@media (min-width: 456px) {
+  .loyalityPointsContainer .rewardSetupContainer h2,
+  .loyalityPointsContainer .redeemSetupContainer h2,
+  .loyalityPointsContainer .royalCustomers h2 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .loyalityPointsContainer .rewardSetupContainer label,
+  .loyalityPointsContainer .redeemSetupContainer label {
+    font-size: 0.875rem;
+  }
+
+  .loyalityPointsContainer .rewardSetupContainer input,
+  .loyalityPointsContainer .amountInput,
+  .loyalityPointsContainer .redeemSetupContainer .minValueEarningPoints input,
+  .loyalityPointsContainer .redeemSetupContainer .pointInput,
+  .loyalityPointsContainer .redeemSetupContainer .maxValueEarningPoints input {
+    width: 180px;
+    height: 40px;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    padding-left: 10px;
+  }
+
+  .loyalityPointsContainer .rewardSetupContainer p,
+  .loyalityPointsContainer .redeemSetupContainer p {
+    font-size: 0.675rem;
+    margin-top: 4px;
+  }
+
+  .loyalityPointsContainer .rewardSetupContainer .minValueEarningPoints input,
+  .loyalityPointsContainer .rewardSetupContainer .setPointExpiry input,
+  .loyalityPointsContainer .redeemSetupContainer .minValueEarningPoints input,
+  .loyalityPointsContainer .redeemSetupContainer .maxValueEarningPoints input {
+    width: 380px;
+  }
+
+  .loyalityPointsContainer .royalCustomers div input,
+  .loyalityPointsContainer .royalCustomers div select {
+    border-radius: 3px;
+    height: 30px;
+  }
+
+  .loyalityPointsContainer .royalCustomers div .editIcon {
+    width: 12px;
+    height: 12px;
+    right: 8px;
+    top: 8px;
+  }
+
+  .loyalityPointsContainer .saveContainer { 
+    height: 50px;
+  }
+
+  .loyalityPointsContainer .saveContainer button { 
+    padding: 6px 12px;
+  }
+}
+
+@media (min-width: 566px) and (max-width: 768px) {
+  .loyalityPointsContainer .rewardPointsImg {
+    width: 100px;
+    height: 122px;
+  }
+
+  .rewardSetupContainer,
+  .redeemAndRoyalContainer {
+    margin-left: 110px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .loyalityPointsContainer .redeemAndRoyalContainer {
+    display: flex;
+    gap: 100px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .loyalityPointsContainer .rewardPointsImg {
+    width: 160px;
+    height: 182px;
+  }
+
+  .rewardSetupContainer,
+  .redeemAndRoyalContainer {
+    margin-left: 150px;
+  }
+}
+
+@media (min-width: 1411px) {
+  .loyalityPointsContainer .rewardPointsImg {
+    width: 300px;
+    height: 322px;
+  }
+
+  .rewardSetupContainer,
+  .redeemAndRoyalContainer {
+    margin-left: 310px;
+  }
+}
