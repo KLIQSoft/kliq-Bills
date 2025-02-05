@@ -151,6 +151,26 @@
   cursor: pointer;
 }
 
+.loyalityPointsContainer .loyalityrupeeinput {
+  position: relative;
+}
+
+.loyalityPointsContainer .rupee {
+  position: absolute;
+  left: 5px;
+  top: 6px;
+
+  font-size: 0.6rem;
+}
+
+.loyalityPointsContainer .amountInput {
+  padding-left: 14px;
+}
+
+.loyalityPointsContainer .loyalPointConversionRedeem .rupee {
+  left: 112px;
+}
+
 @media (min-width: 456px) {
   .loyalityPointsContainer .rewardSetupContainer h2,
   .loyalityPointsContainer .redeemSetupContainer h2,
@@ -202,12 +222,27 @@
     top: 8px;
   }
 
-  .loyalityPointsContainer .saveContainer { 
+  .loyalityPointsContainer .saveContainer {
     height: 50px;
   }
 
-  .loyalityPointsContainer .saveContainer button { 
+  .loyalityPointsContainer .saveContainer button {
     padding: 6px 12px;
+  }
+
+  .loyalityPointsContainer .rupee {
+    left: 8px;
+    top: 10px;
+  
+    font-size: 0.875rem;
+  }
+  
+  .loyalityPointsContainer .amountInput {
+    padding-left: 20px !important;
+  }
+
+  .loyalityPointsContainer .loyalPointConversionRedeem .rupee {
+    left: 205px;
   }
 }
 
