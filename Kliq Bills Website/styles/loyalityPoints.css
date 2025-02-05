@@ -171,6 +171,12 @@
   left: 112px;
 }
 
+.rewardSetupContainer,
+  .redeemAndRoyalContainer {
+    transition: margin .4s ease-in-out;
+  }
+
+
 @media (min-width: 456px) {
   .loyalityPointsContainer .rewardSetupContainer h2,
   .loyalityPointsContainer .redeemSetupContainer h2,
