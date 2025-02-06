@@ -23,11 +23,16 @@
         font-size: 0.625rem;
       }
 
-      .posBillDiscountPopUpContainer .heading h2 {
-        font-size: 0.875rem;
-        padding: 10px;
+      .posBillDiscountPopUpContainer .heading {
+        display: flex;
         border-radius: 3px 3px 0px 0px;
         background: #f0f5f8;
+        padding: 10px;
+        justify-content: space-between;
+      }
+
+      .posBillDiscountPopUpContainer .heading h2 {
+        font-size: 0.875rem;
       }
 
       .posBillDiscountPopUpContainer
@@ -72,15 +77,17 @@
       .posBillDiscountPopUpContainer
         .posBillInputAndRupeeContainer
         .posBillInputContainer
-        div:first-child span,
-        .posBillDiscountPopUpContainer
+        div:first-child
+        span,
+      .posBillDiscountPopUpContainer
         .posBillInputAndRupeeContainer
         .posBillInputContainer
-        div:last-child span {
-            position: absolute;
-            top: 16px;
-            left: 6px;
-        }
+        div:last-child
+        span {
+        position: absolute;
+        top: 16px;
+        left: 6px;
+      }
 
       .posBillDiscountPopUpContainer .posBillInputContainer {
         display: flex;
@@ -125,6 +132,26 @@
     <div class="posBillDiscountPopUpContainer">
       <div class="heading">
         <h2>Bill Discount</h2>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <g clip-path="url(#clip0_5341_1433)">
+            <path
+              d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+              fill="#40484A"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_5341_1433">
+              <rect width="24" height="24" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
       </div>
 
       <div class="posBillInputAndRupeeContainer">
