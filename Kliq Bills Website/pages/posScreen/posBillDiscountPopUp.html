@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pos Bill Discount Pop Up</title>
+    <link rel="stylesheet" href="../../styles/normalize.css" />
+    <link rel="stylesheet" href="../../styles/base.css" />
+    <link rel="stylesheet" href="../../styles/menu.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <link rel="stylesheet" href="../../styles/posScreen.css" />
+    <style>
+      .posBillDiscountPopUpContainer {
+        margin: auto;
+        width: 210px;
+        border-radius: 3px;
+        background: #fff;
+        box-shadow: 0px 8px 24px 0px #959da5;
+      }
+
+      .posBillDiscountPopUpContainer .posBillInputAndRupeeContainer {
+        padding: 10px;
+        font-size: 0.625rem;
+      }
+
+      .posBillDiscountPopUpContainer .heading h2 {
+        font-size: 0.875rem;
+        padding: 10px;
+        border-radius: 3px 3px 0px 0px;
+        background: #f0f5f8;
+      }
+
+      .posBillDiscountPopUpContainer
+        .posBillInputAndRupeeContainer
+        .posBillInputContainer
+        div
+        input {
+        border-radius: 3px;
+        background: #eaf0f3;
+        box-shadow: 0px 6px 24px 0px rgba(0, 0, 13, 0.01),
+          0px 0px 0px 1px rgba(0, 0, 20, 0.01);
+        width: 85px;
+        height: 20px;
+        border: none;
+        padding-left: 18px;
+        font-size: 0.5625rem;
+      }
+
+      .posBillDiscountPopUpContainer
+        .posBillInputAndRupeeContainer
+        .posBillInputContainer
+        div:first-child
+        label,
+      .posBillDiscountPopUpContainer
+        .posBillInputAndRupeeContainer
+        .posBillInputContainer
+        div:last-child
+        label {
+        font-size: 0.5625rem;
+      }
+
+      .posBillDiscountPopUpContainer
+        .posBillInputAndRupeeContainer
+        .posBillInputContainer
+        div {
+        display: flex;
+        flex-direction: column;
+
+        position: relative;
+      }
+
+      .posBillDiscountPopUpContainer
+        .posBillInputAndRupeeContainer
+        .posBillInputContainer
+        div:first-child span,
+        .posBillDiscountPopUpContainer
+        .posBillInputAndRupeeContainer
+        .posBillInputContainer
+        div:last-child span {
+            position: absolute;
+            top: 16px;
+            left: 6px;
+        }
+
+      .posBillDiscountPopUpContainer .posBillInputContainer {
+        display: flex;
+        gap: 3px;
+        margin: 10px 0;
+      }
+
+      .posBillDiscountPopUpContainer .posBillInputContainer p {
+        align-self: center;
+      }
+
+      .posBillDiscountPopUpContainer .posBillInputAndRupeeContainer .buttons {
+        display: flex;
+        gap: 10px;
+      }
+
+      .posBillDiscountPopUpContainer
+        .posBillInputAndRupeeContainer
+        .buttons
+        button {
+        width: 100%;
+        border-radius: 3px;
+        border: 1px solid #9de5bd;
+        background: #a8fdce;
+        color: #264433;
+        padding: 4px;
+        cursor: pointer;
+      }
+
+      .posBillDiscountPopUpContainer
+        .posBillInputAndRupeeContainer
+        .buttons
+        button:last-child {
+        border-radius: 3px;
+        border: 1px solid #9bbbde;
+        background: #f1f8ff;
+        color: #3c4e63;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="posBillDiscountPopUpContainer">
+      <div class="heading">
+        <h2>Bill Discount</h2>
+      </div>
+
+      <div class="posBillInputAndRupeeContainer">
+        <p>Total: ₹135.00</p>
+
+        <div class="posBillInputContainer">
+          <div>
+            <label for="posDisc">Discount in %</label>
+            <input type="text" id="posDisc" />
+            <span>%</span>
+          </div>
+          <p>OR</p>
+          <div>
+            <label for="posRupee">Discount in ₹</label>
+            <input type="text" id="posRupee" />
+            <span>₹</span>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button>Save</button>
+          <button>Cancel</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
