@@ -92,6 +92,15 @@
         background: #f1f8ff;
         color: #3c4e63;
       }
+      
+      .posChangeQuantityContainer .truncate {
+        display: inline-block;
+        max-width: 100px; 
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: bottom;
+      }
     </style>
   </head>
   <body>
@@ -120,7 +129,7 @@
       </div>
 
       <div class="posChangeBodyContainer">
-        <p>Item Name: <span>Ground Nuts 500g....</span></p>
+        <p>Item Name: <span class="truncate">Ground Nuts 500g</span></p>
 
         <div class="posChangeQuantityInput">
           <label for="ENQty">Enter New Quantity</label>
