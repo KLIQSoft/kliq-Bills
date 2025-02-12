@@ -3,6 +3,7 @@
   border: 1px solid #ededed;
   background: #fbfbfb;
   padding: 10px;
+  font-size: 0.5625rem;
 
   display: flex;
   justify-content: space-between;
@@ -11,6 +12,7 @@
 .retailSaleContainer .invoiceContainer select {
   border: none;
   padding-left: 0;
+  font-size: 0.5625rem;
 }
 
 .retailSaleContainer .retailSaleinputs {
@@ -29,8 +31,9 @@
   border-radius: 2px;
   border: 1px solid #e0eaea;
   background: #eff4f4;
-  color: #40484A;
+  color: #40484a;
   padding: 10px;
+  font-size: 0.5625rem;
 }
 
 .retailSaleContainer .addedItemsList div {
@@ -40,15 +43,24 @@
 
 .retailSaleContainer .addedItemsList div:first-child span {
   border-radius: 2px;
-  border: 1px solid #E0EAEA;
-  background: #FFF;
+  border: 1px solid #e0eaea;
+  background: #fff;
   padding: 3px 4px;
   color: var(--primary-color);
+}
+
+.retailSaleContainer .addedItemsList div:last-child {
+  color: #85888c;
+  font-size: 0.5rem;
+  margin-top: 5px;
 }
 
 .retailSaleContainer .totals div {
   display: flex;
   justify-content: space-between;
+  font-size: 0.5rem;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 
 .retailSaleContainer .buttonAndBar {
@@ -64,7 +76,7 @@
   border: none;
   background: #185492;
   padding: 7px;
-  color: #fff; 
+  color: #fff;
   font-weight: bold;
   width: 100%;
   cursor: pointer;
@@ -73,7 +85,328 @@
 .retailSaleContainer .buttonAndBar div {
   padding: 5px 8px;
   border-radius: 2px;
-  border: 1px solid #D9D9D9;
+  border: 1px solid #d9d9d9;
   display: grid;
   cursor: pointer;
+}
+
+.retailSaleContainer .discountContainer {
+  border-radius: 2px;
+  border: 1px solid #ededed;
+  background: #fff;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding: 6px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.retailSaleContainer .discountAndRupeeInputs {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.retailSaleContainer .discountAndRupeeInputs input {
+  width: 60px;
+  height: 20px;
+}
+
+.retailSaleContainer .discountAndRupeeInputs .discountInput input {
+  border-radius: 2px;
+  border: 1px solid #e5bc14;
+}
+
+.retailSaleContainer .discountAndRupeeInputs .rupeeInput input {
+  border-radius: 2px;
+  border: 1px solid #9da1a9;
+  text-align: right;
+}
+
+.retailSaleContainer .discountAndRupeeInputs .discountInput,
+.retailSaleContainer .discountAndRupeeInputs .rupeeInput {
+  position: relative;
+}
+
+.retailSaleContainer .discountContainer p {
+  font-size: 8px;
+  border-radius: 0px 2px 2px 0px;
+}
+
+.retailSaleContainer .discountContainer .discountInput p {
+  border: 1px solid #e5bc14;
+  background: #fbf7ea;
+  color: #e5bc14;
+  display: inline-flex;
+  padding: 3px 7px;
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.retailSaleContainer .discountContainer .rupeeInput p {
+  font-size: 0.5rem;
+  border-radius: 2px 0px 0px 2px;
+  border: 1px solid #9da1a9;
+  background: #f3f6fb;
+  color: #40484a;
+  padding: 3px 7px;
+  display: inline-flex;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.retailSaleContainer .totalAmountsandLoyalityPoints {
+  border-radius: 2px;
+  border: 1px solid #ededed;
+  background: #f4f8fa;
+  color: #40484a;
+  padding: 10px;
+}
+
+.retailSaleContainer .totalAmountsandLoyalityPoints .totalAmounts {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.625rem;
+}
+
+.retailSaleContainer .totalAmountsandLoyalityPoints .totalAmounts p:last-child {
+  width: 80px;
+  border-bottom: 1px solid #000;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.retailSaleContainer .loyalityPointsAndInputs {
+  padding-top: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #eef2f4;
+}
+
+.retailSaleContainer .loyalityPointsAndInputs .loyalityPointsText {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 0.625rem;
+}
+
+.retailSaleContainer
+  .loyalityPointsAndInputs
+  .loyalityPointsText
+  input[type="checkbox"] {
+  width: 10px;
+  height: 10px;
+}
+
+.retailSaleContainer .loyalityPointsAndInputs .loyalityPointsText div {
+  display: grid;
+}
+
+.retailSaleContainer .loyalityPointsAndInputs .loyalityPointsText span {
+  color: #979c9e;
+  font-size: 0.4375rem;
+}
+
+.retailSaleContainer .loyalityPointsAndInputs .loyalityPointsInputs input {
+  width: 60px;
+  height: 20px;
+}
+
+.retailSaleContainer
+  .loyalityPointsAndInputs
+  .loyalityPointsInputs
+  div:first-child
+  input {
+  border-radius: 2px;
+  border: 1px solid #e5bc14;
+}
+
+.retailSaleContainer
+  .loyalityPointsAndInputs
+  .loyalityPointsInputs
+  div:last-child
+  input {
+  border-radius: 2px;
+  border: 1px solid #9da1a9;
+  text-align: right;
+}
+
+.retailSaleContainer
+  .loyalityPointsAndInputs
+  .loyalityPointsInputs
+  div:first-child,
+.retailSaleContainer
+  .loyalityPointsAndInputs
+  .loyalityPointsInputs
+  div:last-child {
+  position: relative;
+}
+
+.retailSaleContainer
+  .loyalityPointsAndInputs
+  .loyalityPointsInputs
+  div:first-child
+  p {
+  border-radius: 0px 2px 2px 0px;
+  border: 1px solid #e5bc14;
+  background: #fbf7ea;
+
+  padding: 3px 5px;
+  display: inline-flex;
+  position: absolute;
+  right: 0;
+  bottom: 2.8px;
+}
+
+.retailSaleContainer
+  .loyalityPointsAndInputs
+  .loyalityPointsInputs
+  div:last-child
+  p {
+  border-radius: 2px 0px 0px 2px;
+  border: 1px solid #9da1a9;
+  background: #f3f6fb;
+  font-size: 8px;
+
+  padding: 3px 7px;
+  display: inline-flex;
+  position: absolute;
+  left: 0;
+  bottom: 2.8px;
+}
+
+.retailSaleContainer .loyalityPointsAndInputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.retailSaleContainer .loyalityPointsAndInputs .loyalityPointsInputs {
+  display: flex;
+  gap: 10px;
+}
+
+.retailSaleContainer .remainingAmount {
+  margin-top: 2px;
+}
+
+.retailSaleContainer .remainingAmount p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.625rem;
+}
+
+.retailSaleContainer .totalAmountsandLoyalityPoints .received {
+  padding-top: 10px;
+  font-size: 0.625rem;
+
+  border-bottom: 1px solid #eef2f4;
+  padding-bottom: 10px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.retailSaleContainer .totalAmountsandLoyalityPoints .received input {
+  width: 10px;
+  height: 10px;
+}
+
+.retailSaleContainer .totalAmountsandLoyalityPoints .received p {
+  width: 80px;
+  border-bottom: 1px solid #000;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.retailSaleContainer .totalAmountsandLoyalityPoints .balanceDue {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.625rem;
+  color: #27bd2c;
+
+  padding-top: 6px;
+  padding-bottom: 10px;
+}
+
+.retailSaleContainer .totalAmountsandLoyalityPoints .balanceDue p:last-child {
+  width: 80px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.retailSaleContainer .totalAmountsandLoyalityPoints .balanceDueRemainingAmount {
+  font-size: 0.625rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.retailSaleContainer .paymentTypeContainer {
+  border-radius: 2px;
+  border: 1px solid #ededed;
+  background: #fff;
+  padding: 10px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  font-size: 0.5625rem;
+}
+
+.retailSaleContainer .paymentTypeContainer div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.retailSaleContainer .paymentTypeContainer div select {
+  font-size: 0.5625rem;
+  padding: 0;
+  border: none;
+}
+
+.retailSaleContainer .paymentTypeContainer div p:last-child {
+  display: flex;
+}
+
+.retailSaleContainer .paymentTypeContainer > p:last-child {
+  font-size: 0.5rem;
+  color: var(--primary-color);
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.retailSaleContainer .descriptionAndPlaceholder {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.retailSaleContainer .descriptionAndPlaceholder .form_div {
+  flex: 1;
+}
+
+.retailSaleContainer .descriptionAndPlaceholder .form_divDesc {
+  height: 3.14rem;
+}
+
+.retailSaleContainer .descAndChooseFileContainer input[type="file"] {
+  border: none;
+  padding-left: 0;
+}
+
+.retailSaleContainer .descriptionAndPlaceholder .placeholdImageContainer {
+  padding: 13px;
+  border-radius: 2px;
+  border: 1px solid #40484a;
+  cursor: pointer;
+
+  display: inline-flex;
 }
