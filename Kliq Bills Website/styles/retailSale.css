@@ -80,6 +80,11 @@
   font-weight: bold;
   width: 100%;
   cursor: pointer;
+  font-size: 0.625rem;
+
+  display: flex;
+  justify-content: center;
+  gap: 6px;
 }
 
 .retailSaleContainer .buttonAndBar div {
@@ -409,4 +414,31 @@
   cursor: pointer;
 
   display: inline-flex;
+}
+
+
+.retailSaleContainer .buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.retailSaleContainer .buttons button {
+  border-radius: 2px;
+  border: 1px solid var(--primary-color);
+  background: none;
+  color: var(--primary-color);
+  padding: 4px 6px;
+  cursor: pointer;
+  font-size: 0.625rem;
+}
+
+.retailSaleContainer .buttons button:last-of-type {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.retailSaleContainer .buttons svg {
+  cursor: pointer;
 }
