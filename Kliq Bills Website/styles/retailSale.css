@@ -422,6 +422,7 @@
   align-items: center;
   gap: 10px;
   justify-content: flex-end;
+  margin-top: 10px;
 }
 
 .retailSaleContainer .buttons button {
